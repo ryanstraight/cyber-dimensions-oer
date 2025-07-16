@@ -3,27 +3,13 @@
 
 ![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 ![Quarto](https://img.shields.io/badge/Made%20with-Quarto-blue.svg)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)
+![Status](https://img.shields.io/badge/Status-Coming_soon-brightgreen.svg)
+![Version](https://img.shields.io/badge/Version-0.0.9999-blue.svg)
 
 **Learn the Methodology Behind Immersive Cybersecurity Case Studies**
 
-<div class="callout-info">
 
-## Coming soon!
-
-The *Cyber Dimensions* toolkit will be released to coincide with the
-*Cyber Dimensions* text from Kendall Hunt, scheduled for August 2025.
-This Open Educational Resource (OER) will be available at
-[ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
-
-</div>
-
-## Overview
-
-<div class="columns">
-
-<div class="column" width="55%">
+<a href="https://github.com/ryanstraight/cyber-dimensions-oer/blob/main/assets/images/Straight-Cyber_Dimensions-OER-portrait_cover.png"><img align=left src="assets/images/Straight-Cyber_Dimensions-OER-portrait_cover.png" width=300 alt="Cover for Cyber Dimensions OER Toolkit" /></a>
 
 This Open Educational Resource (OER) is a comprehensive **methodology
 guide** that teaches you how to create immersive, fictional
@@ -32,16 +18,11 @@ documents the proven “Cyber Dimensions” approach, providing detailed
 explanations, examples, and frameworks to help you understand and apply
 this educational methodology in your own context.
 
-</div>
+The *Cyber Dimensions* toolkit will be released to coincide with the
+*Cyber Dimensions* text from Kendall Hunt, scheduled for August 2025.
+This Open Educational Resource (OER) will be available at
+[ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
 
-<div class="column" width="45%">
-
-<img src="assets/images/cover.png"
-data-fig-alt="Cover for Cyber Dimensions OER Toolkit" />
-
-</div>
-
-</div>
 
 ### Supplemental to Published Textbook
 
