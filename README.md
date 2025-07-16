@@ -162,19 +162,19 @@ the license permits.
 BibTeX citations for the toolkit:
 
 ``` bibtex
-@software{straightCyberDimensionsToolkit2025,
+@book{straightCyberDimensionsToolkit2025,
   author = {Straight, Ryan M.},
   title = {Cyber Dimensions: Open Educational Resource Toolkit},
   year = {2025},
-  publisher = {GitHub},
+  publisher = {GitHub Pages},
   url = {https://github.com/ryanstraight/cyber-dimensions-oer},
   note = {Open Educational Resource for developing immersive cybersecurity case studies}
 }
 ```
 
 > Straight, R. M. (2025). Cyber Dimensions: Open Educational Resource
-> Toolkit \[Computer software\]. GitHub.
-> https://github.com/ryanstraight/cyber-dimensions-oer
+> Toolkit. GitHub Pages.
+> <https://github.com/ryanstraight/cyber-dimensions-oer>
 
 And the Kendall Hunt textbook:
 
@@ -190,8 +190,8 @@ And the Kendall Hunt textbook:
 }
 ```
 
-> Straight, R. (2025). Cyber Dimensions: Immersive Case Studies Across
-> Digital Domains (1st ed.). Kendall Hunt.
+> Straight, R. M. (2025). *Cyber Dimensions: Immersive Case Studies Across
+> Digital Domains* (1st ed.). Kendall Hunt.
 
 ## Technical Features
 
