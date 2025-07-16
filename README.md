@@ -26,12 +26,12 @@ This Open Educational Resource (OER) will be available at
 
 ### Supplemental to Published Textbook
 
-This OER guide is the companion resource to **“Cyber Dimensions:
-Immersive Case Studies Across Digital Domains”** published by Kendall
-Hunt. While the textbook provides complete case studies, assessments,
-and instructional guides ready for classroom use, this methodology guide
+This OER guide is the companion resource to the **“Cyber Dimensions:
+Immersive Case Studies Across Digital Domains”** textbook that provides complete case studies, assessments,
+and instructional guides ready for classroom use. This methodology guide
 explains how those case studies were developed and how you can apply the
-same approaches to create your own immersive scenarios.
+same approaches to create your own immersive scenarios leveraging the
+power of artificial intelligence.
 
 ## Why Learn This Methodology?
 
@@ -39,10 +39,9 @@ This approach has been tested across multiple institutions and refined
 through systematic implementation. The methodology offers several
 advantages over traditional case study development:
 
-- Based on successful case studies used at University of Arizona and
-  other institutions
-- Grounded in constructivist learning theory and problem-based learning
-  research  
+- Based on successful case studies used at University of Arizona
+- Grounded in constructivist learning theory, problem-based learning,
+  and posthuman pedagogical research  
 - Provides adaptable framework for diverse institutional contexts and
   learning objectives
 - Enables deep understanding of both theory and practice behind
