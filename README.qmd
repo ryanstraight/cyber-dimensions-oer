@@ -10,13 +10,8 @@ format: gfm
 
 **Learn the Methodology Behind Immersive Cybersecurity Case Studies**
 
-::: {.implementation-guidance title="Coming soon!"}
-
-This toolkit is a supplement to the [_Cyber Dimensions: Immersive Case Studies Across Digital Domains_ textbook](https://he.kendallhunt.com/product/cyber-dimensions-immersive-case-studies-across-digital-domains) published with Kendall Hunt. This Open Educational Resource (OER) is written as a Quarto book, available at [ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
-:::
-
 ## Overview
-<a href="https://github.com/ryanstraight/cyber-dimensions-oer"><img src="assets/cover.png" alt="Cyber Dimensions OER Toolkit Book Cover" align="right" width="200"></a>
+<a href="https://github.com/ryanstraight/cyber-dimensions-oer"><img src="assets/images/cover.png" alt="Cyber Dimensions OER Toolkit Book Cover" align="right" width="200"></a>
 
 This Open Educational Resource (OER) is a comprehensive **methodology guide** that teaches you how to create immersive, fictional cybersecurity case studies for your classroom. This Quarto book documents the "Cyber Dimensions" approach, providing detailed explanations, examples, and frameworks to help you understand and apply this educational methodology in your own context.
 

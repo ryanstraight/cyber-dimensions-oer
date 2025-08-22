@@ -8,34 +8,21 @@
 
 **Learn the Methodology Behind Immersive Cybersecurity Case Studies**
 
-<div class="callout-info">
-
-## Coming soon!
-
-This toolkit is a supplement to the [*Cyber Dimensions: Immersive Case
-Studies Across Digital Domains*
-textbook](https://he.kendallhunt.com/product/cyber-dimensions-immersive-case-studies-across-digital-domains)
-published with Kendall Hunt. This Open Educational Resource (OER) is
-written as a Quarto book, available at
-[ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
-
-</div>
-
 ## Overview
 
-<a href="https://github.com/ryanstraight/cyber-dimensions-oer"><img src="assets/cover.png" alt="Cyber Dimensions OER Toolkit Book Cover" align="right" width="200"></a>
+<a href="https://github.com/ryanstraight/cyber-dimensions-oer"><img src="assets/images/cover.png" alt="Cyber Dimensions OER Toolkit Book Cover" align="right" width="200"></a>
 
 This Open Educational Resource (OER) is a comprehensive **methodology
 guide** that teaches you how to create immersive, fictional
 cybersecurity case studies for your classroom. This Quarto book
-documents the "Cyber Dimensions" approach, providing detailed
+documents the “Cyber Dimensions” approach, providing detailed
 explanations, examples, and frameworks to help you understand and apply
 this educational methodology in your own context.
 
 ### Supplemental to Published Textbook
 
-This OER guide is the companion resource to **"Cyber Dimensions:
-Immersive Case Studies Across Digital Domains"** published by Kendall
+This OER guide is the companion resource to **“Cyber Dimensions:
+Immersive Case Studies Across Digital Domains”** published by Kendall
 Hunt. While the textbook provides complete case studies, assessments,
 and instructional guides ready for classroom use, this methodology guide
 explains how those case studies were developed and how you can apply the
@@ -49,7 +36,7 @@ several advantages over traditional case study development:
 
 - Based on successfully implemented teaching at University of Arizona
 - Grounded in posthumanist learning theory and artifact-based learning
-  research
+  research  
 - Provides adaptable framework for diverse institutional contexts and
   learning objectives
 - Enables deep understanding of both theory and practice behind
@@ -151,47 +138,49 @@ This demo is released under [Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License (CC
 BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-> [!TIP]
->
-> ### You are free to:
->
-> 1.  **Share**— copy and redistribute the material in any medium or
->     format
-> 2.  **Adapt**— remix, transform, and build upon the material
-> 3.  The licensor cannot revoke these freedoms as long as you follow
->     the license terms.
->
-> ### Under the following terms:
->
-> 1.  **Attribution**— You must give [appropriate
->     credit](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-appropriate-credit),
->     provide a link to the license, and [indicate if changes were
->     made](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-indicate-changes).
->     You may do so in any reasonable manner, but not in any way that
->     suggests the licensor endorses you or your use.
-> 2.  **NonCommercial**— You may not use the material for [commercial
->     purposes](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-commercial-purposes).
-> 3.  **ShareAlike**— If you remix, transform, or build upon the
->     material, you must distribute your contributions under the [same
->     license](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-same-license)as
->     the original.
-> 4.  **No additional restrictions**— You may not apply legal terms or
->     [technological
->     measures](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-technological-measures)that
->     legally restrict others from doing anything the license permits.
->
-> ### Notices:
->
-> You do not have to comply with the license for elements of the
-> material in the public domain or where your use is permitted by an
-> applicable [exception or
-> limitation](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-exception-or-limitation).
->
-> No warranties are given. The license may not give you all of the
-> permissions necessary for your intended use. For example, other rights
-> such as [publicity, privacy, or moral
-> rights](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-publicity-privacy-or-moral-rights)may
-> limit how you use the material.
+<div class="evidence-base" title="License Terms">
+
+### You are free to:
+
+1.  **Share**— copy and redistribute the material in any medium or
+    format
+2.  **Adapt**— remix, transform, and build upon the material
+3.  The licensor cannot revoke these freedoms as long as you follow the
+    license terms.
+
+### Under the following terms:
+
+1.  **Attribution**— You must give [appropriate
+    credit](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-appropriate-credit),
+    provide a link to the license, and [indicate if changes were
+    made](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-indicate-changes).
+    You may do so in any reasonable manner, but not in any way that
+    suggests the licensor endorses you or your use.
+2.  **NonCommercial**— You may not use the material for [commercial
+    purposes](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-commercial-purposes).
+3.  **ShareAlike**— If you remix, transform, or build upon the material,
+    you must distribute your contributions under the [same
+    license](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-same-license)as
+    the original.
+4.  **No additional restrictions**— You may not apply legal terms or
+    [technological
+    measures](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-technological-measures)that
+    legally restrict others from doing anything the license permits.
+
+### Notices:
+
+You do not have to comply with the license for elements of the material
+in the public domain or where your use is permitted by an applicable
+[exception or
+limitation](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-exception-or-limitation).
+
+No warranties are given. The license may not give you all of the
+permissions necessary for your intended use. For example, other rights
+such as [publicity, privacy, or moral
+rights](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-publicity-privacy-or-moral-rights)may
+limit how you use the material.
+
+</div>
 
 ## Citation
 
