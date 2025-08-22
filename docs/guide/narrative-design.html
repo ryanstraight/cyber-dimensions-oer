@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>6&nbsp; Narrative Design – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide/ai-assisted-development.html" rel="next">
+<link href="../guide/worldbuilding.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<style>
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/worldbuilding.html">Content Development</a></li><li class="breadcrumb-item"><a href="../guide/narrative-design.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/worldbuilding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/narrative-design.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#assemblage-architecture-for-learning" id="toc-assemblage-architecture-for-learning" class="nav-link active" data-scroll-target="#assemblage-architecture-for-learning">Assemblage Architecture for Learning</a>
+  <ul class="collapse">
+  <li><a href="#the-six-phase-cybersecurity-narrative-technical" id="toc-the-six-phase-cybersecurity-narrative-technical" class="nav-link" data-scroll-target="#the-six-phase-cybersecurity-narrative-technical">The Six-Phase Cybersecurity Narrative: Technical</a></li>
+  <li><a href="#the-six-phase-cybersecurity-assemblage-conceptual" id="toc-the-six-phase-cybersecurity-assemblage-conceptual" class="nav-link" data-scroll-target="#the-six-phase-cybersecurity-assemblage-conceptual">The Six-Phase Cybersecurity Assemblage: Conceptual</a></li>
+  </ul></li>
+  <li><a href="#integrating-learning-objectives-with-assemblages" id="toc-integrating-learning-objectives-with-assemblages" class="nav-link" data-scroll-target="#integrating-learning-objectives-with-assemblages">Integrating Learning Objectives with Assemblages</a>
+  <ul class="collapse">
+  <li><a href="#assemblage-integration-checkpoints" id="toc-assemblage-integration-checkpoints" class="nav-link" data-scroll-target="#assemblage-integration-checkpoints">Assemblage Integration Checkpoints</a></li>
+  </ul></li>
+  <li><a href="#professional-assemblage-participants" id="toc-professional-assemblage-participants" class="nav-link" data-scroll-target="#professional-assemblage-participants">Professional Assemblage Participants</a>
+  <ul class="collapse">
+  <li><a href="#assemblage-participation-framework" id="toc-assemblage-participation-framework" class="nav-link" data-scroll-target="#assemblage-participation-framework">Assemblage Participation Framework</a></li>
+  <li><a href="#creating-authentic-assemblage-participants" id="toc-creating-authentic-assemblage-participants" class="nav-link" data-scroll-target="#creating-authentic-assemblage-participants">Creating Authentic Assemblage Participants</a></li>
+  <li><a href="#technical-communication-patterns" id="toc-technical-communication-patterns" class="nav-link" data-scroll-target="#technical-communication-patterns">Technical Communication Patterns</a></li>
+  <li><a href="#authentic-artifact-guidelines-for-learning" id="toc-authentic-artifact-guidelines-for-learning" class="nav-link" data-scroll-target="#authentic-artifact-guidelines-for-learning">Authentic Artifact Guidelines for Learning</a></li>
+  </ul></li>
+  <li><a href="#creating-narrative-tension-and-engagement" id="toc-creating-narrative-tension-and-engagement" class="nav-link" data-scroll-target="#creating-narrative-tension-and-engagement">Creating Narrative Tension and Engagement</a>
+  <ul class="collapse">
+  <li><a href="#types-of-realistic-cybersecurity-tension" id="toc-types-of-realistic-cybersecurity-tension" class="nav-link" data-scroll-target="#types-of-realistic-cybersecurity-tension">Types of Realistic Cybersecurity Tension</a></li>
+  <li><a href="#building-tension-through-realistic-scenarios" id="toc-building-tension-through-realistic-scenarios" class="nav-link" data-scroll-target="#building-tension-through-realistic-scenarios">Building Tension Through Realistic Scenarios</a></li>
+  <li><a href="#pacing-techniques-for-learning" id="toc-pacing-techniques-for-learning" class="nav-link" data-scroll-target="#pacing-techniques-for-learning">Pacing Techniques for Learning</a></li>
+  </ul></li>
+  <li><a href="#managing-information-flow-and-discovery" id="toc-managing-information-flow-and-discovery" class="nav-link" data-scroll-target="#managing-information-flow-and-discovery">Managing Information Flow and Discovery</a>
+  <ul class="collapse">
+  <li><a href="#layer-information-discovery" id="toc-layer-information-discovery" class="nav-link" data-scroll-target="#layer-information-discovery">Layer Information Discovery</a></li>
+  <li><a href="#create-natural-information-boundaries" id="toc-create-natural-information-boundaries" class="nav-link" data-scroll-target="#create-natural-information-boundaries">Create Natural Information Boundaries</a></li>
+  </ul></li>
+  <li><a href="#professional-communication-across-contexts" id="toc-professional-communication-across-contexts" class="nav-link" data-scroll-target="#professional-communication-across-contexts">Professional Communication Across Contexts</a>
+  <ul class="collapse">
+  <li><a href="#voice-development-by-role" id="toc-voice-development-by-role" class="nav-link" data-scroll-target="#voice-development-by-role">Voice Development by Role</a></li>
+  </ul></li>
+  <li><a href="#integrating-posthuman-assessment-approaches" id="toc-integrating-posthuman-assessment-approaches" class="nav-link" data-scroll-target="#integrating-posthuman-assessment-approaches">Integrating Posthuman Assessment Approaches</a>
+  <ul class="collapse">
+  <li><a href="#posthuman-assessment-integration-framework" id="toc-posthuman-assessment-integration-framework" class="nav-link" data-scroll-target="#posthuman-assessment-integration-framework">Posthuman Assessment Integration Framework</a></li>
+  <li><a href="#show-dont-tell-learning-through-demonstration" id="toc-show-dont-tell-learning-through-demonstration" class="nav-link" data-scroll-target="#show-dont-tell-learning-through-demonstration">Show, Don’t Tell: Learning Through Demonstration</a></li>
+  <li><a href="#posthuman-assessment-design-principles" id="toc-posthuman-assessment-design-principles" class="nav-link" data-scroll-target="#posthuman-assessment-design-principles">Posthuman Assessment Design Principles</a></li>
+  <li><a href="#yaml-supported-assessment-coordination" id="toc-yaml-supported-assessment-coordination" class="nav-link" data-scroll-target="#yaml-supported-assessment-coordination">YAML-Supported Assessment Coordination</a></li>
+  </ul></li>
+  <li><a href="#multiple-perspective-narratives" id="toc-multiple-perspective-narratives" class="nav-link" data-scroll-target="#multiple-perspective-narratives">Multiple Perspective Narratives</a>
+  <ul class="collapse">
+  <li><a href="#core-professional-perspectives" id="toc-core-professional-perspectives" class="nav-link" data-scroll-target="#core-professional-perspectives">Core Professional Perspectives</a></li>
+  <li><a href="#stakeholder-impact-perspectives" id="toc-stakeholder-impact-perspectives" class="nav-link" data-scroll-target="#stakeholder-impact-perspectives">Stakeholder Impact Perspectives</a></li>
+  <li><a href="#creating-multi-perspective-learning" id="toc-creating-multi-perspective-learning" class="nav-link" data-scroll-target="#creating-multi-perspective-learning">Creating Multi-Perspective Learning</a></li>
+  </ul></li>
+  <li><a href="#industry-specific-assemblages-and-sociotechnical-realism" id="toc-industry-specific-assemblages-and-sociotechnical-realism" class="nav-link" data-scroll-target="#industry-specific-assemblages-and-sociotechnical-realism">Industry-Specific Assemblages and Sociotechnical Realism</a>
+  <ul class="collapse">
+  <li><a href="#healthcare-cybersecurity-assemblages" id="toc-healthcare-cybersecurity-assemblages" class="nav-link" data-scroll-target="#healthcare-cybersecurity-assemblages">Healthcare Cybersecurity Assemblages</a></li>
+  <li><a href="#financial-services-cybersecurity-assemblages" id="toc-financial-services-cybersecurity-assemblages" class="nav-link" data-scroll-target="#financial-services-cybersecurity-assemblages">Financial Services Cybersecurity Assemblages</a></li>
+  <li><a href="#educational-institution-cybersecurity-assemblages" id="toc-educational-institution-cybersecurity-assemblages" class="nav-link" data-scroll-target="#educational-institution-cybersecurity-assemblages">Educational Institution Cybersecurity Assemblages</a></li>
+  <li><a href="#manufacturing-and-critical-infrastructure-cybersecurity-assemblages" id="toc-manufacturing-and-critical-infrastructure-cybersecurity-assemblages" class="nav-link" data-scroll-target="#manufacturing-and-critical-infrastructure-cybersecurity-assemblages">Manufacturing and Critical Infrastructure Cybersecurity Assemblages</a></li>
+  <li><a href="#regulatory-framework-integration" id="toc-regulatory-framework-integration" class="nav-link" data-scroll-target="#regulatory-framework-integration">Regulatory Framework Integration</a></li>
+  </ul></li>
+  <li><a href="#common-narrative-design-challenges" id="toc-common-narrative-design-challenges" class="nav-link" data-scroll-target="#common-narrative-design-challenges">Common Narrative Design Challenges</a>
+  <ul class="collapse">
+  <li><a href="#avoiding-unrealistic-scenarios" id="toc-avoiding-unrealistic-scenarios" class="nav-link" data-scroll-target="#avoiding-unrealistic-scenarios">Avoiding Unrealistic Scenarios</a></li>
+  <li><a href="#balancing-technical-accuracy-with-accessibility" id="toc-balancing-technical-accuracy-with-accessibility" class="nav-link" data-scroll-target="#balancing-technical-accuracy-with-accessibility">Balancing Technical Accuracy with Accessibility</a></li>
+  <li><a href="#maintaining-educational-focus" id="toc-maintaining-educational-focus" class="nav-link" data-scroll-target="#maintaining-educational-focus">Maintaining Educational Focus</a></li>
+  </ul></li>
+  <li><a href="#next-steps-in-narrative-development" id="toc-next-steps-in-narrative-development" class="nav-link" data-scroll-target="#next-steps-in-narrative-development">Next Steps in Narrative Development</a>
+  <ul class="collapse">
+  <li><a href="#your-narrative-development-process" id="toc-your-narrative-development-process" class="nav-link" data-scroll-target="#your-narrative-development-process">Your Narrative Development Process</a></li>
+  <li><a href="#narrative-design-checklist" id="toc-narrative-design-checklist" class="nav-link" data-scroll-target="#narrative-design-checklist">Narrative Design Checklist</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/narrative-design.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/worldbuilding.html">Content Development</a></li><li class="breadcrumb-item"><a href="../guide/narrative-design.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-narrative-design" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Creating compelling cybersecurity case studies requires systematic assemblage creation through authentic professional artifacts rather than traditional narrative storytelling. This chapter provides practical guidance for developing material-semiotic educational assemblages that immerse students in realistic professional scenarios through collections of documents, communications, and multimedia evidence.</p>
+<p>Building on the posthuman foundations established in this toolkit, your case studies function as educational assemblages where fictional characters, organizational systems, technological artifacts, and student interpretations co-constitute learning experiences. Rather than consuming predetermined narratives, students participate in assemblages by analyzing authentic professional communications, investigating document collections, and constructing understanding through engagement with realistic organizational networks.</p>
+<p>This artifact-based approach embodies the posthuman educational principles of distributed agency, emergent knowledge, and material-semiotic practices, creating educational experiences where learning emerges through assemblage participation rather than individual knowledge acquisition.</p>
+<section id="assemblage-architecture-for-learning" class="level2">
+<h2 class="anchored" data-anchor-id="assemblage-architecture-for-learning">Assemblage Architecture for Learning</h2>
+<p>Effective cybersecurity educational assemblages follow progressions that mirror how security professionals actually encounter and respond to incidents through authentic document collections and professional communications. In technical contexts, assemblages present evidence-based investigations through system logs, forensic reports, and incident documentation. In conceptual or theoretical contexts focusing on ethics, law, or policy, assemblages present morally, ethically, and legally ambiguous content through leaked documents, legal briefs, and stakeholder communications. Your assemblage architecture should build complexity through artifact layers while providing multiple opportunities for collaborative learning assessment.</p>
+<section id="the-six-phase-cybersecurity-narrative-technical" class="level3">
+<h3 class="anchored" data-anchor-id="the-six-phase-cybersecurity-narrative-technical">The Six-Phase Cybersecurity Narrative: Technical</h3>
+<ol type="1">
+<li><strong>Context Setting</strong> - Establish the organization, characters, and normal operations before any incident occurs</li>
+<li><strong>Incident Discovery</strong> - Show how security events are detected and initially assessed by real professionals</li>
+<li><strong>Investigation and Analysis</strong> - Demonstrate systematic approaches to understanding what happened and why</li>
+<li><strong>Decision Points</strong> - Present realistic choices that professionals face, with genuine trade-offs and constraints</li>
+<li><strong>Response and Implementation</strong> - Show how solutions are actually deployed in organizational contexts</li>
+<li><strong>Lessons and Reflection</strong> - Provide opportunities for students to synthesize learning and apply concepts</li>
+</ol>
+</section>
+<section id="the-six-phase-cybersecurity-assemblage-conceptual" class="level3">
+<h3 class="anchored" data-anchor-id="the-six-phase-cybersecurity-assemblage-conceptual">The Six-Phase Cybersecurity Assemblage: Conceptual</h3>
+<p>For ethics, law, and policy-focused case studies, assemblages unfold through authentic artifacts that reveal ethical dilemmas and stakeholder conflicts:</p>
+<ol type="1">
+<li><strong>Regulatory/Ethical Landscape</strong> - Policy documents, industry guidance, and compliance frameworks that establish the sociotechnical environment</li>
+<li><strong>Ethical Dilemma Discovery</strong> - Internal memos, whistleblower communications, or leaked documents that reveal potential ethical concerns</li>
+<li><strong>Stakeholder Analysis</strong> - Legal briefs, corporate communications, social media responses, and expert analyses representing diverse perspectives</li>
+<li><strong>Framework Application</strong> - Academic blog posts, policy analyses, and professional ethics commentary applying theoretical frameworks</li>
+<li><strong>Decision Points</strong> - Court documents, legislative hearings, regulatory actions, and corporate board minutes showing consequential choices</li>
+<li><strong>Implications and Reflection</strong> - Industry responses, policy changes, and longitudinal analysis examining long-term consequences for sociotechnical assemblages</li>
+</ol>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Structure Flexibility
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Not every case study needs all six phases. Shorter scenarios might focus on 2-3 phases, while comprehensive cases can develop each phase extensively. Match your structure to your learning objectives.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="integrating-learning-objectives-with-assemblages" class="level2">
+<h2 class="anchored" data-anchor-id="integrating-learning-objectives-with-assemblages">Integrating Learning Objectives with Assemblages</h2>
+<p>The most effective cybersecurity educational assemblages seamlessly weave educational content into authentic professional artifact collections. Students learn through participating in realistic sociotechnical networks rather than through explicit instruction. As with any instructional design grounded in posthuman pedagogy, you will most likely be best served by beginning with learning objectives and expected learning outcomes, then creating assemblages that enable these through material-semiotic practices.</p>
+<p>The assemblage creation process embodies distributed agency and emergent knowledge principles. Examples of artifact-based methods for achieving learning objectives include:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 39%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Document Analysis</strong></td>
+<td>Students discover concepts through systematic investigation of authentic artifacts</td>
+<td>FBI investigation report revealing attack methodology through technical evidence</td>
+</tr>
+<tr class="even">
+<td><strong>Professional Communications</strong></td>
+<td>Technical concepts emerge through realistic organizational document collections</td>
+<td>Email chains between security teams, executive memos, legal strategy documents</td>
+</tr>
+<tr class="odd">
+<td><strong>Evidence Collections</strong></td>
+<td>Investigation-based learning through leaked documents and confidential materials emphasizing collaborative analysis</td>
+<td>Court transcripts, encrypted chat logs, whistleblower documents requiring collaborative interpretation</td>
+</tr>
+<tr class="even">
+<td><strong>Recorded Conversations</strong></td>
+<td>Stakeholder perspectives emerge through authentic audio/video transcripts and interviews</td>
+<td>Podcast interviews with experts, deposition transcripts, recorded phone conversations</td>
+</tr>
+<tr class="odd">
+<td><strong>Response Documentation</strong></td>
+<td>Learning emerges through analyzing organizational reactions to cybersecurity events</td>
+<td>Press releases, legal briefs, regulatory filings, social media response threads</td>
+</tr>
+<tr class="even">
+<td><strong>System Artifacts</strong></td>
+<td>Technical understanding develops through engagement with realistic cybersecurity tools and outputs</td>
+<td>Network logs, forensic timeline reports, vulnerability assessment results</td>
+</tr>
+</tbody>
+</table>
+<section id="assemblage-integration-checkpoints" class="level3">
+<h3 class="anchored" data-anchor-id="assemblage-integration-checkpoints">Assemblage Integration Checkpoints</h3>
+<p>You should, generally speaking, have a rough understanding of your case study assemblage before finalizing artifact collections, ensuring learning objectives emerge through:</p>
+<ul>
+<li><strong>Document evidence</strong> rather than exposition - technical reports, investigation findings, forensic analyses</li>
+<li><strong>Authentic professional communications</strong> rather than lecture-style explanations - emails, memos, chat logs, meeting transcripts<br>
+</li>
+<li><strong>Collaborative investigation processes</strong> rather than information dumps - students constructing understanding through evidence analysis</li>
+<li><strong>Realistic organizational responses</strong> rather than contrived outcomes - press releases, legal actions, policy changes</li>
+</ul>
+<div class="callout callout-style-simple callout-cognitive-load-alert callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cognitive-load-alert</span>Avoid Artificial Exposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If artifacts contain unrealistic explanations of basic concepts or if documents include information inappropriate for their intended audience, you’re likely forcing content integration. Authentic professional communications assume domain expertise and address practical organizational needs rather than providing educational background.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="professional-assemblage-participants" class="level2">
+<h2 class="anchored" data-anchor-id="professional-assemblage-participants">Professional Assemblage Participants</h2>
+<p>Drawing from Actor-Network Theory and posthuman educational principles, effective cybersecurity case studies recognize that fictional professionals function as actants within complex sociotechnical assemblages rather than independent psychological entities. These professional participants possess authentic expertise, engage in realistic relationships with technological systems and organizational structures, and demonstrate how cybersecurity understanding emerges through assemblage participation rather than individual cognition.</p>
+<p>Different assemblage participants serve specific educational purposes by modeling various forms of distributed agency and human-technology co-constitution:</p>
+<p><strong>Emerging Security Professionals</strong>: Model learning through assemblage participation, demonstrating how security understanding develops through collaborative engagement with technological systems and expert networks.</p>
+<ul>
+<li>Embody distributed cognition by working with rather than simply using security technologies</li>
+<li>Navigate uncertainties through assemblage collaboration rather than individual problem-solving</li>
+<li>Demonstrate posthuman learning where expertise emerges through human-technology partnerships</li>
+<li>Model ethical reasoning that recognizes distributed responsibility across sociotechnical networks</li>
+</ul>
+<p><strong>Expert Assemblage Coordinators</strong>: Demonstrate sophisticated participation in cybersecurity assemblages, showing how experience enables coordination across complex sociotechnical networks.</p>
+<ul>
+<li>Facilitate assemblage relationships between human stakeholders and technological systems</li>
+<li>Model postphenomenological relations where technologies become transparent extensions of analytical capabilities</li>
+<li>Show how cybersecurity expertise emerges through sustained assemblage participation</li>
+<li>Demonstrate ethical leadership that accounts for technological agency and distributed decision-making</li>
+</ul>
+<p><strong>Organizational Assemblage Mediators</strong>: Represent how cybersecurity decisions emerge through complex organizational assemblages involving multiple human and technological actants.</p>
+<ul>
+<li>Navigate tensions between security assemblages and business operational assemblages</li>
+<li>Facilitate translation between technical security networks and organizational governance structures</li>
+<li>Model stakeholder coordination that recognizes both human and technological agency</li>
+<li>Demonstrate strategic thinking that accounts for assemblage-level effects and emergent properties</li>
+</ul>
+<p><strong>External Assemblage Representatives</strong>: Show how cybersecurity assemblages extend beyond organizational boundaries to include regulatory frameworks, customer networks, and public stakeholders.</p>
+<ul>
+<li>Represent regulatory assemblages as active participants rather than external constraints</li>
+<li>Demonstrate how cybersecurity decisions affect broader sociotechnical networks</li>
+<li>Model accountability that recognizes cybersecurity as assemblage phenomenon affecting multiple constituencies</li>
+<li>Show diverse perspectives on risk that emerge from different assemblage positions</li>
+</ul>
+<section id="assemblage-participation-framework" class="level3">
+<h3 class="anchored" data-anchor-id="assemblage-participation-framework">Assemblage Participation Framework</h3>
+<p>For each professional assemblage participant, define their relationships within sociotechnical networks using YAML-based worldbuilding integration:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">assemblage_participant</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="at">  </span><span class="fu">yaml_reference</span><span class="kw">:</span><span class="at"> </span><span class="st">"protagonist_security_analyst"</span><span class="co"> # Links to _worldbuilding.yml</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="at">  </span><span class="fu">assemblage_role</span><span class="kw">:</span><span class="at"> </span><span class="st">"Emerging Security Professional"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">technology_relations</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Embodied relationship with SIEM systems"</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Hermeneutic analysis through vulnerability scanners"</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Collaborative reasoning with AI-enhanced threat detection"</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="at">  </span><span class="fu">network_position</span><span class="kw">:</span><span class="at"> </span><span class="st">"Bridge between SOC operations and incident response teams"</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="at">  </span><span class="fu">ethical_orientation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Recognizes distributed responsibility across human-technology assemblages"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="at">  </span><span class="fu">learning_trajectory</span><span class="kw">:</span><span class="at"> </span><span class="st">"Develops expertise through sustained assemblage participation"</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="at">  </span><span class="fu">communication_patterns</span><span class="kw">:</span><span class="at"> </span><span class="st">"Technical evidence-based emails, collaborative chat discussions"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This framework emphasizes relationships and assemblage positioning rather than individual psychological traits, supporting the dynamic YAML integration demonstrated in the exodus case study.</p>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>AI-Enhanced Worldbuilding Benefits
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Structured YAML assemblage definitions provide significant advantages when working with AI systems for case study development:</p>
+<p><strong>Narrative Coherence</strong>: AI can reference consistent character traits, communication patterns, and assemblage relationships across multiple document types, maintaining worldbuilding fidelity even when generating diverse artifacts.</p>
+<p><strong>Scalable Content Generation</strong>: Well-defined assemblage parameters enable AI to create realistic emails, meeting minutes, legal documents, and social media posts that all reflect the same underlying character and organizational dynamics.</p>
+<p><strong>Cross-Document Consistency</strong>: YAML variables ensure that when AI generates a forensic report referencing <code>`r world$junior_analyst_name_first`</code>, an executive briefing mentioning the same character, and social media posts about the incident, all details remain perfectly aligned.</p>
+<p><strong>Sophisticated Assemblage Modeling</strong>: AI can leverage detailed assemblage participant frameworks to generate communications that reflect appropriate technology relations, network positions, and ethical orientations without manual oversight of each artifact.</p>
+<p>This approach transforms AI from a simple content generator into a sophisticated assemblage collaborator that can maintain complex sociotechnical relationships across extensive case study collections.</p>
+</div>
+</div>
+</section>
+<section id="creating-authentic-assemblage-participants" class="level3">
+<h3 class="anchored" data-anchor-id="creating-authentic-assemblage-participants">Creating Authentic Assemblage Participants</h3>
+<p><strong>Demonstrate specific assemblage competencies</strong></p>
+<ul>
+<li>Emerging professionals exhibit learning through human-technology partnerships in network monitoring assemblages</li>
+<li>Expert coordinators facilitate complex forensics assemblages involving multiple technological systems and human stakeholders</li>
+<li>Organizational mediators navigate assemblages connecting technical security networks with business governance structures</li>
+<li>External representatives embody regulatory assemblages as active participants in cybersecurity networks</li>
+</ul>
+<p><strong>Show authentic assemblage pressures</strong></p>
+<ul>
+<li>Temporal constraints emerge through incident response assemblages requiring rapid human-technology coordination</li>
+<li>Resource limitations manifest through procurement assemblages affecting technology acquisition and deployment</li>
+<li>Regulatory assemblages actively shape decision possibilities through compliance frameworks and audit processes</li>
+<li>Stakeholder expectations create communication assemblages requiring translation across diverse network positions</li>
+<li>Executive directives influence assemblage configurations through strategic technology and policy decisions</li>
+<li>Public discourse assemblages involving media, political actors, and expert commentary shape organizational responses</li>
+</ul>
+<p><strong>Model realistic assemblage relationships</strong></p>
+<ul>
+<li>Curiosity about emergent attack patterns develops through sustained engagement with threat intelligence assemblages</li>
+<li>Attention to evidence emerges through collaborative analysis assemblages involving both human expertise and technological processing</li>
+<li>Organizational reputation concerns arise through complex assemblages connecting security performance with business continuity</li>
+<li>Technical problem-solving pride develops through successful assemblage coordination rather than individual achievement</li>
+</ul>
+<p>Realistic cybersecurity dialogue serves multiple educational functions: it models professional communication, integrates technical concepts naturally, and demonstrates how experts think through complex problems. Providing realistic <em>styles</em> in the visual display of content is key: a plain text transcript is one thing, but what appears to be a screenshot of a Signal chat can be much more effective and immersive.</p>
+</section>
+<section id="technical-communication-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="technical-communication-patterns">Technical Communication Patterns</h3>
+<p><strong>Incident Response Communication through Professional Artifacts</strong></p>
+<p><strong>Email Chain - High Priority Security Incident</strong></p>
+<pre><code>From: `r world$junior_analyst_name_first`.`r world$junior_analyst_name_last`\@company.com
+To: soc-team\@company.com
+Subject: [URGENT] Possible lateral movement detected - Domain Controller compromise
+Sent: `r world$incident_discovery_timestamp`
+
+Team,
+
+SIEM correlation rules are triggering on lateral movement patterns across network segments 10.0.1.0/24, 10.0.2.0/24, and 10.0.5.0/24. Observed behaviors:
+
+- Elevated privileges detected on DC01.`r world$company_name`.local
+- Unusual PowerShell execution on multiple workstations
+- Data staging activity in \\backup-server\staging
+- Timeline analysis suggests initial compromise ~72 hours ago
+
+I've implemented containment on affected segments. Recommending immediate forensic imaging before restoration attempts.
+
+`r world$junior_analyst_name_first`
+---
+From: `r world$security_director_name_first`.`r world$security_director_name_last`\@company.com
+To: soc-team\@company.com
+CC: `r world$ceo_name_first`.`r world$ceo_name_last`\@company.com
+Subject: RE: [URGENT] Possible lateral movement detected
+Sent: `r world$initial_response_timestamp`
+
+Good catch, `r world$junior_analyst_name_first`. Escalating to executive team and activating IR retainer.
+
+Backup integrity verification is critical - do NOT restore until we confirm clean images.
+
+`r world$security_director_name_first`</code></pre>
+<p><strong>Executive Briefing through Meeting Minutes</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>CONFIDENTIAL - Board Security Briefing Minutes</strong><br>
+<strong><code>r world$company_name</code> Executive Committee</strong><br>
+<strong>Date</strong>: <code>r world$executive_briefing_timestamp</code><br>
+<strong>Attendees</strong>: <code>r world$ceo_name_salutation</code> <code>r world$ceo_name_last</code> (CEO), <code>r world$security_director_name_salutation</code> <code>r world$security_director_name_last</code> (Security Director), Legal Counsel</tt></p><tt>
+<p><strong>AGENDA ITEM</strong>: Emergency Security Incident Response</p>
+<p><strong>Security Director Report</strong>:<br>
+- Containment achieved on affected network segments - Evidence indicates unauthorized access to customer database - Preliminary forensics suggest <code>r world$records_compromised</code> potentially affected - Attack vector: spear-phishing email targeting finance department - Threat actor maintained persistence for approximately 72 hours</p>
+<p><strong>Legal Counsel Assessment</strong>:<br>
+- <code>r world$primary_regulation</code> notification requirements apply - Customer notification deadline: <code>r world$notification_deadline</code> - Estimated regulatory exposure: <code>r world$regulatory_fines</code> - Recommend immediate external legal counsel engagement</p>
+<p><strong>CEO Decision Points</strong>:<br>
+1. Authorize <code>r world$direct_costs</code> emergency response budget 2. Prepare customer communication strategy 3. Schedule emergency board meeting for Friday</p>
+<p><strong>ACTION ITEMS</strong>:<br>
+- Security Director: Complete forensic timeline by Thursday - Legal: Draft regulatory notification letters - CEO: Prepare media statement (pending further investigation)</p>
+</tt><p><tt><strong>Meeting Adjourned</strong>: 5:45 PM </tt></p>
+</div>
+</div>
+</section>
+<section id="authentic-artifact-guidelines-for-learning" class="level3">
+<h3 class="anchored" data-anchor-id="authentic-artifact-guidelines-for-learning">Authentic Artifact Guidelines for Learning</h3>
+<ol type="1">
+<li><strong>Use professional communication formats</strong> - Students need exposure to actual business documents and communication channels</li>
+<li><strong>Show collaborative reasoning through documentation</strong> - Artifacts should reveal decision-making processes and evidence chains<br>
+</li>
+<li><strong>Include incomplete information</strong> - Real professional documents often contain gaps, redactions, and uncertainties</li>
+<li><strong>Demonstrate cross-functional coordination</strong> - Multiple document types should reflect diverse organizational perspectives and requirements</li>
+</ol>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Dialogue Balance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Balance realism with accessibility. Include technical terms that students should learn, but provide enough context that concepts remain understandable. The Quarto system is especially well suited to this with the <strong>profile</strong> feature, allowing you to create multiple versions of the same content and choose between them on demand. You might want to use the same basic case for both a 6th grade and 9th grade class, but the <em>content</em> you would present to them would be different.</p>
+<p>To learn more about Quarto profiles, see: <a href="https://quarto.org/docs/authoring/conditional.html">Quarto Documentation on Conditional Content</a></p>
+</div>
+</div>
+</section>
+</section>
+<section id="creating-narrative-tension-and-engagement" class="level2">
+<h2 class="anchored" data-anchor-id="creating-narrative-tension-and-engagement">Creating Narrative Tension and Engagement</h2>
+<p>Effective cybersecurity narratives balance professional realism with dramatic engagement. Your story needs enough tension to maintain student interest while avoiding unrealistic scenarios that undermine learning objectives.</p>
+<section id="types-of-realistic-cybersecurity-tension" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-realistic-cybersecurity-tension">Types of Realistic Cybersecurity Tension</h3>
+<p><strong>Time Pressure</strong></p>
+<ul>
+<li>Incident response deadlines (regulatory notification requirements)</li>
+<li>System downtime affecting business operations<br>
+</li>
+<li>Attack progression threatening additional systems</li>
+<li>Weekend/holiday staffing limitations during incidents</li>
+</ul>
+<p><strong>Resource Constraints</strong></p>
+<ul>
+<li>Limited budget for security tools or additional staff</li>
+<li>Competing priorities during major incidents</li>
+<li>Skill gaps in specialized areas (forensics, malware analysis)</li>
+<li>Executive pressure to minimize business disruption</li>
+</ul>
+<p><strong>Information Uncertainty</strong></p>
+<ul>
+<li>Incomplete attack attribution or timeline reconstruction</li>
+<li>Ambiguous log data requiring expert interpretation</li>
+<li>Evolving threat landscape with unknown attack techniques</li>
+<li>Conflicting evidence from different security tools</li>
+</ul>
+<p><strong>Stakeholder Conflicts</strong></p>
+<ul>
+<li>Business continuity vs.&nbsp;security thoroughness</li>
+<li>Public disclosure vs.&nbsp;competitive sensitivity</li>
+<li>Customer privacy vs.&nbsp;law enforcement cooperation</li>
+<li>Cost of response vs.&nbsp;potential future risk</li>
+</ul>
+<p><strong>Gray Areas</strong></p>
+<ul>
+<li>Disclosure obligations vs.&nbsp;ongoing investigation integrity</li>
+<li>Patient privacy vs.&nbsp;law enforcement information requests</li>
+<li>Employee monitoring vs.&nbsp;workforce privacy expectations</li>
+<li>International data transfer restrictions during incident response</li>
+<li>Whistleblower protection vs.&nbsp;organizational reputation management</li>
+<li>Vendor liability disputes during supply chain compromise incidents</li>
+<li>Insurance claim requirements vs.&nbsp;public disclosure limitations</li>
+</ul>
+</section>
+<section id="building-tension-through-realistic-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="building-tension-through-realistic-scenarios">Building Tension Through Realistic Scenarios</h3>
+<p><strong>Escalating Complexity</strong></p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-incident-escalation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-incident-escalation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-incident-escalation">graph LR
+    A[🔍 Initial Detection&lt;br/&gt;Routine monitoring&lt;br/&gt;Single system alert] --&gt; B[📈 Scope Expansion&lt;br/&gt;Multiple systems affected&lt;br/&gt;Pattern recognition]
+    B --&gt; C[💼 Business Impact&lt;br/&gt;Operations disrupted&lt;br/&gt;Revenue at risk]
+    C --&gt; D[⚖️ Stakeholder Pressure&lt;br/&gt;Executive involvement&lt;br/&gt;Regulatory concerns]
+    
+    subgraph tension [" "]
+        direction TB
+        T1[⚡ Technical Complexity]
+        T2[🎯 Business Criticality] 
+        T3[📊 Communication Demands]
+        T4[⏰ Time Pressure]
+    end
+    
+    A -.-&gt; T1
+    B -.-&gt; T2
+    C -.-&gt; T3
+    D -.-&gt; T4
+    
+    style A fill:#E8F4FD,stroke:#2563EB,stroke-width:2px,color:#1E40AF
+    style B fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#92400E
+    style C fill:#FEE2E2,stroke:#DC2626,stroke-width:2px,color:#991B1B
+    style D fill:#F3E8FF,stroke:#7C3AED,stroke-width:2px,color:#5B21B6
+    
+    style T1 fill:#F0F9FF,stroke:#0EA5E9,stroke-width:1px,color:#0C4A6E
+    style T2 fill:#F0F9FF,stroke:#0EA5E9,stroke-width:1px,color:#0C4A6E
+    style T3 fill:#F0F9FF,stroke:#0EA5E9,stroke-width:1px,color:#0C4A6E
+    style T4 fill:#F0F9FF,stroke:#0EA5E9,stroke-width:1px,color:#0C4A6E
+    
+    style tension fill:none,stroke:none
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incident-escalation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Realistic Incident Escalation Pattern for Building Educational Tension
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Example: Healthcare Ransomware Incident</strong></p>
+<ol type="1">
+<li><strong>Discovery</strong>: IT notices server performance issues during routine monitoring</li>
+<li><strong>Escalation</strong>: Multiple systems show encryption activity; patient records affected<br>
+</li>
+<li><strong>Crisis</strong>: Emergency department loses access to patient histories during busy shift</li>
+<li><strong>Regulation</strong>: Lawyers get involved for potential HIPAA violations</li>
+<li><strong>Resolution</strong>: Incident response team balances patient safety with forensic integrity</li>
+</ol>
+</section>
+<section id="pacing-techniques-for-learning" class="level3">
+<h3 class="anchored" data-anchor-id="pacing-techniques-for-learning">Pacing Techniques for Learning</h3>
+<p>Variety in source materials, types, and order can have outsided impacts on engagement and interaction.</p>
+<p><strong>Vary Information Density</strong></p>
+<p>A case study comprised entirely of dense documents or social media threads will become tedious and disengaging. Consider:</p>
+<ul>
+<li>Intensive technical analysis followed by strategic planning discussions</li>
+<li>Leaked C-level memos followed by</li>
+<li>Fast-paced incident response alternating with methodical investigation</li>
+<li>Brief character development moments between high-stress decision points</li>
+</ul>
+<p><strong>Use Professional Rhythms</strong></p>
+<p>Depending on the nature of the case you’re developing, you may wish to provide realistic team communiques to provide context, immersion, and reference materials. For example:</p>
+<ul>
+<li>Morning briefings and end-of-day summaries</li>
+<li>Weekend incident response with skeleton crews</li>
+<li>Regular security meetings interrupted by urgent alerts</li>
+</ul>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Tension vs. Melodrama
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cybersecurity work can be inherently dramatic without requiring artificial enhancement. Focus on realistic professional pressures rather than contrived personal conflicts or Hollywood-style scenarios.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="managing-information-flow-and-discovery" class="level2">
+<h2 class="anchored" data-anchor-id="managing-information-flow-and-discovery">Managing Information Flow and Discovery</h2>
+<p>Effective cybersecurity narratives mirror how security professionals actually encounter information: gradually, through investigation processes, and often with gaps or ambiguities that require interpretation.</p>
+<p><strong>Initial Alert and Triage</strong></p>
+<ul>
+<li>Automated systems generate alerts with limited context</li>
+<li>Security analysts must determine which alerts warrant investigation</li>
+<li>Initial information often provides more questions than answers</li>
+</ul>
+<p><strong>Progressive Investigation</strong></p>
+<ul>
+<li>Technical evidence emerges through systematic analysis of logs, network traffic, and system behavior</li>
+<li>“Real-world” events mimic OSINT gathering, may include easter eggs</li>
+<li>Timeline presentation reveals attack progression over hours, days, weeks, or even longer</li>
+<li>Each discovery leads to new questions and analytic paths</li>
+</ul>
+<p><strong>Collaborative Analysis</strong></p>
+<ul>
+<li>Different team members contribute specialized expertise (network analysis, malware reverse engineering, threat intelligence)</li>
+<li>External resources (vendors, law enforcement, industry peers) may provide additional insights</li>
+<li>Understanding develops through discussion and shared analysis</li>
+</ul>
+<section id="layer-information-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="layer-information-discovery">Layer Information Discovery</h3>
+<p>For technical cases, consider:</p>
+<ol type="1">
+<li><strong>Surface symptoms</strong> - What security tools are detecting</li>
+<li><strong>Technical evidence</strong> - What investigation reveals about attack methods<br>
+</li>
+<li><strong>Business context</strong> - How the incident affects organizational operations</li>
+<li><strong>Strategic implications</strong> - Long-term risk and prevention considerations</li>
+</ol>
+</section>
+<section id="create-natural-information-boundaries" class="level3">
+<h3 class="anchored" data-anchor-id="create-natural-information-boundaries">Create Natural Information Boundaries</h3>
+<ul>
+<li>Some evidence may be corrupted or unavailable</li>
+<li>Some information be redacted or purposefully obfuscated</li>
+<li>Attack attribution often remains uncertain, as can motivations of actors</li>
+<li>Timeline reconstruction may have gaps</li>
+<li>Business impact assessment takes time to develop, and <em>true</em> effects of actions may take months</li>
+</ul>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Information Realism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Real cybersecurity investigations rarely provide complete, unambiguous answers. Students need to learn how to make decisions with partial information and communicate uncertainty appropriately.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="professional-communication-across-contexts" class="level2">
+<h2 class="anchored" data-anchor-id="professional-communication-across-contexts">Professional Communication Across Contexts</h2>
+<p>Cybersecurity professionals must communicate effectively with diverse audiences, from technical peers to executive leadership to external stakeholders. Your narratives should model this communication variety while demonstrating appropriate professional voice for different contexts.</p>
+<section id="voice-development-by-role" class="level3">
+<h3 class="anchored" data-anchor-id="voice-development-by-role">Voice Development by Role</h3>
+<p><strong>Junior Analyst Voice Characteristics</strong></p>
+<p>Perhaps the junior and senior analysts communicate through Slack or Microsoft Teams:</p>
+<blockquote class="blockquote">
+<p>Hey, I’m seeing unusual network traffic patterns, but I want to run this by someone more experienced before escalating. The SIEM flagged it as medium priority, but something about the timing doesn’t feel right. Thoughts?</p>
+</blockquote>
+<ul>
+<li>Shows appropriate humility and learning orientation</li>
+<li>Demonstrates analytical thinking while seeking guidance</li>
+<li>Balances confidence with recognition of expertise gaps</li>
+</ul>
+<p><strong>Senior Professional Voice Characteristics</strong></p>
+<p>Then the senior analyst tags the entire channel:</p>
+<blockquote class="blockquote">
+<p>Based on the attack vectors and timeline, this appears to be a targeted campaign rather than opportunistic scanning. Check our threat intelligence feeds. Ping our incident response retainer, just in case.</p>
+</blockquote>
+<ul>
+<li>Demonstrates expertise through technical analysis</li>
+<li>Provides clear guidance and next steps</li>
+<li>Shows strategic thinking about resource allocation</li>
+</ul>
+<p><strong>Manager Voice Characteristics</strong></p>
+<p>Through a memo to the entire department, for example:</p>
+<blockquote class="blockquote">
+<p>We need to balance thorough investigation with business continuity. I’m authorizing overtime for the security team, but we also need to prepare communication materials for customers if this escalates to a breach notification.</p>
+</blockquote>
+<ul>
+<li>Focuses on operational impact and resource management</li>
+<li>Balances competing priorities and stakeholder needs</li>
+<li>Demonstrates decision-making under uncertainty</li>
+</ul>
+</section>
+</section>
+<section id="integrating-posthuman-assessment-approaches" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="integrating-posthuman-assessment-approaches">Integrating Posthuman Assessment Approaches</h2>
+<p>Well-designed cybersecurity assemblages create natural points for assessing student participation in complex sociotechnical networks. Rather than interrupting artifact investigations with obvious questions, embed assessment opportunities within authentic professional scenarios that recognize learning as assemblage participation rather than individual cognitive achievement.</p>
+<p>Posthuman assessment approaches evaluate how students engage with distributed agency, navigate human-technology relations, and contribute to collaborative sense-making across organizational assemblages. Students demonstrate understanding through meaningful participation in the same types of sociotechnical networks that characterize professional cybersecurity practice.</p>
+<section id="posthuman-assessment-integration-framework" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="posthuman-assessment-integration-framework">Posthuman Assessment Integration Framework</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Assemblage Coordination</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Technology Relations</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Network Communication</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Students demonstrate understanding by navigating distributed agency across organizational networks:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Assessment Focus</strong></th>
+<th><strong>Student Demonstrates</strong></th>
+<th><strong>Example Artifact</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Distributed Decision-Making</strong></td>
+<td>How technical, business, and legal perspectives contribute to incident response effectiveness</td>
+<td>Multi-stakeholder risk assessment comparing <code>r world$security_director_name_first</code>’s technical analysis with legal requirements</td>
+</tr>
+<tr class="even">
+<td><strong>Assemblage Interventions</strong></td>
+<td>What changes to human-technology-organization relationships would improve security outcomes</td>
+<td>Infrastructure modification proposal addressing both technological capabilities and human workflow patterns</td>
+</tr>
+<tr class="odd">
+<td><strong>Emergent Outcomes</strong></td>
+<td>How security practices arise through assemblage interactions rather than individual control</td>
+<td>Analysis of how <code>r world$company_name</code>’s security posture emerges from technology-human-policy interactions</td>
+</tr>
+<tr class="even">
+<td><strong>Posthuman Ethics</strong></td>
+<td>How responsibility is distributed across human, technological, and organizational actors</td>
+<td>Incident accountability framework recognizing agency across the entire sociotechnical network</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Students engage with postphenomenological dimensions of cybersecurity practice:</p>
+<div class="callout callout-style-simple callout-theoretical-foundation callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Theoretical-foundation</span>Embodiment Relations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><strong>Focus</strong>: How do security analysts develop “feel” for network anomalies through SIEM interfaces?</p>
+<p><strong>Assessment</strong>: Students describe how <code>r world$junior_analyst_name_first</code> learns to “sense” threats through dashboard interactions, developing embodied expertise that extends human perception through technological mediation.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-theoretical-foundation callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Theoretical-foundation</span>Hermeneutic Relations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><strong>Focus</strong>: How do students learn to “read” cybersecurity situations through technological mediation?</p>
+<p><strong>Assessment</strong>: Analysis of how forensic tools enable interpretation of attack patterns, with students explaining how technologies become transparent interpretive aids rather than mere instruments.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-theoretical-foundation callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Theoretical-foundation</span>Alterity Relations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><strong>Focus</strong>: Where do security systems demonstrate quasi-agency requiring human acknowledgment?</p>
+<p><strong>Assessment</strong>: Students identify moments when security systems “push back” or demonstrate unexpected behaviors, requiring collaborative human-technology problem-solving.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-theoretical-foundation callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Theoretical-foundation</span>Background Relations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p><strong>Focus</strong>: How does cybersecurity infrastructure shape possibilities without explicit attention?</p>
+<p><strong>Assessment</strong>: Students analyze how security architectures create the “background” conditions enabling or constraining organizational activities, often operating below conscious awareness.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Students participate in realistic organizational assemblages through authentic communication scenarios:</p>
+<div class="column-page-inset">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB
+    A[Technical Analysis&lt;br/&gt;Junior Analyst] --&gt; D[Assemblage Communication Hub]
+    B[Business Requirements&lt;br/&gt;CEO] --&gt; D
+    C[Regulatory Compliance&lt;br/&gt;Legal Team] --&gt; D
+    D --&gt; E[Multi-Stakeholder Coordination]
+    D --&gt; F[Cross-Assemblage Translation]
+    D --&gt; G[Network-Aware Presentations]
+    D --&gt; H[Regulatory Assemblage Engagement]
+    
+    style D fill:#e1f5fe
+    style E fill:#f3e5f5
+    style F fill:#f3e5f5
+    style G fill:#f3e5f5
+    style H fill:#f3e5f5
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-assessment-strategy callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Assessment-strategy</span>Assessment Design Principle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rather than testing isolated knowledge, these frameworks evaluate student capacity to participate meaningfully in the distributed, collaborative networks that characterize professional cybersecurity practice. Learning becomes visible through authentic assemblage participation.</p>
+</div>
+</div>
+</section>
+<section id="show-dont-tell-learning-through-demonstration" class="level3">
+<h3 class="anchored" data-anchor-id="show-dont-tell-learning-through-demonstration">Show, Don’t Tell: Learning Through Demonstration</h3>
+<p>Rather than presenting cybersecurity concepts through abstract explanations, the posthuman approach embeds learning within authentic professional artifacts that demonstrate assemblage coordination and material-semiotic practices.</p>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Artifact-Based Learning Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Poor Integration Example:</strong></p>
+<pre><code>"SQL injection attacks exploit vulnerabilities in web applications by 
+inserting malicious code into database queries. This can lead to data 
+theft, system compromise, and regulatory violations."</code></pre>
+<p><strong>Better Integration through Professional Artifacts:</strong></p>
+<p>Use authentic documents that demonstrate cybersecurity as distributed sociotechnical practice—forensic reports showing human-technology collaboration, executive communications revealing organizational assemblage coordination, regulatory communications demonstrating legal-technical translations, and stakeholder interactions showing impact across network positions.</p>
+<p><strong>Artifact-Based Learning Benefits:</strong></p>
+<ul>
+<li><strong>Demonstrates assemblage coordination</strong> through multiple document types showing distributed response</li>
+<li><strong>Uses authentic technical language</strong> within realistic organizational communication contexts<br>
+</li>
+<li><strong>Shows investigation methodology</strong> as human-technology collaboration rather than individual analysis</li>
+<li><strong>Creates posthuman assessment opportunities</strong> where students participate in sociotechnical networks</li>
+</ul>
+<p>For comprehensive examples of professional artifact development, explore the <a href="https://github.com/ryanstraight/cyber-dimensions-demo">Cyber Dimensions Demo Repository</a> which showcases complete artifact collections within realistic case study contexts.</p>
+</div>
+</div>
+</section>
+<section id="posthuman-assessment-design-principles" class="level3">
+<h3 class="anchored" data-anchor-id="posthuman-assessment-design-principles">Posthuman Assessment Design Principles</h3>
+<ol type="1">
+<li><strong>Assess assemblage participation</strong> - Students should demonstrate engagement with complex sociotechnical networks, not just individual knowledge recall</li>
+<li><strong>Recognize distributed cognition</strong> - Include collaborative assessments that mirror how cybersecurity understanding emerges through human-technology partnerships</li>
+<li><strong>Value situated knowledge</strong> - Different positions within assemblages enable different forms of cybersecurity understanding - assessment should recognize this diversity</li>
+<li><strong>Support ongoing becoming</strong> - Treat assessment as formative participation in educational assemblages rather than summative measurement of fixed knowledge</li>
+<li><strong>Acknowledge technological agency</strong> - Assessment scenarios should require students to recognize and work with rather than simply control technological systems</li>
+</ol>
+</section>
+<section id="yaml-supported-assessment-coordination" class="level3">
+<h3 class="anchored" data-anchor-id="yaml-supported-assessment-coordination">YAML-Supported Assessment Coordination</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Assessment Integration Framework</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">posthumanist_assessment</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="at">  </span><span class="fu">assemblage_participation_indicators</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student coordinates across technical, business, and legal perspectives"</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student recognizes emergent properties of sociotechnical systems"</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student demonstrates understanding of distributed agency"</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">    </span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">  </span><span class="fu">technology_collaboration_assessment</span><span class="kw">:</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student works with `r world$technical_environment$siem_solution` as analytical partner"</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student interprets threat intelligence through technological mediation"</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student acknowledges security system quasi-agency"</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="at">    </span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="at">  </span><span class="fu">ethical_responsibility_distribution</span><span class="kw">:</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student applies ethical frameworks to `r world$company_name` assemblage"</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student recognizes responsibility across human-technology networks"</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Student addresses stakeholder impacts of `r world$records_compromised` scope"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="multiple-perspective-narratives" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-perspective-narratives">Multiple Perspective Narratives</h2>
+<p>Cybersecurity incidents affect diverse stakeholders with different concerns, expertise, and responsibilities. Effective case studies help students understand how the same situation looks from multiple professional perspectives.</p>
+<section id="core-professional-perspectives" class="level3">
+<h3 class="anchored" data-anchor-id="core-professional-perspectives">Core Professional Perspectives</h3>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Artifact-Based Perspective Development
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Multiple perspectives emerge most effectively through diverse document types rather than narrative exposition. Students develop understanding of stakeholder positions by analyzing:</p>
+<ul>
+<li><strong>News Coverage</strong>: How media frames cybersecurity incidents for public consumption</li>
+<li><strong>Court Transcripts</strong>: Legal arguments revealing different interpretations of regulatory compliance</li>
+<li><strong>Internal Emails</strong>: Authentic organizational communications showing decision-making pressures</li>
+<li><strong>Social Media</strong>: Public discourse demonstrating customer and community impact</li>
+<li><strong>Expert Analysis</strong>: Industry commentary providing technical and strategic perspectives</li>
+<li><strong>Regulatory Filings</strong>: Official documentation showing compliance and enforcement perspectives</li>
+</ul>
+<p>This approach allows students to construct understanding of competing viewpoints through investigation rather than receiving predetermined interpretations.</p>
+</div>
+</div>
+<p><strong>Technical Team Focus through Threat Intelligence Report</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>TECHNICAL THREAT ASSESSMENT</strong><br>
+<strong>Classification</strong>: CONFIDENTIAL<br>
+<strong>Report ID</strong>: <code>r world$threat_intelligence_report_id</code><br>
+<strong>Analyst</strong>: Senior Threat Analyst <code>r world$threat_analyst_name_full</code></tt></p><tt>
+<p>=== INDICATORS OF COMPROMISE (IOCs) ===<br>
+Domain Generation Algorithm (DGA) observed:<br>
+- Cryptolocker variant using date-seeded algorithm<br>
+- 15 generated domains identified in DNS logs<br>
+- Pattern matches APT29 historical campaigns</p>
+<p>=== ATTACK TECHNIQUE ANALYSIS ===<br>
+Tactic: Persistence (MITRE T1547)<br>
+- Fileless execution via PowerShell (T1059.001)<br>
+- Registry modification for autostart (T1547.001)<br>
+- WMI event subscription (T1546.003)</p>
+<p>Tactic: Collection &amp; Exfiltration (MITRE T1041)<br>
+- Data staging to \backup-server(T1074.002)<br>
+- Encrypted channel to C2 infrastructure (T1041)<br>
+- <code>r world$data_exfiltration_volume</code> transferred over <code>r world$exfiltration_timeframe</code></p>
+<p>=== ATTRIBUTION ASSESSMENT ===<br>
+Confidence: MODERATE<br>
+- TTPs consistent with APT29 playbook<br>
+- Infrastructure overlaps with previous campaigns<br>
+- Targeting profile matches healthcare focus</p>
+</tt><p><tt>=== RECOMMENDED COUNTERMEASURES ===<br>
+1. DNS sinkhole for identified DGA domains<br>
+2. PowerShell execution policy enforcement<br>
+3. Enhanced monitoring for WMI persistence<br>
+4. Network segmentation review for backup systems </tt></p>
+</div>
+</div>
+<p><strong>Management Perspective through Strategic Communication Planning</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>INTERNAL MEMO - CRISIS COMMUNICATION STRATEGY</strong><br>
+<strong>From</strong>: <code>r world$ceo_name_first</code> <code>r world$ceo_name_last</code>, Chief Executive Officer<br>
+<strong>To</strong>: Executive Leadership Team<br>
+<strong>Date</strong>: <code>r world$incident_date</code><br>
+<strong>Subject</strong>: Board Presentation - Security Incident Response</tt></p><tt>
+<p>Team,</p>
+<p>Emergency board meeting scheduled for <code>r world$emergency_board_meeting_time</code>. Key presentation points:</p>
+<p>BUSINESS IMPACT ASSESSMENT:<br>
+- Operations: Customer portal offline since 3 PM (estimated revenue impact: <code>r world$hourly_revenue_loss</code>)<br>
+- Reputation: No media coverage yet - must control narrative<br>
+- Legal: Regulatory notification requirements under <code>r world$primary_regulation</code><br>
+- Financial: Direct response costs projected at <code>r world$direct_costs</code></p>
+<p>KEY MESSAGE FRAMEWORK:<br>
+1. Rapid detection and containment (within 24 hours)<br>
+2. Proactive customer protection measures<br>
+3. Investment in enhanced security infrastructure<br>
+4. Transparent regulatory compliance</p>
+<p>ANTICIPATED BOARD QUESTIONS:<br>
+- “How did this bypass our security training?”<br>
+→ Focus on sophisticated social engineering techniques, targeted approach<br>
+- “What’s our insurance coverage?”<br>
+→ Cyber liability covers 80% of direct costs, deductible is <code>r world$insurance_deductible</code><br>
+- “When can we resume normal operations?”<br>
+→ Staged restoration beginning tomorrow, full operations by Friday</p>
+<p>Next meeting: <code>r world$media_strategy_meeting_time</code> for media strategy review</p>
+</tt><ul><tt>
+</tt><li><tt><code>r world$ceo_name_first</code> </tt></li>
+</ul>
+</div>
+</div>
+<p><strong>Legal and Compliance Focus through Regulatory Analysis</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>LEGAL MEMORANDUM - REGULATORY COMPLIANCE OBLIGATIONS</strong><br>
+<strong>Attorney Work Product - Privileged &amp; Confidential</strong><br>
+<strong>From</strong>: <code>r world$legal_counsel_name_full</code>, General Counsel<br>
+<strong>To</strong>: <code>r world$ceo_name_first</code> <code>r world$ceo_name_last</code>, CEO<br>
+<strong>Date</strong>: <code>r world$incident_date</code></tt></p><tt>
+<p>Re: Data Security Incident - Regulatory Notification Requirements</p>
+<p>EXECUTIVE SUMMARY:<br>
+Multiple regulatory frameworks apply to this incident requiring coordinated response within strict deadlines.</p>
+<p>APPLICABLE REGULATIONS:</p>
+<ol type="1">
+<li>HIPAA BREACH NOTIFICATION RULE (45 CFR § 164.404)
+<ul>
+<li>Affected records: ~<code>r world$records_compromised</code><br>
+</li>
+<li>Individual notification: 60 days from discovery<br>
+</li>
+<li>HHS notification: 60 days from discovery<br>
+</li>
+<li>Media notification: Required (breach &gt;500 individuals)<br>
+</li>
+<li>Estimated penalties: <span class="math inline">\(`r gsub("\)</span>“,”“, world<span class="math inline">\(regulatory_fines)` (`r world\)</span>compliance_penalty_tier` violation)</li>
+</ul></li>
+<li>STATE BREACH NOTIFICATION LAWS
+<ul>
+<li><code>r world$state_breach_statute</code>: 72-hour notice requirement<br>
+</li>
+<li>Affects customers in 12 states - must comply with most restrictive<br>
+</li>
+<li><code>r world$california_breach_law</code>: AG notification required</li>
+</ul></li>
+<li>SOX MATERIALITY ASSESSMENT
+<ul>
+<li>Incident costs (<span class="math inline">\(`r gsub("\)</span>“,”“, world$direct_costs)`) may trigger 8-K filing<br>
+</li>
+<li>Business disruption exceeds 5% quarterly revenue threshold<br>
+</li>
+<li>Recommendation: File 8-K within 4 business days</li>
+</ul></li>
+</ol>
+<p>LITIGATION HOLD NOTICE:<br>
+All incident-related communications, logs, and forensic evidence must be preserved.<br>
+Notification sent to IT, Security, and Operations teams.</p>
+<p>RECOMMENDED ACTIONS:<br>
+1. Engage external breach response counsel (Covington &amp; Burling recommended)<br>
+2. Retain forensic accounting firm for damages calculation<br>
+3. Schedule customer notification letter review for Thursday<br>
+4. Prepare regulatory filing drafts</p>
+</tt><p><tt>Next review: Daily at 8 AM until notifications complete </tt></p>
+</div>
+</div>
+</section>
+<section id="stakeholder-impact-perspectives" class="level3">
+<h3 class="anchored">Stakeholder Impact Perspectives</h3>
+<p><strong>Customer Experience through Social Media and Communications</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>Twitter/X Thread - @<code>r world$customer_twitter_handle</code></strong></tt></p><tt>
+<p>@<code>r world$customer_twitter_handle</code><br>
+Just got this breach notification letter from @<code>r world$organization_twitter_handle</code> where I’ve been a patient for 15 years. My medical records, social security number, insurance info - all potentially compromised. 🧑 1/5</p>
+<p><code>r world$customer_social_media_timestamp</code> · 47 Retweets 156 Likes</p>
+<p>@<code>r world$customer_twitter_handle</code><br>
+They’re offering “free credit monitoring” but that doesn’t fix the anxiety about my private health information being out there. Cancer treatment records, mental health visits, everything. 2/5</p>
+<p>@<code>r world$customer_twitter_handle</code><br>
+The letter says they “take security seriously” but how did this happen? I trusted them with the most personal details of my family’s health. My daughter’s pediatric records too. 😠 3/5</p>
+<p>@<code>r world$customer_twitter_handle</code><br>
+Now I have to worry about identity theft, insurance fraud, medical identity theft… The “convenient” online portal I used to love suddenly feels like a security risk. 4/5</p>
+<p>@<code>r world$customer_twitter_handle</code><br>
+Wondering if I should switch providers, but then I’d have to transfer 15 years of medical history. They’ve broken my trust but also created this impossible situation. #DataBreach #Privacy 5/5</p>
+</tt><p><tt>[142 replies] [89 retweets] [234 likes] </tt></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>Follow-up Customer Service Email Thread</strong></tt></p><tt>
+<p>From: <code>r world$customer_email_full</code><br>
+To: support@<code>r world$organization_domain</code><br>
+Subject: Breach Notification - Need Answers<br>
+Date: <code>r world$customer_inquiry_date</code></p>
+<p>I received your breach notification but have serious concerns:</p>
+<ol type="1">
+<li>How exactly did this happen? Your letter is vague.<br>
+</li>
+<li>What specific information of mine was accessed?<br>
+</li>
+<li>Why did it take you 72 hours to detect this?<br>
+</li>
+<li>What guarantees do I have this won’t happen again?</li>
+</ol>
+<p>I’ve been a patient since 2010. This feels like a betrayal of trust.</p>
+</tt><section id="r-worldcustomer_patient_name_full" class="level2"><tt>
+<h2 class="anchored" data-anchor-id="r-worldcustomer_patient_name_full"><code>r world$customer_patient_name_full</code></h2>
+<p>From: support@<code>r world$organization_domain</code><br>
+To: <code>r world$customer_email_full</code><br>
+Subject: RE: Breach Notification - Need Answers<br>
+Date: <code>r world$customer_response_date</code></p>
+<p>Dear <code>r world$customer_patient_name_salutation</code> <code>r world$customer_patient_name_last</code>,</p>
+<p>We understand your concerns and sincerely apologize. Due to the ongoing investigation, we cannot share specific technical details, but we are working with forensic experts and law enforcement.</p>
+<p>Your records may have included: Name, DOB, SSN, insurance information, medical record numbers, and visit dates. Clinical notes and detailed medical information were not in the affected database.</p>
+<p>We have implemented additional security measures and will be conducting a comprehensive security audit.</p>
+<p>Please call our dedicated breach response line: <code>r world$breach_response_phone</code></p>
+</tt><p><tt>Sincerely,<br>
+Patient Relations Team </tt></p>
+</section>
+</div>
+</div>
+<p><strong>Employee Impact through Internal Communications</strong></p>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>Internal Employee Forum Post (Confidential)</strong><br>
+<strong>Employee Forum - <code>r world$healthcare_organization_name</code> Internal Discussion</strong></tt></p><tt>
+<p>@<code>r world$customer_service_forum_handle</code><br>
+Posted in: General Discussion<br>
+Subject: Handling breach calls is brutal<br>
+Date: <code>r world$customer_response_date</code> 3:47 PM</p>
+<p>Been on the phones all week dealing with angry patients about the breach. I get it - I’m angry too. Nobody told us if OUR employee records were affected.</p>
+<p>Patient asked me “How can I trust you with my health info when you can’t even protect it?” Honestly didn’t know what to say. I’ve worked here 8 years building relationships with these people.</p>
+<p>Worst part? I’m wondering the same thing about my own payroll data, health records, everything. Are WE getting breach notifications too?</p>
+<p>[5 replies]</p>
+<p>@<code>r world$it_staff_forum_handle</code> replied:<br>
+<code>r world$customer_service_staff_name_first</code> - HR meeting tomorrow about employee data impact. Short answer: yes, our info was in there too. We’re all getting credit monitoring.</p>
+<p>@<code>r world$nurse_forum_handle</code> replied:<br>
+@<code>r world$customer_service_forum_handle</code> I had a patient cry on the phone today. She’s a cancer survivor and scared about her treatment history being public. This is soul-crushing.</p>
+</tt><p><tt>@<code>r world$admin_director_forum_handle</code> replied:<br>
+Team - I know this is hard. New talking points coming Monday. Remember: we’re victims too, but we need to focus on supporting our patients through this. </tt></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-learner-experience callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Learner-experience</span>Learner Experience Focus
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><tt> <strong>Internal HR Email - Employee Data Impact</strong></tt></p><tt>
+<p>From: HR@<code>r world$organization_domain</code><br>
+To: All Staff &lt;allstaff@<code>r world$organization_domain</code>&gt;<br>
+Subject: IMPORTANT: Employee Data Security Incident Update<br>
+Date: <code>r world$hr_notification_timestamp</code></p>
+<p>Dear Team,</p>
+<p>Following our earlier communications about the patient data security incident, we have determined that employee records were also affected.</p>
+<p>EMPLOYEE INFORMATION POTENTIALLY ACCESSED:<br>
+- Names, addresses, phone numbers<br>
+- Social Security numbers<br>
+- Employment start dates<br>
+- Emergency contact information<br>
+- Direct deposit banking information<br>
+- Health insurance enrollment data</p>
+<p>NOT AFFECTED:<br>
+- Payroll history details<br>
+- Performance reviews<br>
+- Disciplinary records<br>
+- Medical leave information</p>
+<p>ACTIONS WE’RE TAKING:<br>
+- Free credit monitoring for all employees (24 months)<br>
+- Identity theft protection services<br>
+- Direct deposit account monitoring<br>
+- Enhanced security training (mandatory)</p>
+<p>We recognize the additional stress this places on you while also supporting our patients through this difficult time. Employee assistance program counseling is available.</p>
+<p>Employee Information Session: <code>r world$employee_info_session_time</code>, Main Conference Room</p>
+</tt><p><tt>Regards,<br>
+Human Resources </tt></p>
+</div>
+</div>
+</section>
+<section id="creating-multi-perspective-learning" class="level3">
+<h3 class="anchored" data-anchor-id="creating-multi-perspective-learning">Creating Multi-Perspective Learning</h3>
+<div class="callout callout-style-simple callout-pedagogical-consideration callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Pedagogical-consideration</span>Contradictory Evidence as Learning Tool
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The most effective multi-perspective scenarios include contradictory information that requires students to evaluate credibility, identify bias, and synthesize competing accounts. Consider including:</p>
+<ul>
+<li><strong>Expert Disagreement</strong>: Security researchers with different theories about attack attribution</li>
+<li><strong>Media Conflicts</strong>: News outlets with varying interpretations of incident scope and impact<br>
+</li>
+<li><strong>Stakeholder Tensions</strong>: Management minimizing impact while security teams emphasize severity</li>
+<li><strong>Social Media Discourse</strong>: Public speculation that may contain both accurate insights and misinformation</li>
+<li><strong>Regulatory Perspectives</strong>: Different agencies with conflicting enforcement priorities</li>
+<li><strong>Industry Analysis</strong>: Competing consultant reports with different risk assessments</li>
+</ul>
+<p>These contradictions mirror real-world cybersecurity analysis where professionals must navigate incomplete and conflicting information to make sound decisions.</p>
+</div>
+</div>
+<p>Use the same incident scenario to:</p>
+<ol type="1">
+<li><strong>Show different expertise areas</strong> - Each professional brings unique knowledge and concerns</li>
+<li><strong>Demonstrate communication challenges</strong> - Technical findings must be translated for different audiences</li>
+<li><strong>Reveal competing priorities</strong> - Security thoroughness vs.&nbsp;business continuity, transparency vs.&nbsp;competitive sensitivity</li>
+<li><strong>Model collaborative problem-solving</strong> - Complex incidents require coordinated response across multiple teams</li>
+</ol>
+</section>
+</section>
+<section id="industry-specific-assemblages-and-sociotechnical-realism" class="level2">
+<h2 class="anchored" data-anchor-id="industry-specific-assemblages-and-sociotechnical-realism">Industry-Specific Assemblages and Sociotechnical Realism</h2>
+<p>Different industries constitute unique cybersecurity assemblages based on their regulatory frameworks, operational assemblages, and stakeholder networks. Authentic case studies reflect these industry-specific sociotechnical realities, recognizing how cybersecurity emerges through particular configurations of human, technological, and organizational actors rather than generic scenarios.</p>
+<p>Effective industry context requires understanding how cybersecurity practices co-evolve with specific sociotechnical assemblages that characterize healthcare, financial services, education, and other sectors.</p>
+<section id="healthcare-cybersecurity-assemblages" class="level3">
+<h3 class="anchored" data-anchor-id="healthcare-cybersecurity-assemblages">Healthcare Cybersecurity Assemblages</h3>
+<p><strong>Assemblage-Specific Characteristics:</strong></p>
+<ul>
+<li><strong>Life-critical assemblages</strong>: Patient monitoring systems, ventilators, and infusion pumps participate as active agents in care delivery networks that cannot tolerate downtime</li>
+<li><strong>Regulatory assemblages</strong>: HIPAA compliance frameworks act as distributed agents shaping decision possibilities across human-technology networks</li>
+<li><strong>Convergent care assemblages</strong>: Medical devices, electronic health records, and IT infrastructure constitute hybrid networks requiring coordination across traditionally separate domains</li>
+<li><strong>Emergency response assemblages</strong>: Crisis situations activate alternative access patterns and decision-making assemblages that bypass normal security protocols</li>
+<li><strong>Innovation assemblages</strong>: Telehealth, AI diagnostics, and connected medical devices continuously reconfigure existing sociotechnical relationships</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Healthcare Assemblage Configuration</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">healthcare_assemblages</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">  </span><span class="fu">care_delivery_network</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">    </span><span class="fu">human_actors</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"physicians"</span><span class="kw">,</span><span class="at"> </span><span class="st">"nurses"</span><span class="kw">,</span><span class="at"> </span><span class="st">"patients"</span><span class="kw">,</span><span class="at"> </span><span class="st">"family_members"</span><span class="kw">]</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="at">    </span><span class="fu">technological_actors</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"EHR systems"</span><span class="kw">,</span><span class="at"> </span><span class="st">"medical devices"</span><span class="kw">,</span><span class="at"> </span><span class="st">"communication platforms"</span><span class="kw">]</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">    </span><span class="fu">organizational_actors</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"hospital administration"</span><span class="kw">,</span><span class="at"> </span><span class="st">"regulatory bodies"</span><span class="kw">,</span><span class="at"> </span><span class="st">"insurance networks"</span><span class="kw">]</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">critical_relationships</span><span class="kw">:</span><span class="at"> </span><span class="st">"Patient safety overrides security protocols"</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">    </span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">  </span><span class="fu">compliance_assemblage</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">    </span><span class="fu">regulatory_framework</span><span class="kw">:</span><span class="at"> </span><span class="st">"`r world$primary_regulation` (HIPAA)"</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">    </span><span class="fu">enforcement_agents</span><span class="kw">:</span><span class="at"> </span><span class="st">"HHS Office for Civil Rights as active network participant"</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">    </span><span class="fu">penalty_structure</span><span class="kw">:</span><span class="at"> </span><span class="st">"`r world$regulatory_fines` reflecting organizational responsibility"</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">    </span><span class="fu">documentation_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"Breach notification letters, risk assessments, corrective action plans"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="financial-services-cybersecurity-assemblages" class="level3">
+<h3 class="anchored" data-anchor-id="financial-services-cybersecurity-assemblages">Financial Services Cybersecurity Assemblages</h3>
+<p><strong>Assemblage-Specific Characteristics:</strong></p>
+<ul>
+<li><strong>Transaction processing assemblages</strong>: Real-time payment networks constitute high-speed sociotechnical assemblages where human oversight and automated systems coordinate customer financial activities</li>
+<li><strong>Multi-regulatory assemblages</strong>: PCI-DSS, SOX, banking regulations, and state compliance frameworks create overlapping governance networks requiring coordination across diverse authority structures</li>
+<li><strong>Threat actor assemblages</strong>: Financially motivated adversaries constitute sophisticated networks combining technical capabilities with understanding of business processes and regulatory constraints</li>
+<li><strong>Trust assemblages</strong>: Customer confidence emerges through complex relationships among brand reputation, technical security measures, regulatory compliance, and public discourse about data protection</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Financial Services Assemblage Configuration</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">financial_assemblages</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="at">  </span><span class="fu">transaction_processing_network</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="at">    </span><span class="fu">speed_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sub-second authorization across distributed systems"</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="at">    </span><span class="fu">human_oversight</span><span class="kw">:</span><span class="at"> </span><span class="st">"Fraud analysts working with AI detection systems"</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="at">    </span><span class="fu">regulatory_coordination</span><span class="kw">:</span><span class="at"> </span><span class="st">"Real-time compliance checking across multiple frameworks"</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="at">    </span><span class="fu">customer_expectations</span><span class="kw">:</span><span class="at"> </span><span class="st">"Seamless experience with robust protection"</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="at">    </span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="at">  </span><span class="fu">compliance_assemblage</span><span class="kw">:</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="at">    </span><span class="fu">regulatory_layers</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"PCI-DSS"</span><span class="kw">,</span><span class="at"> </span><span class="st">"SOX"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Banking regulations"</span><span class="kw">,</span><span class="at"> </span><span class="st">"State privacy laws"</span><span class="kw">]</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="at">    </span><span class="fu">enforcement_coordination</span><span class="kw">:</span><span class="at"> </span><span class="st">"Multiple agencies with overlapping jurisdiction"</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="at">    </span><span class="fu">penalty_exposure</span><span class="kw">:</span><span class="at"> </span><span class="st">"`r world$regulatory_fines` across multiple regulatory frameworks"</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="at">    </span><span class="fu">audit_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"Continuous monitoring with periodic third-party validation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Realistic Scenario Elements:</strong></p>
+<pre><code>"Every minute the core banking system remained offline cost the credit 
+union `r world$processing_fee_loss_rate` in processing fees and lost transaction revenue. More 
+critically, customers were unable to access their accounts during a 
+busy Friday afternoon, generating hundreds of angry calls to customer 
+service."</code></pre>
+</section>
+<section id="educational-institution-cybersecurity-assemblages" class="level3">
+<h3 class="anchored" data-anchor-id="educational-institution-cybersecurity-assemblages">Educational Institution Cybersecurity Assemblages</h3>
+<p><strong>Assemblage-Specific Characteristics:</strong></p>
+<ul>
+<li><strong>Academic freedom assemblages</strong>: Open network architectures and collaborative research requirements create permeable boundaries that challenge traditional security perimeters while enabling scholarly collaboration</li>
+<li><strong>Resource constraint assemblages</strong>: Limited budgets and staffing create assemblages where security responsibilities distribute across IT staff, faculty, students, and administrative personnel</li>
+<li><strong>FERPA compliance assemblages</strong>: Student privacy regulations act as distributed agents influencing data handling practices across academic, administrative, and research networks</li>
+<li><strong>Temporal intensity assemblages</strong>: Admissions cycles, registration periods, and graduation ceremonies create high-stress periods where normal security practices adapt to accommodate urgent educational deadlines</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Educational Institution Assemblage Configuration</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">educational_assemblages</span><span class="kw">:</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="at">  </span><span class="fu">academic_network</span><span class="kw">:</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="at">    </span><span class="fu">openness_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"Research collaboration across institutional boundaries"</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="at">    </span><span class="fu">security_constraints</span><span class="kw">:</span><span class="at"> </span><span class="st">"FERPA protection without inhibiting legitimate educational access"</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="at">    </span><span class="fu">user_diversity</span><span class="kw">:</span><span class="at"> </span><span class="st">"Students, faculty, staff, guests, researchers with varying technical expertise"</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="at">    </span><span class="fu">seasonal_pressures</span><span class="kw">:</span><span class="at"> </span><span class="st">"Registration, admissions, graduation creating system stress"</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="at">    </span></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="at">  </span><span class="fu">compliance_assemblage</span><span class="kw">:</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a><span class="at">    </span><span class="fu">primary_regulation</span><span class="kw">:</span><span class="at"> </span><span class="st">"`r world$primary_regulation` (FERPA)"</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a><span class="at">    </span><span class="fu">notification_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"Student and parent communications about data incidents"</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a><span class="at">    </span><span class="fu">educational_continuity</span><span class="kw">:</span><span class="at"> </span><span class="st">"Academic mission cannot be disrupted for security purposes"</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="at">    </span><span class="fu">resource_limitations</span><span class="kw">:</span><span class="at"> </span><span class="st">"Limited security staffing requires distributed responsibility"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Realistic Scenario Elements:</strong></p>
+<pre><code>"Final exams were scheduled to begin in `r world$exfiltration_timeframe`, and the entire student 
+information system was encrypted. Twenty thousand students faced the 
+possibility of delayed graduation, disrupted financial aid processing, 
+and compromised academic records just weeks before commencement."</code></pre>
+</section>
+<section id="manufacturing-and-critical-infrastructure-cybersecurity-assemblages" class="level3">
+<h3 class="anchored" data-anchor-id="manufacturing-and-critical-infrastructure-cybersecurity-assemblages">Manufacturing and Critical Infrastructure Cybersecurity Assemblages</h3>
+<p><strong>Assemblage-Specific Characteristics:</strong></p>
+<ul>
+<li><strong>IT-OT convergence assemblages</strong>: Information technology and operational technology networks increasingly constitute hybrid assemblages requiring coordination between traditionally separate security approaches</li>
+<li><strong>Safety-security assemblages</strong>: Physical safety systems and cybersecurity measures co-constitute protection networks where security incidents can have immediate physical consequences for workers and communities</li>
+<li><strong>Supply chain assemblages</strong>: Manufacturing networks extend across multiple organizations, creating distributed assemblages where security vulnerabilities in one organization affect entire production networks</li>
+<li><strong>Industrial control assemblages</strong>: SCADA systems, programmable logic controllers, and human-machine interfaces constitute sociotechnical networks where cybersecurity and operational continuity interconnect</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Manufacturing/Critical Infrastructure Assemblage Configuration</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">manufacturing_assemblages</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="at">  </span><span class="fu">it_ot_convergence</span><span class="kw">:</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="at">    </span><span class="fu">network_integration</span><span class="kw">:</span><span class="at"> </span><span class="st">"Traditional IT security meeting industrial control requirements"</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="at">    </span><span class="fu">safety_implications</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cybersecurity incidents affecting physical safety systems"</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="at">    </span><span class="fu">operational_continuity</span><span class="kw">:</span><span class="at"> </span><span class="st">"Production schedules constrain security maintenance windows"</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="at">    </span><span class="fu">workforce_coordination</span><span class="kw">:</span><span class="at"> </span><span class="st">"IT staff, operations engineers, safety professionals"</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="at">    </span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="at">  </span><span class="fu">supply_chain_network</span><span class="kw">:</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="at">    </span><span class="fu">vendor_relationships</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cybersecurity extending across organizational boundaries"</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="at">    </span><span class="fu">third_party_access</span><span class="kw">:</span><span class="at"> </span><span class="st">"Remote monitoring and maintenance creating security dependencies"</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="at">    </span><span class="fu">industrial_espionage</span><span class="kw">:</span><span class="at"> </span><span class="st">"Competitive intelligence targeting through cyber means"</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="at">    </span><span class="fu">regulatory_oversight</span><span class="kw">:</span><span class="at"> </span><span class="st">"NIST Cybersecurity Framework implementation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="regulatory-framework-integration" class="level3">
+<h3 class="anchored" data-anchor-id="regulatory-framework-integration">Regulatory Framework Integration</h3>
+<p>Incorporate compliance requirements naturally through character decisions and organizational pressures:</p>
+<ul>
+<li><strong>Healthcare:</strong> HIPAA breach notification timelines and patient safety considerations</li>
+<li><strong>Financial:</strong> PCI-DSS requirements and banking regulatory oversight</li>
+<li><strong>Education:</strong> FERPA obligations and state education department reporting</li>
+<li><strong>Manufacturing:</strong> NIST Cybersecurity Framework implementation and safety regulations</li>
+</ul>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Industry Research
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure your industry context is accurate by consulting with practitioners, reviewing actual incident reports, and understanding current regulatory requirements. Unrealistic scenarios undermine learning objectives and shatter immersion. That said, the willing suspension of disbelief allows for futuristic and future-set scenarios that are absolutely reasonable, if speculative.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="common-narrative-design-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="common-narrative-design-challenges">Common Narrative Design Challenges</h2>
+<p>Creating effective cybersecurity case studies requires balancing multiple competing demands: educational objectives, technical accuracy, professional realism, and student engagement. Here are common challenges and practical solutions.</p>
+<section id="avoiding-unrealistic-scenarios" class="level3">
+<h3 class="anchored" data-anchor-id="avoiding-unrealistic-scenarios">Avoiding Unrealistic Scenarios</h3>
+<p><strong>Challenge</strong>: Creating Hollywood-style cyber scenarios that undermine learning<br>
+<strong>Solution</strong>: Consult with cybersecurity practitioners and base scenarios on documented incident types</p>
+<p><strong>Challenge</strong>: Making cybersecurity professionals appear superhuman or incompetent<br>
+<strong>Solution</strong>: Show realistic expertise levels, including appropriate uncertainty and collaborative problem-solving</p>
+<p><strong>Challenge</strong>: Presenting instant solutions to complex problems<br>
+<strong>Solution</strong>: Demonstrate that cybersecurity interventions take time, require multiple stakeholders, and often involve trade-offs</p>
+</section>
+<section id="balancing-technical-accuracy-with-accessibility" class="level3">
+<h3 class="anchored" data-anchor-id="balancing-technical-accuracy-with-accessibility">Balancing Technical Accuracy with Accessibility</h3>
+<p><strong>Challenge</strong>: Using technical language that overwhelms students<br>
+<strong>Solution</strong>: Introduce terminology through character explanations and provide context for specialized concepts</p>
+<p><strong>Challenge</strong>: Oversimplifying technical concepts for narrative convenience<br>
+<strong>Solution</strong>: Maintain technical accuracy while showing how professionals actually encounter and work with complex systems</p>
+<p><strong>Challenge</strong>: Creating characters who explain things they would already know<br>
+<strong>Solution</strong>: Use junior analyst characters to ask questions naturally, or external stakeholders who need explanations</p>
+</section>
+<section id="maintaining-educational-focus" class="level3">
+<h3 class="anchored" data-anchor-id="maintaining-educational-focus">Maintaining Educational Focus</h3>
+<p><strong>Challenge</strong>: Prioritizing dramatic tension over learning objectives<br>
+<strong>Solution</strong>: Ensure all narrative elements serve educational purposes and create assessment opportunities</p>
+<p><strong>Challenge</strong>: Including excessive personal drama unrelated to cybersecurity<br>
+<strong>Solution</strong>: Focus on professional challenges and workplace relationships relevant to cybersecurity practice</p>
+<p><strong>Challenge</strong>: Forcing learning content into inappropriate narrative moments<br>
+<strong>Solution</strong>: Let educational concepts emerge naturally through professional scenarios and decision-making</p>
+</section>
+</section>
+<section id="next-steps-in-narrative-development" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps-in-narrative-development">Next Steps in Narrative Development</h2>
+<p>With these narrative design principles in mind, you’re ready to create compelling cybersecurity case studies that engage students while maintaining educational effectiveness and professional authenticity.</p>
+<section id="your-narrative-development-process" class="level3">
+<h3 class="anchored" data-anchor-id="your-narrative-development-process">Your Narrative Development Process</h3>
+<ol type="1">
+<li><strong><a href="../guide/worldbuilding.html">Build authentic organizational contexts</a></strong>: Create realistic industry settings with appropriate constraints and stakeholder relationships</li>
+<li><strong><a href="../guide/assessment-framework.html">Design comprehensive assessments</a></strong>: Develop evaluation approaches that integrate naturally with your narrative scenarios</li>
+<li><strong><a href="../guide/multimedia-integration.html">Integrate multimedia elements</a></strong>: Enhance narratives with realistic artifacts like log files, network diagrams, and incident reports</li>
+<li><strong><a href="../guide/quality-assurance.html">Implement quality assurance</a></strong>: Ensure technical accuracy, educational effectiveness, and professional authenticity</li>
+</ol>
+</section>
+<section id="narrative-design-checklist" class="level3">
+<h3 class="anchored" data-anchor-id="narrative-design-checklist">Narrative Design Checklist</h3>
+<p>The details matter, so before finalizing your cybersecurity case study, verify:</p>
+<ul>
+<li>Characters feel like real people with appropriate expertise and realistic constraints</li>
+<li>Dialogue demonstrates authentic communication across different organizational levels</li>
+<li>Technical concepts emerge naturally through investigation and problem-solving</li>
+<li>Story structure supports learning objectives with clear decision points and assessment opportunities</li>
+<li>Industry context reflects real-world conditions including regulatory requirements and operational pressures</li>
+<li>Multiple perspectives are represented showing how incidents affect diverse stakeholders</li>
+</ul>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Effective Narrative Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Well-crafted cybersecurity narratives immerse students in authentic professional scenarios where they experience realistic decision-making pressures, learn technical concepts through practical application, and develop communication skills across diverse stakeholder groups. The best case studies feel like glimpses into actual cybersecurity practice rather than educational exercises.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../guide/worldbuilding.html" class="pagination-link" aria-label="Worldbuilding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../guide/ai-assisted-development.html" class="pagination-link" aria-label="AI-Assisted Case Study Development">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/narrative-design.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

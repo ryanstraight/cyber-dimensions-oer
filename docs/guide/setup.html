@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>3&nbsp; Setup – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide/tutorial.html" rel="next">
+<link href="../guide/methodology.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/setup.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/worldbuilding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/narrative-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#quickstart" id="toc-quickstart" class="nav-link active" data-scroll-target="#quickstart">Quickstart</a></li>
+  <li><a href="#technical-infrastructure-requirements" id="toc-technical-infrastructure-requirements" class="nav-link" data-scroll-target="#technical-infrastructure-requirements">Technical Infrastructure Requirements</a></li>
+  <li><a href="#platform-installation-procedures" id="toc-platform-installation-procedures" class="nav-link" data-scroll-target="#platform-installation-procedures">Platform Installation Procedures</a>
+  <ul class="collapse">
+  <li><a href="#statistical-computing-environment-setup" id="toc-statistical-computing-environment-setup" class="nav-link" data-scroll-target="#statistical-computing-environment-setup">Statistical Computing Environment Setup</a></li>
+  <li><a href="#scientific-publishing-platform-configuration" id="toc-scientific-publishing-platform-configuration" class="nav-link" data-scroll-target="#scientific-publishing-platform-configuration">Scientific Publishing Platform Configuration</a></li>
+  <li><a href="#version-control-system-integration" id="toc-version-control-system-integration" class="nav-link" data-scroll-target="#version-control-system-integration">Version Control System Integration</a></li>
+  </ul></li>
+  <li><a href="#required-r-packages" id="toc-required-r-packages" class="nav-link" data-scroll-target="#required-r-packages">Required R Packages</a></li>
+  <li><a href="#scalability-considerations-for-multi-case-study-development" id="toc-scalability-considerations-for-multi-case-study-development" class="nav-link" data-scroll-target="#scalability-considerations-for-multi-case-study-development">Scalability Considerations for Multi-Case Study Development</a></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files">Configuration Files</a>
+  <ul class="collapse">
+  <li><a href="#quarto-configuration-_quarto.yml" id="toc-quarto-configuration-_quarto.yml" class="nav-link" data-scroll-target="#quarto-configuration-_quarto.yml">1. Quarto Configuration (<code>_quarto.yml</code>)</a></li>
+  <li><a href="#r-project-configuration" id="toc-r-project-configuration" class="nav-link" data-scroll-target="#r-project-configuration">2. R Project Configuration</a></li>
+  <li><a href="#git-configuration-.gitignore" id="toc-git-configuration-.gitignore" class="nav-link" data-scroll-target="#git-configuration-.gitignore">3. Git Configuration (<code>.gitignore</code>)</a></li>
+  </ul></li>
+  <li><a href="#development-workflow" id="toc-development-workflow" class="nav-link" data-scroll-target="#development-workflow">Development Workflow</a>
+  <ul class="collapse">
+  <li><a href="#essential-scripts" id="toc-essential-scripts" class="nav-link" data-scroll-target="#essential-scripts">Essential Scripts</a></li>
+  </ul></li>
+  <li><a href="#testing-your-setup" id="toc-testing-your-setup" class="nav-link" data-scroll-target="#testing-your-setup">Testing Your Setup</a>
+  <ul class="collapse">
+  <li><a href="#create-a-test-document" id="toc-create-a-test-document" class="nav-link" data-scroll-target="#create-a-test-document">1. Create a Test Document</a></li>
+  <li><a href="#render-the-test" id="toc-render-the-test" class="nav-link" data-scroll-target="#render-the-test">2. Render the Test</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
+  </ul></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/setup.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>To effectively create cybersecurity case studies using the Cyber Dimensions methodology, you need a carefully configured development environment that integrates scientific publishing capabilities with systematic content management tools. This configuration guide helps you establish the technical foundation necessary for implementing the pedagogical approaches outlined in the methodology chapter, supporting your development of complex educational materials that foster critical thinking and technical learning <span class="citation" data-cites="kampe2022">(<a href="../references.html#ref-kampe2022" role="doc-biblioref">Kampe, 2022</a>)</span>.</p>
+<section id="quickstart" class="level2">
+<h2 class="anchored" data-anchor-id="quickstart">Quickstart</h2>
+<ol type="1">
+<li>You install R</li>
+<li>You install Quarto</li>
+<li>You install RStudio</li>
+<li>You clone the repository</li>
+<li>You build the project!</li>
+</ol>
+<p>This assumes you’re using RStudio for development. This is not required but is the default method. There is a minimal demo available for you use directly:</p>
+<ol type="1">
+<li><strong>Download the template</strong> from this repository: <a href="https://github.com/ryanstraight/cyber-dimensions-demo">cyber-dimensions-demo</a></li>
+<li><strong>Extract to your desired location</strong></li>
+<li><strong>Open in RStudio</strong> by double-clicking the <code>.Rproj</code> file</li>
+</ol>
+</section>
+<section id="technical-infrastructure-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="technical-infrastructure-requirements">Technical Infrastructure Requirements</h2>
+<p>Your development environment centers on the <a href="https://quarto.org">Quarto</a> scientific publishing platform, which provides you with the computational and narrative integration capabilities essential for creating sophisticated educational materials. Quarto’s architecture supports the complex multimedia integration, cross-referencing, and multiple output formats you need for contemporary cybersecurity education.</p>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Author's Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>My “tech stack,” as it were, is R, Quarto, and RStudio. So long as you’ve installed those three platforms, you’re ready to do anything discussed in this book. R and Quarto both live in the background, and RStudio is the integrated development environment (IDE). That said, Quarto works through the terminal, so you can technically write in Notepad to build a Quarto document. RStudio allows for project-based workflows, which this process leverages heavily, as with the here() package.</p>
+</div>
+</div>
+<p>Additional development tools enhance your productivity and provide alternative approaches to content creation. Visual Studio Code offers you a lightweight alternative text editor with extensive Quarto integration capabilities, while GitHub Desktop provides you with graphical interface access to version control functionality if you’re less comfortable with command-line interfaces. The Pandoc document converter, typically bundled with your Quarto installations, extends format conversion capabilities beyond the standard Quarto output options.</p>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Extended Development Support
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While not strictly required, these supplementary tools significantly enhance your development experience: Visual Studio Code for alternative editing environments, GitHub Desktop for simplified version control management, and direct Pandoc access for specialized document conversion requirements that extend beyond standard Quarto capabilities. Your R installation comes with its own bundled version of Pandoc.</p>
+</div>
+</div>
+</section>
+<section id="platform-installation-procedures" class="level2">
+<h2 class="anchored" data-anchor-id="platform-installation-procedures">Platform Installation Procedures</h2>
+<p>Your installation process requires systematic attention to platform-specific requirements and dependency management to ensure optimal performance across different operating systems. Each component builds upon previous installations, making sequential completion essential for your proper system configuration.</p>
+<section id="statistical-computing-environment-setup" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-computing-environment-setup">Statistical Computing Environment Setup</h3>
+<p>The R statistical computing environment and RStudio integrated development environment form the computational foundation for your dynamic content generation and systematic project management. On Windows and macOS platforms, your installation follows a straightforward sequence beginning with R base installation from the official <a href="https://www.r-project.org/">R Project</a> distribution, followed by RStudio Desktop installation from <a href="https://posit.co/download/rstudio-desktop/">Posit</a>. Both installations typically require only default configuration options for optimal integration.</p>
+<p>Your Linux installations require additional attention to package management and dependency resolution. If you’re using Ubuntu and Debian distributions, you’ll benefit from package manager installation that ensures proper system integration and automatic dependency management:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Update package repository and install R base system</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">sudo</span> apt install r-base r-base-dev</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Install RStudio from downloaded package</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> rstudio-<span class="pp">*</span>.deb</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">sudo</span> apt-get install <span class="at">-f</span>  <span class="co"># Resolve any dependency issues</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scientific-publishing-platform-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-publishing-platform-configuration">Scientific Publishing Platform Configuration</h3>
+<p>Your Quarto installation provides the document publishing capabilities that enable sophisticated educational material development. Your installation process remains consistent across platforms, requiring you to download platform-specific installers from the official <a href="https://quarto.org/docs/get-started/">Quarto documentation site</a> and execute following standard installation procedures for your operating system.</p>
+<p>Your installation verification ensures proper system integration and command-line accessibility essential for advanced document processing:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="version-control-system-integration" class="level3">
+<h3 class="anchored" data-anchor-id="version-control-system-integration">Version Control System Integration</h3>
+<p>Your Git version control system installation provides the collaborative development and systematic content management capabilities necessary for educational material development and maintenance. Your installation procedures vary by platform: Windows systems require you to download and install from the official <a href="https://git-scm.com/">Git website</a>, macOS systems let you benefit from Homebrew package manager installation (<code>brew install git</code>), while Linux distributions typically include Git in standard package repositories (<code>sudo apt install git</code>).</p>
+</section>
+</section>
+<section id="required-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="required-r-packages">Required R Packages</h2>
+<p>You can create a new R script and run these installation commands:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Essential packages for case study development</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="st">"here"</span>,        <span class="co"># File path management</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="st">"yaml"</span>,        <span class="co"># YAML file handling</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="st">"stringr"</span>,     <span class="co"># String manipulation</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="st">"tidyverse"</span>,   <span class="co"># Data manipulation</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="st">"readr"</span>,       <span class="co"># File reading</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="st">"knitr"</span>,       <span class="co"># Document generation</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="st">"quarto"</span>,      <span class="co"># R-based quarto commands</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>  <span class="st">"devtools"</span>,    <span class="co"># Development tools</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>  <span class="st">"usethis"</span>      <span class="co"># Project setup utilities</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>))</span>
+<span id="cb3-13"><a href="#cb3-13"></a></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="co"># Optional but recommended packages</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
+<span id="cb3-16"><a href="#cb3-16"></a>  <span class="st">"DT"</span>,          <span class="co"># Interactive tables</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>  <span class="st">"plotly"</span>,      <span class="co"># Interactive plots</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>  <span class="st">"htmlwidgets"</span>  <span class="co"># HTML widgets</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="scalability-considerations-for-multi-case-study-development" class="level2">
+<h2 class="anchored" data-anchor-id="scalability-considerations-for-multi-case-study-development">Scalability Considerations for Multi-Case Study Development</h2>
+<p>Effective cybersecurity education programs require systematic approaches to content development that maintain quality while supporting institutional scale requirements.</p>
+<p><strong>Content Development Workflow Architecture</strong>:</p>
+<ol type="1">
+<li><p><strong>Template Standardization</strong>: Establish consistent case study structures that support efficient development and quality assurance processes.</p></li>
+<li><p><strong>Collaborative Development</strong>: Configure Git workflows that enable multiple educators to contribute content while maintaining methodological consistency.</p></li>
+<li><p><strong>Quality Assurance Integration</strong>: Implement automated testing for educational content that validates learning objectives alignment and technical functionality.</p></li>
+<li><p><strong>Assessment Analytics</strong>: Design data collection frameworks that support educational effectiveness evaluation and continuous improvement processes.</p></li>
+</ol>
+<p><strong>Automated Quality Assurance Framework</strong> (<code>scripts/quality-assurance.R</code>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Automated Quality Assurance for Case Study Development</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(testthat)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">library</span>(yaml)</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># Function to validate case study structure</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>validate_case_study <span class="ot">&lt;-</span> <span class="cf">function</span>(case_study_path) {</span>
+<span id="cb4-7"><a href="#cb4-7"></a>  </span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="co"># Check required sections exist</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  required_sections <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"learning_objectives"</span>, <span class="st">"artifact_collection"</span>, </span>
+<span id="cb4-10"><a href="#cb4-10"></a>                        <span class="st">"assessment_framework"</span>, <span class="st">"stakeholder_analysis"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  </span>
+<span id="cb4-12"><a href="#cb4-12"></a>  case_content <span class="ot">&lt;-</span> <span class="fu">readLines</span>(case_study_path)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>  case_text <span class="ot">&lt;-</span> <span class="fu">paste</span>(case_content, <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb4-14"><a href="#cb4-14"></a>  </span>
+<span id="cb4-15"><a href="#cb4-15"></a>  validation_results <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb4-16"><a href="#cb4-16"></a>  </span>
+<span id="cb4-17"><a href="#cb4-17"></a>  <span class="cf">for</span> (section <span class="cf">in</span> required_sections) {</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    section_exists <span class="ot">&lt;-</span> <span class="fu">grepl</span>(section, case_text, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-19"><a href="#cb4-19"></a>    validation_results[[section]] <span class="ot">&lt;-</span> section_exists</span>
+<span id="cb4-20"><a href="#cb4-20"></a>    </span>
+<span id="cb4-21"><a href="#cb4-21"></a>    <span class="cf">if</span> (<span class="sc">!</span>section_exists) {</span>
+<span id="cb4-22"><a href="#cb4-22"></a>      <span class="fu">warning</span>(<span class="fu">paste</span>(<span class="st">"Missing required section:"</span>, section, </span>
+<span id="cb4-23"><a href="#cb4-23"></a>                   <span class="st">"in"</span>, case_study_path))</span>
+<span id="cb4-24"><a href="#cb4-24"></a>    }</span>
+<span id="cb4-25"><a href="#cb4-25"></a>  }</span>
+<span id="cb4-26"><a href="#cb4-26"></a>  </span>
+<span id="cb4-27"><a href="#cb4-27"></a>  <span class="fu">return</span>(validation_results)</span>
+<span id="cb4-28"><a href="#cb4-28"></a>}</span>
+<span id="cb4-29"><a href="#cb4-29"></a></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="co"># Function to validate learning objectives alignment</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a>validate_learning_objectives <span class="ot">&lt;-</span> <span class="cf">function</span>(case_study_path) {</span>
+<span id="cb4-32"><a href="#cb4-32"></a>  </span>
+<span id="cb4-33"><a href="#cb4-33"></a>  <span class="co"># Implementation for checking learning objectives</span></span>
+<span id="cb4-34"><a href="#cb4-34"></a>  <span class="co"># against institutional competency frameworks</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a>  </span>
+<span id="cb4-36"><a href="#cb4-36"></a>}</span>
+<span id="cb4-37"><a href="#cb4-37"></a></span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="co"># Run validation on all case studies</span></span>
+<span id="cb4-39"><a href="#cb4-39"></a>validate_all_cases <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb4-40"><a href="#cb4-40"></a>  case_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="st">"cases"</span>, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.qmd$"</span>, </span>
+<span id="cb4-41"><a href="#cb4-41"></a>                          <span class="at">recursive =</span> <span class="cn">TRUE</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-42"><a href="#cb4-42"></a>  </span>
+<span id="cb4-43"><a href="#cb4-43"></a>  validation_report <span class="ot">&lt;-</span> <span class="fu">lapply</span>(case_files, validate_case_study)</span>
+<span id="cb4-44"><a href="#cb4-44"></a>  <span class="fu">names</span>(validation_report) <span class="ot">&lt;-</span> case_files</span>
+<span id="cb4-45"><a href="#cb4-45"></a>  </span>
+<span id="cb4-46"><a href="#cb4-46"></a>  <span class="fu">return</span>(validation_report)</span>
+<span id="cb4-47"><a href="#cb4-47"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="configuration-files" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-files">Configuration Files</h2>
+<section id="quarto-configuration-_quarto.yml" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-configuration-_quarto.yml">1. Quarto Configuration (<code>_quarto.yml</code>)</h3>
+<p>One of the main benefits of using the Quarto system is the ease of manipulation. If you’d prefer to organize your directory differently, just edit the YAML in <code>_quarto.yml</code> and it will apply throughout the project.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">  </span><span class="fu">pre-render</span><span class="kw">:</span><span class="at"> scripts/setup.R</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">  </span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span><span class="co"> # Default bootstrap theme</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> assets/css/styles.css</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">    </span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="at">  </span><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="at">  </span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="fu">citation</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="fu">footnotes-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="r-project-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="r-project-configuration">2. R Project Configuration</h3>
+<p>RStudio will take care of this automatically if you use the IDE to create a project in an existing folder or use a Version Control (directly use the Git repository through RStudio). Otherwise, if you really want to, manually create a file called (for example) <code>my-cases.Rproj</code>:</p>
+<pre><code>Version: 1.0
+
+RestoreWorkspace: No
+SaveWorkspace: No
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+BuildType: Custom
+CustomScriptPath: scripts/build.R</code></pre>
+</section>
+<section id="git-configuration-.gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="git-configuration-.gitignore">3. Git Configuration (<code>.gitignore</code>)</h3>
+<p>Depending on how you want to host your case studies (online for all or locally to share on demand), you may wish to consider the following:</p>
+<pre><code># R specific
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+*.Rproj
+
+# Quarto
+/.quarto/
+_site/
+_freeze/
+*_files/
+*.html
+*.pdf
+*.docx
+*.tex
+*.log
+*.aux
+*.out
+*.toc
+*.fff
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# R Markdown
+*.nb.html
+*.utf8.md
+*.knit.md
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Cache directories
+node_modules/
+.sass-cache/
+.cache/
+
+# Environment variables
+.env
+.env.local
+
+# RDS cache files
+*.rds
+!_world_data.rds  # Keep worldbuilding cache
+
+# Large data files (adjust as needed)
+*.csv
+*.xlsx
+*.json
+!_worldbuilding.yml  # Keep worldbuilding config
+
+# Media files (consider hyperlinking to control size limits)
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3
+# Uncomment to exclude images if they're large
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+
+# Bibliography and citation files
+# Uncomment if you want to exclude
+# *.bib
+# *.csl</code></pre>
+</section>
+</section>
+<section id="development-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="development-workflow">Development Workflow</h2>
+<pre><code>my-case-studies/
+├── _quarto.yml
+├── my-cases.Rproj
+├── README.qmd                      # with `format: gfm` to render to README.md
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── images/
+│   └── profiles/
+├── _scripts/
+│   ├── setup.R
+│   └── worldbuilding.R
+├── data/
+│   └── _worldbuilding.yml
+├── cases/
+│   ├── case1/
+│   │   ├── scenario.qmd
+│   │   ├── assessment.qmd
+│   │   └── assets/
+│   └── case2/
+├── templates/
+└── docs/                           # Standard Github Pages rendering location</code></pre>
+<section id="essential-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="essential-scripts">Essential Scripts</h3>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Script Validation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These scripts are based on the <em>Cyber Dimensions</em> textbook development workflow. Adjust paths and functions according to your specific project structure and worldbuilding requirements.</p>
+</div>
+</div>
+<p><strong><code>scripts/setup.R</code></strong> - Pre-render script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Load required libraries</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">library</span>(here)</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="fu">library</span>(yaml)</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co"># Ensure output directory exists</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="fu">here</span>(<span class="st">"docs"</span>))) {</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  <span class="fu">dir.create</span>(<span class="fu">here</span>(<span class="st">"docs"</span>), <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-10"><a href="#cb9-10"></a>}</span>
+<span id="cb9-11"><a href="#cb9-11"></a></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co"># Load worldbuilding data</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"_worldbuilding.yml"</span>))) {</span>
+<span id="cb9-14"><a href="#cb9-14"></a>  world_data <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"_worldbuilding.yml"</span>))</span>
+<span id="cb9-15"><a href="#cb9-15"></a>  world <span class="ot">&lt;-</span> world_data<span class="sc">$</span>world</span>
+<span id="cb9-16"><a href="#cb9-16"></a>  </span>
+<span id="cb9-17"><a href="#cb9-17"></a>  <span class="co"># Process date calculations if needed</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a>  <span class="cf">if</span> (<span class="fu">exists</span>(<span class="st">"world$base_year"</span>)) {</span>
+<span id="cb9-19"><a href="#cb9-19"></a>    world<span class="sc">$</span>current_year <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>))</span>
+<span id="cb9-20"><a href="#cb9-20"></a>    world<span class="sc">$</span>years_since_base <span class="ot">&lt;-</span> world<span class="sc">$</span>current_year <span class="sc">-</span> world<span class="sc">$</span>base_year</span>
+<span id="cb9-21"><a href="#cb9-21"></a>  }</span>
+<span id="cb9-22"><a href="#cb9-22"></a>  </span>
+<span id="cb9-23"><a href="#cb9-23"></a>  <span class="co"># Save processed world data</span></span>
+<span id="cb9-24"><a href="#cb9-24"></a>  <span class="fu">saveRDS</span>(world, <span class="fu">here</span>(<span class="st">"_world_data.rds"</span>))</span>
+<span id="cb9-25"><a href="#cb9-25"></a>  <span class="fu">message</span>(<span class="st">"Worldbuilding data loaded successfully"</span>)</span>
+<span id="cb9-26"><a href="#cb9-26"></a>} <span class="cf">else</span> {</span>
+<span id="cb9-27"><a href="#cb9-27"></a>  <span class="fu">warning</span>(<span class="st">"No worldbuilding data found. Creating empty world object."</span>)</span>
+<span id="cb9-28"><a href="#cb9-28"></a>  world <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb9-29"><a href="#cb9-29"></a>  <span class="fu">saveRDS</span>(world, <span class="fu">here</span>(<span class="st">"_world_data.rds"</span>))</span>
+<span id="cb9-30"><a href="#cb9-30"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong><code>scripts/worldbuilding.R</code></strong> - Helper functions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Helper functions for worldbuilding</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">source</span>(<span class="fu">here</span>(<span class="st">"scripts"</span>, <span class="st">"setup.R"</span>))</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># Load world data if available</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="fu">here</span>(<span class="st">"_world_data.rds"</span>))) {</span>
+<span id="cb10-6"><a href="#cb10-6"></a>  world <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">"_world_data.rds"</span>))</span>
+<span id="cb10-7"><a href="#cb10-7"></a>} <span class="cf">else</span> {</span>
+<span id="cb10-8"><a href="#cb10-8"></a>  world <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb10-9"><a href="#cb10-9"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="testing-your-setup" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-setup">Testing Your Setup</h2>
+<section id="create-a-test-document" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-test-document">1. Create a Test Document</h3>
+<p>Create <code>test.qmd</code> to explore Quarto markdown functionality (APA 7th edition style):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1"></a>---</span>
+<span id="cb11-2"><a href="#cb11-2"></a>title: "Setup Test"</span>
+<span id="cb11-3"><a href="#cb11-3"></a>author: "My Name"</span>
+<span id="cb11-4"><a href="#cb11-4"></a>date: last-modified</span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a>bibliography: refs.bib   # Or whatever your .bib file is named</span>
+<span id="cb11-7"><a href="#cb11-7"></a>csl: https://www.zotero.org/styles/apa    # Or a local CSL for styling</span>
+<span id="cb11-8"><a href="#cb11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9"></a>engine: knitr        # For inline R code rendering</span>
+<span id="cb11-10"><a href="#cb11-10"></a>format:</span>
+<span id="cb11-11"><a href="#cb11-11"></a>  html:</span>
+<span id="cb11-12"><a href="#cb11-12"></a>    embed-resources: true</span>
+<span id="cb11-13"><a href="#cb11-13"></a>    output-file: "optional-rendered-name-different-from-qmd-filename"</span>
+<span id="cb11-14"><a href="#cb11-14"></a>---</span>
+<span id="cb11-15"><a href="#cb11-15"></a></span>
+<span id="cb11-16"><a href="#cb11-16"></a># Testing Your Installation</span>
+<span id="cb11-17"><a href="#cb11-17"></a></span>
+<span id="cb11-18"><a href="#cb11-18"></a>If you can render this document, your setup is working!</span>
+<span id="cb11-19"><a href="#cb11-19"></a></span>
+<span id="cb11-20"><a href="#cb11-20"></a>&lt;!-- You can add HTML comments in Quarto markdown like this and they won't appear when rendered. --</span>
+<span id="cb11-21"><a href="#cb11-21"></a></span>
+<span id="cb11-22"><a href="#cb11-22"></a>You can add images:</span>
+<span id="cb11-23"><a href="#cb11-23"></a></span>
+<span id="cb11-24"><a href="#cb11-24"></a>![](images/example.png){fig-alt="Alt text should go in a fig-alt key like this. While you can add text in the square brackets ![Like this](images/example.png), it will also show as a caption in the rendered file. If you want that, go for it!"}</span>
+<span id="cb11-25"><a href="#cb11-25"></a></span>
+<span id="cb11-26"><a href="#cb11-26"></a>## R Code Test</span>
+<span id="cb11-27"><a href="#cb11-27"></a></span>
+<span id="cb11-28"><a href="#cb11-28"></a>```{r}</span>
+<span id="cb11-29"><a href="#cb11-29"></a>label: test-r-code</span>
+<span id="cb11-30"><a href="#cb11-30"></a>echo: true</span>
+<span id="cb11-31"><a href="#cb11-31"></a></span>
+<span id="cb11-32"><a href="#cb11-32"></a># Basic R functionality</span>
+<span id="cb11-33"><a href="#cb11-33"></a>2 + 2</span>
+<span id="cb11-34"><a href="#cb11-34"></a>```</span>
+<span id="cb11-35"><a href="#cb11-35"></a>Add ordered lists with 1. for each item for them to auto-number:</span>
+<span id="cb11-36"><a href="#cb11-36"></a></span>
+<span id="cb11-37"><a href="#cb11-37"></a>1. This is the first item</span>
+<span id="cb11-38"><a href="#cb11-38"></a>1. This is the second item.</span>
+<span id="cb11-39"><a href="#cb11-39"></a>1. This is the third item.</span>
+<span id="cb11-40"><a href="#cb11-40"></a>1. All 4 items start with 1.</span>
+<span id="cb11-41"><a href="#cb11-41"></a></span>
+<span id="cb11-42"><a href="#cb11-42"></a>Easily include markdown tables:</span>
+<span id="cb11-43"><a href="#cb11-43"></a></span>
+<span id="cb11-44"><a href="#cb11-44"></a>| Left-aligned column | Center | Right |</span>
+<span id="cb11-45"><a href="#cb11-45"></a>|:--------------------|:------:|------:|</span>
+<span id="cb11-46"><a href="#cb11-46"></a>| 123                 |        |       |</span>
+<span id="cb11-47"><a href="#cb11-47"></a>| ABC                 |        |       |</span>
+<span id="cb11-48"><a href="#cb11-48"></a>| 123                 |        |       |</span>
+<span id="cb11-49"><a href="#cb11-49"></a>| ABC                 |        |       |</span>
+<span id="cb11-50"><a href="#cb11-50"></a></span>
+<span id="cb11-51"><a href="#cb11-51"></a>: Example table {#tbl-table-label-for-cross-reference}</span>
+<span id="cb11-52"><a href="#cb11-52"></a></span>
+<span id="cb11-53"><a href="#cb11-53"></a></span>
+<span id="cb11-54"><a href="#cb11-54"></a>::: {.implementation-guidance title="Callout Title"}</span>
+<span id="cb11-55"><a href="#cb11-55"></a></span>
+<span id="cb11-56"><a href="#cb11-56"></a>This is a callout box - if you can see this formatted correctly, </span>
+<span id="cb11-57"><a href="#cb11-57"></a>Quarto is working properly!</span>
+<span id="cb11-58"><a href="#cb11-58"></a></span>
+<span id="cb11-59"><a href="#cb11-59"></a>:::</span>
+<span id="cb11-60"><a href="#cb11-60"></a></span>
+<span id="cb11-61"><a href="#cb11-61"></a>Here we could refer back to @tbl-table-label-for-cross-reference. Once we've set up our worldbuilding YAML in `_worldbuilding.yml`, we can add some inline R references, like `r world$casename_ceo_fullname`. Likewise, adding [@authorYYYY] bibtex will add in-text citations. </span>
+<span id="cb11-62"><a href="#cb11-62"></a></span>
+<span id="cb11-63"><a href="#cb11-63"></a>Note that in Quarto markdown</span>
+<span id="cb11-64"><a href="#cb11-64"></a>single linebreaks will not be rendered</span>
+<span id="cb11-65"><a href="#cb11-65"></a>and will combine into a single line.</span>
+<span id="cb11-66"><a href="#cb11-66"></a></span>
+<span id="cb11-67"><a href="#cb11-67"></a>You can force a linebreak  </span>
+<span id="cb11-68"><a href="#cb11-68"></a>by adding two spaces  </span>
+<span id="cb11-69"><a href="#cb11-69"></a>at the end of a line.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="render-the-test" class="level3">
+<h3 class="anchored" data-anchor-id="render-the-test">2. Render the Test</h3>
+<p>In RStudio:</p>
+<ol type="1">
+<li>Open <code>test.qmd</code></li>
+<li>Click the “Render” button</li>
+<li>Verify that HTML output is generated</li>
+</ol>
+<p>Or from command line:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="ex">quarto</span> render test.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<p>Refer to the <a href="https://quarto.org/guide/">Quarto.org guide</a> for troubleshooting. Some common issues are:</p>
+<p><strong>Quarto not found</strong>:</p>
+<ul>
+<li>Ensure Quarto is installed and in your PATH</li>
+<li>Restart RStudio after installation</li>
+</ul>
+<p><strong>R packages not loading</strong>:</p>
+<ul>
+<li>Check that packages are installed correctly</li>
+<li>Update R and packages to latest versions</li>
+</ul>
+<p><strong>Rendering fails</strong>:</p>
+<ul>
+<li>Check for syntax errors in QMD files</li>
+<li>Verify all required packages are installed</li>
+<li>Look at the error messages for specific issues</li>
+</ul>
+<section id="getting-help" class="level3">
+<h3 class="anchored" data-anchor-id="getting-help">Getting Help</h3>
+<ul>
+<li><strong>Quarto Documentation</strong>: <a href="https://quarto.org/docs">quarto.org/docs</a></li>
+<li><strong>R Help</strong>: Use <code>?function_name</code> in R console</li>
+<li><strong>Stack Overflow</strong>: Tag questions with <code>quarto</code> and <code>r</code></li>
+<li><strong>GitHub Issues</strong>: Report bugs in the project repository</li>
+</ul>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>Once your environment is set up:</p>
+<ol type="1">
+<li><a href="../guide/tutorial.html"><strong>Work through the tutorial</strong></a> to build your first case study</li>
+<li><a href="../templates/case-study-template.html"><strong>Explore the templates</strong></a> for structure guidance</li>
+<li><a href="../guide/worldbuilding.html"><strong>Learn about worldbuilding</strong></a> to create consistent fictional universes</li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-kampe2022" class="csl-entry" role="listitem">
+Kampe, C. W. (2022). <em>Complex games and game design as a vehicle for technical &amp; critical learning</em> [PhD thesis, North Carolina State University]. <a href="https://NC State Repository">NC State Repository</a>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../guide/methodology.html" class="pagination-link" aria-label="Methodology">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../guide/tutorial.html" class="pagination-link" aria-label="Tutorial">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

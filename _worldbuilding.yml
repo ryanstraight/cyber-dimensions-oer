@@ -1,0 +1,89 @@
+# Example worldbuilding data for demonstration purposes
+# This file provides variables referenced in mermaid diagrams and other content
+
+# Personnel - Using role-based naming pattern for non-fragile references
+# CEO
+ceo_name_first: "Michael"
+ceo_name_last: "Rodriguez"
+ceo_name_salutation: "Mr."
+
+# Security Director
+security_director_name_first: "Sarah"
+security_director_name_last: "Martinez"
+security_director_name_salutation: "Ms."
+
+# Junior Analyst
+junior_analyst_name_first: "Alex"
+junior_analyst_name_last: "Chen"
+junior_analyst_name_salutation: "Mr."
+
+# Additional Personnel
+threat_analyst_name_full: "Dr. Emily Watson"
+legal_counsel_name_full: "Jennifer Park, Esq."
+
+# Customer/Patient Personnel
+customer_patient_name_full: "Maria Gonzalez"
+customer_patient_name_salutation: "Ms."
+customer_patient_name_last: "Gonzalez"
+customer_email_full: "maria.gonzalez@email.com"
+customer_twitter_handle: "MariaG_Phoenix"
+
+# Healthcare Organization Staff
+customer_service_staff_name_first: "James"
+healthcare_organization_name: "Regional Medical Center"
+customer_service_forum_handle: "CustomerServiceTeam"
+it_staff_forum_handle: "ITSupport"
+nurse_forum_handle: "RNManager"
+admin_director_forum_handle: "AdminDirector"
+
+# Organization
+company_name: "SecureTech Solutions"
+organization_domain: "securetech.com"
+organization_twitter_handle: "SecureTechSolutions"
+
+# Incident Details
+incident_discovery_timestamp: "2024-03-15 09:30:00"
+initial_response_timestamp: "2024-03-15 09:45:00"
+executive_briefing_timestamp: "2024-03-15 14:00:00"
+incident_date: "March 15, 2024"
+
+# Technical Details
+log_analysis_timestamp: "2024-03-15 14:17:00"
+log_analysis_timestamp_db: "2024-03-15 14:17:23"
+attacker_ip_address: "185.220.101.47"
+data_exfiltration_volume: "2.3 GB"
+exfiltration_timeframe: "48 hours"
+
+# Meeting and Response Times
+emergency_board_meeting_time: "March 16, 7:00 AM"
+media_strategy_meeting_time: "March 16, 2:00 PM"
+employee_info_session_time: "March 17, 10:00 AM"
+hr_notification_timestamp: "March 16, 2024 8:30 AM"
+
+# Customer Communication
+customer_inquiry_date: "March 16, 2024"
+customer_response_date: "March 17, 2024"
+customer_social_media_timestamp: "March 16, 2024 7:23 PM"
+breach_response_phone: "1-800-555-HELP"
+
+# Financial Details
+hourly_revenue_loss: "$15,000"
+insurance_deductible: "$100,000"
+compliance_penalty_tier: "Tier II"
+
+# Legal and Regulatory
+state_breach_statute: "Arizona Breach Notification Law"
+california_breach_law: "California SB-1386"
+
+# Impact Metrics
+records_compromised: "15,000"
+direct_costs: "$250,000"
+regulatory_fines: "$500,000"
+
+# Compliance
+primary_regulation: "HIPAA"
+notification_deadline: "72 hours"
+
+# Other details for comprehensive case studies
+forensic_incident_id: "INC-2024-0315-001"
+threat_intelligence_report_id: "TIR-2024-0315-001"

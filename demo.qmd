@@ -1,0 +1,46 @@
+# Demonstration Case Study {-}
+
+This toolkit provides comprehensive methodology and templates for creating immersive cybersecurity case studies. To see the Cyber Dimensions approach in action, a complete (though intentionally short) demonstration case study is available that showcases all the principles and techniques described throughout this guide.
+
+## The CIRCUIT Case Study
+
+**CIRCUIT** is a power grid cybersecurity incident that demonstrates the full Cyber Dimensions methodology. This case study features:
+
+- **Immersive fictional world** with realistic organizations, characters, and technical infrastructure
+- **Authentic artifacts** including emails, news reports, technical documentation, and social media posts
+- **Multiple perspectives** representing different stakeholder viewpoints and ethical positions
+- **Realistic complexity** requiring students to navigate competing priorities and incomplete information
+- **Flexible assessment** supporting various educational contexts and learning objectives
+
+The case follows cybersecurity professionals as they respond to a sophisticated attack on critical infrastructure, requiring students to analyze technical evidence, evaluate ethical implications, and make time-sensitive decisions under pressure.
+
+## Experience the Complete Case Study
+
+Rather than including excerpts or partial examples in this toolkit, we encourage you to experience the complete rendered case study:
+
+::: {.implementation-guidance title="Visit the CIRCUIT Demonstration"}
+**[Access the complete CIRCUIT case study](https://ryanstraight.github.io/cyber-dimensions-demo)**
+
+This fully rendered demonstration shows exactly what students experience when engaging with a Cyber Dimensions case study, including all interactive elements, document collections, and assessment frameworks.
+:::
+
+## What You'll Find in the Demo
+
+The CIRCUIT demonstration includes:
+
+- **Complete narrative** with realistic incident timeline and character development
+- **Authentic artifact collections** showing how fictional documents create immersive experiences
+- **Assessment examples** demonstrating various evaluation approaches
+- **Technical implementation** showing Quarto features and styling in practice
+- **Student guidance materials** including case briefings and assignment instructions
+
+## Connecting Demo to Methodology
+
+As you explore the CIRCUIT case study, notice how it implements the theoretical principles and practical techniques described throughout this toolkit:
+
+- Posthuman educational approach recognizing distributed agency across human-technology assemblages
+- Material-semiotic practices where fictional artifacts shape authentic learning experiences
+- Assemblage thinking creating coherent sociotechnical educational networks
+- Realistic professional contexts that prepare students for cybersecurity careers
+
+The demonstration serves as both a learning experience and a reference implementation, showing how the Cyber Dimensions methodology creates engaging, educational, and professionally relevant cybersecurity education. Continue through this book to find out how to create your own.

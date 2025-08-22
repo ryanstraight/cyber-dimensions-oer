@@ -1,0 +1,525 @@
+---
+title: "Setup"
+---
+
+To effectively create cybersecurity case studies using the Cyber Dimensions methodology, you need a carefully configured development environment that integrates scientific publishing capabilities with systematic content management tools. This configuration guide helps you establish the technical foundation necessary for implementing the pedagogical approaches outlined in the methodology chapter, supporting your development of complex educational materials that foster critical thinking and technical learning [@kampe2022].
+
+## Quickstart
+
+1. You install R
+1. You install Quarto
+1. You install RStudio
+1. You clone the repository
+1. You build the project!
+
+This assumes you're using RStudio for development. This is not required but is the default method. There is a minimal demo available for you use directly:
+
+1.  **Download the template** from this repository: [cyber-dimensions-demo](https://github.com/ryanstraight/cyber-dimensions-demo) 
+2.  **Extract to your desired location**
+3.  **Open in RStudio** by double-clicking the `.Rproj` file
+
+## Technical Infrastructure Requirements
+
+Your development environment centers on the [Quarto](https://quarto.org) scientific publishing platform, which provides you with the computational and narrative integration capabilities essential for creating sophisticated educational materials. Quarto's architecture supports the complex multimedia integration, cross-referencing, and multiple output formats you need for contemporary cybersecurity education.
+
+::: {.implementation-guidance title="Author's Note"}
+
+My "tech stack," as it were, is R, Quarto, and RStudio. So long as you've installed those three platforms, you're ready to do anything discussed in this book. R and Quarto both live in the background, and RStudio is the integrated development environment (IDE). That said, Quarto works through the terminal, so you can technically write in Notepad to build a Quarto document. RStudio allows for project-based workflows, which this process leverages heavily, as with the here() package.
+
+:::
+
+Additional development tools enhance your productivity and provide alternative approaches to content creation. Visual Studio Code offers you a lightweight alternative text editor with extensive Quarto integration capabilities, while GitHub Desktop provides you with graphical interface access to version control functionality if you're less comfortable with command-line interfaces. The Pandoc document converter, typically bundled with your Quarto installations, extends format conversion capabilities beyond the standard Quarto output options.
+
+::: {.implementation-guidance title="Extended Development Support"}
+
+While not strictly required, these supplementary tools significantly enhance your development experience: Visual Studio Code for alternative editing environments, GitHub Desktop for simplified version control management, and direct Pandoc access for specialized document conversion requirements that extend beyond standard Quarto capabilities. Your R installation comes with its own bundled version of Pandoc.
+
+:::
+
+## Platform Installation Procedures
+
+Your installation process requires systematic attention to platform-specific requirements and dependency management to ensure optimal performance across different operating systems. Each component builds upon previous installations, making sequential completion essential for your proper system configuration.
+
+### Statistical Computing Environment Setup
+
+The R statistical computing environment and RStudio integrated development environment form the computational foundation for your dynamic content generation and systematic project management. On Windows and macOS platforms, your installation follows a straightforward sequence beginning with R base installation from the official [R Project](https://www.r-project.org/) distribution, followed by RStudio Desktop installation from [Posit](https://posit.co/download/rstudio-desktop/). Both installations typically require only default configuration options for optimal integration.
+
+Your Linux installations require additional attention to package management and dependency resolution. If you're using Ubuntu and Debian distributions, you'll benefit from package manager installation that ensures proper system integration and automatic dependency management:
+
+```bash
+# Update package repository and install R base system
+sudo apt update
+sudo apt install r-base r-base-dev
+
+# Install RStudio from downloaded package
+sudo dpkg -i rstudio-*.deb
+sudo apt-get install -f  # Resolve any dependency issues
+```
+
+### Scientific Publishing Platform Configuration
+
+Your Quarto installation provides the document publishing capabilities that enable sophisticated educational material development. Your installation process remains consistent across platforms, requiring you to download platform-specific installers from the official [Quarto documentation site](https://quarto.org/docs/get-started/) and execute following standard installation procedures for your operating system.
+
+Your installation verification ensures proper system integration and command-line accessibility essential for advanced document processing:
+
+```bash
+quarto --version
+```
+
+### Version Control System Integration
+
+Your Git version control system installation provides the collaborative development and systematic content management capabilities necessary for educational material development and maintenance. Your installation procedures vary by platform: Windows systems require you to download and install from the official [Git website](https://git-scm.com/), macOS systems let you benefit from Homebrew package manager installation (`brew install git`), while Linux distributions typically include Git in standard package repositories (`sudo apt install git`).
+
+## Required R Packages
+
+You can create a new R script and run these installation commands:
+
+```r
+# Essential packages for case study development
+install.packages(c(
+  "here",        # File path management
+  "yaml",        # YAML file handling
+  "stringr",     # String manipulation
+  "tidyverse",   # Data manipulation
+  "readr",       # File reading
+  "knitr",       # Document generation
+  "quarto",      # R-based quarto commands
+  "devtools",    # Development tools
+  "usethis"      # Project setup utilities
+))
+
+# Optional but recommended packages
+install.packages(c(
+  "DT",          # Interactive tables
+  "plotly",      # Interactive plots
+  "htmlwidgets"  # HTML widgets
+))
+```
+
+## Scalability Considerations for Multi-Case Study Development
+
+Effective cybersecurity education programs require systematic approaches to content development that maintain quality while supporting institutional scale requirements.
+
+**Content Development Workflow Architecture**:
+
+1. **Template Standardization**: Establish consistent case study structures that support efficient development and quality assurance processes.
+
+2. **Collaborative Development**: Configure Git workflows that enable multiple educators to contribute content while maintaining methodological consistency.
+
+3. **Quality Assurance Integration**: Implement automated testing for educational content that validates learning objectives alignment and technical functionality.
+
+4. **Assessment Analytics**: Design data collection frameworks that support educational effectiveness evaluation and continuous improvement processes.
+
+**Automated Quality Assurance Framework** (`scripts/quality-assurance.R`):
+
+```r
+# Automated Quality Assurance for Case Study Development
+library(testthat)
+library(yaml)
+
+# Function to validate case study structure
+validate_case_study <- function(case_study_path) {
+  
+  # Check required sections exist
+  required_sections <- c("learning_objectives", "artifact_collection", 
+                        "assessment_framework", "stakeholder_analysis")
+  
+  case_content <- readLines(case_study_path)
+  case_text <- paste(case_content, collapse = "\n")
+  
+  validation_results <- list()
+  
+  for (section in required_sections) {
+    section_exists <- grepl(section, case_text, ignore.case = TRUE)
+    validation_results[[section]] <- section_exists
+    
+    if (!section_exists) {
+      warning(paste("Missing required section:", section, 
+                   "in", case_study_path))
+    }
+  }
+  
+  return(validation_results)
+}
+
+# Function to validate learning objectives alignment
+validate_learning_objectives <- function(case_study_path) {
+  
+  # Implementation for checking learning objectives
+  # against institutional competency frameworks
+  
+}
+
+# Run validation on all case studies
+validate_all_cases <- function() {
+  case_files <- list.files("cases", pattern = "\\.qmd$", 
+                          recursive = TRUE, full.names = TRUE)
+  
+  validation_report <- lapply(case_files, validate_case_study)
+  names(validation_report) <- case_files
+  
+  return(validation_report)
+}
+```
+
+## Configuration Files
+
+### 1. Quarto Configuration (`_quarto.yml`)
+
+One of the main benefits of using the Quarto system is the ease of manipulation. If you'd prefer to organize your directory differently, just edit the YAML in `_quarto.yml` and it will apply throughout the project.
+
+```yaml
+project:
+  type: default
+  pre-render: scripts/setup.R
+  
+format:
+  html:
+    theme: cosmo # Default bootstrap theme
+    css: assets/css/styles.css
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
+    
+execute:
+  freeze: auto
+  echo: false
+  message: false
+  warning: false
+  
+citation: false
+footnotes-hover: true
+```
+
+### 2. R Project Configuration
+
+RStudio will take care of this automatically if you use the IDE to create a project in an existing folder or use a Version Control (directly use the Git repository through RStudio). Otherwise, if you really want to, manually create a file called (for example) `my-cases.Rproj`:
+
+```
+Version: 1.0
+
+RestoreWorkspace: No
+SaveWorkspace: No
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
+
+BuildType: Custom
+CustomScriptPath: scripts/build.R
+```
+
+### 3. Git Configuration (`.gitignore`)
+
+Depending on how you want to host your case studies (online for all or locally to share on demand), you may wish to consider the following:
+
+```
+# R specific
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+*.Rproj
+
+# Quarto
+/.quarto/
+_site/
+_freeze/
+*_files/
+*.html
+*.pdf
+*.docx
+*.tex
+*.log
+*.aux
+*.out
+*.toc
+*.fff
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# R Markdown
+*.nb.html
+*.utf8.md
+*.knit.md
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Cache directories
+node_modules/
+.sass-cache/
+.cache/
+
+# Environment variables
+.env
+.env.local
+
+# RDS cache files
+*.rds
+!_world_data.rds  # Keep worldbuilding cache
+
+# Large data files (adjust as needed)
+*.csv
+*.xlsx
+*.json
+!_worldbuilding.yml  # Keep worldbuilding config
+
+# Media files (consider hyperlinking to control size limits)
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3
+# Uncomment to exclude images if they're large
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+
+# Bibliography and citation files
+# Uncomment if you want to exclude
+# *.bib
+# *.csl
+```
+
+## Development Workflow
+
+```
+my-case-studies/
+├── _quarto.yml
+├── my-cases.Rproj
+├── README.qmd                      # with `format: gfm` to render to README.md
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── images/
+│   └── profiles/
+├── _scripts/
+│   ├── setup.R
+│   └── worldbuilding.R
+├── data/
+│   └── _worldbuilding.yml
+├── cases/
+│   ├── case1/
+│   │   ├── scenario.qmd
+│   │   ├── assessment.qmd
+│   │   └── assets/
+│   └── case2/
+├── templates/
+└── docs/                           # Standard Github Pages rendering location
+```
+
+### Essential Scripts
+
+::: {.implementation-guidance title="Script Validation"}
+
+These scripts are based on the *Cyber Dimensions* textbook development workflow. Adjust paths and functions according to your specific project structure and worldbuilding requirements.
+
+:::
+
+**`scripts/setup.R`** - Pre-render script:
+
+```r
+# Load required libraries
+library(here)
+library(yaml)
+library(dplyr)
+library(stringr)
+
+# Ensure output directory exists
+if (!dir.exists(here("docs"))) {
+  dir.create(here("docs"), recursive = TRUE)
+}
+
+# Load worldbuilding data
+if (file.exists(here("data", "_worldbuilding.yml"))) {
+  world_data <- yaml::read_yaml(here("data", "_worldbuilding.yml"))
+  world <- world_data$world
+  
+  # Process date calculations if needed
+  if (exists("world$base_year")) {
+    world$current_year <- as.numeric(format(Sys.Date(), "%Y"))
+    world$years_since_base <- world$current_year - world$base_year
+  }
+  
+  # Save processed world data
+  saveRDS(world, here("_world_data.rds"))
+  message("Worldbuilding data loaded successfully")
+} else {
+  warning("No worldbuilding data found. Creating empty world object.")
+  world <- list()
+  saveRDS(world, here("_world_data.rds"))
+}
+```
+
+**`scripts/worldbuilding.R`** - Helper functions:
+
+``` r
+# Helper functions for worldbuilding
+source(here("scripts", "setup.R"))
+
+# Load world data if available
+if (file.exists(here("_world_data.rds"))) {
+  world <- readRDS(here("_world_data.rds"))
+} else {
+  world <- list()
+}
+```
+
+## Testing Your Setup
+
+### 1. Create a Test Document
+
+Create `test.qmd` to explore Quarto markdown functionality (APA 7th edition style):
+
+````{verbatim}
+---
+title: "Setup Test"
+author: "My Name"
+date: last-modified
+
+bibliography: refs.bib   # Or whatever your .bib file is named
+csl: https://www.zotero.org/styles/apa    # Or a local CSL for styling
+
+engine: knitr        # For inline R code rendering
+format:
+  html:
+    embed-resources: true
+    output-file: "optional-rendered-name-different-from-qmd-filename"
+---
+
+# Testing Your Installation
+
+If you can render this document, your setup is working!
+
+<!-- You can add HTML comments in Quarto markdown like this and they won't appear when rendered. --
+
+You can add images:
+
+![](images/example.png){fig-alt="Alt text should go in a fig-alt key like this. While you can add text in the square brackets ![Like this](images/example.png), it will also show as a caption in the rendered file. If you want that, go for it!"}
+
+## R Code Test
+
+```{r}
+label: test-r-code
+echo: true
+
+# Basic R functionality
+2 + 2
+```
+Add ordered lists with 1. for each item for them to auto-number:
+
+1. This is the first item
+1. This is the second item.
+1. This is the third item.
+1. All 4 items start with 1.
+
+Easily include markdown tables:
+
+| Left-aligned column | Center | Right |
+|:--------------------|:------:|------:|
+| 123                 |        |       |
+| ABC                 |        |       |
+| 123                 |        |       |
+| ABC                 |        |       |
+
+: Example table {#tbl-table-label-for-cross-reference}
+
+
+::: {.implementation-guidance title="Callout Title"}
+
+This is a callout box - if you can see this formatted correctly, 
+Quarto is working properly!
+
+:::
+
+Here we could refer back to @tbl-table-label-for-cross-reference. Once we've set up our worldbuilding YAML in `_worldbuilding.yml`, we can add some inline R references, like `r world$casename_ceo_fullname`. Likewise, adding [@authorYYYY] bibtex will add in-text citations. 
+
+Note that in Quarto markdown
+single linebreaks will not be rendered
+and will combine into a single line.
+
+You can force a linebreak  
+by adding two spaces  
+at the end of a line.
+````
+
+### 2. Render the Test
+
+In RStudio:
+
+1. Open `test.qmd`
+1. Click the "Render" button
+1. Verify that HTML output is generated
+
+Or from command line:
+
+```bash
+quarto render test.qmd
+```
+
+## Troubleshooting
+
+Refer to the [Quarto.org guide](https://quarto.org/guide/) for troubleshooting. Some common issues are:
+
+**Quarto not found**:
+
+-   Ensure Quarto is installed and in your PATH
+-   Restart RStudio after installation
+
+**R packages not loading**:
+
+-   Check that packages are installed correctly
+-   Update R and packages to latest versions
+
+**Rendering fails**:
+
+-   Check for syntax errors in QMD files
+-   Verify all required packages are installed
+-   Look at the error messages for specific issues
+
+### Getting Help
+
+-   **Quarto Documentation**: [quarto.org/docs](https://quarto.org/docs)
+-   **R Help**: Use `?function_name` in R console
+-   **Stack Overflow**: Tag questions with `quarto` and `r`
+-   **GitHub Issues**: Report bugs in the project repository
+
+## Next Steps
+
+Once your environment is set up:
+
+1.  [**Work through the tutorial**](tutorial.qmd) to build your first case study
+2.  [**Explore the templates**](../templates/case-study-template.qmd) for structure guidance
+3.  [**Learn about worldbuilding**](worldbuilding.qmd) to create consistent fictional universes

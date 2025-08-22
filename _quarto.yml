@@ -1,0 +1,160 @@
+project:
+  type: book
+  output-dir: docs
+
+metadata-files:
+  - _book.yml
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+
+filters:
+  - custom-callout
+
+custom-callout:
+  theoretical-foundation:
+    title: "Theoretical Foundation"
+    icon-symbol: "🏛️"
+    color: "#594a3d"
+    appearance: "simple"
+  
+  pedagogical-consideration:
+    title: "Pedagogical Consideration"
+    icon-symbol: "🎓"
+    color: "#4a6e8a"
+    appearance: "simple"
+  
+  implementation-guidance:
+    title: "Implementation Guidance"
+    icon-symbol: "🔧"
+    color: "#736355"
+    appearance: "simple"
+  
+  assessment-strategy:
+    title: "Assessment Strategy"
+    icon-symbol: "📋"
+    color: "#c88a3f"
+    appearance: "simple"
+  
+  cognitive-load-alert:
+    title: "Cognitive Load Consideration"
+    icon-symbol: "🧠"
+    color: "#a94442"
+    appearance: "simple"
+  
+  scaffolding-tip:
+    title: "Scaffolding Strategy"
+    icon-symbol: "🏗️"
+    color: "#5a7d5a"
+    appearance: "simple"
+  
+  learner-experience:
+    title: "Learner Experience Focus"
+    icon-symbol: "👤"
+    color: "#8a7c6f"
+    appearance: "simple"
+  
+  evidence-base:
+    title: "Research Evidence"
+    icon-symbol: "📊"
+    color: "#4a6e8a"
+    appearance: "simple"
+
+citation:
+  type: book
+  title: "Cyber Dimensions: Open Educational Resource Toolkit"
+  author: "Ryan M. Straight"
+  doi: 10.17605/OSF.IO/XYFM9
+  url: "https://github.com/ryanstraight/cyber-dimensions-oer"
+  
+params:
+  orcid-straight: 0000-0002-6251-5662
+  google-scholar-straight: https://scholar.google.com/citations?user=7y4X8jgAAAAJ
+
+format:
+  html:
+    title-meta: "Cyber Dimensions: Open Educational Resource Toolkit"
+    theme: 
+      - flatly
+      - assets/custom.scss
+    css: assets/styles.css
+    sidebar:
+      style: "docked"
+      search: true
+      collapse-level: 2
+      pinned: true
+    toc: true
+    toc-location: right
+    toc-title: "Contents"
+    toc-depth: 3
+    toc-expand: 2
+    number-sections: true
+    number-depth: 1
+    code-fold: false
+    code-copy: true
+    code-line-numbers: true
+    fig-responsive: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    lightbox:
+      match: auto
+      effect: zoom
+      desc-position: bottom
+    crossref:
+      fig-title: "Figure"
+      fig-prefix: "Figure"
+      tbl-title: "Table"
+      tbl-prefix: "Table"
+      eq-prefix: "Equation"
+      sec-prefix: "Section"
+    link-external-newwindow: true
+    link-external-icon: true
+    citations-hover: true
+    footnotes-hover: true
+    smooth-scroll: true
+    anchor-sections: true
+  #   
+  # pdf:
+  #   title-meta: "Cyber Dimensions: Open Educational Resource Toolkit"
+  #   documentclass: scrbook
+  #   toc: true
+  #   toc-depth: 2
+  #   number-sections: true
+  #   number-depth: 2
+  #   colorlinks: true
+  #   fig-cap-location: bottom
+  #   tbl-cap-location: top
+  #   crossref:
+  #     fig-title: "Figure"
+  #     fig-prefix: "Figure"
+  #     tbl-title: "Table"
+  #     tbl-prefix: "Table"
+  #     eq-prefix: "Equation"
+  #     sec-prefix: "Section"
+  #   cite-method: biblatex
+  #   
+  # docx:
+  #   title-meta: "Cyber Dimensions: Open Educational Resource Toolkit"
+  #   toc: true
+  #   toc-depth: 2
+  #   number-sections: true
+  #   number-depth: 2
+  #   fig-cap-location: bottom
+  #   tbl-cap-location: top
+  #   crossref:
+  #     fig-title: "Figure"
+  #     fig-prefix: "Figure"
+  #     tbl-title: "Table"
+  #     tbl-prefix: "Table"
+  #     eq-prefix: "Equation"
+  #     sec-prefix: "Section"
+
+execute:
+  enabled: false
+  freeze: auto
+  echo: false
+  message: false
+  error: false
+  warning: false
+  
+license: "CC BY 4.0"
