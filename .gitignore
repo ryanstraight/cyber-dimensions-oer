@@ -34,3 +34,17 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+
+# Quarto files
+/.quarto/
+_freeze/
+
+# Quarto intermediate notebook files
+*.quarto_ipynb
+
+# Private research notes
+_research-notes/
+
+# Claude local configuration (not for publication)
+CLAUDE.local.md
+.claude/

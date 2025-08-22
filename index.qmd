@@ -1,0 +1,140 @@
+# Preface {.unnumbered}
+
+This Open Educational Resource (OER) toolkit provides you with the **Cyber Dimensions methodology**—a sophisticated posthuman approach to cybersecurity education developed through systematic Design-Based Research at the University of Arizona. Rather than offering generic case study development guidance, this resource gives you the theoretical foundations and practical implementation framework you need to apply an innovative pedagogical methodology grounded in posthumanist educational theory, postphenomenological research principles, and assemblage thinking.
+
+## Why This Approach Matters {#sec-why-approach-matters}
+
+Contemporary cybersecurity education faces well-documented challenges in bridging theoretical knowledge and professional practice. Systematic reviews of the field consistently identify gaps between theoretical curricula and the complex, collaborative realities of cybersecurity work. Students report difficulty transferring classroom learning to professional contexts, while industry stakeholders note persistent misalignments between educational preparation and workplace requirements.
+
+These challenges reflect deeper theoretical assumptions about learning and knowledge that may be inadequate for preparing your students to engage with cybersecurity's distributed, sociotechnical character. Traditional pedagogical approaches typically position human learners as autonomous agents who acquire knowledge about technological systems, treating security as something humans "do to" technology rather than recognizing how security emerges through ongoing relationships among human expertise, technological systems, organizational structures, and social practices.
+
+The Cyber Dimensions methodology draws on posthuman educational theory to help you address these foundational assumptions. Rather than simply improving existing approaches, it reconceptualizes cybersecurity education as assemblage creation—helping you develop learning environments where your students engage with complex networks of human and nonhuman actors that more accurately reflect professional cybersecurity practice.
+
+This theoretical reorientation has practical implications for your curriculum design, assessment development, and pedagogical implementation. The methodology provides you with frameworks for creating educational experiences that recognize cybersecurity's inherently collaborative and distributed character while maintaining rigorous academic standards and clear learning objectives. The approach has been developed through systematic Design-Based Research, ensuring both theoretical sophistication and practical applicability across diverse educational contexts.
+
+## Posthuman Cybersecurity Education: Beyond Anthropocentric Approaches {#sec-posthuman-cybersecurity-education}
+
+The Cyber Dimensions methodology helps you address fundamental limitations in traditional cybersecurity education that positions humans as autonomous agents who simply "use" technological systems. This anthropocentric paradigm fails to recognize the complex ways humans and technologies co-constitute each other in ongoing processes of becoming, limiting your students' ability to understand and engage with the distributed character of contemporary cybersecurity practice.
+
+**Posthuman cybersecurity pedagogy** recognizes that:
+
+- **Security emerges through assemblages**: Cybersecurity effectiveness results from complex networks of human and nonhuman actors rather than individual human decision-making
+- **Learning is distributed**: Understanding develops through engagement with sociotechnical assemblages rather than transmission of abstract principles
+- **Agency is relational**: Both human learners and technological systems possess agency that shapes educational outcomes
+- **Ethics are entangled**: Responsibility extends across human-technology networks rather than residing in individual moral agents
+
+::: {.theoretical-foundation title="Theoretical Sophistication and Practical Utility"}
+
+This methodology represents a significant theoretical contribution to cybersecurity education while maintaining practical utility for you as an educator. The combination of posthumanist rigor and pedagogical effectiveness distinguishes the approach from both generic instructional design and purely theoretical educational research.
+
+:::
+
+## Methodological Framework: Assemblage-Based Education {#sec-methodological-framework}
+
+The Cyber Dimensions methodology employs **systematic worldbuilding** as assemblage creation, establishing coherent sociotechnical networks that embody posthumanist recognition of distributed agency across human and nonhuman actors. This approach draws upon sophisticated theoretical frameworks—posthuman inquiry heuristics, agential realism, assemblage theory, and postphenomenological methodology—to create educational experiences that transcend conventional case study development.
+
+### Worldbuilding as Posthuman Infrastructure {#sec-worldbuilding-posthuman-infrastructure}
+
+The centralized `_worldbuilding.yml` system represents more than technical data management--it embodies **posthuman infrastructure** that recognizes the agency of computational systems in educational delivery. This systematic approach creates stable assemblages that support multiple learning encounters while maintaining theoretical sophistication and internal coherence.
+
+::: {.implementation-guidance title="From Generic Case Studies to Posthuman Assemblages"}
+
+**Traditional Approach**: Develops isolated case studies as vehicles for delivering predetermined cybersecurity content to individual learners
+
+**Posthuman Methodology**: Creates educational assemblages where human learners, fictional characters, technological systems, and organizational structures co-constitute understanding through ongoing intra-active processes
+
+:::
+
+### Five Pillars Reconsidered Through Posthuman Lens {#sec-five-pillars-posthuman-lens}
+
+The methodology reconceptualizes traditional pedagogical approaches through posthuman theoretical frameworks that recognize the agency of nonhuman actors in educational assemblages:
+
+::: {.pedagogical-consideration title="Immersive Fiction as Material-Semiotic Practice"}
+
+Rather than treating immersive fiction as narrative technique, the posthuman approach recognizes fictional worlds as **material-semiotic practices** that co-constitute learning experiences alongside human participants. Effective cybersecurity scenarios create agential cuts that make specific phenomena observable for learning while embodying situated knowledges that resist universal claims.
+
+:::
+
+::: {.pedagogical-consideration title="Interconnected Narratives as Actor-Networks"}
+
+Systematic narrative continuity creates stable **actor-networks** that enable increasingly sophisticated analysis of cybersecurity phenomena. Recurring characters and organizations become obligatory passage points through which students must navigate to understand complex ethical and technical relationships that characterize real cybersecurity practice.
+
+:::
+
+::: {.pedagogical-consideration title="Multiple Perspectives as Posthuman Ethics"}
+
+The inclusion of diverse stakeholder perspectives reflects **posthuman ethics** that recognizes ethical responsibility as distributed across assemblages rather than located in individual moral agents. Students develop response-ability—capabilities for responding appropriately to complex situations that exceed individual control.
+
+:::
+
+::: {.pedagogical-consideration title="Realistic Complexity as Emergent Phenomena"}
+
+Rather than managing cognitive load through simplification, the posthuman approach embraces complexity as **emergent phenomena** that arise through assemblage interactions. Learning environments preserve unpredictable outcomes that characterize real cybersecurity assemblages while supporting distributed cognition across human-technology networks.
+
+:::
+
+::: {.assessment-strategy title="Flexible Assessment as Posthuman Evaluation"}
+
+Assessment recognizes that learning outcomes emerge through assemblage participation rather than individual cognitive achievement. Evaluation examines how students engage with complex human-technology-organization networks while valuing situated understanding and supporting ongoing becoming through formative participation.
+
+:::
+
+## Toolkit Organization and Theoretical Progression {#sec-toolkit-organization}
+
+This resource enables you to understand and apply posthuman cybersecurity education principles through systematic progression across four integrated domains that build from theoretical foundations through practical implementation while maintaining scholarly rigor throughout.
+
+### Foundation (Part 1): Establishing Theoretical Sophistication {#sec-foundation-theoretical}
+
+The foundational section establishes the comprehensive theoretical framework supporting the Cyber Dimensions methodology, including:
+
+- **[Theoretical Foundations](guide/posthuman-foundations.qmd)**: We begin with applied posthumanist pedagogical theory, providing a comprehensive framework for integrating Adams & Thompson's [-@adamsResearchingPosthumanWorld2016] posthuman inquiry heuristics, Barad's [-@baradMeetingUniverseHalfway2007] agential realism, assemblage theory [-@deleuzeThousandPlateausCapitalism1987], and postphenomenological methodology [-@ihdeTechnologyLifeworldGarden1990]
+- **[Posthuman Methodology](guide/methodology.qmd)**: Core approach grounding cybersecurity education in posthumanist theory and postphenomenological design principles
+- **[Development Environment](guide/setup.qmd)**: Technical infrastructure supporting posthuman educational assemblages
+- **[Implementation Tutorial](guide/tutorial.qmd)**: Systematic guidance for applying theoretical principles in practice
+
+### Content Development (Part 2): Assemblage Creation and Narrative Design {#sec-content-development-assemblage}
+
+The content development section focuses on creating educational assemblages that embody posthuman pedagogical principles:
+
+- **[Worldbuilding as Infrastructure](guide/worldbuilding.qmd)**: Systematic assemblage creation through centralized worldbuilding systems that recognize nonhuman agency
+- **[Narrative Design](guide/narrative-design.qmd)**: Storytelling approaches grounded in material-semiotic practices and actor-network theory
+- **[Assessment Framework](guide/assessment-framework.qmd)**: Evaluation approaches that recognize distributed learning across human-technology networks
+
+### Technical Implementation (Part 3): Posthuman Educational Technology {#sec-technical-implementation-posthuman}
+
+The technical implementation section addresses the computational and design competencies required for sophisticated educational assemblage development:
+
+- **[Quarto Integration](guide/quarto-setup.qmd)**: Platform configuration that supports posthuman educational principles
+- **[Visual Design](guide/styling.qmd)**: Aesthetic approaches that embody theoretical sophistication
+- **[Multimedia Integration](guide/multimedia-integration.qmd)**: Multi-modal assemblage creation across diverse media
+- **[Quality Assurance](guide/quality-assurance.qmd)**: Evaluation processes grounded in posthuman theoretical consistency
+
+### Resources and Templates (Part 4): Applied Methodology and Assessment {#sec-resources-templates-applied}
+
+The resources section provides practical tools for implementing posthuman cybersecurity education while maintaining theoretical rigor:
+
+- **[Case Study Templates](templates/case-study-template.qmd)**: Frameworks embodying posthuman pedagogical principles
+- **[Assessment Templates](templates/assessment-templates.qmd)**: Evaluation approaches recognizing assemblage participation
+- **[Case Study Examples](https://github.com/ryanstraight/cyber-dimensions-demo)**: Demo repository with complete case studies demonstrating posthuman principles in practice
+- **[Cross-Case Continuity](guide/cross-case-continuity.qmd)**: Systematic approaches to assemblage coherence across multiple scenarios
+
+## Educational Innovation and Scholarly Contribution {#sec-educational-innovation}
+
+This toolkit represents **educational innovation** that contributes to both cybersecurity pedagogy and posthuman educational theory. The methodology demonstrates how posthuman principles can be systematically integrated into professional education while advancing theoretical understanding of human-technology relations in learning contexts.
+
+::: {.evidence-base title="Research-Based Educational Development"}
+
+The Cyber Dimensions methodology employs **Design-Based Research** principles that recognize educational technology development as systematic inquiry contributing to both practical effectiveness and theoretical advancement. This approach generates evidence about how posthuman pedagogical principles enhance cybersecurity education while producing transferable insights for educational research.
+
+:::
+
+## Next Steps: Toward Posthuman Practice {#sec-next-steps-posthuman}
+
+This toolkit enables you as a cybersecurity educator (and others; cybersecurity is simply the domain we've chosen) to move beyond anthropocentric approaches toward **posthuman practice** that recognizes the distributed character of contemporary cybersecurity work. By understanding and applying these methodological principles, you can create learning experiences that prepare your students for professional practice characterized by complex human-technology assemblages rather than simple human control over passive technological systems.
+
+You can start exploring posthuman cybersecurity education by:
+
+1. **[Understanding the theoretical foundations](guide/posthuman-foundations.qmd)** that ground this innovative approach
+2. **[Exploring the methodology](guide/methodology.qmd)** through posthuman pedagogical principles  
+3. **[Examining systematic worldbuilding](guide/worldbuilding.qmd)** as assemblage creation and infrastructure development
+4. **[Reviewing the case study examples](https://github.com/ryanstraight/cyber-dimensions-demo)** to see posthuman principles in practice

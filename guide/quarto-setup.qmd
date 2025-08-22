@@ -1,0 +1,912 @@
+# Quarto Setup
+
+[Quarto](https://quarto.org) provides the technical foundation for implementing the Cyber Dimensions methodology through its comprehensive scientific and technical publishing capabilities. This open-source platform, built upon the Pandoc document conversion system, enables the sophisticated content integration, dynamic variable management, and multi-format output generation required for professional cybersecurity education materials.
+
+::: {.implementation-guidance title="Looking for a quick start?"}
+
+This chapter *manually* walks through the technical setup in a Quarto project. For a minimal functioning example, feel free to simply clone the [Cyber Dimensions demo](https://github.com/ryanstraight/cyber-dimensions-demo) repository.
+
+:::
+
+## Platform Capabilities and Educational Applications {#sec-platform-capabilities}
+
+Quarto's architecture supports the complex requirements of educational case study development through several integrated capabilities. The platform enables seamless combination of narrative text with executable code within unified document structures, facilitating the dynamic content generation essential for maintaining consistency across multiple scenarios. Multi-format output generation allows educators to produce HTML websites, PDF documents, Word files, and presentation materials from identical source content, maximizing development efficiency while ensuring consistent messaging across different distribution channels.
+
+Dynamic content capabilities support variable-driven text generation that automatically updates character names, organizational details, and temporal references across all materials when worldbuilding data changes. This functionality proves essential for maintaining narrative consistency while accommodating different educational contexts or iterative content refinement processes.
+
+### Educational Integration Advantages {#sec-educational-integration-advantages}
+
+::: {.pedagogical-consideration title="Pedagogical Infrastructure Benefits"}
+The Quarto platform provides several specific advantages for our needs: dynamic worldbuilding capabilities that ensure automatic content updates across all materials when source data changes; consistent formatting standards that maintain professional presentation quality across diverse content types; multi-format content generation that enables creation of student handouts, instructor guides, and web resources from unified source materials; reproducible case development workflows that facilitate scenario modification while preserving narrative consistency; and interactive element integration that supports embedded assessments, simulations, and multimedia components.
+:::
+
+## Quarto Project Structure {#sec-quarto-project-structure}
+
+The Cyber Dimensions methodology uses a sophisticated multi-configuration architecture that supports complex educational workflows. Here's the actual production structure to build both student- and teacher-facing texts from one source:
+
+```
+cyber-dimensions-project/
+├── _quarto.yml              # Default configuration with metadata integration
+├── _quarto-book.yml         # Book format with parts/chapters structure
+├── _quarto-teacher.yml      # Instructor-specific content and assessments
+├── _quarto-textbook.yml     # Student-facing textbook configuration
+├── index.qmd                # Project homepage
+├── _worldbuilding.yml       # Comprehensive fictional world database
+├── _world_data.rds          # Optimized worldbuilding cache
+├── _styles/
+│   └── styles.css           # Immersive, specialized styling
+├── _scripts/
+│   ├── setup.R              # Advanced pre-render with caching/error handling
+│   └── solo_render.R        # Individual file rendering support
+├── _extensions/             # Quarto extensions for specialized features
+├── _legacy/                 # Version control for deprecated content
+├── assets/
+│   ├── _QA.qmd             # Quality assurance integration
+│   └── images/             # Case-specific visual assets
+└── cases/
+    ├── case1name/          # Case study directories
+    │   ├── case1name-intro.qmd  # Standardized introduction
+    │   ├── case1name-content.qmd # Main narrative content
+    │   └── assessments_moc.qmd # Assessment management
+    ├──...
+```
+
+### Multi-Configuration Architecture {#sec-multi-configuration-architecture}
+
+The Cyber Dimensions methodology employs multiple specialized configuration files to support different output formats and audiences. This approach enables sophisticated content management while maintaining consistency across diverse educational contexts.
+
+#### Primary Configuration (`_quarto.yml`) {#sec-primary-configuration}
+
+The default configuration integrates metadata files and establishes core project parameters:
+
+```yml
+project:
+  type: book
+  title: "Cyber Dimensions Case Studies"
+  pre-render: _scripts/setup.R
+  output-dir: docs
+  
+metadata-files:
+  - _worldbuilding.yml
+  
+book:
+  title: "Cyber Dimensions: Immersive Cybersecurity Education"
+  author: "Your Institution"
+  date: last-modified
+  chapters:
+    - index.qmd
+    - part: "Case Studies"
+      chapters:
+        - cases/case1name/case-intro.qmd
+        - cases/avalanche/case-content.qmd
+        - cases/techgiant/case-intro.qmd
+        - cases/techgiant/case-content.qmd
+  appendices:
+    - assets/_QA.qmd
+
+format:
+  html:
+    theme: 
+      - flatly
+      - _styles/custom.scss
+    css: _styles/styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    code-copy: hover
+    citations-hover: true
+    footnotes-hover: true
+    embed-resources: false
+    
+execute:
+  freeze: auto
+  echo: false
+  message: false
+  warning: false
+  error: false
+```
+
+#### Book Configuration (`_quarto-book.yml`) {#sec-book-configuration}
+
+Specialized book format with complex part/chapter hierarchies, with assessments separated from case content for demonstration:
+
+```yml
+project:
+  type: book
+  pre-render: _scripts/setup.R
+  
+book:
+  title: "Cyber Dimensions: Professional Case Studies"
+  parts:
+    - title: "Introduction"
+      chapters:
+        - index.qmd
+    - title: "Corporate Security Cases"
+      chapters:
+        - cases/case1name/case1name-intro.qmd
+        - cases/case1name/case1name-content.qmd
+        - cases/case2name/case2name-intro.qmd
+        - cases/case2name/case2name-content.qmd
+    - title: "Infrastructure Cases"
+      chapters:
+        - cases/case3name/case3name-intro.qmd
+        - cases/case3name/case3name-content.qmd
+    - title: "Assessment Framework"
+      chapters:
+        - cases/avalanche/assessments_moc.qmd
+        - cases/techgiant/assessments_moc.qmd
+        - cases/municipal/assessments_moc.qmd
+
+format:
+  html:
+    theme: flatly
+    css: _styles/styles.css
+    number-sections: true
+    toc: true
+  pdf:
+    documentclass: book
+    geometry: margin=1in
+    fontsize: 11pt
+    number-sections: true
+  docx:
+    number-sections: true
+    highlight-style: github
+```
+
+#### Profile-Based Configurations {#sec-profile-configurations}
+
+Quarto profiles enable sophisticated audience-specific rendering from a single source codebase. This powerful feature allows educators to maintain one set of content files while generating customized outputs for different user groups - students, instructors, administrators, or developers - each with tailored visibility, formatting, and interactive elements.
+
+**How Profiles Work**: Profiles function through conditional rendering directives embedded within your content. When you specify a profile during rendering (`quarto render --profile teacher`), Quarto processes only the content blocks marked for that profile while excluding others. This approach eliminates the need for separate content files while ensuring each audience receives appropriately tailored materials.
+
+This presents a range of benefits. For example, student versions can hide implementation details and answer keys while maintaining engaging interactive elements. Instructor versions reveal teaching notes, detailed explanations, and assessment rubrics. Developer versions expose technical implementation details and debugging tools.
+
+Using profiles is easy: create separate configuration files for each profile (`_quarto-teacher.yml`, `_quarto-student.yml`) and use [conditional content blocks within your case study files](https://quarto.org/docs/projects/profiles.html#profile-content). This modular approach enables sophisticated content management while preserving source code simplicity.
+
+The methodology supports profile-based rendering for different audiences:
+
+**Teacher Profile (`_quarto-teacher.yml`)**:
+
+```yml
+project:
+  type: book
+  pre-render: _scripts/setup.R
+  
+profile:
+  default: teacher
+  
+format:
+  html:
+    theme: flatly
+    css: _styles/styles.css
+    code-fold: false  # Show all instructor content
+    
+execute:
+  echo: true  # Display code for instructor review
+```
+
+**Student Profile (`_quarto-textbook.yml`)**: {#lst-student-profile}
+
+```yml
+project:
+  type: book
+  pre-render: _scripts/setup.R
+  
+profile:
+  default: student
+  
+format:
+  html:
+    theme: flatly
+    css: _styles/styles.css
+    code-fold: true  # Hide implementation details
+    
+execute:
+  echo: false  # Clean student interface
+```
+
+#### Conditional Content Example {#sec-conditional-content-example}
+
+Here's a practical example showing how the same case study section appears differently for each profile, demonstrating various conditional content techniques. Note that the full range of visibility and hiding options is shown here simply for illustration. It's unlikely you'd ever need to get this complex with conditional content.
+
+````{verbatim}
+## Network Security Incident Analysis
+
+<!-- Default content visible to all profiles -->
+On March 15, 2025, DataFlow Corporation discovered suspicious network activity 
+affecting their customer database. This incident demonstrates key principles 
+of incident response and forensic analysis.
+
+### Initial Discovery
+
+::: {.content-visible when-profile="student"}
+**Your Task**: Review the network logs below and identify potential indicators 
+of compromise. Consider what evidence suggests this was an external attack 
+versus an insider threat.
+
+**Evidence A**: Unusual login patterns from IP 203.0.113.45
+**Evidence B**: Database queries executed outside normal business hours  
+**Evidence C**: Administrative account elevation at 2:17 AM
+
+*What do you conclude from this evidence?*
+:::
+
+::: {.content-visible when-profile="teacher"}
+**Instructor Guidance**: 
+- Allow 10-15 minutes for individual analysis
+- Students typically focus on Evidence A first (external IP)
+- Guide discussion toward timeline correlation across all evidence
+- Key learning objective: Synthesizing multiple evidence sources
+
+**Answer Key**: Evidence suggests coordinated external attack:
+- IP 203.0.113.45 traces to known botnet infrastructure
+- Timeline shows lateral movement pattern (login → elevation → data access)
+- Business hours timing eliminates typical insider threat patterns
+
+**Discussion Questions**:
+1. What additional evidence would strengthen this conclusion?
+2. How might defenders have detected this earlier?
+3. What containment actions should be prioritized?
+:::
+
+::: {.content-hidden when-profile="student"}
+**Advanced Analysis** (Visible to teacher and developer profiles):
+The attack follows APT28 methodology documented in MITRE ATT&CK framework:
+- Initial Access: Valid Accounts (T1078)
+- Privilege Escalation: Account Manipulation (T1098)  
+- Collection: Data from Information Repositories (T1213)
+:::
+
+::: {.content-visible when-profile="developer"}
+**Technical Implementation Notes**:
+- Evidence data sourced from: `r world$dataflow_incident_logs`
+- IP address variable: `r world$dataflow_attacker_ip`
+- Timeline calculations use: `r world$dataflow_incident_timeline`
+- Difficulty level: `r world$assessment_intermediate_level`
+
+**Quality Assurance**: 
+- Verify IP geolocation accuracy in current threat intelligence feeds
+- Update MITRE ATT&CK references quarterly
+- Test timeline logic with different academic calendar dates
+:::
+
+### Technical Analysis
+
+<!-- Content with multiple exclusion conditions -->
+::: {.content-hidden when-profile="student,developer" unless-profile="teacher"}
+**Instructor-Only Section**: This technical deep-dive should only be used 
+with advanced undergraduate or graduate students. For introductory courses, 
+skip to the "Lessons Learned" section.
+:::
+
+<!-- Content visible to multiple profiles -->
+::: {.content-visible when-profile="teacher,developer"}
+**Technical Details**: The attacker used a sophisticated privilege escalation 
+technique that exploits Windows Active Directory group policy inheritance...
+
+```bash
+# Forensic commands for advanced analysis
+Get-WinEvent -LogName Security | Where-Object {$_.Id -eq 4672}
+net group "Domain Admins" /domain
+```
+:::
+
+### Assessment Questions
+
+::: {.content-visible when-profile="student"}
+**Question 1**: Based on the evidence, what type of attack occurred?
+a) SQL Injection  b) Phishing Campaign  c) Advanced Persistent Threat  d) Insider Fraud
+
+**Question 2**: What was the primary attack vector?
+a) Email attachment  b) Compromised credentials  c) Network vulnerability  d) Physical access
+:::
+
+::: {.content-visible when-profile="teacher"}
+**Assessment Rubric**:
+- Excellent (4): Identifies APT with supporting evidence from all three sources
+- Good (3): Identifies external threat with supporting evidence  
+- Satisfactory (2): Recognizes suspicious activity but lacks specific classification
+- Needs Improvement (1): Focuses on single evidence source without synthesis
+
+**Timing**: 20-25 minutes for individual work, 15 minutes for discussion
+:::
+
+::: {.content-hidden when-profile="student"}
+**Assessment Analytics**:
+- Historical accuracy rate: 78% (Q1), 65% (Q2)
+- Common wrong answers: Q1-b (31%), Q2-c (28%)
+- Cognitive load assessment: Medium complexity
+- Recommended prerequisite: Network fundamentals module
+:::
+````
+
+This example demonstrates several conditional content techniques:
+
+- **`when-profile`**: Shows content only for specified profiles
+- **`when-profile="teacher,developer"`**: Shows content for multiple profiles  
+- **`content-hidden when-profile="student"`**: Hides from students, shows to others
+- **`content-hidden when-profile="student,developer" unless-profile="teacher"`**: Complex conditional logic
+- **Default content**: No conditional wrapper means visible to all profiles (this is likely to be the majority of the content)
+
+### Configuration Strategy Guidelines {#sec-configuration-strategy-guidelines}
+
+**Book Format (Recommended)**: Use for comprehensive case study collections with structured progression and cross-case continuity. Supports sophisticated part/chapter hierarchies and integrated assessment frameworks.
+
+**Website Format**: Suitable for standalone case studies or when individual case access patterns are prioritized over linear progression.
+
+#### Multi-Format Output Strategy {#sec-multi-format-output-strategy}
+
+A further bonus of using the Quarto platform is the automated and consistent application of outputs and even branding. See the [`_brand.yml`](https://quarto.org/docs/authoring/brand.html) documentation for more^[Note that as of August 2025, `_brand.yml` does not work with book projects.] 
+
+**HTML (Primary Format)**: 
+
+- Interactive elements and multimedia integration
+- Advanced styling with CSS custom properties
+- Social media component rendering
+- Responsive design for diverse devices
+
+**PDF (Print Distribution)**:
+
+- Professional formatting for institutional requirements
+- Optimized typography and page layout
+- Appropriate for formal assessment distribution
+
+**DOCX (Institutional Compatibility)**:
+
+- Microsoft Office integration requirements
+- Collaborative editing workflows
+- Template-based formatting consistency
+
+
+## Creating Content with Quarto {#sec-creating-content-quarto}
+
+### Basic Document Structure {#sec-basic-document-structure}
+
+Every Quarto document starts with YAML front matter:
+
+```markdown
+---
+title: "The NetworkCorp Incident"
+subtitle: "A Case Study in Insider Threats"
+author: "Your Name"
+date: "2025-07-14"
+format: 
+  html:
+    toc: true
+    number-sections: true
+---
+```
+
+### Advanced Pre-Render System {#sec-advanced-pre-render-system}
+
+The Cyber Dimensions methodology employs a sophisticated pre-render architecture that handles worldbuilding data processing, caching optimization, and error management. This system ensures consistent variable availability across all case studies while maintaining performance and reliability.
+
+#### Core Pre-Render Architecture (`_scripts/setup.R`) {#sec-core-pre-render-architecture}
+
+The production setup script implements advanced data management with comprehensive error handling: {#lst-setup-architecture}
+
+```r
+# Advanced worldbuilding data processing with caching
+library(here)
+library(yaml)
+library(dplyr)
+
+# Error handling wrapper
+safe_load_world <- function() {
+  tryCatch({
+    # Check for cached data
+    cache_file <- here("_world_data.rds")
+    yaml_file <- here("_worldbuilding.yml")
+    
+    # Intelligent cache management
+    if (file.exists(cache_file) && 
+        file.mtime(cache_file) > file.mtime(yaml_file)) {
+      message("Loading cached worldbuilding data...")
+      readRDS(cache_file)
+    } else {
+      message("Processing worldbuilding YAML...")
+      world_raw <- read_yaml(yaml_file)
+      
+      # Advanced variable processing
+      world_processed <- process_world_variables(world_raw)
+      
+      # Cache processed data
+      saveRDS(world_processed, cache_file)
+      world_processed
+    }
+  }, error = function(e) {
+    stop(paste("Failed to load worldbuilding data:", e$message))
+  })
+}
+
+# Dynamic year calculation system
+process_world_variables <- function(world_data) {
+  current_year <- as.numeric(format(Sys.Date(), "%Y"))
+  
+  # Generate year variables (year_plus_1 through year_plus_25)
+  for (i in 1:25) {
+    world_data[[paste0("year_plus_", i)]] <- current_year + i
+  }
+  
+  # Generate past year variables (year_minus_1 through year_minus_5)
+  for (i in 1:5) {
+    world_data[[paste0("year_minus_", i)]] <- current_year - i
+  }
+  
+  # Process nested structures and cross-references
+  world_data <- resolve_cross_references(world_data)
+  
+  return(world_data)
+}
+
+# Load world data globally
+world <- safe_load_world()
+```
+
+#### Individual File Rendering Support {#sec-individual-file-rendering}
+
+The `solo_render.R` script enables development of individual files while maintaining access to the complete worldbuilding system: {#lst-solo-render}
+
+```r
+# _scripts/solo_render.R
+# Enables individual file development with full world data access
+
+if (!exists("world")) {
+  message("Loading worldbuilding data for solo render...")
+  source(here::here("_scripts", "setup.R"))
+}
+
+# Verify data availability
+if (length(world) == 0) {
+  stop("Worldbuilding data not available. Check _worldbuilding.yml")
+}
+
+message(paste("World data loaded:", length(world), "variables available"))
+```
+
+#### Integration in Quarto Documents {#sec-integration-quarto-documents}
+
+Case study files integrate seamlessly with the pre-render system through the global `world` object: {#lst-integration-documents}
+
+````{verbatim}
+---
+title: "The `r world$avalanche_company_name` Incident"
+subtitle: "A Case Study in `r world$avalanche_incident_type`"
+---
+
+# Executive Summary
+
+On `r world$avalanche_incident_date`, `r world$avalanche_company_name` 
+experienced a significant cybersecurity incident affecting 
+`r world$avalanche_customers_affected` customers. The incident was 
+discovered by `r world$avalanche_discoverer_name`, 
+`r world$avalanche_discoverer_title`, who immediately escalated 
+to `r world$avalanche_ciso_name`, Chief Information Security Officer.
+
+## Timeline
+
+- **`r world$avalanche_discovery_time`**: Initial discovery
+- **`r world$avalanche_escalation_time`**: Management notification
+- **`r world$avalanche_containment_time`**: Threat containment
+- **`r world$avalanche_resolution_time`**: Full system restoration
+````
+
+#### Error Handling and Debugging {#sec-error-handling-debugging}
+
+The system includes comprehensive error management for production reliability: {#lst-error-handling}
+
+```r
+# Validation functions for worldbuilding data
+validate_world_data <- function(world) {
+  required_vars <- c(
+    "avalanche_company_name",
+    "avalanche_incident_date", 
+    "avalanche_incident_type"
+  )
+  
+  missing_vars <- setdiff(required_vars, names(world))
+  
+  if (length(missing_vars) > 0) {
+    stop(paste("Missing required variables:", 
+               paste(missing_vars, collapse = ", ")))
+  }
+  
+  message("World data validation: PASSED")
+  return(TRUE)
+}
+
+# Debug function for variable inspection
+inspect_world_variables <- function(pattern = NULL) {
+  if (is.null(pattern)) {
+    cat("Available world variables:\n")
+    cat(paste(names(world), collapse = "\n"))
+  } else {
+    matching <- names(world)[grepl(pattern, names(world))]
+    cat(paste("Variables matching '", pattern, "':\n", sep = ""))
+    cat(paste(matching, collapse = "\n"))
+  }
+}
+```
+
+### Advanced Content Features {#sec-advanced-content-features}
+
+### Callout Boxes {#sec-callout-boxes}
+
+Create attention-grabbing content blocks: {#lst-callout-boxes}
+
+```markdown
+::: {.callout-important title="Critical Security Alert"}
+All employee credentials must be reset immediately following
+the security incident.
+:::
+
+::: {.callout-tip title="Best Practice"}
+Implement multi-factor authentication on all administrative accounts.
+:::
+```
+
+### Tabbed Content {#sec-tabbed-content}
+
+Organize complex information: {#lst-tabbed-content}
+
+```markdown
+::: {.panel-tabset}
+
+## Technical Details
+
+The attack vector involved...
+
+## Business Impact
+
+Financial losses included...
+
+## Lessons Learned
+
+Key takeaways from this incident...
+
+:::
+```
+
+### Cross-References {#sec-cross-references}
+
+Link sections and figures: {#lst-cross-references}
+
+```markdown
+As discussed in @sec-methodology, the attack followed a pattern
+consistent with advanced persistent threats.
+```
+
+## Working with Multiple Formats {#sec-working-multiple-formats}
+
+### HTML Output (Primary) {#sec-html-output-primary}
+
+HTML serves as the primary format for interactive case studies, featuring sophisticated styling architecture that supports specialized cybersecurity education components: {#lst-html-output-production}
+
+```{.yaml filename="_quarto.yml"}
+format:
+  html:
+    theme: 
+      - flatly
+      - _styles/custom.scss
+    css: _styles/styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    code-copy: hover
+    citations-hover: true
+    footnotes-hover: true
+    embed-resources: false
+    anchor-sections: true
+```
+
+#### Production CSS Architecture {#sec-production-css-architecture}
+
+The Cyber Dimensions methodology employs a comprehensive 910+ line CSS system that provides specialized components for cybersecurity education: {#lst-production-css}
+
+**Social Media Component Styling**: {#lst-social-media-components}
+
+```css
+/* Twitter-style component */
+.twitter-post {
+  background: #f7f9fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.twitter-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.twitter-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* Discord-style component */
+.discord-message {
+  background: #2f3136;
+  color: #dcddde;
+  padding: 8px 16px 8px 72px;
+  margin: 2px 0;
+  position: relative;
+  font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.discord-avatar {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Signal-style component */
+.signal-message {
+  background: #2090ea;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 18px;
+  margin: 4px 0;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.signal-message.received {
+  background: #f1f1f2;
+  color: #000;
+  align-self: flex-start;
+}
+
+.signal-message.sent {
+  background: #2090ea;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+```
+
+**Timeline and Interactive Elements**: {#lst-timeline-components}
+
+```css
+/* Timeline component for incident progression */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #007bff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 70px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 22px;
+  width: 16px;
+  height: 16px;
+  background: #007bff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #007bff33;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #007bff;
+}
+
+/* Evidence collection styling */
+.evidence-item {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-left: 4px solid #ffb400;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.evidence-label {
+  font-weight: bold;
+  color: #856404;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+```
+
+**CSS Custom Properties for Theming**: {#lst-css-custom-properties}
+
+```css
+:root {
+  /* Cybersecurity color palette */
+  --cyber-primary: #007bff;
+  --cyber-danger: #dc3545;
+  --cyber-warning: #ffc107;
+  --cyber-success: #28a745;
+  --cyber-dark: #343a40;
+  
+  /* Incident severity levels */
+  --severity-low: #28a745;
+  --severity-medium: #ffc107;
+  --severity-high: #fd7e14;
+  --severity-critical: #dc3545;
+  
+  /* Component backgrounds */
+  --social-twitter: #1da1f2;
+  --social-discord: #5865f2;
+  --social-signal: #2090ea;
+  --social-reddit: #ff4500;
+  
+  /* Typography */
+  --font-mono: 'Source Code Pro', Consolas, 'Courier New', monospace;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: 12px;
+  }
+  
+  .social-component {
+    font-size: 0.9em;
+  }
+}
+```
+
+### Multi-Format Output for Educational Contexts {#sec-multi-format-output}
+
+For detailed guidance on configuring PDF, Word, and other output formats, see the [Quarto Formats documentation](https://quarto.org/docs/output-formats/).
+
+**Case Study-Specific Format Considerations**:
+
+- **PDF**: Best for formal instructor materials and assessment rubrics that need consistent formatting
+- **Word (DOCX)**: Essential for institutional compatibility and collaborative editing workflows
+- **HTML**: Primary format for interactive elements, social media components, and multimedia integration
+
+When configuring formats, ensure your custom CSS and social media component styling render appropriately across all target formats. Test timeline components and evidence presentation elements in each output format.
+
+
+## Interactive Content Development {#sec-interactive-content}
+
+### Code Execution {#sec-code-execution}
+
+Quarto allows for the execution of code. If you wish (though this is advanced), allow students to run cybersecurity tools: {#lst-code-execution}
+
+````{verbatim}
+```{python}
+#| echo: true
+#| eval: false
+
+# Network scan example
+import nmap
+nm = nmap.PortScanner()
+result = nm.scan('192.168.1.1', '22-443')
+print(result)
+```
+````
+
+### Embedded Assessments {#sec-embedded-assessments}
+
+Create interactive self-check quizzes: {#lst-embedded-assessments}
+
+```markdown
+**Question 1**: What type of attack is described?
+
+a) SQL Injection
+b) Cross-site Scripting  
+c) Buffer Overflow
+d) Social Engineering
+
+::: {.callout-tip collapse="true" title="Answer"}
+d) Social Engineering - The attack relied on human psychology rather than technical vulnerabilities.
+:::
+```
+
+## Project-Specific Setup Considerations {#sec-project-specific-setup}
+
+Cybersecurity case studies have unique technical requirements that differ from standard academic or technical documentation projects. Your Quarto setup must support realistic cybersecurity interfaces, dynamic worldbuilding data, and multi-audience content delivery.
+
+**Key Project-Specific Considerations**:
+
+- **Dynamic worldbuilding data integration** through YAML and R pre-processing
+- **Multi-format output** for diverse educational contexts (HTML, PDF, DOCX)
+- **Profile-based rendering** for different audiences (students, instructors, developers)
+- **Social media component styling** for authentic digital communication scenarios
+- **Timeline and evidence presentation** components for incident analysis
+- **Cross-case character and organizational continuity**
+
+
+## Deployment and Distribution {#sec-deployment-distribution}
+
+For comprehensive guidance on publishing Quarto projects to various platforms (GitHub Pages, Netlify, Quarto Pub, etc.), see the [Quarto Publishing documentation](https://quarto.org/docs/publishing/).
+
+**Project-Specific Considerations for Case Study Distribution**:
+
+- **Multi-format outputs**: Ensure your deployment supports HTML (primary), PDF (print), and DOCX (institutional) versions
+- **Profile-based builds**: Consider automating builds for different audiences (student vs. instructor versions)
+- **Asset management**: Large media files may require CDN or external hosting for optimal performance
+- **Access control**: Instructor materials may need private repositories or password protection
+
+For packaging case studies for offline distribution or LMS integration, include all source files (`.qmd`, `_worldbuilding.yml`, `_scripts/`, `assets/`) to enable customization by other educators.
+
+For general Quarto performance optimization guidance, see the [Quarto Performance documentation](https://quarto.org/docs/projects/code-execution.html#freeze).
+
+**Cybersecurity Case Study Specific Optimizations**:
+
+- **Worldbuilding data caching**: Use `.rds` caching for complex YAML processing (see `_scripts/setup.R` examples)
+- **Large media assets**: Host realistic cybersecurity screenshots and diagrams externally if they impact load times
+- **Social media component styling**: Minimize CSS complexity for timeline and evidence components
+
+### Accessibility in Cybersecurity Education {#sec-cybersecurity-accessibility}
+
+For comprehensive accessibility guidance, see the [Quarto Accessibility documentation](https://quarto.org/docs/output-formats/html-basics.html#accessibility). Accessibility priorities include:
+
+- **Technical interface screenshots**: Provide detailed alt text describing security dashboard elements, network diagrams, and system interfaces
+- **Social media components**: Ensure Twitter, Discord, and Signal mockups are navigable via keyboard and screen readers
+- **Evidence timelines**: Structure timeline components with proper heading hierarchy and logical tab order
+
+## Project-Specific Troubleshooting {#sec-project-troubleshooting}
+
+For basic Quarto installation, configuration, and rendering help, refer to the comprehensive [Quarto documentation](https://quarto.org/docs). This chapter focuses specifically on cybersecurity case study project setup considerations.
+
+**Worldbuilding Data Not Loading**:  
+
+- Verify `_worldbuilding.yml` syntax is valid YAML
+- Check that `_scripts/setup.R` is properly configured in `_quarto.yml` pre-render
+- Ensure R packages `here` and `yaml` are installed
+
+**Profile Rendering Problems**:  
+
+- Confirm profile configuration files exist (`_quarto-teacher.yml`, etc.)
+- Verify conditional content syntax: `::: {.content-visible when-profile="student"}`
+- Check that profile names match between configuration and content files
+
+**Social Media Component Styling Issues**:  
+
+- Verify custom CSS files are properly linked in `_quarto.yml`
+- Check that `.twitter-post`, `.discord-message`, etc. classes are defined
+- Ensure SCSS compilation is working if using custom themes
+
+## Implementation Roadmap {#sec-implementation-roadmap}
+
+With your Quarto foundation established, proceed through these development phases:
+
+1. **[Explore advanced worldbuilding](worldbuilding.qmd)** for complex scenarios that support interconnected narratives (see @sec-interconnected-narratives-posthuman in the Methodology chapter)
+2. **[Learn styling techniques](styling.qmd)** for custom appearance that enhances immersive fiction (see @sec-immersive-fiction-posthuman in the Methodology chapter)
+3. **[Study assessment design](assessment-framework.qmd)** for effective evaluation using flexible assessment approaches (see @sec-flexible-assessment-posthuman in the Methodology chapter)
+4. **[Review quality assurance](quality-assurance.qmd)** for professional output standards
+
+This systematic approach ensures your technical implementation aligns with the posthuman cybersecurity education methodology while maintaining professional educational standards.

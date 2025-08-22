@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>4&nbsp; Tutorial – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide/worldbuilding.html" rel="next">
+<link href="../guide/setup.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/tutorial.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/tutorial.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/worldbuilding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/narrative-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-classroom-evidence" id="toc-sec-classroom-evidence" class="nav-link active" data-scroll-target="#sec-classroom-evidence">Student Learning Evidence</a></li>
+  <li><a href="#sec-core-principles" id="toc-sec-core-principles" class="nav-link" data-scroll-target="#sec-core-principles">Core Principles</a></li>
+  <li><a href="#sec-getting-started" id="toc-sec-getting-started" class="nav-link" data-scroll-target="#sec-getting-started">Phase 1: Getting Started</a></li>
+  <li><a href="#sec-centralized-worldbuilding" id="toc-sec-centralized-worldbuilding" class="nav-link" data-scroll-target="#sec-centralized-worldbuilding">Centralized Worldbuilding</a>
+  <ul class="collapse">
+  <li><a href="#sec-using-world-data" id="toc-sec-using-world-data" class="nav-link" data-scroll-target="#sec-using-world-data">Using World Data</a></li>
+  <li><a href="#sec-quarto-configuration" id="toc-sec-quarto-configuration" class="nav-link" data-scroll-target="#sec-quarto-configuration">Quarto Configuration</a></li>
+  </ul></li>
+  <li><a href="#sec-worldbuilding-data" id="toc-sec-worldbuilding-data" class="nav-link" data-scroll-target="#sec-worldbuilding-data">Phase 2: Worldbuilding Data</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-_worldbuilding.yml-sec-worldbuilding-yml-setup" id="toc-setting-up-_worldbuilding.yml-sec-worldbuilding-yml-setup" class="nav-link" data-scroll-target="#setting-up-_worldbuilding.yml-sec-worldbuilding-yml-setup">Setting Up _worldbuilding.yml {#sec-worldbuilding-yml-setup}</a></li>
+  </ul></li>
+  <li><a href="#sec-processing-scripts" id="toc-sec-processing-scripts" class="nav-link" data-scroll-target="#sec-processing-scripts">Phase 3: Processing Scripts</a>
+  <ul class="collapse">
+  <li><a href="#sec-data-loader-script" id="toc-sec-data-loader-script" class="nav-link" data-scroll-target="#sec-data-loader-script">Data Loader Script</a></li>
+  <li><a href="#sec-loading-world-data" id="toc-sec-loading-world-data" class="nav-link" data-scroll-target="#sec-loading-world-data">Loading World Data</a></li>
+  </ul></li>
+  <li><a href="#sec-case-content-development" id="toc-sec-case-content-development" class="nav-link" data-scroll-target="#sec-case-content-development">Phase 4: Case Study Content</a></li>
+  <li><a href="#sec-case-study-assessment" id="toc-sec-case-study-assessment" class="nav-link" data-scroll-target="#sec-case-study-assessment">Phase 5: Case Study Assessment</a>
+  <ul class="collapse">
+  <li><a href="#sec-assessment-design" id="toc-sec-assessment-design" class="nav-link" data-scroll-target="#sec-assessment-design">Assessment Design</a></li>
+  </ul></li>
+  <li><a href="#sec-professional-visual-design" id="toc-sec-professional-visual-design" class="nav-link" data-scroll-target="#sec-professional-visual-design">Phase 6: Visual Design</a></li>
+  <li><a href="#sec-quality-assurance" id="toc-sec-quality-assurance" class="nav-link" data-scroll-target="#sec-quality-assurance">Phase 7: Quality Assurance</a>
+  <ul class="collapse">
+  <li><a href="#sec-rendering-testing" id="toc-sec-rendering-testing" class="nav-link" data-scroll-target="#sec-rendering-testing">Rendering &amp; Testing</a></li>
+  <li><a href="#sec-quality-verification" id="toc-sec-quality-verification" class="nav-link" data-scroll-target="#sec-quality-verification">Verification Checklist</a></li>
+  </ul></li>
+  <li><a href="#sec-iterative-improvement" id="toc-sec-iterative-improvement" class="nav-link" data-scroll-target="#sec-iterative-improvement">Phase 8: Iterative Improvement</a>
+  <ul class="collapse">
+  <li><a href="#sec-educational-quality-criteria" id="toc-sec-educational-quality-criteria" class="nav-link" data-scroll-target="#sec-educational-quality-criteria">Quality Evaluation</a></li>
+  </ul></li>
+  <li><a href="#sec-educational-development-progression" id="toc-sec-educational-development-progression" class="nav-link" data-scroll-target="#sec-educational-development-progression">Development Progression</a></li>
+  <li><a href="#sec-technical-support" id="toc-sec-technical-support" class="nav-link" data-scroll-target="#sec-technical-support">Technical Support</a>
+  <ul class="collapse">
+  <li><a href="#sec-educational-support-resources" id="toc-sec-educational-support-resources" class="nav-link" data-scroll-target="#sec-educational-support-resources">Support Resources</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/tutorial.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/tutorial.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This tutorial walks you through creating compelling cybersecurity case studies using the <strong>Cyber Dimensions methodology</strong>—a research-based approach that helps your students engage with the complex, collaborative realities of cybersecurity work. Rather than simply presenting technical concepts, this method helps you create realistic scenarios where your students experience how cybersecurity teams actually coordinate across technology, people, and organizations.</p>
+<p>This methodology was developed and refined through Design-Based Research at the University of Arizona, including implementation in the published “Cyber Dimensions” textbook <span class="citation" data-cites="straightHumanCentricModelsCybersecurity2024">(<a href="../references.html#ref-straightHumanCentricModelsCybersecurity2024" role="doc-biblioref">Straight, 2024</a>)</span> and systematic analysis of the NICE Workforce Framework <span class="citation" data-cites="straightCyberDimensionsImmersive2025">(<a href="../references.html#ref-straightCyberDimensionsImmersive2025" role="doc-biblioref">Straight, 2025</a>)</span>. Classroom implementation revealed that your students engaging with these interconnected scenarios will develop enhanced capabilities for understanding cybersecurity as collaborative, distributed work rather than individual technical problem-solving.</p>
+<section id="sec-classroom-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="sec-classroom-evidence">Student Learning Evidence</h2>
+<p>Implementation of this methodology across multiple cybersecurity education contexts revealed consistent patterns in student learning that align with industry workforce needs. Analysis of the NICE Workforce Framework using systematic coding techniques identified 47 task statements that explicitly require coordination with rather than control over technological systems, supporting this pedagogical emphasis on collaborative practice you’ll be implementing. This, however, is the exception to the rule.</p>
+<p>Through this tutorial, you’ll learn to create case studies that develop essential cybersecurity capabilities. Your students engaging with these scenarios will develop <strong>systems thinking</strong>—the ability to recognize how cybersecurity incidents involve complex interactions between technology, people, and organizational processes rather than isolated technical problems. They’ll also strengthen <strong>collaborative problem-solving</strong> skills through working effectively with diverse stakeholders including technical teams, management, legal departments, and communications staff during security incidents.</p>
+<p>The methodology particularly emphasizes <strong>technology integration</strong>, helping your students develop practical skills for coordinating human analysis with automated tools and systems rather than treating technology as separate from human work. Your students will also enhance their <strong>communication across contexts</strong>, learning to translate technical findings for different audiences and coordinate response efforts across organizational boundaries. Finally, the approach develops <strong>ethical reasoning</strong> capabilities, helping your students understand how cybersecurity decisions affect multiple stakeholders and require consideration of competing values and constraints.</p>
+<p>Classroom observation during “Cyber Dimensions” textbook implementation showed that your students engaging with interconnected scenarios will consistently demonstrate enhanced comfort with complexity and ambiguity—essential capabilities for cybersecurity professionals working in constantly evolving threat environments.</p>
+</section>
+<section id="sec-core-principles" class="level2">
+<h2 class="anchored" data-anchor-id="sec-core-principles">Core Principles</h2>
+<p>This methodology recognizes that cybersecurity work is inherently collaborative and distributed across people, technology, and organizational systems. Rather than teaching cybersecurity as individual technical skills, you can use effective case studies to help your students experience the coordination challenges that characterize real cybersecurity practice.</p>
+<p>The approach builds on research establishing that cybersecurity effectiveness emerges through networks connecting human expertise, technological capabilities, and organizational processes. This understanding shapes every aspect of case study design:</p>
+<p>The methodology operates on several interconnected principles that distinguish it from traditional case study approaches. <strong>Realistic complexity</strong> ensures scenarios preserve the ambiguity and multiple stakeholder perspectives that characterize actual cybersecurity incidents, rather than simplifying problems into neat academic exercises. This complexity supports <strong>collaborative problem-solving</strong> where students work with others and coordinate with technological tools rather than solving problems in isolation.</p>
+<p>Each case study you create should maintain a <strong>systems perspective</strong>, demonstrating how cybersecurity decisions ripple across technical, organizational, and social domains. Your approach should deliberately incorporate <strong>multiple stakeholder views</strong>, including perspectives from technical analysts, management, legal teams, communications staff, and affected communities. Finally, <strong>technology integration</strong> helps your students learn to work WITH automated tools and systems as partners rather than treating technology as separate from human analysis.</p>
+<p>This framework extends postphenomenological analysis in cybersecurity education by integrating insights about human-technology relations with practical case study development. The synthesis addresses the gap between theoretical sophistication and pedagogical utility identified in cybersecurity education literature.</p>
+</section>
+<section id="sec-getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="sec-getting-started">Phase 1: Getting Started</h2>
+<p>When you develop effective case studies, you need systematic organization that keeps track of interconnected story elements, characters, and technical details. The “Cyber Dimensions” textbook development revealed that consistent project organization is essential for maintaining realistic story continuity across multiple scenarios.</p>
+<p>The “Cyber Dimensions” textbook uses a <strong>centralized worldbuilding system</strong> that manages all fictional data through a structured YAML file and automated processing. This approach ensures consistency across multiple interconnected case studies you create while making updates efficient and reliable.</p>
+</section>
+<section id="sec-centralized-worldbuilding" class="level2">
+<h2 class="anchored" data-anchor-id="sec-centralized-worldbuilding">Centralized Worldbuilding</h2>
+<p>Rather than managing character and organizational information in separate folders, you can use this methodology’s single master data file that feeds all your case studies:</p>
+<p><strong>Core Architecture</strong>:</p>
+<ul>
+<li><strong><code>_worldbuilding.yml</code></strong> - Master data file containing 933+ variables for characters, organizations, technologies, and relationships</li>
+<li><strong><code>_scripts/setup.R</code></strong> - Pre-render script that converts YAML data into a cached R data object<br>
+</li>
+<li><strong><code>_world_data.rds</code></strong> - Binary cache file for fast loading during document rendering</li>
+<li><strong><code>_scripts/solo_render.R</code></strong> - Script sourced by individual case studies to access the <code>world</code> object</li>
+</ul>
+<p>This system ensures that when a character appears in multiple cases you create, their details remain consistent. For example, Katherine Pillar appears as CEO of TechGiant in one case while her sister Eleanor Pillar appears as CEO of Quantum Frontier in another case—the family relationship is maintained automatically through your centralized data.</p>
+<section id="sec-using-world-data" class="level3">
+<h3 class="anchored" data-anchor-id="sec-using-world-data">Using World Data</h3>
+<p>Each case study file you create includes a setup chunk that loads the centralized world data, then references variables throughout the narrative using inline R code. This approach makes updating character names, company details, or relationships efficient across all your cases.</p>
+<p><strong>Example Implementation</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>```r</span>
+<span id="cb1-2"><a href="#cb1-2"></a># At the top of each case study QMD file</span>
+<span id="cb1-3"><a href="#cb1-3"></a>source(here::here("_scripts", "solo_render.R"))</span>
+<span id="cb1-4"><a href="#cb1-4"></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Using Variables in Content</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>Founded in 2005, `r world$company_name` </span>
+<span id="cb2-2"><a href="#cb2-2"></a>has rapidly become a leader in the social media and technology industry. </span>
+<span id="cb2-3"><a href="#cb2-3"></a>The company's mission is to create innovative digital solutions that </span>
+<span id="cb2-4"><a href="#cb2-4"></a>enhance human connection and self-expression in the online world.</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a>**Key facts about** `r world$company_name`:</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a>- Founded: 2005</span>
+<span id="cb2-9"><a href="#cb2-9"></a>- Headquarters: Palo Alto, California  </span>
+<span id="cb2-10"><a href="#cb2-10"></a>- CEO: `r world$ceo_name_salutation` `r world$ceo_name_first` `r world$ceo_name_last`</span>
+<span id="cb2-11"><a href="#cb2-11"></a>- Annual Revenue: $78 billion (2023)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This systematic approach means that changing a character’s name or role in your <code>_worldbuilding.yml</code> file automatically updates it across all case studies that reference that character. The approach emerged from classroom observation showing that your students will engage more deeply with scenarios when they recognize familiar characters and organizations from previous cases, creating a sense of inhabiting a coherent professional world.</p>
+</section>
+<section id="sec-quarto-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="sec-quarto-configuration">Quarto Configuration</h3>
+<p>Your project requires specific Quarto configuration to enable the centralized worldbuilding system. The pre-render script ensures world data is processed before your individual case studies are rendered.</p>
+<p><strong>Essential <code>_quarto.yml</code> Settings</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">  </span><span class="fu">pre-render</span><span class="kw">:</span><span class="at"> _scripts/setup.R</span><span class="co">  # Processes _worldbuilding.yml before rendering</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"**/*.qmd"</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"!**/*.md"</span><span class="co">  # Exclude markdown files to avoid duplicates</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> bootstrap</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> assets/styles.css</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="at">    </span><span class="fu">code-fold</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">  # Show R code chunks for educational purposes if desired</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="at">    </span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co">  # Cache R code execution for performance</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">   # Hide R code in output by default</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="at">  </span><span class="fu">message</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Key Configuration Elements</strong>:</p>
+<ul>
+<li><strong><code>pre-render: _scripts/setup.R</code></strong> - Essential for processing the YAML world data before any QMD files are rendered</li>
+<li><strong>R execution settings</strong> - Configured to hide technical details while showing educational content</li>
+<li><strong>Styling</strong> - Consistent visual presentation across all case studies</li>
+</ul>
+</section>
+</section>
+<section id="sec-worldbuilding-data" class="level2">
+<h2 class="anchored" data-anchor-id="sec-worldbuilding-data">Phase 2: Worldbuilding Data</h2>
+<section id="setting-up-_worldbuilding.yml-sec-worldbuilding-yml-setup" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-_worldbuilding.yml-sec-worldbuilding-yml-setup">Setting Up _worldbuilding.yml {#sec-worldbuilding-yml-setup}</h3>
+<p>Your centralized worldbuilding system starts with a structured YAML file containing all the fictional data for your case studies. This file defines characters, organizations, technologies, and their relationships across multiple scenarios. (The following describes a simple single-case project.)</p>
+<p><strong>Creating <code>_worldbuilding.yml</code></strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># _worldbuilding.yml - Master data file for case studies</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">world</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">  # Global Settings</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="at">  </span><span class="fu">this_year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2025</span><span class="co">  # Base year for timeline calculations</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="at">  </span><span class="fu">textbook_title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Case Study Collection Title"</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">  </span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">  # Cross-Case Organizations (appear in multiple scenarios)</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">  </span><span class="fu">technewstoday_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"TechNewsToday"</span><span class="at"> </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">  </span><span class="fu">technewstoday_handle</span><span class="kw">:</span><span class="at"> </span><span class="st">"\@TechNewsToday"</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="at">  </span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">  # Cybersecurity Incident Case Study</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="at">  </span><span class="fu">cyberincident_company_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"SecureCorpInc"</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="at">  </span><span class="fu">cyberincident_company_shortname</span><span class="kw">:</span><span class="at"> </span><span class="st">"SCI"</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="at">  </span><span class="fu">cyberincident_ciso_fullname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dr. Maria Rodriguez"</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="at">  </span><span class="fu">cyberincident_ciso_lastname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Rodriguez"</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="at">  </span><span class="fu">cyberincident_security_analyst_fullname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Alex Chen"</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="at">  </span><span class="fu">cyberincident_security_analyst_lastname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Chen"</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="at">  </span><span class="fu">cyberincident_threat_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Operation Shadow Walker"</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="at">  </span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co">  # External Organizations</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="at">  </span><span class="fu">consultant_firm_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"CyberGuard Solutions"</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="at">  </span><span class="fu">consultant_lead_name_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sarah"</span><span class="co"> # CROSS-CASE: Could appear in other scenarios</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="at">  </span><span class="fu">consultant_lead_name_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Kim"</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="at">  </span><span class="fu">consultant_lead_name_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ms."</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="at">  </span></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="co">  # News Organizations (appear across cases for realistic media coverage)</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="at">  </span><span class="fu">news_outlet1_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"CyberToday"</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="at">  </span><span class="fu">news_outlet1_reporter_fullname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Jennifer Walsh"</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="at">  </span><span class="fu">news_outlet1_reporter_lastname</span><span class="kw">:</span><span class="at"> </span><span class="st">"Walsh"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Key YAML Structure Principles</strong>:</p>
+<ul>
+<li><strong>Consistent mutli-case naming patterns</strong> - Use prefixes like <code>casename_</code> to group related variables</li>
+<li><strong>Full and last names</strong> - Separate variables allow flexible referencing in different contexts</li>
+<li><strong>Cross-case annotations</strong> - Comments like <code># CROSS-CASE:</code> track character relationships across scenarios</li>
+<li><strong>Hierarchical organization</strong> - Group related characters and organizations together</li>
+</ul>
+</section>
+</section>
+<section id="sec-processing-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="sec-processing-scripts">Phase 3: Processing Scripts</h2>
+<p>Your worldbuilding system requires two R scripts to process and load the YAML data into your case studies. While the following may seem overly technical, it is set-it-and-forget-it. Using the project format described in this toolkit, you won’t need to make any edits.</p>
+<p>When you render individual files for testing, you’ll need a pre-render script so they can access the <code>world$</code> parameter values. Create <code>_scripts/setup.R</code> to process your <code>_worldbuilding.yml</code> data:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># _scripts/setup.R - Pre-render script to process worldbuilding data</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">library</span>(yaml)</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">library</span>(here)</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="fu">message</span>(<span class="st">"Processing worldbuilding data..."</span>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a>yaml_file <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_worldbuilding.yml"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9"></a>rds_file <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_world_data.rds"</span>)</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># Check if processing is needed (performance optimization)</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>process_yaml <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(rds_file) <span class="sc">&amp;&amp;</span> <span class="fu">file.exists</span>(yaml_file)) {</span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="cf">if</span> (<span class="fu">file.mtime</span>(yaml_file) <span class="sc">&lt;=</span> <span class="fu">file.mtime</span>(rds_file)) {</span>
+<span id="cb5-15"><a href="#cb5-15"></a>    <span class="fu">message</span>(<span class="st">"World data is up-to-date. Skipping processing."</span>)</span>
+<span id="cb5-16"><a href="#cb5-16"></a>    process_yaml <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>  }</span>
+<span id="cb5-18"><a href="#cb5-18"></a>}</span>
+<span id="cb5-19"><a href="#cb5-19"></a></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="cf">if</span> (process_yaml) {</span>
+<span id="cb5-21"><a href="#cb5-21"></a>  <span class="co"># Load YAML data</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a>  <span class="cf">if</span> (<span class="fu">file.exists</span>(yaml_file)) {</span>
+<span id="cb5-23"><a href="#cb5-23"></a>    world_data <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(yaml_file)</span>
+<span id="cb5-24"><a href="#cb5-24"></a>    world <span class="ot">&lt;-</span> world_data<span class="sc">$</span>world</span>
+<span id="cb5-25"><a href="#cb5-25"></a>    </span>
+<span id="cb5-26"><a href="#cb5-26"></a>    <span class="co"># Save processed data for fast loading</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a>    <span class="fu">saveRDS</span>(world, rds_file)</span>
+<span id="cb5-28"><a href="#cb5-28"></a>    <span class="fu">message</span>(<span class="st">"World data processed and cached successfully!"</span>)</span>
+<span id="cb5-29"><a href="#cb5-29"></a>  } <span class="cf">else</span> {</span>
+<span id="cb5-30"><a href="#cb5-30"></a>    <span class="fu">stop</span>(<span class="st">"_worldbuilding.yml not found. Cannot process world data."</span>)</span>
+<span id="cb5-31"><a href="#cb5-31"></a>  }</span>
+<span id="cb5-32"><a href="#cb5-32"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="sec-data-loader-script" class="level3">
+<h3 class="anchored" data-anchor-id="sec-data-loader-script">Data Loader Script</h3>
+<p>Create <code>_scripts/solo_render.R</code> for your individual QMD files to load the world data. This is a simple quality of life improvement, negating the need to render the entire project to check individual file changes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># _scripts/solo_render.R - Loads world data for individual QMD files</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>rds_file <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_world_data.rds"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(rds_file)) {</span>
+<span id="cb6-6"><a href="#cb6-6"></a>  world <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(rds_file)</span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="co"># message("World data loaded successfully for QMD rendering")</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">stop</span>(<span class="st">"_world_data.rds not found. Run pre-render script first."</span>)</span>
+<span id="cb6-10"><a href="#cb6-10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now your case study QMD files can access all the centralized world data through the <code>world</code> object, ensuring consistency across multiple scenarios while making updates manageable through your single YAML file.</p>
+</section>
+<section id="sec-loading-world-data" class="level3">
+<h3 class="anchored" data-anchor-id="sec-loading-world-data">Loading World Data</h3>
+<p>Each case study file you create needs to load the centralized world data to access shared variables. This approach ensures all your cases use consistent character names, organizations, and details while keeping the code simple and maintainable. Every case study QMD file you create should start with this setup:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>```r</span>
+<span id="cb7-2"><a href="#cb7-2"></a># Load centralized world data system</span>
+<span id="cb7-3"><a href="#cb7-3"></a>source(here::here("_scripts", "solo_render.R"))</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a># The 'world' object now contains all variables from _worldbuilding.yml</span>
+<span id="cb7-6"><a href="#cb7-6"></a># You can access any variable using world$variable_name syntax</span>
+<span id="cb7-7"><a href="#cb7-7"></a># For example:</span>
+<span id="cb7-8"><a href="#cb7-8"></a># - world$junior_analyst_name_first (role-based naming)</span>
+<span id="cb7-9"><a href="#cb7-9"></a># - world$company_name  </span>
+<span id="cb7-10"><a href="#cb7-10"></a># - world$incident_date</span>
+<span id="cb7-11"><a href="#cb7-11"></a># - world$ceo_name_salutation</span>
+<span id="cb7-12"><a href="#cb7-12"></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This approach provides several key benefits for your cybersecurity case study development:</p>
+<ul>
+<li><strong>Consistency</strong>: All your cases use the same character and organization data</li>
+<li><strong>Maintainability</strong>: Updates to character details only need to happen in one place</li>
+<li><strong>Cross-case continuity</strong>: Characters can appear across multiple scenarios you create with consistent backgrounds</li>
+<li><strong>Performance</strong>: RDS caching makes loading fast even with large worldbuilding files</li>
+</ul>
+</section>
+</section>
+<section id="sec-case-content-development" class="level2">
+<h2 class="anchored" data-anchor-id="sec-case-content-development">Phase 4: Case Study Content</h2>
+<p>Once you establish your centralized worldbuilding system, you can create case study content that dynamically references shared data. This approach ensures consistency across all your cases while allowing for rich, interconnected narratives that feel authentic and professionally realistic.</p>
+<p>For example, you can create <code>cases/organizational-breach/breach-scenario.qmd</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a>On `r world$incident_date`, </span>
+<span id="cb8-2"><a href="#cb8-2"></a>`r world$company_name` experienced a significant data breach that </span>
+<span id="cb8-3"><a href="#cb8-3"></a>affected approximately `r world$records_compromised` </span>
+<span id="cb8-4"><a href="#cb8-4"></a>customer accounts. This case study examines the incident from multiple </span>
+<span id="cb8-5"><a href="#cb8-5"></a>professional perspectives, highlighting the complex interplay of technical </span>
+<span id="cb8-6"><a href="#cb8-6"></a>systems, organizational processes, and human decision-making in cybersecurity.</span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>::: {.learner-experience title="Learning Outcomes"}</span>
+<span id="cb8-9"><a href="#cb8-9"></a>Through engagement with this case study, participants develop **practical</span>
+<span id="cb8-10"><a href="#cb8-10"></a>cybersecurity capabilities** including:</span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a>- Understanding how cybersecurity involves coordination across technical systems, </span>
+<span id="cb8-13"><a href="#cb8-13"></a>  organizational processes, and human decision-making</span>
+<span id="cb8-14"><a href="#cb8-14"></a>- Recognizing why effective incident response requires multi-perspective analysis </span>
+<span id="cb8-15"><a href="#cb8-15"></a>  and coordinated response</span>
+<span id="cb8-16"><a href="#cb8-16"></a>- Developing ethical frameworks for cybersecurity decision-making that consider </span>
+<span id="cb8-17"><a href="#cb8-17"></a>  multiple stakeholders</span>
+<span id="cb8-18"><a href="#cb8-18"></a>- Building resilience through comprehensive preparation that includes technical, </span>
+<span id="cb8-19"><a href="#cb8-19"></a>  organizational, and human factors</span>
+<span id="cb8-20"><a href="#cb8-20"></a>:::</span>
+<span id="cb8-21"><a href="#cb8-21"></a></span>
+<span id="cb8-22"><a href="#cb8-22"></a>## Organizational Context</span>
+<span id="cb8-23"><a href="#cb8-23"></a></span>
+<span id="cb8-24"><a href="#cb8-24"></a>### Company Background</span>
+<span id="cb8-25"><a href="#cb8-25"></a></span>
+<span id="cb8-26"><a href="#cb8-26"></a>Background: `r world$company_name` operates as a distributed </span>
+<span id="cb8-27"><a href="#cb8-27"></a>software development company with employees </span>
+<span id="cb8-28"><a href="#cb8-28"></a>across Austin, Portland, and remote locations. The organization specializes in </span>
+<span id="cb8-29"><a href="#cb8-29"></a>collaborative cloud infrastructure for small businesses, led by CEO </span>
+<span id="cb8-30"><a href="#cb8-30"></a>`r world$ceo_name_salutation` `r world$ceo_name_first` `r world$ceo_name_last` and supported by Infrastructure Manager </span>
+<span id="cb8-31"><a href="#cb8-31"></a>`r world$security_director_name_salutation` `r world$security_director_name_first` `r world$security_director_name_last`.</span>
+<span id="cb8-32"><a href="#cb8-32"></a></span>
+<span id="cb8-33"><a href="#cb8-33"></a>### Key Personnel</span>
+<span id="cb8-34"><a href="#cb8-34"></a></span>
+<span id="cb8-35"><a href="#cb8-35"></a>The incident response involved several critical team members:</span>
+<span id="cb8-36"><a href="#cb8-36"></a></span>
+<span id="cb8-37"><a href="#cb8-37"></a>- **`r world$ceo_name_salutation` `r world$ceo_name_first` `r world$ceo_name_last`** </span>
+<span id="cb8-38"><a href="#cb8-38"></a>  (CEO): Strategic decision-making and </span>
+<span id="cb8-39"><a href="#cb8-39"></a>  external communications</span>
+<span id="cb8-40"><a href="#cb8-40"></a>- **`r world$security_director_name_salutation` `r world$security_director_name_first` `r world$security_director_name_last`** </span>
+<span id="cb8-41"><a href="#cb8-41"></a>  (Security Director): Technical infrastructure assessment and </span>
+<span id="cb8-42"><a href="#cb8-42"></a>  remediation coordination</span>
+<span id="cb8-43"><a href="#cb8-43"></a>- **`r world$junior_analyst_name_salutation` `r world$junior_analyst_name_first` `r world$junior_analyst_name_last`** </span>
+<span id="cb8-44"><a href="#cb8-44"></a>  (Junior Analyst): Junior team member learning incident </span>
+<span id="cb8-45"><a href="#cb8-45"></a>  response procedures</span>
+<span id="cb8-46"><a href="#cb8-46"></a></span>
+<span id="cb8-47"><a href="#cb8-47"></a>## Technical Infrastructure</span>
+<span id="cb8-48"><a href="#cb8-48"></a></span>
+<span id="cb8-49"><a href="#cb8-49"></a>The company's **CollaborativeCloud Infrastructure** provides integrated services including:</span>
+<span id="cb8-50"><a href="#cb8-50"></a></span>
+<span id="cb8-51"><a href="#cb8-51"></a>- **File Synchronization Systems**: Automated data coordination across organizational boundaries</span>
+<span id="cb8-52"><a href="#cb8-52"></a>- **Authentication Networks**: Multi-factor access control systems</span>
+<span id="cb8-53"><a href="#cb8-53"></a>- **Distributed Storage**: Geographically distributed data persistence with redundancy</span>
+<span id="cb8-54"><a href="#cb8-54"></a></span>
+<span id="cb8-55"><a href="#cb8-55"></a>## The Security Incident</span>
+<span id="cb8-56"><a href="#cb8-56"></a></span>
+<span id="cb8-57"><a href="#cb8-57"></a>### Attack Analysis</span>
+<span id="cb8-58"><a href="#cb8-58"></a></span>
+<span id="cb8-59"><a href="#cb8-59"></a>The breach occurred through a sophisticated phishing campaign that exploited the interconnected nature of the company's communication and authentication systems. The attack succeeded through:</span>
+<span id="cb8-60"><a href="#cb8-60"></a></span>
+<span id="cb8-61"><a href="#cb8-61"></a>**Email System Compromise**: The attackers leveraged `r world$junior_analyst_name_first` `r world$junior_analyst_name_last`'s trust in routine organizational communications, successfully bypassing initial security awareness training</span>
+<span id="cb8-62"><a href="#cb8-62"></a></span>
+<span id="cb8-63"><a href="#cb8-63"></a>**Credential Harvesting**: The phishing attack captured authentication credentials that provided access to internal file synchronization systems</span>
+<span id="cb8-64"><a href="#cb8-64"></a></span>
+<span id="cb8-65"><a href="#cb8-65"></a>**Lateral Movement**: Once inside the network, attackers moved systematically through interconnected systems, exploiting trust relationships between services</span>
+<span id="cb8-66"><a href="#cb8-66"></a></span>
+<span id="cb8-67"><a href="#cb8-67"></a>### Event Timeline</span>
+<span id="cb8-68"><a href="#cb8-68"></a></span>
+<span id="cb8-69"><a href="#cb8-69"></a>The incident unfolded over several days, demonstrating how cybersecurity breaches often involve complex sequences of technical and organizational responses:</span>
+<span id="cb8-70"><a href="#cb8-70"></a></span>
+<span id="cb8-71"><a href="#cb8-71"></a>**Day 1 (** `r world$incident_date` **)**: Initial phishing email received by `r world$junior_analyst_name_first` `r world$junior_analyst_name_last` during routine morning email check</span>
+<span id="cb8-72"><a href="#cb8-72"></a></span>
+<span id="cb8-73"><a href="#cb8-73"></a>**Day 1-2**: Attackers establish persistence within internal systems and begin reconnaissance of network architecture</span>
+<span id="cb8-74"><a href="#cb8-74"></a></span>
+<span id="cb8-75"><a href="#cb8-75"></a>**Day 3**: Lateral movement begins as attackers exploit service account privileges to access customer data repositories</span>
+<span id="cb8-76"><a href="#cb8-76"></a></span>
+<span id="cb8-77"><a href="#cb8-77"></a>**Day 4**: Breach detection through automated monitoring systems alerts `r world$security_director_name_first` `r world$security_director_name_last` to unusual data access patterns</span>
+<span id="cb8-78"><a href="#cb8-78"></a></span>
+<span id="cb8-79"><a href="#cb8-79"></a>## Impact Assessment</span>
+<span id="cb8-80"><a href="#cb8-80"></a></span>
+<span id="cb8-81"><a href="#cb8-81"></a>### Organization Impact</span>
+<span id="cb8-82"><a href="#cb8-82"></a></span>
+<span id="cb8-83"><a href="#cb8-83"></a>The breach created significant impacts across multiple organizational levels:</span>
+<span id="cb8-84"><a href="#cb8-84"></a></span>
+<span id="cb8-85"><a href="#cb8-85"></a>- **Customer Data Exposure**: Approximately `r world$records_compromised` customer records containing personal and business information were accessed</span>
+<span id="cb8-86"><a href="#cb8-86"></a>- **Operational Disruption**: 72-hour service suspension while systems were secured and rebuilt</span>
+<span id="cb8-87"><a href="#cb8-87"></a>- **Trust and Reputation**: Customer confidence declined, requiring extensive communication and relationship rebuilding</span>
+<span id="cb8-88"><a href="#cb8-88"></a>- **Financial Impact**: `r world$direct_costs` in direct response costs plus ongoing reputation and relationship effects</span>
+<span id="cb8-89"><a href="#cb8-89"></a></span>
+<span id="cb8-90"><a href="#cb8-90"></a>### Regulatory Impact</span>
+<span id="cb8-91"><a href="#cb8-91"></a></span>
+<span id="cb8-92"><a href="#cb8-92"></a>The incident triggered multiple compliance and legal obligations:</span>
+<span id="cb8-93"><a href="#cb8-93"></a></span>
+<span id="cb8-94"><a href="#cb8-94"></a>- **Notification Requirements**: State and federal breach notification laws required customer and regulatory notifications within specific timeframes</span>
+<span id="cb8-95"><a href="#cb8-95"></a>- **Audit Requirements**: Industry regulators initiated formal security assessment procedures</span>
+<span id="cb8-96"><a href="#cb8-96"></a>- **Legal Obligations**: Multiple jurisdictions created overlapping compliance obligations requiring coordination</span>
+<span id="cb8-97"><a href="#cb8-97"></a></span>
+<span id="cb8-98"><a href="#cb8-98"></a>## Discussion Framework</span>
+<span id="cb8-99"><a href="#cb8-99"></a></span>
+<span id="cb8-100"><a href="#cb8-100"></a>### Technical Questions</span>
+<span id="cb8-101"><a href="#cb8-101"></a></span>
+<span id="cb8-102"><a href="#cb8-102"></a>1. **How do different human-technology interactions** create vulnerabilities and protective capabilities within cybersecurity systems?</span>
+<span id="cb8-103"><a href="#cb8-103"></a>2. **What role do automated monitoring systems play** in detecting and responding to cybersecurity incidents, and how should organizations balance automation with human oversight?</span>
+<span id="cb8-104"><a href="#cb8-104"></a>3. **How can multi-factor authentication systems** strengthen organizational security while maintaining usability for legitimate users?</span>
+<span id="cb8-105"><a href="#cb8-105"></a></span>
+<span id="cb8-106"><a href="#cb8-106"></a>### Ethics &amp; Organization</span>
+<span id="cb8-107"><a href="#cb8-107"></a></span>
+<span id="cb8-108"><a href="#cb8-108"></a>1. **How should responsibility be distributed** across individuals, technical systems, and organizational policies during cybersecurity incidents?</span>
+<span id="cb8-109"><a href="#cb8-109"></a>2. **What ethical obligations emerge** when cybersecurity incidents affect customers and business partners beyond the immediate organization?</span>
+<span id="cb8-110"><a href="#cb8-110"></a>3. **How should incident response transparency balance** public communication needs with operational security requirements?</span>
+<span id="cb8-111"><a href="#cb8-111"></a></span>
+<span id="cb8-112"><a href="#cb8-112"></a>### Professional Development</span>
+<span id="cb8-113"><a href="#cb8-113"></a></span>
+<span id="cb8-114"><a href="#cb8-114"></a>1. **How can junior cybersecurity professionals like** `r world$junior_analyst_name_first` `r world$junior_analyst_name_last` **develop expertise** through structured incident response experiences?</span>
+<span id="cb8-115"><a href="#cb8-115"></a>2. **What career pathways exist** for cybersecurity professionals interested in incident response and infrastructure management?</span>
+<span id="cb8-116"><a href="#cb8-116"></a>3. **How do industry certifications and continued education** support professional growth in cybersecurity fields?</span>
+<span id="cb8-117"><a href="#cb8-117"></a></span>
+<span id="cb8-118"><a href="#cb8-118"></a>### Response &amp; Recovery</span>
+<span id="cb8-119"><a href="#cb8-119"></a></span>
+<span id="cb8-120"><a href="#cb8-120"></a>1. **How can incident response be understood** as organizational reconstruction rather than simply technical remediation?</span>
+<span id="cb8-121"><a href="#cb8-121"></a>2. **What communication strategies** should address the needs of different stakeholder groups in recovery processes?</span>
+<span id="cb8-122"><a href="#cb8-122"></a>3. **How can trust be rebuilt** across customer, employee, and partner relationships that have been affected by the incident?</span>
+<span id="cb8-123"><a href="#cb8-123"></a></span>
+<span id="cb8-124"><a href="#cb8-124"></a>## Learning Outcomes</span>
+<span id="cb8-125"><a href="#cb8-125"></a></span>
+<span id="cb8-126"><a href="#cb8-126"></a>This case study demonstrates:</span>
+<span id="cb8-127"><a href="#cb8-127"></a></span>
+<span id="cb8-128"><a href="#cb8-128"></a>- **Systems Thinking**: Cybersecurity emerges through coordination across technical, organizational, and human factors, not individual control over isolated systems</span>
+<span id="cb8-129"><a href="#cb8-129"></a>- **Multi-perspective Analysis**: Understanding how security incidents affect multiple stakeholder groups and organizational systems</span>
+<span id="cb8-130"><a href="#cb8-130"></a>- **Professional Response Capabilities**: Developing skills for coordinating complex organizational and technical responses</span>
+<span id="cb8-131"><a href="#cb8-131"></a>- **Ethical Professional Practice**: Recognizing responsibility across individual, organizational, and systemic levels</span>
+<span id="cb8-132"><a href="#cb8-132"></a></span>
+<span id="cb8-133"><a href="#cb8-133"></a>## Recovery &amp; Improvement</span>
+<span id="cb8-134"><a href="#cb8-134"></a></span>
+<span id="cb8-135"><a href="#cb8-135"></a>Consider how TechnoCollaborative Systems should approach **organizational strengthening** through:</span>
+<span id="cb8-136"><a href="#cb8-136"></a></span>
+<span id="cb8-137"><a href="#cb8-137"></a>1. **Enhanced Security Training**: Improved coordination between human awareness and automated security systems</span>
+<span id="cb8-138"><a href="#cb8-138"></a>2. **Long-term Organizational Resilience**: Strategic development of adaptive capabilities across organizational departments</span>
+<span id="cb8-139"><a href="#cb8-139"></a>3. **Continuous Learning Programs**: Ongoing education programs that strengthen cybersecurity knowledge and skills</span>
+<span id="cb8-140"><a href="#cb8-140"></a>4. **Incident Response Preparation**: Pre-established response teams that can rapidly coordinate during security events</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="sec-case-study-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="sec-case-study-assessment">Phase 5: Case Study Assessment</h2>
+<section id="sec-assessment-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-assessment-design">Assessment Design</h3>
+<p>When you design effective case study assessments, you should measure your students’ ability to analyze complex cybersecurity scenarios from multiple perspectives rather than testing isolated technical knowledge. Your well-designed evaluations should encourage students to engage with realistic professional challenges that integrate technical systems, organizational processes, and human decision-making.</p>
+<p>You can create <code>cases/organizational-breach/breach-assessment.qmd</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a># Assessment: TechnoCollaborative Systems Data Breach Analysis</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a>This assessment evaluates your ability to analyze complex cybersecurity incidents from multiple professional perspectives. Rather than testing isolated technical knowledge, this evaluation measures your capacity to understand and work with the interconnected technical, organizational, and human factors that characterize real-world cybersecurity challenges.</span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a>::: {.assessment-strategy title="Assessment Philosophy"}</span>
+<span id="cb9-6"><a href="#cb9-6"></a>This evaluation measures your capacity to engage effectively with **professional cybersecurity practice** by:</span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a>- Understanding how cybersecurity involves multiple stakeholders, systems, and organizational factors</span>
+<span id="cb9-9"><a href="#cb9-9"></a>- Recognizing how effective incident response requires coordination across technical systems, organizational processes, and human decision-making</span>
+<span id="cb9-10"><a href="#cb9-10"></a>- Developing capabilities for analyzing complex cybersecurity scenarios from multiple professional perspectives</span>
+<span id="cb9-11"><a href="#cb9-11"></a>- Demonstrating ethical frameworks that consider responsibilities to various stakeholder groups</span>
+<span id="cb9-12"><a href="#cb9-12"></a>- Creating practical approaches that address organizational complexity while maintaining security effectiveness</span>
+<span id="cb9-13"><a href="#cb9-13"></a>:::</span>
+<span id="cb9-14"><a href="#cb9-14"></a></span>
+<span id="cb9-15"><a href="#cb9-15"></a>## Part I: Technical Analysis (40 points)</span>
+<span id="cb9-16"><a href="#cb9-16"></a></span>
+<span id="cb9-17"><a href="#cb9-17"></a>### Component 1: Human-Tech Integration (15 points)</span>
+<span id="cb9-18"><a href="#cb9-18"></a></span>
+<span id="cb9-19"><a href="#cb9-19"></a>Analyze the `r world$company_name` data breach through professional cybersecurity frameworks that examine how human and technical factors interact in security incidents:</span>
+<span id="cb9-20"><a href="#cb9-20"></a></span>
+<span id="cb9-21"><a href="#cb9-21"></a>a) **Identify specific human-technology interactions** that enabled the security breach, explaining how user behavior and system design created vulnerability pathways</span>
+<span id="cb9-22"><a href="#cb9-22"></a></span>
+<span id="cb9-23"><a href="#cb9-23"></a>b) **Examine monitoring and detection systems** used by cybersecurity professionals to identify threats, and analyze how these systems failed to prevent the incident</span>
+<span id="cb9-24"><a href="#cb9-24"></a></span>
+<span id="cb9-25"><a href="#cb9-25"></a>c) **Analyze automated security systems** and their role in the organization's security posture, discussing how enhanced system configuration might have provided better protection</span>
+<span id="cb9-26"><a href="#cb9-26"></a></span>
+<span id="cb9-27"><a href="#cb9-27"></a>d) **Evaluate infrastructure elements** that created environmental conditions for the attack, identifying areas that require enhanced security attention</span>
+<span id="cb9-28"><a href="#cb9-28"></a></span>
+<span id="cb9-29"><a href="#cb9-29"></a>### Component 2: Timeline &amp; Impact (15 points)</span>
+<span id="cb9-30"><a href="#cb9-30"></a></span>
+<span id="cb9-31"><a href="#cb9-31"></a>Create detailed **incident analysis documentation** that traces how the data breach propagated through organizational systems:</span>
+<span id="cb9-32"><a href="#cb9-32"></a></span>
+<span id="cb9-33"><a href="#cb9-33"></a>a) **Map primary stakeholders** (individuals, systems, departments) involved in the incident, indicating their roles and responsibilities in the security incident</span>
+<span id="cb9-34"><a href="#cb9-34"></a></span>
+<span id="cb9-35"><a href="#cb9-35"></a>b) **Identify critical system dependencies** through which the attack had to travel, explaining why these network positions became critical vulnerability points</span>
+<span id="cb9-36"><a href="#cb9-36"></a></span>
+<span id="cb9-37"><a href="#cb9-37"></a>c) **Trace attack progression** showing how the incident developed over time through different organizational systems, demonstrating technical and procedural failures</span>
+<span id="cb9-38"><a href="#cb9-38"></a></span>
+<span id="cb9-39"><a href="#cb9-39"></a>d) **Analyze broader impacts** that extended beyond immediate technical systems to include regulatory requirements, customer relationships, and industry reputation</span>
+<span id="cb9-40"><a href="#cb9-40"></a></span>
+<span id="cb9-41"><a href="#cb9-41"></a>### Component 3: Responsibility (10 points)</span>
+<span id="cb9-42"><a href="#cb9-42"></a></span>
+<span id="cb9-43"><a href="#cb9-43"></a>Develop a **professional responsibility analysis** that examines ethical obligations across different stakeholder groups:</span>
+<span id="cb9-44"><a href="#cb9-44"></a></span>
+<span id="cb9-45"><a href="#cb9-45"></a>a) **Apply response-ability frameworks** that examine how ethical obligations emerge through relationships among humans, technologies, and organizational systems</span>
+<span id="cb9-46"><a href="#cb9-46"></a></span>
+<span id="cb9-47"><a href="#cb9-47"></a>b) **Analyze stakeholder impacts** that demonstrate how cybersecurity practices require attention to various affected groups and communities</span>
+<span id="cb9-48"><a href="#cb9-48"></a></span>
+<span id="cb9-49"><a href="#cb9-49"></a>c) **Evaluate accountability mechanisms** that extend responsibility beyond individual practitioners to include organizational and systemic factors</span>
+<span id="cb9-50"><a href="#cb9-50"></a></span>
+<span id="cb9-51"><a href="#cb9-51"></a>## Part II: Response &amp; Ethics (35 points)</span>
+<span id="cb9-52"><a href="#cb9-52"></a></span>
+<span id="cb9-53"><a href="#cb9-53"></a>### Component 4: Stakeholder Impact (15 points)</span>
+<span id="cb9-54"><a href="#cb9-54"></a></span>
+<span id="cb9-55"><a href="#cb9-55"></a>Examine how the data breach affected diverse **stakeholder groups**:</span>
+<span id="cb9-56"><a href="#cb9-56"></a></span>
+<span id="cb9-57"><a href="#cb9-57"></a>a) **Customer Impact**: Analyze how approximately `r world$records_compromised` customers experienced disruption, considering both immediate data exposure risks and ongoing relationship effects</span>
+<span id="cb9-58"><a href="#cb9-58"></a></span>
+<span id="cb9-59"><a href="#cb9-59"></a>b) **Employee Impact**: Evaluate how staff within `r world$company_name` experienced professional, ethical, and technical challenges during the incident response</span>
+<span id="cb9-60"><a href="#cb9-60"></a></span>
+<span id="cb9-61"><a href="#cb9-61"></a>c) **Regulatory Impact**: Assess how the incident activated governmental and industry oversight responsibilities and compliance requirements</span>
+<span id="cb9-62"><a href="#cb9-62"></a></span>
+<span id="cb9-63"><a href="#cb9-63"></a>d) **Industry Impact**: Examine broader effects on cybersecurity professional community and industry trust relationships</span>
+<span id="cb9-64"><a href="#cb9-64"></a></span>
+<span id="cb9-65"><a href="#cb9-65"></a>### Component 5: Decision Scenarios (20 points)</span>
+<span id="cb9-66"><a href="#cb9-66"></a></span>
+<span id="cb9-67"><a href="#cb9-67"></a>`r world$ceo_name_salutation` `r world$ceo_name_first` `r world$ceo_name_last` faces complex **leadership decisions** that require professional ethical analysis:</span>
+<span id="cb9-68"><a href="#cb9-68"></a></span>
+<span id="cb9-69"><a href="#cb9-69"></a>**Decision Scenario A**: Cross-organizational collaboration with potential information sharing risks requires balancing security improvement against proprietary information protection</span>
+<span id="cb9-70"><a href="#cb9-70"></a></span>
+<span id="cb9-71"><a href="#cb9-71"></a>**Decision Scenario B**: Customer transparency demands must be balanced against vulnerability disclosure that could affect the broader industry</span>
+<span id="cb9-72"><a href="#cb9-72"></a></span>
+<span id="cb9-73"><a href="#cb9-73"></a>**Decision Scenario C**: Communication strategies must address organizational, media, and regulatory stakeholder needs simultaneously</span>
+<span id="cb9-74"><a href="#cb9-74"></a></span>
+<span id="cb9-75"><a href="#cb9-75"></a>For each scenario:</span>
+<span id="cb9-76"><a href="#cb9-76"></a>a) **Identify decision complexity** including all stakeholders and systems that could be affected by decision outcomes</span>
+<span id="cb9-77"><a href="#cb9-77"></a>b) **Apply professional ethical frameworks** that recognize shared responsibility and professional obligations</span>
+<span id="cb9-78"><a href="#cb9-78"></a>c) **Develop coordination strategies** that balance competing priorities while maintaining professional standards</span>
+<span id="cb9-79"><a href="#cb9-79"></a></span>
+<span id="cb9-80"><a href="#cb9-80"></a>## Part III: Security Programs (25 points)</span>
+<span id="cb9-81"><a href="#cb9-81"></a></span>
+<span id="cb9-82"><a href="#cb9-82"></a>### Component 6: Program Development (15 points)</span>
+<span id="cb9-83"><a href="#cb9-83"></a></span>
+<span id="cb9-84"><a href="#cb9-84"></a>Design a **comprehensive security improvement program** that addresses multiple organizational levels:</span>
+<span id="cb9-85"><a href="#cb9-85"></a></span>
+<span id="cb9-86"><a href="#cb9-86"></a>a) **Immediate Stabilization** (0-30 days): Identify actions that strengthen security controls while maintaining operational business function</span>
+<span id="cb9-87"><a href="#cb9-87"></a></span>
+<span id="cb9-88"><a href="#cb9-88"></a>b) **System Integration Enhancement** (1-6 months): Develop programs that improve coordination among diverse organizational elements including staff training, technological systems, and organizational processes</span>
+<span id="cb9-89"><a href="#cb9-89"></a></span>
+<span id="cb9-90"><a href="#cb9-90"></a>c) **Long-term Organizational Resilience** (6-24 months): Create strategic approaches that enhance adaptive capabilities across organizational departments while addressing complex interdependencies</span>
+<span id="cb9-91"><a href="#cb9-91"></a></span>
+<span id="cb9-92"><a href="#cb9-92"></a>For each phase, demonstrate understanding of:</span>
+<span id="cb9-93"><a href="#cb9-93"></a>- How comprehensive security programs integrate technical, organizational, and human factors</span>
+<span id="cb9-94"><a href="#cb9-94"></a>- Why coordination among different organizational elements enhances rather than complicates security programs</span>
+<span id="cb9-95"><a href="#cb9-95"></a>- How measurement approaches must account for organizational rather than purely technical security outcomes</span>
+<span id="cb9-96"><a href="#cb9-96"></a></span>
+<span id="cb9-97"><a href="#cb9-97"></a>### Component 7: Learning Programs (10 points)</span>
+<span id="cb9-98"><a href="#cb9-98"></a></span>
+<span id="cb9-99"><a href="#cb9-99"></a>Create **ongoing education programs** that strengthen organizational cybersecurity capabilities:</span>
+<span id="cb9-100"><a href="#cb9-100"></a></span>
+<span id="cb9-101"><a href="#cb9-101"></a>a) **Professional Development Training**: Design learning programs that help staff develop capabilities for working effectively within complex organizational and technical environments</span>
+<span id="cb9-102"><a href="#cb9-102"></a></span>
+<span id="cb9-103"><a href="#cb9-103"></a>b) **Technology Integration Education**: Develop educational approaches that enhance staff understanding of and effective use of cybersecurity technologies and systems</span>
+<span id="cb9-104"><a href="#cb9-104"></a></span>
+<span id="cb9-105"><a href="#cb9-105"></a>c) **Organizational Resilience Development**: Create training programs that build cybersecurity capabilities across organizational departments rather than concentrating them in individual specialists</span>
+<span id="cb9-106"><a href="#cb9-106"></a></span>
+<span id="cb9-107"><a href="#cb9-107"></a>d) **Assessment Integration**: Design evaluation approaches that measure practical cybersecurity competency development and organizational preparedness</span>
+<span id="cb9-108"><a href="#cb9-108"></a></span>
+<span id="cb9-109"><a href="#cb9-109"></a>## Submission Requirements</span>
+<span id="cb9-110"><a href="#cb9-110"></a></span>
+<span id="cb9-111"><a href="#cb9-111"></a>Your completed incident analysis should demonstrate:</span>
+<span id="cb9-112"><a href="#cb9-112"></a></span>
+<span id="cb9-113"><a href="#cb9-113"></a>- **Professional Analysis Depth**: 2,500-3,500 words that show deep engagement with complex cybersecurity challenges rather than surface-level technical summary</span>
+<span id="cb9-114"><a href="#cb9-114"></a>- **Framework Integration**: Appropriate use of cybersecurity professional frameworks with proper industry and academic citations</span>
+<span id="cb9-115"><a href="#cb9-115"></a>- **Professional Communication**: Formatting and presentation that demonstrates capability for engaging with cybersecurity professional environments</span>
+<span id="cb9-116"><a href="#cb9-116"></a>- **Systems Thinking**: Evidence of understanding how cybersecurity involves coordination across technical, organizational, and human factors</span>
+<span id="cb9-117"><a href="#cb9-117"></a>- **Practical Application**: Recommendations that recognize organizational complexity while maintaining operational feasibility</span>
+<span id="cb9-118"><a href="#cb9-118"></a></span>
+<span id="cb9-119"><a href="#cb9-119"></a>Submit according to your instructor's guidance.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-professional-visual-design" class="level2">
+<h2 class="anchored" data-anchor-id="sec-professional-visual-design">Phase 6: Visual Design</h2>
+<p>Visual design supports educational effectiveness by creating professional interfaces that help your students engage with cybersecurity concepts in contexts that mirror industry standards. Rather than treating styling as decorative, your thoughtful design choices enhance readability, reinforce professional standards, and support learning objectives.</p>
+<p>An example of <code>assets/styles.css</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">/* Visual design that supports educational effectiveness */</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co">/* and mirrors industry-standard presentation */</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">/* Professional callout styling for enhanced readability */</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">.callout-learning-objective</span> {</span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="kw">border-left</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#6f42c1</span><span class="op">;</span> <span class="co">/* Posthuman theoretical purple */</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#f8f4ff</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> </span>
+<span id="cb10-8"><a href="#cb10-8"></a>                                   <span class="cn">#ede7ff</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.25</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">8</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">111</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">193</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>}</span>
+<span id="cb10-14"><a href="#cb10-14"></a></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="fu">.callout-security-alert</span> {</span>
+<span id="cb10-16"><a href="#cb10-16"></a>  <span class="kw">border-left</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#e83e8c</span><span class="op">;</span> <span class="co">/* Assemblage analysis pink */</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#fff5f8</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> </span>
+<span id="cb10-18"><a href="#cb10-18"></a>                                   <span class="cn">#ffe8f1</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.25</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-21"><a href="#cb10-21"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">8</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">232</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">140</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a>}</span>
+<span id="cb10-24"><a href="#cb10-24"></a></span>
+<span id="cb10-25"><a href="#cb10-25"></a><span class="fu">.callout-theoretical-foundation</span> {</span>
+<span id="cb10-26"><a href="#cb10-26"></a>  <span class="kw">border-left</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#17a2b8</span><span class="op">;</span> <span class="co">/* Theoretical foundation teal */</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#f0fcff</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> </span>
+<span id="cb10-28"><a href="#cb10-28"></a>                                   <span class="cn">#e0f8ff</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-29"><a href="#cb10-29"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.25</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-30"><a href="#cb10-30"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-31"><a href="#cb10-31"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">8</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">23</span><span class="op">,</span> <span class="dv">162</span><span class="op">,</span> <span class="dv">184</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-32"><a href="#cb10-32"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-33"><a href="#cb10-33"></a>}</span>
+<span id="cb10-34"><a href="#cb10-34"></a></span>
+<span id="cb10-35"><a href="#cb10-35"></a><span class="co">/* Professional typography for cybersecurity education */</span></span>
+<span id="cb10-36"><a href="#cb10-36"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3 {</span>
+<span id="cb10-37"><a href="#cb10-37"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#2d3436</span><span class="op">;</span></span>
+<span id="cb10-38"><a href="#cb10-38"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
+<span id="cb10-39"><a href="#cb10-39"></a>  <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">1.3</span><span class="op">;</span></span>
+<span id="cb10-40"><a href="#cb10-40"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">'Inter'</span><span class="op">,</span> <span class="dv">-apple-system</span><span class="op">,</span> <span class="dv">BlinkMacSystemFont</span><span class="op">,</span> </span>
+<span id="cb10-41"><a href="#cb10-41"></a>                <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb10-42"><a href="#cb10-42"></a>}</span>
+<span id="cb10-43"><a href="#cb10-43"></a></span>
+<span id="cb10-44"><a href="#cb10-44"></a>h1 {</span>
+<span id="cb10-45"><a href="#cb10-45"></a>  <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#6f42c1</span><span class="op">;</span></span>
+<span id="cb10-46"><a href="#cb10-46"></a>  <span class="kw">padding-bottom</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-47"><a href="#cb10-47"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-48"><a href="#cb10-48"></a>}</span>
+<span id="cb10-49"><a href="#cb10-49"></a></span>
+<span id="cb10-50"><a href="#cb10-50"></a>h2 {</span>
+<span id="cb10-51"><a href="#cb10-51"></a>  <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#e83e8c</span><span class="op">;</span></span>
+<span id="cb10-52"><a href="#cb10-52"></a>  <span class="kw">padding-bottom</span><span class="ch">:</span> <span class="dv">0.3</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-53"><a href="#cb10-53"></a>  <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">2.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-54"><a href="#cb10-54"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-55"><a href="#cb10-55"></a>}</span>
+<span id="cb10-56"><a href="#cb10-56"></a></span>
+<span id="cb10-57"><a href="#cb10-57"></a><span class="co">/* Code blocks that emphasize computational agency */</span></span>
+<span id="cb10-58"><a href="#cb10-58"></a>pre {</span>
+<span id="cb10-59"><a href="#cb10-59"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#2d3436</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> <span class="cn">#636e72</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-60"><a href="#cb10-60"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#ddd</span><span class="op">;</span></span>
+<span id="cb10-61"><a href="#cb10-61"></a>  <span class="kw">border</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb10-62"><a href="#cb10-62"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-63"><a href="#cb10-63"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-64"><a href="#cb10-64"></a>  <span class="kw">overflow-x</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb10-65"><a href="#cb10-65"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">45</span><span class="op">,</span> <span class="dv">52</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">0.3</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-66"><a href="#cb10-66"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">'JetBrains Mono'</span><span class="op">,</span> <span class="st">'Fira Code'</span><span class="op">,</span> </span>
+<span id="cb10-67"><a href="#cb10-67"></a>                <span class="dv">monospace</span><span class="op">;</span></span>
+<span id="cb10-68"><a href="#cb10-68"></a>}</span>
+<span id="cb10-69"><a href="#cb10-69"></a></span>
+<span id="cb10-70"><a href="#cb10-70"></a><span class="co">/* Professional emphasis styling */</span></span>
+<span id="cb10-71"><a href="#cb10-71"></a>strong {</span>
+<span id="cb10-72"><a href="#cb10-72"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#0056b3</span><span class="op">;</span></span>
+<span id="cb10-73"><a href="#cb10-73"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb10-74"><a href="#cb10-74"></a>}</span>
+<span id="cb10-75"><a href="#cb10-75"></a></span>
+<span id="cb10-76"><a href="#cb10-76"></a>em {</span>
+<span id="cb10-77"><a href="#cb10-77"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#6c757d</span><span class="op">;</span></span>
+<span id="cb10-78"><a href="#cb10-78"></a>  <span class="kw">font-style</span><span class="ch">:</span> <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb10-79"><a href="#cb10-79"></a>}</span>
+<span id="cb10-80"><a href="#cb10-80"></a></span>
+<span id="cb10-81"><a href="#cb10-81"></a><span class="co">/* Professional table styling */</span></span>
+<span id="cb10-82"><a href="#cb10-82"></a>table {</span>
+<span id="cb10-83"><a href="#cb10-83"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-84"><a href="#cb10-84"></a>  <span class="kw">border-collapse</span><span class="ch">:</span> <span class="dv">separate</span><span class="op">;</span></span>
+<span id="cb10-85"><a href="#cb10-85"></a>  <span class="kw">border-spacing</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-86"><a href="#cb10-86"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-87"><a href="#cb10-87"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-88"><a href="#cb10-88"></a>  <span class="kw">overflow</span><span class="ch">:</span> <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb10-89"><a href="#cb10-89"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-90"><a href="#cb10-90"></a>}</span>
+<span id="cb10-91"><a href="#cb10-91"></a></span>
+<span id="cb10-92"><a href="#cb10-92"></a>th<span class="op">,</span> td {</span>
+<span id="cb10-93"><a href="#cb10-93"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-94"><a href="#cb10-94"></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb10-95"><a href="#cb10-95"></a>  <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#e9ecef</span><span class="op">;</span></span>
+<span id="cb10-96"><a href="#cb10-96"></a>}</span>
+<span id="cb10-97"><a href="#cb10-97"></a></span>
+<span id="cb10-98"><a href="#cb10-98"></a>th {</span>
+<span id="cb10-99"><a href="#cb10-99"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#0056b3</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> <span class="cn">#004494</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-100"><a href="#cb10-100"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb10-101"><a href="#cb10-101"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
+<span id="cb10-102"><a href="#cb10-102"></a>  <span class="kw">text-transform</span><span class="ch">:</span> <span class="dv">uppercase</span><span class="op">;</span></span>
+<span id="cb10-103"><a href="#cb10-103"></a>  <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">0.5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb10-104"><a href="#cb10-104"></a>}</span>
+<span id="cb10-105"><a href="#cb10-105"></a></span>
+<span id="cb10-106"><a href="#cb10-106"></a>tbody tr<span class="in">:hover</span> {</span>
+<span id="cb10-107"><a href="#cb10-107"></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">#f8fbff</span><span class="op">;</span></span>
+<span id="cb10-108"><a href="#cb10-108"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">background-color 0.2</span><span class="dt">s</span> <span class="dv">ease</span><span class="op">;</span></span>
+<span id="cb10-109"><a href="#cb10-109"></a>}</span>
+<span id="cb10-110"><a href="#cb10-110"></a></span>
+<span id="cb10-111"><a href="#cb10-111"></a><span class="co">/* Responsive design for accessibility */</span></span>
+<span id="cb10-112"><a href="#cb10-112"></a><span class="im">@media</span> <span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span> <span class="dv">768</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb10-113"><a href="#cb10-113"></a>  <span class="fu">.container</span> {</span>
+<span id="cb10-114"><a href="#cb10-114"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-115"><a href="#cb10-115"></a>  }</span>
+<span id="cb10-116"><a href="#cb10-116"></a>  </span>
+<span id="cb10-117"><a href="#cb10-117"></a>  h1 {</span>
+<span id="cb10-118"><a href="#cb10-118"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.75</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-119"><a href="#cb10-119"></a>  }</span>
+<span id="cb10-120"><a href="#cb10-120"></a>  </span>
+<span id="cb10-121"><a href="#cb10-121"></a>  h2 {</span>
+<span id="cb10-122"><a href="#cb10-122"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.4</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-123"><a href="#cb10-123"></a>  }</span>
+<span id="cb10-124"><a href="#cb10-124"></a>  </span>
+<span id="cb10-125"><a href="#cb10-125"></a>  table {</span>
+<span id="cb10-126"><a href="#cb10-126"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">0.875</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-127"><a href="#cb10-127"></a>  }</span>
+<span id="cb10-128"><a href="#cb10-128"></a>  </span>
+<span id="cb10-129"><a href="#cb10-129"></a>  <span class="fu">.callout-learning-objective</span><span class="op">,</span></span>
+<span id="cb10-130"><a href="#cb10-130"></a>  <span class="fu">.callout-security-alert</span><span class="op">,</span></span>
+<span id="cb10-131"><a href="#cb10-131"></a>  <span class="fu">.callout-best-practice</span> {</span>
+<span id="cb10-132"><a href="#cb10-132"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-133"><a href="#cb10-133"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-134"><a href="#cb10-134"></a>  }</span>
+<span id="cb10-135"><a href="#cb10-135"></a>}</span>
+<span id="cb10-136"><a href="#cb10-136"></a></span>
+<span id="cb10-137"><a href="#cb10-137"></a><span class="co">/* Special styling for educational comments */</span></span>
+<span id="cb10-138"><a href="#cb10-138"></a><span class="fu">.educational-comment</span> {</span>
+<span id="cb10-139"><a href="#cb10-139"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#fff3cd</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> <span class="cn">#ffeaa7</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-140"><a href="#cb10-140"></a>  <span class="kw">border-left</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#ff9800</span><span class="op">;</span></span>
+<span id="cb10-141"><a href="#cb10-141"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-142"><a href="#cb10-142"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-143"><a href="#cb10-143"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">0.375</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb10-144"><a href="#cb10-144"></a>  <span class="kw">font-style</span><span class="ch">:</span> <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb10-145"><a href="#cb10-145"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#856404</span><span class="op">;</span></span>
+<span id="cb10-146"><a href="#cb10-146"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="sec-quality-assurance" class="level2">
+<h2 class="anchored" data-anchor-id="sec-quality-assurance">Phase 7: Quality Assurance</h2>
+<section id="sec-rendering-testing" class="level3">
+<h3 class="anchored" data-anchor-id="sec-rendering-testing">Rendering &amp; Testing</h3>
+<p>When you render your documents, this creates functional educational materials from your source files and centralized data. This process transforms your QMD files and YAML data into polished, professional case studies ready for your classroom use.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Render individual case study files</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="ex">quarto</span> render cases/organizational-breach/breach-scenario.qmd</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="ex">quarto</span> render cases/organizational-breach/breach-assessment.qmd</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co"># Render entire project for comprehensive testing</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="sec-quality-verification" class="level3">
+<h3 class="anchored" data-anchor-id="sec-quality-verification">Verification Checklist</h3>
+<p>You should verify your case study quality through <strong>comprehensive quality indicators</strong> that ensure educational effectiveness:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Data integration</strong>: All your centralized world variables properly load and display across documents</label></li>
+<li><label><input type="checkbox"><strong>Content consistency</strong>: Character names, organizations, and details remain consistent throughout your cases</label></li>
+<li><label><input type="checkbox"><strong>Professional accuracy</strong>: Your technical content accurately reflects current cybersecurity industry practices</label></li>
+<li><label><input type="checkbox"><strong>Educational alignment</strong>: Your assessment questions support stated learning objectives and competency development</label></li>
+<li><label><input type="checkbox"><strong>Technical functionality</strong>: All cross-references, links, and formatting render correctly across output formats</label></li>
+</ul>
+</section>
+</section>
+<section id="sec-iterative-improvement" class="level2">
+<h2 class="anchored" data-anchor-id="sec-iterative-improvement">Phase 8: Iterative Improvement</h2>
+<p>Your refinement should follow <strong>Design-Based Research</strong> principles that generate systematic evidence about educational effectiveness while improving practical implementation:</p>
+<ul>
+<li><strong>Educational Researchers</strong>: You can collaborate with researchers to evaluate pedagogical effectiveness in developing cybersecurity professional competencies</li>
+<li><strong>Cybersecurity Instructors</strong>: You should assess classroom implementation success and student engagement with your case study materials</li>
+<li><strong>Student Participants</strong>: You can collect evidence about learning outcomes and engagement with realistic cybersecurity scenarios</li>
+<li><strong>Industry Professional Networks</strong>: You should verify authenticity of your scenario representations and professional relevance</li>
+</ul>
+<section id="sec-educational-quality-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="sec-educational-quality-criteria">Quality Evaluation</h3>
+<ul>
+<li><strong>Pedagogical Effectiveness</strong>: Ensure your case study complexity supports learning objectives without overwhelming student engagement</li>
+<li><strong>Professional Authenticity</strong>: Verify that your characters and scenarios demonstrate realistic cybersecurity professional characteristics</li>
+<li><strong>Industry Accuracy</strong>: Confirm that your case study interactions reflect actual cybersecurity professional practice patterns</li>
+<li><strong>Educational Functionality</strong>: Validate that your case studies successfully enable cybersecurity competency development</li>
+</ul>
+</section>
+</section>
+<section id="sec-educational-development-progression" class="level2">
+<h2 class="anchored" data-anchor-id="sec-educational-development-progression">Development Progression</h2>
+<p>You have successfully created your first <strong>cybersecurity case study using centralized worldbuilding</strong>—a coherent educational system that combines theoretical rigor with practical classroom utility. This approach demonstrates how your systematic development enhances rather than complicates cybersecurity education.</p>
+<ol type="1">
+<li><strong><a href="../guide/worldbuilding.html">Systematic Worldbuilding Development</a></strong>: Develop more complex character and organizational networks that support multiple interconnected case studies</li>
+<li><strong><a href="../guide/narrative-design.html">Narrative Design for Professional Authenticity</a></strong>: Create storytelling approaches that develop realistic professional scenarios with genuine educational value</li>
+<li><strong><a href="../guide/assessment-framework.html">Comprehensive Assessment Framework Implementation</a></strong>: Design evaluation systems that measure professional cybersecurity competency development</li>
+<li><strong><a href="https://github.com/ryanstraight/cyber-dimensions-demo">Professional Case Study Examples</a></strong>: Explore the demo repository to study how established case studies demonstrate effective educational design principles in practice</li>
+</ol>
+<p>This tutorial demonstrates how <strong>your systematic educational development</strong> can simultaneously advance <strong>practical classroom effectiveness</strong> and <strong>educational innovation</strong>. Your centralized approach creates a sustainable foundation for developing multiple interconnected cybersecurity case studies while maintaining professional authenticity and educational rigor.</p>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Complete Implementation Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To see this methodology in practice, explore the <strong><a href="https://github.com/ryanstraight/cyber-dimensions-demo">Cyber Dimensions Demo Repository</a></strong>, which showcases a complete implementation of the centralized worldbuilding system with four fully-developed case studies. The demo illustrates how the <code>_worldbuilding.yml</code> system maintains character and organizational consistency across multiple scenarios while supporting rich narrative development and professional assessment design.</p>
+</div>
+</div>
+</section>
+<section id="sec-technical-support" class="level2">
+<h2 class="anchored" data-anchor-id="sec-technical-support">Technical Support</h2>
+<p><strong>World data not loading</strong>:</p>
+<ul>
+<li>Verify your <code>_scripts/setup.R</code> executed successfully with appropriate processing messages</li>
+<li>Confirm your <code>_world_data.rds</code> exists and contains expected world variables</li>
+<li>Validate YAML syntax in your <code>_worldbuilding.yml</code> maintains proper structure and indentation</li>
+</ul>
+<p><strong>Case study rendering failures</strong>:</p>
+<ul>
+<li>Check for missing R packages that support your world data processing (yaml, here)</li>
+<li>Ensure your file paths use <code>here::here()</code> function for cross-platform compatibility</li>
+<li>Verify your Quarto configuration enables R code execution and variable substitution</li>
+</ul>
+<p><strong>Variable reference issues</strong>:</p>
+<ul>
+<li>Confirm your <code>solo_render.R</code> is sourced correctly at the beginning of your QMD files</li>
+<li>Verify your variable names match exactly between YAML file and R expressions (case-sensitive)</li>
+<li>Ensure your R inline code uses proper syntax: <code>`r world$variable_name`</code></li>
+</ul>
+<section id="sec-educational-support-resources" class="level3">
+<h3 class="anchored" data-anchor-id="sec-educational-support-resources">Support Resources</h3>
+<ul>
+<li><strong>Methodology Documentation</strong>: Consult the <a href="../guide/methodology.html">cybersecurity education methodology guide</a> for comprehensive pedagogical frameworks and design principles</li>
+<li><strong>Development Templates</strong>: Reference <a href="../templates/case-study-template.html">systematic worldbuilding templates</a> that demonstrate effective case study development</li>
+<li><strong>Professional Examples</strong>: Analyze <a href="https://github.com/ryanstraight/cyber-dimensions-demo">established case study implementations</a> that demonstrate educational effectiveness in practice</li>
+<li><strong>Educational Community</strong>: Engage with cybersecurity education professional networks for ongoing pedagogical and technical development</li>
+</ul>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Tutorial Complete
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You have successfully created your first <strong>cybersecurity case study using centralized worldbuilding</strong>! The TechnoCollaborative Systems data breach demonstrates effective integration of:</p>
+<ul>
+<li>Systematic data management through centralized YAML-based worldbuilding</li>
+<li>Professional authenticity across realistic characters and organizational scenarios</li>
+<li>Multi-perspective analysis of cybersecurity incidents from various stakeholder viewpoints</li>
+<li>Educational effectiveness that combines theoretical rigor with practical application</li>
+<li>Evidence-based methodology that generates systematic approaches to case study development</li>
+</ul>
+<p>This achievement represents significant contribution to cybersecurity education methodology while maintaining practical utility for classroom implementation. You are now prepared to develop increasingly complex and interconnected cybersecurity case study systems.</p>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-straightHumanCentricModelsCybersecurity2024" class="csl-entry" role="listitem">
+Straight, R. (2024). Beyond <span>Human-Centric Models</span> in <span>Cybersecurity Education</span>: <span>A Pilot Posthuman Analysis</span> of the <span>NICE Workforce Framework</span> for <span>Cybersecurity</span>. <em>Journal of Cybersecurity Education, Research and Practice</em>, <em>2024</em>(1). <a href="https://doi.org/10.62915/2472-2707.1210">https://doi.org/10.62915/2472-2707.1210</a>
+</div>
+<div id="ref-straightCyberDimensionsImmersive2025" class="csl-entry" role="listitem">
+Straight, R. (2025). <em>Cyber <span>Dimensions</span>: <span>Immersive Case Studies Across Digital Domains</span></em> (1st ed.). Kendall Hunt.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../guide/setup.html" class="pagination-link" aria-label="Setup">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../guide/worldbuilding.html" class="pagination-link" aria-label="Worldbuilding">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/tutorial.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

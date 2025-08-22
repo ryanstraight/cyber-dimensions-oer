@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>Supplemental Resources – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./guide/cross-case-continuity.html" rel="prev">
+<link href="./assets/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./supplemental.html">Supplemental Resources</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/worldbuilding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/narrative-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./supplemental.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#incident-response-and-management" id="toc-incident-response-and-management" class="nav-link active" data-scroll-target="#incident-response-and-management">Incident Response and Management</a></li>
+  <li><a href="#risk-management-and-governance" id="toc-risk-management-and-governance" class="nav-link" data-scroll-target="#risk-management-and-governance">Risk Management and Governance</a></li>
+  <li><a href="#compliance-and-regulatory-requirements" id="toc-compliance-and-regulatory-requirements" class="nav-link" data-scroll-target="#compliance-and-regulatory-requirements">Compliance and Regulatory Requirements</a></li>
+  <li><a href="#educational-theory-and-instructional-design" id="toc-educational-theory-and-instructional-design" class="nav-link" data-scroll-target="#educational-theory-and-instructional-design">Educational Theory and Instructional Design</a>
+  <ul class="collapse">
+  <li><a href="#case-based-learning-methodology" id="toc-case-based-learning-methodology" class="nav-link" data-scroll-target="#case-based-learning-methodology">Case-Based Learning Methodology</a></li>
+  <li><a href="#technology-enhanced-learning" id="toc-technology-enhanced-learning" class="nav-link" data-scroll-target="#technology-enhanced-learning">Technology-Enhanced Learning</a></li>
+  </ul></li>
+  <li><a href="#technical-resources-and-tools" id="toc-technical-resources-and-tools" class="nav-link" data-scroll-target="#technical-resources-and-tools">Technical Resources and Tools</a>
+  <ul class="collapse">
+  <li><a href="#threat-intelligence-and-research" id="toc-threat-intelligence-and-research" class="nav-link" data-scroll-target="#threat-intelligence-and-research">Threat Intelligence and Research</a></li>
+  </ul></li>
+  <li><a href="#industry-reports-and-threat-intelligence" id="toc-industry-reports-and-threat-intelligence" class="nav-link" data-scroll-target="#industry-reports-and-threat-intelligence">Industry Reports and Threat Intelligence</a>
+  <ul class="collapse">
+  <li><a href="#annual-security-reports" id="toc-annual-security-reports" class="nav-link" data-scroll-target="#annual-security-reports">Annual Security Reports</a></li>
+  <li><a href="#threat-landscape-analysis" id="toc-threat-landscape-analysis" class="nav-link" data-scroll-target="#threat-landscape-analysis">Threat Landscape Analysis</a></li>
+  </ul></li>
+  <li><a href="#professional-development-and-certification" id="toc-professional-development-and-certification" class="nav-link" data-scroll-target="#professional-development-and-certification">Professional Development and Certification</a>
+  <ul class="collapse">
+  <li><a href="#cybersecurity-certifications" id="toc-cybersecurity-certifications" class="nav-link" data-scroll-target="#cybersecurity-certifications">Cybersecurity Certifications</a></li>
+  <li><a href="#professional-organizations" id="toc-professional-organizations" class="nav-link" data-scroll-target="#professional-organizations">Professional Organizations</a></li>
+  </ul></li>
+  <li><a href="#case-study-development-resources" id="toc-case-study-development-resources" class="nav-link" data-scroll-target="#case-study-development-resources">Case Study Development Resources</a>
+  <ul class="collapse">
+  <li><a href="#visual-design-and-multimedia" id="toc-visual-design-and-multimedia" class="nav-link" data-scroll-target="#visual-design-and-multimedia">Visual Design and Multimedia</a></li>
+  </ul></li>
+  <li><a href="#research-and-academic-resources" id="toc-research-and-academic-resources" class="nav-link" data-scroll-target="#research-and-academic-resources">Research and Academic Resources</a>
+  <ul class="collapse">
+  <li><a href="#cybersecurity-education-research" id="toc-cybersecurity-education-research" class="nav-link" data-scroll-target="#cybersecurity-education-research">Cybersecurity Education Research</a></li>
+  <li><a href="#educational-technology-journals" id="toc-educational-technology-journals" class="nav-link" data-scroll-target="#educational-technology-journals">Educational Technology Journals</a></li>
+  </ul></li>
+  <li><a href="#legal-and-ethical-resources" id="toc-legal-and-ethical-resources" class="nav-link" data-scroll-target="#legal-and-ethical-resources">Legal and Ethical Resources</a>
+  <ul class="collapse">
+  <li><a href="#privacy-and-data-protection-law" id="toc-privacy-and-data-protection-law" class="nav-link" data-scroll-target="#privacy-and-data-protection-law">Privacy and Data Protection Law</a></li>
+  <li><a href="#professional-ethics-in-cybersecurity" id="toc-professional-ethics-in-cybersecurity" class="nav-link" data-scroll-target="#professional-ethics-in-cybersecurity">Professional Ethics in Cybersecurity</a></li>
+  </ul></li>
+  <li><a href="#software-and-platform-resources" id="toc-software-and-platform-resources" class="nav-link" data-scroll-target="#software-and-platform-resources">Software and Platform Resources</a>
+  <ul class="collapse">
+  <li><a href="#simulation-and-training-platforms" id="toc-simulation-and-training-platforms" class="nav-link" data-scroll-target="#simulation-and-training-platforms">Simulation and Training Platforms</a></li>
+  </ul></li>
+  <li><a href="#quality-assurance-and-assessment" id="toc-quality-assurance-and-assessment" class="nav-link" data-scroll-target="#quality-assurance-and-assessment">Quality Assurance and Assessment</a>
+  <ul class="collapse">
+  <li><a href="#educational-assessment-theory" id="toc-educational-assessment-theory" class="nav-link" data-scroll-target="#educational-assessment-theory">Educational Assessment Theory</a></li>
+  <li><a href="#technical-quality-assurance" id="toc-technical-quality-assurance" class="nav-link" data-scroll-target="#technical-quality-assurance">Technical Quality Assurance</a></li>
+  </ul></li>
+  <li><a href="#professional-journals-and-publications" id="toc-professional-journals-and-publications" class="nav-link" data-scroll-target="#professional-journals-and-publications">Professional Journals and Publications</a>
+  <ul class="collapse">
+  <li><a href="#cybersecurity-journals" id="toc-cybersecurity-journals" class="nav-link" data-scroll-target="#cybersecurity-journals">Cybersecurity Journals</a></li>
+  <li><a href="#educational-technology-publications" id="toc-educational-technology-publications" class="nav-link" data-scroll-target="#educational-technology-publications">Educational Technology Publications</a></li>
+  </ul></li>
+  <li><a href="#emerging-technologies-and-future-trends" id="toc-emerging-technologies-and-future-trends" class="nav-link" data-scroll-target="#emerging-technologies-and-future-trends">Emerging Technologies and Future Trends</a>
+  <ul class="collapse">
+  <li><a href="#artificial-intelligence-and-machine-learning-in-cybersecurity" id="toc-artificial-intelligence-and-machine-learning-in-cybersecurity" class="nav-link" data-scroll-target="#artificial-intelligence-and-machine-learning-in-cybersecurity">Artificial Intelligence and Machine Learning in Cybersecurity</a></li>
+  <li><a href="#cloud-security-and-devsecops" id="toc-cloud-security-and-devsecops" class="nav-link" data-scroll-target="#cloud-security-and-devsecops">Cloud Security and DevSecOps</a></li>
+  <li><a href="#zero-trust-architecture" id="toc-zero-trust-architecture" class="nav-link" data-scroll-target="#zero-trust-architecture">Zero Trust Architecture</a></li>
+  </ul></li>
+  <li><a href="#international-perspectives-and-resources" id="toc-international-perspectives-and-resources" class="nav-link" data-scroll-target="#international-perspectives-and-resources">International Perspectives and Resources</a>
+  <ul class="collapse">
+  <li><a href="#global-cybersecurity-frameworks" id="toc-global-cybersecurity-frameworks" class="nav-link" data-scroll-target="#global-cybersecurity-frameworks">Global Cybersecurity Frameworks</a></li>
+  <li><a href="#cultural-considerations-in-cybersecurity-education" id="toc-cultural-considerations-in-cybersecurity-education" class="nav-link" data-scroll-target="#cultural-considerations-in-cybersecurity-education">Cultural Considerations in Cybersecurity Education</a></li>
+  </ul></li>
+  <li><a href="#open-access-and-free-resources" id="toc-open-access-and-free-resources" class="nav-link" data-scroll-target="#open-access-and-free-resources">Open Access and Free Resources</a></li>
+  <li><a href="#government-and-public-sector-resources" id="toc-government-and-public-sector-resources" class="nav-link" data-scroll-target="#government-and-public-sector-resources">Government and Public Sector Resources</a></li>
+  <li><a href="#open-educational-resources" id="toc-open-educational-resources" class="nav-link" data-scroll-target="#open-educational-resources">Open Educational Resources</a></li>
+  <li><a href="#community-and-professional-networks" id="toc-community-and-professional-networks" class="nav-link" data-scroll-target="#community-and-professional-networks">Community and Professional Networks</a>
+  <ul class="collapse">
+  <li><a href="#online-communities-and-forums" id="toc-online-communities-and-forums" class="nav-link" data-scroll-target="#online-communities-and-forums">Online Communities and Forums</a></li>
+  <li><a href="#professional-conferences-and-events" id="toc-professional-conferences-and-events" class="nav-link" data-scroll-target="#professional-conferences-and-events">Professional Conferences and Events</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/supplemental.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Supplemental Resources</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The following list of resources provides a foundation for case study development. Supplement with current industry reports, recent academic research, and emerging threat intelligence to ensure your case studies reflect the current cybersecurity landscape.</p>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Resource Currency
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cybersecurity is a rapidly evolving field. Verify currency of all references and update citations regularly to maintain accuracy and relevance. Consider subscribing to industry newsletters and threat intelligence feeds for the most current information.</p>
+</div>
+</div>
+<section id="incident-response-and-management" class="level2">
+<h2 class="anchored" data-anchor-id="incident-response-and-management">Incident Response and Management</h2>
+<p>These foundational frameworks and guidelines provide the structural backbone for creating realistic incident response scenarios in your case studies. Understanding these established protocols helps ensure your fictional incidents follow authentic professional practices.</p>
+<p><strong>NIST Cybersecurity Framework</strong></p>
+<ul>
+<li>National Institute of Standards and Technology. (2024). <em>NIST Cybersecurity Framework 2.0</em>. NIST. <a href="https://www.nist.gov/cyberframework" class="uri">https://www.nist.gov/cyberframework</a></li>
+</ul>
+<p><strong>NIST Special Publication 800-61</strong></p>
+<ul>
+<li>Nelson, A., Rekhi, S.., Souppaya, M., &amp; Scarfone, K. (2025). <em>Incident Response Recommendations and Considerations for Cybersecurity Risk Management</em>. NIST Special Publication 800-61 Rev 3. <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final" class="uri">https://csrc.nist.gov/pubs/sp/800/61/r3/final</a></li>
+</ul>
+<p><strong>SANS Incident Response Process</strong></p>
+<ul>
+<li>SANS Institute. (2023). <em>Incident Response</em>. SANS. <a href="https://www.sans.org/security-resources/glossary-of-terms/incident-response" class="uri">https://www.sans.org/security-resources/glossary-of-terms/incident-response</a></li>
+</ul>
+</section>
+<section id="risk-management-and-governance" class="level2">
+<h2 class="anchored" data-anchor-id="risk-management-and-governance">Risk Management and Governance</h2>
+<p>Risk assessment and governance frameworks help you create case studies that reflect how organizations make strategic security decisions. These resources provide authentic contexts for leadership challenges and budget allocation scenarios.</p>
+<p><strong>ISO/IEC 27001:2022</strong></p>
+<ul>
+<li>International Organization for Standardization. (2022). <em>Information Security Management Systems — Requirements</em>. ISO/IEC 27001:2022.</li>
+</ul>
+<p><strong>FAIR (Factor Analysis of Information Risk)</strong></p>
+<ul>
+<li>Freund, J., &amp; Jones, J. (2015). <em>Measuring and Managing Information Risk: A FAIR Approach</em>. Butterworth-Heinemann.</li>
+</ul>
+<p><strong>COSO Enterprise Risk Management Framework</strong></p>
+<ul>
+<li>Committee of Sponsoring Organizations of the Treadway Commission. (2017). <em>Enterprise Risk Management Framework</em>. <a href="https://www.coso.org/guidance-erm" class="uri">https://www.coso.org/guidance-erm</a></li>
+</ul>
+</section>
+<section id="compliance-and-regulatory-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="compliance-and-regulatory-requirements">Compliance and Regulatory Requirements</h2>
+<p>Legal and regulatory frameworks add realistic constraints and ethical dimensions to your case studies. These requirements often drive organizational decision-making and create tension between security, compliance, and operational efficiency.</p>
+<p><strong>HIPAA Security Rule</strong></p>
+<ul>
+<li>U.S. Department of Health and Human Services. (2003). <em>Health Insurance Portability and Accountability Act Security Rule</em>. 45 CFR Parts 160 and 164.</li>
+</ul>
+<p><strong>PCI DSS Requirements</strong></p>
+<ul>
+<li>PCI Security Standards Council. (2024). <em>Payment Card Industry Data Security Standard v4.0.1</em>. <a href="https://www.pcisecuritystandards.org/" class="uri">https://www.pcisecuritystandards.org/</a></li>
+</ul>
+<p><strong>GDPR Compliance Guidelines</strong></p>
+<ul>
+<li>European Union. (2016). <em>General Data Protection Regulation</em>. Official Journal of the European Union L119. <a href="https://gdpr.eu/" class="uri">https://gdpr.eu/</a></li>
+</ul>
+</section>
+<section id="educational-theory-and-instructional-design" class="level2">
+<h2 class="anchored" data-anchor-id="educational-theory-and-instructional-design">Educational Theory and Instructional Design</h2>
+<p>These pedagogical resources ground your case study development in evidence-based educational practices. Understanding learning theory helps create more effective and engaging educational experiences for your students.</p>
+<section id="case-based-learning-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="case-based-learning-methodology">Case-Based Learning Methodology</h3>
+<p><strong>Case Method in Professional Education</strong></p>
+<ul>
+<li>Merseth, K. K. (1991). The early history of case-based instruction: Insights for teacher education today. <em>Journal of Teacher Education</em>, 42(4), 243-249.</li>
+</ul>
+<p><strong>Problem-Based Learning in Higher Education</strong></p>
+<ul>
+<li>Barrows, H. S., &amp; Tamblyn, R. M. (1980). <em>Problem-Based Learning: An Approach to Medical Education</em>. Springer Publishing Company.</li>
+</ul>
+<p><strong>Authentic Assessment Design</strong></p>
+<ul>
+<li>Wiggins, G., &amp; McTighe, J. (2005). <em>Understanding by Design</em> (2nd ed.). Association for Supervision and Curriculum Development.</li>
+</ul>
+</section>
+<section id="technology-enhanced-learning" class="level3">
+<h3 class="anchored" data-anchor-id="technology-enhanced-learning">Technology-Enhanced Learning</h3>
+<p><strong>Multimedia Learning Theory</strong></p>
+<ul>
+<li>Mayer, R. E. (2014). <em>The Cambridge Handbook of Multimedia Learning</em> (2nd ed.). Cambridge University Press.</li>
+</ul>
+<p><strong>Cognitive Load Theory</strong></p>
+<ul>
+<li>Sweller, J., Ayres, P., &amp; Kalyuga, S. (2011). <em>Cognitive Load Theory</em>. Springer Science &amp; Business Media.</li>
+</ul>
+<p><strong>Universal Design for Learning</strong></p>
+<ul>
+<li>Rose, D. H., &amp; Meyer, A. (2002). <em>Teaching Every Student in the Digital Age: Universal Design for Learning</em>. Association for Supervision and Curriculum Development.</li>
+</ul>
+</section>
+</section>
+<section id="technical-resources-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="technical-resources-and-tools">Technical Resources and Tools</h2>
+<p>Technical accuracy requires understanding current cybersecurity tools and platforms. These resources help you create realistic technical scenarios and ensure your case studies reflect actual professional environments.</p>
+<p><strong>SIEM Platform Resources</strong></p>
+<ul>
+<li>Splunk Inc.&nbsp;(2023). <em>Splunk Security Essentials</em>. <a href="https://splunkbase.splunk.com/app/3435/" class="uri">https://splunkbase.splunk.com/app/3435/</a></li>
+<li>Elastic N.V. (2023). <em>Elastic Security Documentation</em>. <a href="https://www.elastic.co/guide/en/security/current/index.html" class="uri">https://www.elastic.co/guide/en/security/current/index.html</a></li>
+<li>IBM Corporation. (2023). <em>QRadar SIEM Documentation</em>. <a href="https://www.ibm.com/docs/en/qradar-common" class="uri">https://www.ibm.com/docs/en/qradar-common</a></li>
+</ul>
+<p><strong>Network Analysis Tools</strong></p>
+<ul>
+<li>Wireshark Foundation. (2023). <em>Wireshark User’s Guide</em>. <a href="https://www.wireshark.org/docs/wsug_html/" class="uri">https://www.wireshark.org/docs/wsug_html/</a></li>
+<li>Rapid7. (2023). <em>Metasploit Documentation</em>. <a href="https://docs.rapid7.com/metasploit/" class="uri">https://docs.rapid7.com/metasploit/</a></li>
+</ul>
+<p><strong>Digital Forensics Resources</strong></p>
+<ul>
+<li>Carrier, B. (2005). <em>File System Forensic Analysis</em>. Addison-Wesley Professional.</li>
+<li>Casey, E., &amp; Rose, C. (2018). <em>Handbook of Digital Forensics and Investigation</em>. Academic Press.</li>
+</ul>
+<section id="threat-intelligence-and-research" class="level3">
+<h3 class="anchored" data-anchor-id="threat-intelligence-and-research">Threat Intelligence and Research</h3>
+<p><strong>MITRE ATT&amp;CK Framework</strong></p>
+<ul>
+<li>MITRE Corporation. (2023). <em>ATT&amp;CK for Enterprise</em>. <a href="https://attack.mitre.org/" class="uri">https://attack.mitre.org/</a></li>
+</ul>
+<p><strong>OWASP Security Testing Guide</strong></p>
+<ul>
+<li>Open Web Application Security Project. (2023). <em>OWASP Testing Guide v4.2</em>. <a href="https://owasp.org/www-project-web-security-testing-guide/" class="uri">https://owasp.org/www-project-web-security-testing-guide/</a></li>
+</ul>
+<p><strong>CVE Database and Vulnerability Research</strong></p>
+<ul>
+<li>MITRE Corporation. (2023). <em>Common Vulnerabilities and Exposures</em>. <a href="https://cve.mitre.org/" class="uri">https://cve.mitre.org/</a></li>
+<li>National Vulnerability Database. (2023). <em>NVD - NIST</em>. <a href="https://nvd.nist.gov/" class="uri">https://nvd.nist.gov/</a></li>
+</ul>
+</section>
+</section>
+<section id="industry-reports-and-threat-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="industry-reports-and-threat-intelligence">Industry Reports and Threat Intelligence</h2>
+<p>Current threat intelligence and industry trend data keep your case studies relevant and realistic. These reports provide insight into emerging threats, attack patterns, and cybersecurity trends that should inform your scenario development.</p>
+<section id="annual-security-reports" class="level3">
+<h3 class="anchored" data-anchor-id="annual-security-reports">Annual Security Reports</h3>
+<p><strong>Verizon Data Breach Investigations Report</strong></p>
+<ul>
+<li>Verizon Business. (2025). <em>2025 Data Breach Investigations Report</em>. <a href="https://www.verizon.com/business/resources/reports/dbir/" class="uri">https://www.verizon.com/business/resources/reports/dbir/</a></li>
+</ul>
+<p><strong>IBM Cost of a Data Breach Report</strong></p>
+<ul>
+<li>IBM Security. (2025). <em>Cost of a Data Breach Report 2025</em>. <a href="https://www.ibm.com/reports/data-breach" class="uri">https://www.ibm.com/reports/data-breach</a></li>
+</ul>
+<p><strong>Mandiant M-Trends Report</strong></p>
+<ul>
+<li>Mandiant. (2025). <em>M-Trends 2025</em>. <a href="https://www.mandiant.com/m-trends" class="uri">https://www.mandiant.com/m-trends</a></li>
+</ul>
+</section>
+<section id="threat-landscape-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="threat-landscape-analysis">Threat Landscape Analysis</h3>
+<p><strong>CIS Critical Security Controls</strong></p>
+<ul>
+<li>Center for Internet Security. (2025). <em>CIS Critical Security Controls</em>. <a href="https://www.cisecurity.org/controls/" class="uri">https://www.cisecurity.org/controls/</a></li>
+</ul>
+<p><strong>CISA Cybersecurity Advisories</strong></p>
+<ul>
+<li>Cybersecurity and Infrastructure Security Agency. (2025). <em>CISA Alerts and Advisories</em>. <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="uri">https://www.cisa.gov/news-events/cybersecurity-advisories</a></li>
+</ul>
+<p><strong>FireEye/Mandiant APT Reports</strong></p>
+<ul>
+<li>Google (2025). <em>Threat Intelligence</em>. Google Cloud. <a href="https://cloud.google.com/blog/topics/threat-intelligence/" class="uri">https://cloud.google.com/blog/topics/threat-intelligence/</a></li>
+</ul>
+</section>
+</section>
+<section id="professional-development-and-certification" class="level2">
+<h2 class="anchored" data-anchor-id="professional-development-and-certification">Professional Development and Certification</h2>
+<p>Professional certification pathways and development resources help you create authentic career progression scenarios. Understanding certification requirements and professional growth paths adds realism to character development across multiple cases.</p>
+<section id="cybersecurity-certifications" class="level3">
+<h3 class="anchored" data-anchor-id="cybersecurity-certifications">Cybersecurity Certifications</h3>
+<p><strong>(ISC)² Certifications</strong></p>
+<ul>
+<li>(ISC)² International Information System Security Certification Consortium. (2023). <em>CISSP Official Study Guide</em> (9th ed.). Sybex.</li>
+</ul>
+<p><strong>SANS Training and Certification</strong></p>
+<ul>
+<li>SANS Institute. (2025). <em>GIAC Security Certifications</em>. <a href="https://www.giac.org/" class="uri">https://www.giac.org/</a></li>
+</ul>
+<p><strong>CompTIA Security+</strong></p>
+<ul>
+<li>CompTIA. (2025). <em>CompTIA Security+ Certification Guide</em>. <a href="https://www.comptia.org/certifications/security" class="uri">https://www.comptia.org/certifications/security</a></li>
+</ul>
+</section>
+<section id="professional-organizations" class="level3">
+<h3 class="anchored" data-anchor-id="professional-organizations">Professional Organizations</h3>
+<p><strong>Information Systems Audit and Control Association</strong></p>
+<ul>
+<li>ISACA. (2025). <em>Cybersecurity Professional Resources</em>. <a href="https://www.isaca.org/" class="uri">https://www.isaca.org/</a></li>
+</ul>
+</section>
+</section>
+<section id="case-study-development-resources" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-development-resources">Case Study Development Resources</h2>
+<p>Creative writing and narrative design resources help you craft compelling, engaging stories that capture student attention while maintaining educational integrity. These tools support the artistic elements of case study development.</p>
+<p><strong>Character Development for Educational Content</strong></p>
+<ul>
+<li>McKee, R. (1997). <em>Story: Substance, Structure, Style and the Principles of Screenwriting</em>. HarperCollins. <a href="https://archive.org/details/RobertMcKeeStorypdf" class="uri">https://archive.org/details/RobertMcKeeStorypdf</a></li>
+</ul>
+<p><strong>Dialogue Writing for Professional Contexts</strong></p>
+<ul>
+<li>Mamet, D. (2007). <em>Bambi vs.&nbsp;Godzilla: On the Nature, Purpose, and Practice of the Movie Business</em>. Vintage Books. <a href="https://archive.org/details/bambivsgodzillao0000mame" class="uri">https://archive.org/details/bambivsgodzillao0000mame</a></li>
+</ul>
+<p><strong>Technical Writing and Communication</strong></p>
+<ul>
+<li>Alred, G. J., Brusaw, C. T., &amp; Oliu, W. E. (2019). <em>Handbook of Technical Writing</em> (12th ed.). Bedford/St.&nbsp;Martin’s. <a href="https://archive.org/details/handbookoftechni0000alre" class="uri">https://archive.org/details/handbookoftechni0000alre</a></li>
+</ul>
+<section id="visual-design-and-multimedia" class="level3">
+<h3 class="anchored" data-anchor-id="visual-design-and-multimedia">Visual Design and Multimedia</h3>
+<p><strong>Information Design Principles</strong></p>
+<ul>
+<li>Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2nd ed.). Graphics Press. <a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/" class="uri">https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/</a></li>
+</ul>
+<p><strong>Web Accessibility Guidelines</strong></p>
+<ul>
+<li>World Wide Web Consortium. (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.2</em>. <a href="https://www.w3.org/WAI/WCAG22/quickref/" class="uri">https://www.w3.org/WAI/WCAG22/quickref/</a></li>
+</ul>
+<p><strong>Interactive Media Design</strong></p>
+<ul>
+<li>Cooper, A., Reimann, R., Cronin, D., &amp; Noessel, C. (2014). <em>About Face: The Essentials of Interaction Design</em> (4th ed.). Wiley. <a href="https://archive.org/details/aboutfaceessenti0000coop" class="uri">https://archive.org/details/aboutfaceessenti0000coop</a></li>
+</ul>
+</section>
+</section>
+<section id="research-and-academic-resources" class="level2">
+<h2 class="anchored" data-anchor-id="research-and-academic-resources">Research and Academic Resources</h2>
+<p>Academic research databases and journals provide scholarly foundations for your educational approaches. These resources help ensure your case studies align with current research in cybersecurity education and learning science.</p>
+<section id="cybersecurity-education-research" class="level3">
+<h3 class="anchored" data-anchor-id="cybersecurity-education-research">Cybersecurity Education Research</h3>
+<p><strong>ACM Digital Library</strong></p>
+<ul>
+<li>Association for Computing Machinery. (2025). <em>ACM Digital Library - Security and Privacy</em>. <a href="https://dl.acm.org/" class="uri">https://dl.acm.org/</a></li>
+</ul>
+<p><strong>IEEE Computer Society Digital Library</strong></p>
+<ul>
+<li>IEEE Computer Society. (2025). <em>IEEE Xplore Digital Library</em>. <a href="https://ieeexplore.ieee.org/" class="uri">https://ieeexplore.ieee.org/</a></li>
+</ul>
+<p><strong>USENIX Security Symposium Proceedings</strong></p>
+<ul>
+<li>USENIX Association. (2025). <em>Security Symposium Proceedings</em>. <a href="https://www.usenix.org/conferences/byname/108" class="uri">https://www.usenix.org/conferences/byname/108</a></li>
+</ul>
+</section>
+<section id="educational-technology-journals" class="level3">
+<h3 class="anchored" data-anchor-id="educational-technology-journals">Educational Technology Journals</h3>
+<p><strong>Computers &amp; Education</strong></p>
+<ul>
+<li>Elsevier. <em>Computers &amp; Education</em>. ISSN: 0360-1315. <a href="https://www.sciencedirect.com/journal/computers-and-education" class="uri">https://www.sciencedirect.com/journal/computers-and-education</a></li>
+</ul>
+<p><strong>Educational Technology Research and Development</strong></p>
+<ul>
+<li>Springer. <em>Educational Technology Research and Development</em>. ISSN: 1042-1629. <a href="https://link.springer.com/journal/11423" class="uri">https://link.springer.com/journal/11423</a></li>
+</ul>
+<p><strong>Journal of Computing in Higher Education</strong></p>
+<ul>
+<li>Springer. <em>Journal of Computing in Higher Education</em>. ISSN: 1042-1726. <a href="https://link.springer.com/journal/12528" class="uri">https://link.springer.com/journal/12528</a></li>
+</ul>
+</section>
+</section>
+<section id="legal-and-ethical-resources" class="level2">
+<h2 class="anchored" data-anchor-id="legal-and-ethical-resources">Legal and Ethical Resources</h2>
+<p>Legal frameworks and ethical theories provide the foundation for realistic ethical dilemmas in your case studies. Understanding legal requirements and ethical frameworks helps create authentic decision-making scenarios.</p>
+<section id="privacy-and-data-protection-law" class="level3">
+<h3 class="anchored" data-anchor-id="privacy-and-data-protection-law">Privacy and Data Protection Law</h3>
+<p><strong>Privacy Law Fundamentals</strong></p>
+<ul>
+<li>Solove, D. J., &amp; Schwartz, P. M. (2021). <em>Information Privacy Law</em> (7th ed.). Wolters Kluwer Law &amp; Business. <a href="https://www.informationprivacylaw.com/wp-content/uploads/2020/11/Information-Privacy-Law-7th-Edition-Contents-01.pdf" class="uri">https://www.informationprivacylaw.com/wp-content/uploads/2020/11/Information-Privacy-Law-7th-Edition-Contents-01.pdf</a></li>
+</ul>
+<p><strong>International Privacy Regulations</strong></p>
+<ul>
+<li>Bygrave, L. A. (2014). <em>Data Privacy Law: An International Perspective</em>. Oxford University Press. <a href="https://academic.oup.com/idpl/article-abstract/5/1/88/622973?login=false" class="uri">https://academic.oup.com/idpl/article-abstract/5/1/88/622973?login=false</a></li>
+</ul>
+<p><strong>Cybersecurity Law and Policy</strong></p>
+<ul>
+<li>Brenner, S. W. (2012). <em>Cybercrime and the Law: Challenges, Issues, and Outcomes</em>. Northeastern University Press. <a href="https://archive.org/details/cybercrimelawcha0000bren" class="uri">https://archive.org/details/cybercrimelawcha0000bren</a></li>
+</ul>
+</section>
+<section id="professional-ethics-in-cybersecurity" class="level3">
+<h3 class="anchored" data-anchor-id="professional-ethics-in-cybersecurity">Professional Ethics in Cybersecurity</h3>
+<p><strong>Computer Ethics and Professional Responsibility</strong></p>
+<ul>
+<li>Quinn, M. J. (2016). <em>Ethics for the Information Age</em> (7th ed.). Pearson. <a href="https://archive.org/details/ethicsforinforma0000quin" class="uri">https://archive.org/details/ethicsforinforma0000quin</a></li>
+</ul>
+<p><strong>ACM Code of Ethics and Professional Conduct</strong></p>
+<ul>
+<li>Association for Computing Machinery. (2018). <em>ACM Code of Ethics and Professional Conduct</em>. <a href="https://www.acm.org/code-of-ethics" class="uri">https://www.acm.org/code-of-ethics</a></li>
+</ul>
+<p><strong>IEEE Computer Society Code of Ethics</strong></p>
+<ul>
+<li>IEEE Computer Society. (1999). <em>IEEE Computer Society Code of Ethics</em>. <a href="https://www.computer.org/education/code-of-ethics" class="uri">https://www.computer.org/education/code-of-ethics</a></li>
+</ul>
+</section>
+</section>
+<section id="software-and-platform-resources" class="level2">
+<h2 class="anchored" data-anchor-id="software-and-platform-resources">Software and Platform Resources</h2>
+<p>Technical platforms and software tools enable efficient case study development and publication. These resources help you implement the technical aspects of creating and delivering immersive educational content.</p>
+<p><strong>Quarto Publishing System</strong></p>
+<ul>
+<li>Posit PBC. (2025). <em>Quarto Documentation</em>. <a href="https://quarto.org/docs/" class="uri">https://quarto.org/docs/</a></li>
+</ul>
+<p><strong>R for Data Science and Education</strong></p>
+<ul>
+<li>Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2025). <em>R for Data Science</em> (2nd ed.). O’Reilly Media. <a href="https://r4ds.hadley.nz/" class="uri">https://r4ds.hadley.nz/</a></li>
+</ul>
+<p><strong>Git and Version Control</strong></p>
+<ul>
+<li>Chacon, S., &amp; Straub, B. (2014). <em>Pro Git</em> (2nd ed.). Apress. <a href="https://git-scm.com/book" class="uri">https://git-scm.com/book</a></li>
+</ul>
+<section id="simulation-and-training-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-and-training-platforms">Simulation and Training Platforms</h3>
+<p><strong>Cybersecurity Range Platforms</strong></p>
+<ul>
+<li>SANS NetWars. (2025). <em>Continuous SANS NetWars</em>. <a href="https://www.sans.org/cyber-ranges/" class="uri">https://www.sans.org/cyber-ranges/</a></li>
+<li>National Cyber League. (2025). <em>NCL Competition Platform</em>. <a href="https://nationalcyberleague.org/" class="uri">https://nationalcyberleague.org/</a></li>
+</ul>
+<p><strong>Virtual Laboratory Environments</strong></p>
+<ul>
+<li>VMware Workstation. (2025). <em>VMware Workstation Documentation</em>. <a href="https://docs.vmware.com/" class="uri">https://docs.vmware.com/</a></li>
+<li>VirtualBox. (2025). <em>Oracle VM VirtualBox User Manual</em>. <a href="https://www.virtualbox.org/manual/" class="uri">https://www.virtualbox.org/manual/</a></li>
+</ul>
+</section>
+</section>
+<section id="quality-assurance-and-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="quality-assurance-and-assessment">Quality Assurance and Assessment</h2>
+<p>Assessment design principles and quality assurance methods ensure your case studies meet educational standards. These resources help you create effective evaluation methods and maintain content quality.</p>
+<section id="educational-assessment-theory" class="level3">
+<h3 class="anchored" data-anchor-id="educational-assessment-theory">Educational Assessment Theory</h3>
+<p><strong>Assessment Design Principles</strong></p>
+<ul>
+<li>Brookhart, S. M. (2013). <em>How to Create and Use Rubrics for Formative Assessment and Grading</em>. ASCD. <a href="https://archive.org/details/howtocreateuseru0000broo" class="uri">https://archive.org/details/howtocreateuseru0000broo</a></li>
+</ul>
+<p><strong>Authentic Assessment in Higher Education</strong></p>
+<ul>
+<li>Mueller, J. (2018). <em>Authentic Assessment Primer</em>. North Central Regional Educational Laboratory. <a href="https://archive.org/details/authenticassessm0000jane" class="uri">https://archive.org/details/authenticassessm0000jane</a></li>
+</ul>
+<p><strong>Peer Review and Collaborative Assessment</strong></p>
+<ul>
+<li>Topping, K. J. (2009). Peer assessment. <em>Theory Into Practice</em>, 48(1), 20-27. <a href="https://www.tandfonline.com/doi/full/10.1080/00405840802577569" class="uri">https://www.tandfonline.com/doi/full/10.1080/00405840802577569</a></li>
+</ul>
+</section>
+<section id="technical-quality-assurance" class="level3">
+<h3 class="anchored" data-anchor-id="technical-quality-assurance">Technical Quality Assurance</h3>
+<p><strong>Software Testing and Quality Assurance</strong></p>
+<ul>
+<li>Myers, G. J., Sandler, C., &amp; Badgett, T. (2011). <em>The Art of Software Testing</em> (3rd ed.). Wiley. <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119202486" class="uri">https://onlinelibrary.wiley.com/doi/book/10.1002/9781119202486</a></li>
+</ul>
+<p><strong>Web Accessibility Testing</strong></p>
+<ul>
+<li>Thatcher, J., Henry, S. L., Lawson, B., Kirkpatrick, A., Regan, B., Burks, M., &amp; Rutter, R. (2006). <em>Web Accessibility: Web Standards and Regulatory Compliance</em>. Apress. <a href="https://jimthatcher.com/book2.htm" class="uri">https://jimthatcher.com/book2.htm</a></li>
+</ul>
+<p><strong>Content Management and Version Control</strong></p>
+<ul>
+<li>Loeliger, J., &amp; McCullough, M. (2012). <em>Version Control with Git</em> (2nd ed.). O’Reilly Media. <a href="https://www.oreilly.com/library/view/version-control-with/9781449345037/" class="uri">https://www.oreilly.com/library/view/version-control-with/9781449345037/</a></li>
+</ul>
+</section>
+</section>
+<section id="professional-journals-and-publications" class="level2">
+<h2 class="anchored" data-anchor-id="professional-journals-and-publications">Professional Journals and Publications</h2>
+<p>Current research publications keep you informed about latest developments in cybersecurity and education. These journals provide ongoing insights to inform case study updates and theoretical foundations.</p>
+<section id="cybersecurity-journals" class="level3">
+<h3 class="anchored" data-anchor-id="cybersecurity-journals">Cybersecurity Journals</h3>
+<p><strong>Computer &amp; Security</strong></p>
+<ul>
+<li>Elsevier. <em>Computers &amp; Security</em>. ISSN: 0167-4048. <a href="https://www.sciencedirect.com/journal/computers-and-security" class="uri">https://www.sciencedirect.com/journal/computers-and-security</a></li>
+</ul>
+<p><strong>IEEE Security &amp; Privacy</strong></p>
+<ul>
+<li>IEEE Computer Society. <em>IEEE Security &amp; Privacy</em>. ISSN: 1540-7993. <a href="https://www.computer.org/csdl/magazine/sp" class="uri">https://www.computer.org/csdl/magazine/sp</a></li>
+</ul>
+<p><strong>Information Security Journal: A Global Perspective</strong></p>
+<ul>
+<li>Taylor &amp; Francis. <em>Information Security Journal</em>. ISSN: 1939-3555. <a href="https://www.tandfonline.com/journals/uiss20" class="uri">https://www.tandfonline.com/journals/uiss20</a></li>
+</ul>
+</section>
+<section id="educational-technology-publications" class="level3">
+<h3 class="anchored" data-anchor-id="educational-technology-publications">Educational Technology Publications</h3>
+<p><strong>EDUCAUSE Review</strong></p>
+<ul>
+<li>EDUCAUSE. <em>EDUCAUSE Review</em>. <a href="https://er.educause.edu/" class="uri">https://er.educause.edu/</a></li>
+</ul>
+<p><strong>Chronicle of Higher Education</strong></p>
+<ul>
+<li>Chronicle of Higher Education. <em>Technology Section</em>. <a href="https://www.chronicle.com/tag/technology" class="uri">https://www.chronicle.com/tag/technology</a></li>
+</ul>
+<p><strong>Campus Technology</strong></p>
+<ul>
+<li>1105 Media. <em>Campus Technology</em>. <a href="https://campustechnology.com/" class="uri">https://campustechnology.com/</a></li>
+</ul>
+</section>
+</section>
+<section id="emerging-technologies-and-future-trends" class="level2">
+<h2 class="anchored" data-anchor-id="emerging-technologies-and-future-trends">Emerging Technologies and Future Trends</h2>
+<p>Emerging technology resources help you stay current with evolving threats and defensive capabilities. Understanding future trends ensures your case studies remain relevant and forward-looking.</p>
+<section id="artificial-intelligence-and-machine-learning-in-cybersecurity" class="level3">
+<h3 class="anchored" data-anchor-id="artificial-intelligence-and-machine-learning-in-cybersecurity">Artificial Intelligence and Machine Learning in Cybersecurity</h3>
+<p><strong>AI for Cybersecurity</strong></p>
+<ul>
+<li>Stamp, M. (2018). <em>Introduction to Machine Learning with Applications in Information Security</em>. Chapman and Hall/CRC. <a href="https://www.taylorfrancis.com/books/mono/10.1201/9781003264873/introduction-machine-learning-applications-information-security-mark-stamp" class="uri">https://www.taylorfrancis.com/books/mono/10.1201/9781003264873/introduction-machine-learning-applications-information-security-mark-stamp</a></li>
+</ul>
+<p><strong>Machine Learning for Cybersecurity</strong></p>
+<ul>
+<li>Conti, M., Dehghantanha, A., Franke, K., &amp; Watson, S. (2018). <em>Internet of Things Security and Forensics: Challenges and Opportunities</em>. Springer. <a href="https://www.sciencedirect.com/science/article/pii/S0167739X17316667" class="uri">https://www.sciencedirect.com/science/article/pii/S0167739X17316667</a></li>
+</ul>
+</section>
+<section id="cloud-security-and-devsecops" class="level3">
+<h3 class="anchored" data-anchor-id="cloud-security-and-devsecops">Cloud Security and DevSecOps</h3>
+<p><strong>Cloud Security Best Practices</strong></p>
+<ul>
+<li>Krutz, R. L., &amp; Vines, R. D. (2010). <em>Cloud Security: A Comprehensive Guide to Secure Cloud Computing</em>. Wiley. <a href="https://www.wiley.com/en-us/Cloud+Security%3A+A+Comprehensive+Guide+to+Secure+Cloud+Computing-p-9780470938942" class="uri">https://www.wiley.com/en-us/Cloud+Security%3A+A+Comprehensive+Guide+to+Secure+Cloud+Computing-p-9780470938942</a></li>
+</ul>
+<p><strong>DevSecOps Implementation</strong></p>
+<ul>
+<li>Wilson, G. (2020). <em>DevSecOps: A leader’s guide to producing secure software without compromising flow, feedback and continuous improvement</em>. IT Revolution Press. <a href="https://www.barnesandnoble.com/w/devsecops-glenn-wilson/1138471474" class="uri">https://www.barnesandnoble.com/w/devsecops-glenn-wilson/1138471474</a></li>
+</ul>
+</section>
+<section id="zero-trust-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="zero-trust-architecture">Zero Trust Architecture</h3>
+<p><strong>NIST Zero Trust Architecture</strong></p>
+<ul>
+<li>Rose, S., Borchert, O., Mitchell, S., &amp; Connelly, S. (2020). <em>Zero Trust Architecture</em>. NIST Special Publication 800-207. <a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" class="uri">https://csrc.nist.gov/publications/detail/sp/800-207/final</a></li>
+</ul>
+<p><strong>Zero Trust Implementation Guide</strong></p>
+<ul>
+<li>Gilman, E. &amp; Barth, D. (2017). <em>Zero Trust Networks: Building Secure Systems in Untrusted Networks</em>. O’Reilly Media.</li>
+</ul>
+</section>
+</section>
+<section id="international-perspectives-and-resources" class="level2">
+<h2 class="anchored" data-anchor-id="international-perspectives-and-resources">International Perspectives and Resources</h2>
+<p>Global cybersecurity frameworks and international perspectives help you create case studies that reflect diverse regulatory environments and cultural contexts. These resources support development of globally relevant scenarios.</p>
+<section id="global-cybersecurity-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="global-cybersecurity-frameworks">Global Cybersecurity Frameworks</h3>
+<p><strong>European Union Cybersecurity Strategy</strong></p>
+<ul>
+<li>European Commission. (2020). <em>The EU’s Cybersecurity Strategy for the Digital Decade</em>. <a href="https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-strategy" class="uri">https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-strategy</a></li>
+</ul>
+<p><strong>Australian Cyber Security Centre</strong></p>
+<ul>
+<li>Australian Government. (2025). <em>Australian Cyber Security Centre Publications</em>. <a href="https://www.cyber.gov.au/" class="uri">https://www.cyber.gov.au/</a></li>
+</ul>
+<p><strong>UK National Cyber Security Centre</strong></p>
+<ul>
+<li>UK Government. (2023). <em>NCSC Guidance and Publications</em>. <a href="https://www.ncsc.gov.uk/guidance" class="uri">https://www.ncsc.gov.uk/guidance</a></li>
+</ul>
+</section>
+<section id="cultural-considerations-in-cybersecurity-education" class="level3">
+<h3 class="anchored" data-anchor-id="cultural-considerations-in-cybersecurity-education">Cultural Considerations in Cybersecurity Education</h3>
+<p><strong>Cross-Cultural Communication in Technical Contexts</strong></p>
+<ul>
+<li>Hofstede, G., Hofstede, G. J., &amp; Minkov, M. (2010). <em>Cultures and Organizations: Software of the Mind</em> (3rd ed.). McGraw-Hill. <a href="https://archive.org/details/g.-hofstede-g.-j.-hofstede-m.-minkov-cultures-and-organizations-software-of-the-" class="uri">https://archive.org/details/g.-hofstede-g.-j.-hofstede-m.-minkov-cultures-and-organizations-software-of-the-</a></li>
+</ul>
+<p><strong>Global Perspectives on Privacy and Security</strong></p>
+<ul>
+<li>Rosen, J. (2012). <em>The Right to Be Forgotten</em>. Stanford Law Review Online, 64, 88. <a href="https://www.stanfordlawreview.org/online/privacy-paradox-the-right-to-be-forgotten/" class="uri">https://www.stanfordlawreview.org/online/privacy-paradox-the-right-to-be-forgotten/</a></li>
+</ul>
+</section>
+</section>
+<section id="open-access-and-free-resources" class="level2">
+<h2 class="anchored" data-anchor-id="open-access-and-free-resources">Open Access and Free Resources</h2>
+<p>Freely available resources provide cost-effective foundations for case study development. These open access materials ensure your educational content remains accessible to diverse educational contexts.</p>
+</section>
+<section id="government-and-public-sector-resources" class="level2">
+<h2 class="anchored" data-anchor-id="government-and-public-sector-resources">Government and Public Sector Resources</h2>
+<p><strong>NIST Cybersecurity Publications</strong></p>
+<ul>
+<li>National Institute of Standards and Technology. (2025). <em>Cybersecurity Publications</em>. <a href="https://csrc.nist.gov/publications" class="uri">https://csrc.nist.gov/publications</a></li>
+</ul>
+<p><strong>CISA Cybersecurity Resources</strong></p>
+<ul>
+<li>Cybersecurity and Infrastructure Security Agency. (2025). <em>Education and Training Resources</em>. <a href="https://www.cisa.gov/cybersecurity-training-exercises" class="uri">https://www.cisa.gov/cybersecurity-training-exercises</a></li>
+</ul>
+<p><strong>Department of Homeland Security Resources</strong></p>
+<ul>
+<li>U.S. Department of Homeland Security. (2025). <em>Cybersecurity</em>. <a href="https://www.dhs.gov/topics/cybersecurity" class="uri">https://www.dhs.gov/topics/cybersecurity</a></li>
+</ul>
+</section>
+<section id="open-educational-resources" class="level2">
+<h2 class="anchored" data-anchor-id="open-educational-resources">Open Educational Resources</h2>
+<p><strong>MIT OpenCourseWare</strong></p>
+<ul>
+<li>Massachusetts Institute of Technology. (2023). <em>Computer Science Courses</em>. <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/" class="uri">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/</a></li>
+</ul>
+<p><strong>Carnegie Mellon Open Learning Initiative</strong></p>
+<ul>
+<li>Carnegie Mellon University. (2023). <em>Open Learning Initiative</em>. <a href="https://oli.cmu.edu/" class="uri">https://oli.cmu.edu/</a></li>
+</ul>
+<p><strong>OpenSecurityTraining2</strong></p>
+<ul>
+<li>OpenSecurityTraining. (2023). <em>Free Security Training</em>. <a href="https://opensecuritytraining.info/" class="uri">https://opensecuritytraining.info/</a></li>
+</ul>
+</section>
+<section id="community-and-professional-networks" class="level2">
+<h2 class="anchored" data-anchor-id="community-and-professional-networks">Community and Professional Networks</h2>
+<p>Professional networks and community resources provide ongoing support and collaboration opportunities. These connections help you stay current with industry practices and educational innovations.</p>
+<section id="online-communities-and-forums" class="level3">
+<h3 class="anchored" data-anchor-id="online-communities-and-forums">Online Communities and Forums</h3>
+<p><strong>Reddit Cybersecurity Communities</strong></p>
+<ul>
+<li>r/cybersecurity: <a href="https://www.reddit.com/r/cybersecurity/" class="uri">https://www.reddit.com/r/cybersecurity/</a></li>
+<li>r/netsec: <a href="https://www.reddit.com/r/netsec/" class="uri">https://www.reddit.com/r/netsec/</a></li>
+<li>r/AskNetsec: <a href="https://www.reddit.com/r/AskNetsec/" class="uri">https://www.reddit.com/r/AskNetsec/</a></li>
+</ul>
+<p><strong>Stack Overflow Security Tags</strong></p>
+<ul>
+<li>Stack Overflow. (2025). <em>Security Questions</em>. <a href="https://stackoverflow.com/questions/tagged/security" class="uri">https://stackoverflow.com/questions/tagged/security</a></li>
+</ul>
+<p><strong>Information Security Stack Exchange</strong></p>
+<ul>
+<li>Stack Exchange Network. (2025). <em>Information Security Community</em>. <a href="https://security.stackexchange.com/" class="uri">https://security.stackexchange.com/</a></li>
+</ul>
+</section>
+<section id="professional-conferences-and-events" class="level3">
+<h3 class="anchored" data-anchor-id="professional-conferences-and-events">Professional Conferences and Events</h3>
+<p><strong>Major Cybersecurity Conferences</strong></p>
+<ul>
+<li>RSAC Conference. (2025). <em>Annual Cybersecurity Conference</em>. <a href="https://www.rsaconference.com/" class="uri">https://www.rsaconference.com/</a></li>
+<li>DEF CON Communications. (2025). <em>Hacker Convention</em>. <a href="https://defcon.org/" class="uri">https://defcon.org/</a></li>
+<li>Security BSides. (2025). <em>Community-Driven Security Conferences</em>. <a href="http://www.securitybsides.com/" class="uri">http://www.securitybsides.com/</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./guide/cross-case-continuity.html" class="pagination-link" aria-label="Cross-Case Continuity">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/supplemental.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

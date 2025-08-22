@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>5&nbsp; Worldbuilding – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide/narrative-design.html" rel="next">
+<link href="../guide/tutorial.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/worldbuilding.html">Content Development</a></li><li class="breadcrumb-item"><a href="../guide/worldbuilding.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/methodology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/worldbuilding.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/narrative-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#why-systematic-worldbuilding-matters" id="toc-why-systematic-worldbuilding-matters" class="nav-link active" data-scroll-target="#why-systematic-worldbuilding-matters">Why Systematic Worldbuilding Matters</a></li>
+  <li><a href="#setting-up-your-worldbuilding-system" id="toc-setting-up-your-worldbuilding-system" class="nav-link" data-scroll-target="#setting-up-your-worldbuilding-system">Setting Up Your Worldbuilding System</a>
+  <ul class="collapse">
+  <li><a href="#basic-yaml-structure" id="toc-basic-yaml-structure" class="nav-link" data-scroll-target="#basic-yaml-structure">Basic YAML Structure</a></li>
+  </ul></li>
+  <li><a href="#advanced-developing-characters-and-organizations" id="toc-advanced-developing-characters-and-organizations" class="nav-link" data-scroll-target="#advanced-developing-characters-and-organizations">Advanced: Developing Characters and Organizations</a>
+  <ul class="collapse">
+  <li><a href="#character-development-framework" id="toc-character-development-framework" class="nav-link" data-scroll-target="#character-development-framework">Character Development Framework</a></li>
+  <li><a href="#organizational-structure-and-context" id="toc-organizational-structure-and-context" class="nav-link" data-scroll-target="#organizational-structure-and-context">Organizational Structure and Context</a></li>
+  </ul></li>
+  <li><a href="#technical-infrastructure-and-authenticity" id="toc-technical-infrastructure-and-authenticity" class="nav-link" data-scroll-target="#technical-infrastructure-and-authenticity">Technical Infrastructure and Authenticity</a>
+  <ul class="collapse">
+  <li><a href="#technology-stack-development" id="toc-technology-stack-development" class="nav-link" data-scroll-target="#technology-stack-development">Technology Stack Development</a></li>
+  </ul></li>
+  <li><a href="#timeline-management-and-consistency" id="toc-timeline-management-and-consistency" class="nav-link" data-scroll-target="#timeline-management-and-consistency">Timeline Management and Consistency</a>
+  <ul class="collapse">
+  <li><a href="#relative-date-systems" id="toc-relative-date-systems" class="nav-link" data-scroll-target="#relative-date-systems">Relative Date Systems</a></li>
+  <li><a href="#research-and-authenticity-guidelines" id="toc-research-and-authenticity-guidelines" class="nav-link" data-scroll-target="#research-and-authenticity-guidelines">Research and Authenticity Guidelines</a></li>
+  <li><a href="#character-development-best-practices" id="toc-character-development-best-practices" class="nav-link" data-scroll-target="#character-development-best-practices">Character Development Best Practices</a></li>
+  </ul></li>
+  <li><a href="#cross-case-continuity-and-shared-elements" id="toc-cross-case-continuity-and-shared-elements" class="nav-link" data-scroll-target="#cross-case-continuity-and-shared-elements">Cross-Case Continuity and Shared Elements</a>
+  <ul class="collapse">
+  <li><a href="#naming-conventions-and-standards" id="toc-naming-conventions-and-standards" class="nav-link" data-scroll-target="#naming-conventions-and-standards">Naming Conventions and Standards</a></li>
+  </ul></li>
+  <li><a href="#integrating-world-data-into-case-studies" id="toc-integrating-world-data-into-case-studies" class="nav-link" data-scroll-target="#integrating-world-data-into-case-studies">Integrating World Data into Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#basic-variable-substitution" id="toc-basic-variable-substitution" class="nav-link" data-scroll-target="#basic-variable-substitution">Basic Variable Substitution</a></li>
+  <li><a href="#complex-narrative-integration" id="toc-complex-narrative-integration" class="nav-link" data-scroll-target="#complex-narrative-integration">Complex Narrative Integration</a></li>
+  <li><a href="#dynamic-content-with-conditional-logic" id="toc-dynamic-content-with-conditional-logic" class="nav-link" data-scroll-target="#dynamic-content-with-conditional-logic">Dynamic Content with Conditional Logic</a></li>
+  <li><a href="#calculated-values-and-financial-impact" id="toc-calculated-values-and-financial-impact" class="nav-link" data-scroll-target="#calculated-values-and-financial-impact">Calculated Values and Financial Impact</a></li>
+  </ul></li>
+  <li><a href="#quality-assurance-for-worldbuilding" id="toc-quality-assurance-for-worldbuilding" class="nav-link" data-scroll-target="#quality-assurance-for-worldbuilding">Quality Assurance for Worldbuilding</a>
+  <ul class="collapse">
+  <li><a href="#systematic-consistency-checking" id="toc-systematic-consistency-checking" class="nav-link" data-scroll-target="#systematic-consistency-checking">Systematic Consistency Checking</a></li>
+  <li><a href="#content-review-and-validation-process" id="toc-content-review-and-validation-process" class="nav-link" data-scroll-target="#content-review-and-validation-process">Content Review and Validation Process</a></li>
+  <li><a href="#documentation-and-version-control" id="toc-documentation-and-version-control" class="nav-link" data-scroll-target="#documentation-and-version-control">Documentation and Version Control</a></li>
+  </ul></li>
+  <li><a href="#advanced-worldbuilding-techniques" id="toc-advanced-worldbuilding-techniques" class="nav-link" data-scroll-target="#advanced-worldbuilding-techniques">Advanced Worldbuilding Techniques</a>
+  <ul class="collapse">
+  <li><a href="#multi-case-universe-development" id="toc-multi-case-universe-development" class="nav-link" data-scroll-target="#multi-case-universe-development">Multi-Case Universe Development</a></li>
+  <li><a href="#organizational-culture-and-context" id="toc-organizational-culture-and-context" class="nav-link" data-scroll-target="#organizational-culture-and-context">Organizational Culture and Context</a></li>
+  </ul></li>
+  <li><a href="#implementation-best-practices" id="toc-implementation-best-practices" class="nav-link" data-scroll-target="#implementation-best-practices">Implementation Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#development-workflow" id="toc-development-workflow" class="nav-link" data-scroll-target="#development-workflow">Development Workflow</a></li>
+  <li><a href="#collaborative-development-framework" id="toc-collaborative-development-framework" class="nav-link" data-scroll-target="#collaborative-development-framework">Collaborative Development Framework</a></li>
+  <li><a href="#maintenance-and-version-control" id="toc-maintenance-and-version-control" class="nav-link" data-scroll-target="#maintenance-and-version-control">Maintenance and Version Control</a></li>
+  </ul></li>
+  <li><a href="#common-pitfalls-and-solutions" id="toc-common-pitfalls-and-solutions" class="nav-link" data-scroll-target="#common-pitfalls-and-solutions">Common Pitfalls and Solutions</a>
+  <ul class="collapse">
+  <li><a href="#typical-worldbuilding-challenges" id="toc-typical-worldbuilding-challenges" class="nav-link" data-scroll-target="#typical-worldbuilding-challenges">Typical Worldbuilding Challenges</a></li>
+  <li><a href="#quality-maintenance-strategies" id="toc-quality-maintenance-strategies" class="nav-link" data-scroll-target="#quality-maintenance-strategies">Quality Maintenance Strategies</a></li>
+  </ul></li>
+  <li><a href="#summary-and-next-steps" id="toc-summary-and-next-steps" class="nav-link" data-scroll-target="#summary-and-next-steps">Summary and Next Steps</a>
+  <ul class="collapse">
+  <li><a href="#recommended-development-sequence" id="toc-recommended-development-sequence" class="nav-link" data-scroll-target="#recommended-development-sequence">Recommended Development Sequence</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/worldbuilding.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/worldbuilding.html">Content Development</a></li><li class="breadcrumb-item"><a href="../guide/worldbuilding.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Effective cybersecurity case studies require believable, consistent fictional worlds where students can engage with complex security challenges. This chapter provides practical guidance for creating systematic worldbuilding frameworks using YAML-based data management that scales across multiple case studies.</p>
+<p>The centralized <code>_worldbuilding.yml</code> approach demonstrated in the tutorial enables consistent character development, organizational structures, and technical environments while maintaining narrative coherence across your entire case study collection.</p>
+<section id="why-systematic-worldbuilding-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-systematic-worldbuilding-matters">Why Systematic Worldbuilding Matters</h2>
+<p>Consistent worldbuilding provides several critical benefits for cybersecurity education:</p>
+<p><strong>Student Engagement</strong>: Students connect more deeply with realistic characters and organizations they can believe in</p>
+<p><strong>Technical Authenticity</strong>: Systematic data management ensures accurate representation of cybersecurity tools, processes, and organizational structures</p>
+<p><strong>Scalable Development</strong>: Centralized world data enables efficient creation of multiple related case studies</p>
+<p><strong>Cross-Case Continuity</strong>: Shared characters and organizations create interconnected learning experiences that reinforce key concepts</p>
+</section>
+<section id="setting-up-your-worldbuilding-system" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-worldbuilding-system">Setting Up Your Worldbuilding System</h2>
+<p>The <code>_worldbuilding.yml</code> file serves as your central data repository for all fictional world elements. This systematic approach ensures consistency across multiple case studies while enabling dynamic content generation.</p>
+<section id="basic-yaml-structure" class="level3">
+<h3 class="anchored" data-anchor-id="basic-yaml-structure">Basic YAML Structure</h3>
+<p>Start with this foundational <code>_worldbuilding.yml</code> template. We’ll start with fully manual work. You can automate the creation of the <code>year_plus_#</code> values in the setup script to generate accurate and dynamic dates as far forward or back as you like. We’ll presume there’s just one single case study for this example. When describing multiple, cross-linked cases, prefixing values with <code>casename_</code> is suggested.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">world</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">  # Temporal Framework</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="at">  </span><span class="fu">this_year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2025</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">year_plus_1</span><span class="kw">:</span><span class="at"> </span><span class="dv">2026</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">  </span><span class="fu">year_plus_2</span><span class="kw">:</span><span class="at"> </span><span class="dv">2027</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="at">  </span><span class="fu">year_plus_5</span><span class="kw">:</span><span class="at"> </span><span class="dv">2030</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="at">  </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">  # Primary Organization</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="at">  </span><span class="fu">company_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"CyberSecure Technologies"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="at">  </span><span class="fu">company_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cybersecurity Consulting"</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="at">  </span><span class="fu">company_size</span><span class="kw">:</span><span class="at"> </span><span class="st">"180 employees"</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="at">  </span><span class="fu">company_location</span><span class="kw">:</span><span class="at"> </span><span class="st">"Austin, Texas"</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="at">  </span><span class="fu">company_founded</span><span class="kw">:</span><span class="at"> </span><span class="dv">2019</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="at">  </span><span class="fu">company_mission</span><span class="kw">:</span><span class="at"> </span><span class="st">"Excellence in cybersecurity risk management"</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="at">  </span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">  # Leadership Team</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="at">  </span><span class="fu">ceo_name_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sarah"</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="at">  </span><span class="fu">ceo_name_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Drum-Butcher"</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="at">  </span><span class="fu">ceo_name_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ms."</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="at">  </span><span class="fu">ceo_name_pronoun_objective</span><span class="kw">:</span><span class="at"> </span><span class="st">"her"</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="at">  </span><span class="fu">ceo_name_pronoun_subjective</span><span class="kw">:</span><span class="at"> </span><span class="st">"she"</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="at">  </span><span class="fu">ceo_background</span><span class="kw">:</span><span class="at"> </span><span class="st">"Former NSA cybersecurity analyst, 15 years experience"</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="at">  </span><span class="fu">ceo_age</span><span class="kw">:</span><span class="at"> </span><span class="dv">42</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="at">  </span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="at">  </span><span class="fu">cto_name_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Rodriguez"</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="at">  </span><span class="fu">cto_name_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mario"</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="at">  </span><span class="fu">cto_name_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dr."</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="at">  </span><span class="fu">cto_background</span><span class="kw">:</span><span class="at"> </span><span class="st">"PhD Computer Science, specialist in network security"</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="at">  </span><span class="fu">cto_age</span><span class="kw">:</span><span class="at"> </span><span class="dv">38</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="at">  </span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co">  # Security Team</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="at">  </span><span class="fu">security_director_name_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Patel"</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="at">  </span><span class="fu">security_director_name_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Aisha"</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="at">  </span><span class="fu">security_director_name_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dr."</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="at">  </span><span class="fu">security_director_background</span><span class="kw">:</span><span class="at"> </span><span class="st">"CISSP certified, former FBI cyber division"</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="at">  </span><span class="fu">security_director_specialization</span><span class="kw">:</span><span class="at"> </span><span class="st">"Incident response and forensics"</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="at">  </span></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="at">  </span><span class="fu">junior_analyst_name_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Kim"</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="at">  </span><span class="fu">junior_analyst_name_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Alexander"</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="at">  </span><span class="fu">junior_analyst_name_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mr."</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="at">  </span><span class="fu">junior_analyst_background</span><span class="kw">:</span><span class="at"> </span><span class="st">"Recent cybersecurity bootcamp graduate"</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="at">  </span><span class="fu">junior_analyst_experience</span><span class="kw">:</span><span class="at"> </span><span class="st">"6 months"</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="at">  </span><span class="fu">junior_analyst_job_title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Junior Analyst"</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="at">  </span></span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="co">  # Client Organization</span></span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="at">  </span><span class="fu">client_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Regional Medical Center"</span></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="at">  </span><span class="fu">client_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"Healthcare Provider"</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="at">  </span><span class="fu">client_size</span><span class="kw">:</span><span class="at"> </span><span class="st">"1,200 employees"</span></span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="at">  </span><span class="fu">client_location</span><span class="kw">:</span><span class="at"> </span><span class="st">"Phoenix, Arizona"</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="at">  </span></span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="co">  # Technical Environment</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="at">  </span><span class="fu">primary_network</span><span class="kw">:</span><span class="at"> </span><span class="st">"10.0.0.0/16"</span></span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="at">  </span><span class="fu">dmz_network</span><span class="kw">:</span><span class="at"> </span><span class="st">"192.168.100.0/24"</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="at">  </span><span class="fu">vpn_solution</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cisco AnyConnect"</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="at">  </span><span class="fu">firewall_vendor</span><span class="kw">:</span><span class="at"> </span><span class="st">"Palo Alto Networks"</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="at">  </span></span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="co">  # Incident Details</span></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="at">  </span><span class="fu">incident_type</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced Persistent Threat"</span></span>
+<span id="cb1-59"><a href="#cb1-59"></a><span class="at">  </span><span class="fu">incident_discovery_day</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 15"</span><span class="co">    # Couple with world$year_plus_1 for next year</span></span>
+<span id="cb1-60"><a href="#cb1-60"></a><span class="at">  </span><span class="fu">incident_duration</span><span class="kw">:</span><span class="at"> </span><span class="st">"72 hours"</span></span>
+<span id="cb1-61"><a href="#cb1-61"></a><span class="at">  </span><span class="fu">systems_affected</span><span class="kw">:</span><span class="at"> </span><span class="dv">145</span></span>
+<span id="cb1-62"><a href="#cb1-62"></a><span class="at">  </span><span class="fu">records_compromised</span><span class="kw">:</span><span class="at"> </span><span class="st">"~50,000 patient records"</span><span class="co"> # Useful for writing news stories</span></span>
+<span id="cb1-63"><a href="#cb1-63"></a><span class="at">  </span></span>
+<span id="cb1-64"><a href="#cb1-64"></a><span class="co">  # Financial Impact</span></span>
+<span id="cb1-65"><a href="#cb1-65"></a><span class="at">  </span><span class="fu">direct_costs</span><span class="kw">:</span><span class="at"> </span><span class="st">"$2.3 million"</span><span class="co"> # Easily increase or decrease</span></span>
+<span id="cb1-66"><a href="#cb1-66"></a><span class="at">  </span><span class="fu">regulatory_fines</span><span class="kw">:</span><span class="at"> </span><span class="st">"$450,000"</span></span>
+<span id="cb1-67"><a href="#cb1-67"></a><span class="at">  </span><span class="fu">business_interruption</span><span class="kw">:</span><span class="at"> </span><span class="st">"$1.2 million"</span></span>
+<span id="cb1-68"><a href="#cb1-68"></a><span class="at">  </span></span>
+<span id="cb1-69"><a href="#cb1-69"></a><span class="co">  # Regulatory Context</span></span>
+<span id="cb1-70"><a href="#cb1-70"></a><span class="at">  </span><span class="fu">primary_regulation</span><span class="kw">:</span><span class="at"> </span><span class="st">"HIPAA"</span></span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="at">  </span><span class="fu">notification_deadline</span><span class="kw">:</span><span class="at"> </span><span class="st">"60 days"</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="at">  </span><span class="fu">reporting_authority</span><span class="kw">:</span><span class="at"> </span><span class="st">"HHS Office for Civil Rights"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Naming Consistency
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose consistent naming conventions early. Use underscores for YAML keys (<code>company_name</code>) and establish clear patterns for character references (<code>cto_name_last</code>, <code>ceo_name_salutation</code>).</p>
+<p>This allows for text like “<code>`r world$ceo_name_salutation`</code> <code>`r world$ceo_name_last`</code>.” to render as “Ms.&nbsp;Drum-Butcher.”</p>
+</div>
+</div>
+</section>
+</section>
+<section id="advanced-developing-characters-and-organizations" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-developing-characters-and-organizations">Advanced: Developing Characters and Organizations</h2>
+<section id="character-development-framework" class="level3">
+<h3 class="anchored" data-anchor-id="character-development-framework">Character Development Framework</h3>
+<p>Effective cybersecurity case studies require believable characters with realistic professional backgrounds and motivations. Expand your <code>_worldbuilding.yml</code> with detailed character information if you wish to have more nuanced and documented character development. While you <em>may</em> use this information in your case content, it is more useful for AI-analysis of your world for consistency’s sake. Remember: <code>_worldbuilding.yml</code> can arbitrarily organized so long as the YAML syntax is valid.</p>
+<p>Example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Character Relationships and Dynamics</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">relationships</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">  </span><span class="fu">sarah_and_marcus</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="st">"Professional colleagues"</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="fu">history</span><span class="kw">:</span><span class="at"> </span><span class="st">"Worked together at previous company for 3 years"</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">    </span><span class="fu">dynamic</span><span class="kw">:</span><span class="at"> </span><span class="st">"Collaborative leadership style"</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="at">    </span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="at">  </span><span class="fu">aisha_and_alex</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mentor-mentee"</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="at">    </span><span class="fu">history</span><span class="kw">:</span><span class="at"> </span><span class="st">"Aisha hired Alex directly from bootcamp"</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="at">    </span><span class="fu">dynamic</span><span class="kw">:</span><span class="at"> </span><span class="st">"Supportive but demanding training relationship"</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Character Motivations and Goals  </span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="fu">character_motivations</span><span class="kw">:</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="at">  </span><span class="fu">ceo</span><span class="kw">:</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="at">    </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Building company reputation in competitive market"</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="at">    </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Proving women can lead in cybersecurity"</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="at">    </span><span class="fu">fear</span><span class="kw">:</span><span class="at"> </span><span class="st">"Losing client trust due to preventable incidents"</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="at">    </span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="at">  </span><span class="fu">junior_analyst</span><span class="kw">:</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="at">    </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Proving competence in first professional role"</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="at">    </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> </span><span class="st">"Learning from experienced professionals"</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="at">    </span><span class="fu">fear</span><span class="kw">:</span><span class="at"> </span><span class="st">"Making mistakes that compromise client security"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Character Authenticity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Base character backgrounds on realistic career paths. Research actual cybersecurity roles, typical experience levels, and common certification progressions to create believable professional personas.</p>
+</div>
+</div>
+</section>
+<section id="organizational-structure-and-context" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-structure-and-context">Organizational Structure and Context</h3>
+<p>Create detailed organizational frameworks that support complex cybersecurity scenarios:</p>
+<div class="callout callout-style-simple callout-cognitive-load-alert callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cognitive-load-alert</span>YAML can't include YAML!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You cannot have YAML keys include other YAML keys for inline R rendering. In the example below, it would be tempting to set the company head to <code>head: world$ceo_name-last</code> but this will not work. Your own personal organization of worldbuilding content will be unique depending on what you want to highlight or focus on. If you’re interested in a focus on organizational structures, then perhaps the example below is best. I’ve blown out the head of the Executive Leadership department to use the same modular naming conventions as earlier just for demonstration. You could then refer to <code>`world$company_structure$departments$exec_leadership$head_last`</code> to get “Drum-Butcher,” or <code>`world$client_portfolio$healthcare$average_size`</code> to insert “500-2000 employees.” This, however, is an advanced approach and isn’t necessary for a successfully designed case study.</p>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Company Structure and Departments</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">company_structure</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">  </span><span class="fu">departments</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="at">    </span><span class="fu">exec_leadership</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="at">      </span><span class="fu">dept_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Executive Leadership"</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="at">      </span><span class="fu">head_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Drum-Butcher"</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="at">      </span><span class="fu">head_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sarah"</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="at">      </span><span class="fu">head_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mrs."</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="at">      </span><span class="fu">staff_count</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="at">      </span><span class="fu">budget</span><span class="kw">:</span><span class="at"> </span><span class="st">"$2.5M annually"</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="at">      </span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="at">    </span><span class="fu">soc</span><span class="kw">:</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="at">      </span><span class="fu">dept_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Security Operations Center"</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="at">      </span><span class="fu">dept_abbr</span><span class="kw">:</span><span class="at"> </span><span class="st">"SOC"</span><span class="at"> </span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="at">      </span><span class="fu">head_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Patel"</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="at">      </span><span class="fu">head_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Aisha"</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="at">      </span><span class="fu">head_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dr."</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="at">      </span><span class="fu">staff_count</span><span class="kw">:</span><span class="at"> </span><span class="dv">45</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="at">      </span><span class="fu">specializations</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"SOC Operations"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Incident Response"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Threat Intelligence"</span><span class="kw">]</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="at">      </span><span class="fu">shift_structure</span><span class="kw">:</span><span class="at"> </span><span class="st">"24/7 coverage"</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="at">    </span><span class="fu">consult</span><span class="kw">:</span><span class="at">  </span></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="at">      </span><span class="fu">dept_name</span><span class="kw">:</span><span class="at"> </span><span class="st">"Consulting Services"</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="at">      </span><span class="fu">head_last</span><span class="kw">:</span><span class="at"> </span><span class="st">"Rodriguez"</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="at">      </span><span class="fu">head_first</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mario"</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="at">      </span><span class="fu">head_salutation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mr."</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="at">      </span><span class="fu">staff_count</span><span class="kw">:</span><span class="at"> </span><span class="dv">120</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="at">      </span><span class="fu">specializations</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"Risk Assessment"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Compliance"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Security Architecture"</span><span class="kw">]</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="at">      </span><span class="fu">client_capacity</span><span class="kw">:</span><span class="at"> </span><span class="st">"15-20 active engagements"</span></span>
+<span id="cb3-29"><a href="#cb3-29"></a></span>
+<span id="cb3-30"><a href="#cb3-30"></a><span class="co"># Client Portfolio and Market Position</span></span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="fu">client_portfolio</span><span class="kw">:</span></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="at">  </span><span class="fu">healthcare</span><span class="kw">:</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a><span class="at">    </span><span class="fu">count</span><span class="kw">:</span><span class="at"> </span><span class="dv">12</span></span>
+<span id="cb3-34"><a href="#cb3-34"></a><span class="at">    </span><span class="fu">average_size</span><span class="kw">:</span><span class="at"> </span><span class="st">"500-2000 employees"</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a><span class="at">    </span><span class="fu">common_challenges</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"HIPAA compliance"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Legacy systems"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Remote access security"</span><span class="kw">]</span></span>
+<span id="cb3-36"><a href="#cb3-36"></a><span class="at">    </span><span class="fu">revenue_percentage</span><span class="kw">:</span><span class="at"> </span><span class="st">"60%"</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a><span class="at">    </span></span>
+<span id="cb3-38"><a href="#cb3-38"></a><span class="at">  </span><span class="fu">financial_services</span><span class="kw">:</span></span>
+<span id="cb3-39"><a href="#cb3-39"></a><span class="at">    </span><span class="fu">count</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
+<span id="cb3-40"><a href="#cb3-40"></a><span class="at">    </span><span class="fu">average_size</span><span class="kw">:</span><span class="at"> </span><span class="st">"200-1500 employees"</span></span>
+<span id="cb3-41"><a href="#cb3-41"></a><span class="at">    </span><span class="fu">common_challenges</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"PCI DSS compliance"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Fraud prevention"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Mobile banking security"</span><span class="kw">]</span></span>
+<span id="cb3-42"><a href="#cb3-42"></a><span class="at">    </span><span class="fu">revenue_percentage</span><span class="kw">:</span><span class="at"> </span><span class="st">"30%"</span></span>
+<span id="cb3-43"><a href="#cb3-43"></a><span class="at">    </span></span>
+<span id="cb3-44"><a href="#cb3-44"></a><span class="at">  </span><span class="fu">manufacturing</span><span class="kw">:</span></span>
+<span id="cb3-45"><a href="#cb3-45"></a><span class="at">    </span><span class="fu">count</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
+<span id="cb3-46"><a href="#cb3-46"></a><span class="at">    </span><span class="fu">average_size</span><span class="kw">:</span><span class="at"> </span><span class="st">"800-3000 employees"</span></span>
+<span id="cb3-47"><a href="#cb3-47"></a><span class="at">    </span><span class="fu">common_challenges</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"OT/IT convergence"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Supply chain security"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Industrial espionage"</span><span class="kw">]</span></span>
+<span id="cb3-48"><a href="#cb3-48"></a><span class="at">    </span><span class="fu">revenue_percentage</span><span class="kw">:</span><span class="at"> </span><span class="st">"10%"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="technical-infrastructure-and-authenticity" class="level2">
+<h2 class="anchored" data-anchor-id="technical-infrastructure-and-authenticity">Technical Infrastructure and Authenticity</h2>
+<section id="technology-stack-development" class="level3">
+<h3 class="anchored" data-anchor-id="technology-stack-development">Technology Stack Development</h3>
+<p>If your focus is on technical applications and implementations, you may wish to provide specific technical specifications. In this situation, ground your case studies in realistic technical environments. Document specific tools, systems, and configurations. Note that you can even add markdown to these, such as the <code>access_switches</code> below:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Detailed Technical Environment</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">technical_environment</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="at">  </span><span class="fu">network_architecture</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="at">    </span><span class="fu">core_switches</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cisco Catalyst 9500 Series"</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="at">    </span><span class="fu">access_switches</span><span class="kw">:</span><span class="at"> </span><span class="st">"[Cisco Catalyst 9300 Series](https://cisco.com)"</span><span class="at">  </span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="at">    </span><span class="fu">wireless_controller</span><span class="kw">:</span><span class="at"> </span><span class="st">"Cisco WLC 5520"</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="at">    </span><span class="fu">network_segmentation</span><span class="kw">:</span><span class="at"> </span><span class="st">"VLANs for guest, corporate, and secure zones"</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="at">    </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="at">  </span><span class="fu">security_infrastructure</span><span class="kw">:</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="at">    </span><span class="fu">firewall</span><span class="kw">:</span><span class="at"> </span><span class="st">"Palo Alto Networks PA-5220"</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="at">    </span><span class="fu">endpoint_protection</span><span class="kw">:</span><span class="at"> </span><span class="st">"CrowdStrike Falcon Complete"</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="at">    </span><span class="fu">email_security</span><span class="kw">:</span><span class="at"> </span><span class="st">"Proofpoint Email Protection"</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="at">    </span><span class="fu">web_filtering</span><span class="kw">:</span><span class="at"> </span><span class="st">"Zscaler Internet Access"</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="at">    </span><span class="fu">vulnerability_scanner</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tenable Nessus Professional"</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="at">    </span><span class="fu">siem_solution</span><span class="kw">:</span><span class="at"> </span><span class="st">"Splunk Enterprise Security"</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="at">    </span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="at">  </span><span class="fu">cloud_environment</span><span class="kw">:</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="at">    </span><span class="fu">primary_provider</span><span class="kw">:</span><span class="at"> </span><span class="st">"AWS"</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="at">    </span><span class="fu">regions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"us-west-2"</span><span class="kw">,</span><span class="at"> </span><span class="st">"us-east-1"</span><span class="kw">]</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="at">    </span><span class="fu">key_services</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"EC2"</span><span class="kw">,</span><span class="at"> </span><span class="st">"S3"</span><span class="kw">,</span><span class="at"> </span><span class="st">"RDS"</span><span class="kw">,</span><span class="at"> </span><span class="st">"CloudFront"</span><span class="kw">,</span><span class="at"> </span><span class="st">"IAM"</span><span class="kw">,</span><span class="at"> </span><span class="st">"CloudTrail"</span><span class="kw">]</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="at">    </span><span class="fu">backup_strategy</span><span class="kw">:</span><span class="at"> </span><span class="st">"Multi-region replication with 30-day retention"</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="co"># Attack Methodology (MITRE ATT&amp;CK Framework)</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="fu">attack_scenario</span><span class="kw">:</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="at">  </span><span class="fu">initial_access</span><span class="kw">:</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="at">    </span><span class="fu">tactic</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1566 - Phishing"</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="at">    </span><span class="fu">technique</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1566.002 - Spearphishing Link"</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="at">    </span><span class="fu">target</span><span class="kw">:</span><span class="at"> </span><span class="st">"Finance department staff via LinkedIn connection"</span></span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="at">    </span><span class="fu">success_rate</span><span class="kw">:</span><span class="at"> </span><span class="st">"3 of 15 recipients clicked malicious link"</span></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="at">    </span></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="at">  </span><span class="fu">execution</span><span class="kw">:</span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="at">    </span><span class="fu">tactic</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1059 - Command and Scripting Interpreter"</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a><span class="at">    </span><span class="fu">technique</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1059.001 - PowerShell"</span></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="at">    </span><span class="fu">payload</span><span class="kw">:</span><span class="at"> </span><span class="st">"Obfuscated PowerShell script downloaded from compromised site"</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="at">    </span></span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="at">  </span><span class="fu">persistence</span><span class="kw">:</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="at">    </span><span class="fu">tactic</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1053 - Scheduled Task/Job"</span></span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="at">    </span><span class="fu">technique</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1053.005 - Scheduled Task"</span></span>
+<span id="cb4-39"><a href="#cb4-39"></a><span class="at">    </span><span class="fu">location</span><span class="kw">:</span><span class="at"> </span><span class="st">"Primary domain controller"</span></span>
+<span id="cb4-40"><a href="#cb4-40"></a><span class="at">    </span><span class="fu">frequency</span><span class="kw">:</span><span class="at"> </span><span class="st">"Every 4 hours during business hours"</span></span>
+<span id="cb4-41"><a href="#cb4-41"></a><span class="at">    </span></span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="at">  </span><span class="fu">lateral_movement</span><span class="kw">:</span></span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="at">    </span><span class="fu">tactic</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1021 - Remote Services"</span></span>
+<span id="cb4-44"><a href="#cb4-44"></a><span class="at">    </span><span class="fu">technique</span><span class="kw">:</span><span class="at"> </span><span class="st">"T1021.001 - Remote Desktop Protocol"</span></span>
+<span id="cb4-45"><a href="#cb4-45"></a><span class="at">    </span><span class="fu">method</span><span class="kw">:</span><span class="at"> </span><span class="st">"Compromised administrator credentials"</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a><span class="at">    </span><span class="fu">affected_systems</span><span class="kw">:</span><span class="at"> </span><span class="st">"15 workstations, 3 servers"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Technical Accuracy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Verify all technical details against current industry standards. Outdated technology references can undermine case study credibility and educational value.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="timeline-management-and-consistency" class="level2">
+<h2 class="anchored" data-anchor-id="timeline-management-and-consistency">Timeline Management and Consistency</h2>
+<section id="relative-date-systems" class="level3">
+<h3 class="anchored" data-anchor-id="relative-date-systems">Relative Date Systems</h3>
+<p>Use relative date references to maintain timeline consistency across case studies. Note that you cannot reference a YAML key in another YAML key.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Flexible Timeline Framework</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">timeline</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">  </span><span class="fu">company_founding</span><span class="kw">:</span><span class="at"> </span><span class="st">"year_minus_6"</span><span class="co">    # DOES NOT WORK!</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">  </span><span class="fu">company_founding</span><span class="kw">:</span><span class="at"> </span><span class="dv">2019</span><span class="co">              # Use year_minus_6 in the document</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co"># Specific Incident Timeline</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="fu">incident_progression</span><span class="kw">:</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">  </span><span class="fu">initial_compromise</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 15, 2025, 9:23 AM"</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">  </span><span class="fu">first_detection</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 17, 2025, 2:15 PM"</span><span class="at"> </span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">  </span><span class="fu">escalation_to_leadership</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 17, 2025, 3:45 PM"</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">  </span><span class="fu">containment_achieved</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 18, 2025, 11:30 PM"</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">  </span><span class="fu">forensic_analysis_complete</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 22, 2025, 4:45 PM"</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">  </span><span class="fu">systems_recovery</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 25, 2025, 8:00 AM"</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="at">  </span><span class="fu">lessons_learned_session</span><span class="kw">:</span><span class="at"> </span><span class="st">"April 2, 2025, 10:00 AM"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="research-and-authenticity-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="research-and-authenticity-guidelines">Research and Authenticity Guidelines</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Research Area</strong></th>
+<th><strong>Key Focus Points</strong></th>
+<th><strong>Validation Methods</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Regulatory Environment</strong></td>
+<td>Compliance requirements, reporting deadlines, penalty structures</td>
+<td>Review current regulations, consult legal frameworks</td>
+</tr>
+<tr class="even">
+<td><strong>Attack Patterns</strong></td>
+<td>Current threat landscape, industry-specific vulnerabilities</td>
+<td>MITRE ATT&amp;CK framework, threat intelligence reports</td>
+</tr>
+<tr class="odd">
+<td><strong>Organizational Structure</strong></td>
+<td>Typical hierarchies, roles, decision-making processes</td>
+<td>Industry research, organizational charts, job descriptions</td>
+</tr>
+<tr class="even">
+<td><strong>Technology Standards</strong></td>
+<td>Current tools, realistic configurations, deployment scenarios</td>
+<td>Vendor documentation, industry surveys, practitioner input</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="character-development-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="character-development-best-practices">Character Development Best Practices</h3>
+<p>Build authentic cybersecurity professionals with these considerations:</p>
+<p><strong>Professional Backgrounds</strong></p>
+<ul>
+<li>Research typical career paths for different cybersecurity roles</li>
+<li>Include realistic certifications (CISSP, CISM, CEH, Security+)</li>
+<li>Match experience levels to responsibilities and decision-making authority</li>
+</ul>
+<p><strong>Personal Motivations</strong></p>
+<ul>
+<li>Career advancement goals (technical vs.&nbsp;management tracks)</li>
+<li>Professional reputation concerns</li>
+<li>Work-life balance considerations</li>
+<li>Industry networking and community involvement</li>
+</ul>
+<p><strong>Skill Alignment</strong></p>
+<ul>
+<li>Technical capabilities match stated experience</li>
+<li>Communication skills appropriate for role level</li>
+<li>Leadership abilities correspond to management responsibilities</li>
+<li>Continuous learning and professional development</li>
+</ul>
+</section>
+</section>
+<section id="cross-case-continuity-and-shared-elements" class="level2">
+<h2 class="anchored" data-anchor-id="cross-case-continuity-and-shared-elements">Cross-Case Continuity and Shared Elements</h2>
+<p>Create interconnected case studies that reference each other and build upon shared experiences:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Shared Universe Elements</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">shared_universe</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="at">  </span><span class="fu">industry_contacts</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="at">    </span><span class="fu">fbi_liaison</span><span class="kw">:</span><span class="at"> </span><span class="st">"Special Agent Jennifer Walsh"</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="at">    </span><span class="fu">industry_analyst</span><span class="kw">:</span><span class="at"> </span><span class="st">"David Park, Cybersecurity Ventures"</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="at">    </span><span class="fu">conference_organizer</span><span class="kw">:</span><span class="at"> </span><span class="st">"BSides Denver Planning Committee"</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="at">    </span><span class="fu">regulatory_contact</span><span class="kw">:</span><span class="at"> </span><span class="st">"Maria Santos, HHS OCR"</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="at">    </span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="at">  </span><span class="fu">recurring_locations</span><span class="kw">:</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="at">    </span><span class="fu">conference_venue</span><span class="kw">:</span><span class="at"> </span><span class="st">"Colorado Convention Center"</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="at">    </span><span class="fu">training_facility</span><span class="kw">:</span><span class="at"> </span><span class="st">"SecureEd Training Institute"</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="at">    </span><span class="fu">networking_hub</span><span class="kw">:</span><span class="at"> </span><span class="st">"TechHub Denver"</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="at">    </span><span class="fu">emergency_response_center</span><span class="kw">:</span><span class="at"> </span><span class="st">"Regional Cyber Coordination Center"</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># Cross-Case References and Connections</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="fu">case_connections</span><span class="kw">:</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="at">  </span><span class="fu">previous_incidents</span><span class="kw">:</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">case_id</span><span class="kw">:</span><span class="at"> </span><span class="st">"healthcare_breach_2024"</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="at">      </span><span class="fu">reference</span><span class="kw">:</span><span class="at"> </span><span class="st">"Similar attack pattern observed in Q4 2024"</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a><span class="at">      </span><span class="fu">connection</span><span class="kw">:</span><span class="at"> </span><span class="st">"Same threat actor group suspected (APT29)"</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a><span class="at">      </span><span class="fu">lessons_applied</span><span class="kw">:</span><span class="at"> </span><span class="st">"Enhanced email filtering protocols"</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="at">      </span></span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="at">  </span><span class="fu">ongoing_relationships</span><span class="kw">:</span></span>
+<span id="cb6-24"><a href="#cb6-24"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">character</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sarah Chen"</span></span>
+<span id="cb6-25"><a href="#cb6-25"></a><span class="at">      </span><span class="fu">role</span><span class="kw">:</span><span class="at"> </span><span class="st">"CyberSecurity Advisory Board Member"</span></span>
+<span id="cb6-26"><a href="#cb6-26"></a><span class="at">      </span><span class="fu">context</span><span class="kw">:</span><span class="at"> </span><span class="st">"Provides expertise across multiple client scenarios"</span></span>
+<span id="cb6-27"><a href="#cb6-27"></a><span class="at">      </span><span class="fu">influence</span><span class="kw">:</span><span class="at"> </span><span class="st">"Shapes industry best practices"</span></span>
+<span id="cb6-28"><a href="#cb6-28"></a><span class="at">      </span></span>
+<span id="cb6-29"><a href="#cb6-29"></a><span class="at">  </span><span class="fu">technology_evolution</span><span class="kw">:</span></span>
+<span id="cb6-30"><a href="#cb6-30"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">improvement</span><span class="kw">:</span><span class="at"> </span><span class="st">"SIEM rule enhancements"</span></span>
+<span id="cb6-31"><a href="#cb6-31"></a><span class="at">      </span><span class="fu">based_on</span><span class="kw">:</span><span class="at"> </span><span class="st">"Lessons from previous incident"</span></span>
+<span id="cb6-32"><a href="#cb6-32"></a><span class="at">      </span><span class="fu">implementation_date</span><span class="kw">:</span><span class="at"> </span><span class="st">"December 2024"</span></span>
+<span id="cb6-33"><a href="#cb6-33"></a><span class="at">      </span><span class="fu">effectiveness</span><span class="kw">:</span><span class="at"> </span><span class="st">"Reduced false positives by 40%"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="naming-conventions-and-standards" class="level3">
+<h3 class="anchored" data-anchor-id="naming-conventions-and-standards">Naming Conventions and Standards</h3>
+<p>Establish consistent naming patterns for organizations, characters, and systems:</p>
+<p><strong>Organization Naming</strong></p>
+<ul>
+<li>Primary companies: Professional, memorable names (CyberSecure Technologies)</li>
+<li>Client organizations: Industry-appropriate names (Regional Medical Center)</li>
+<li>Vendor references: Use actual company names for authenticity</li>
+</ul>
+<p><strong>Character References</strong></p>
+<ul>
+<li>YAML keys: Use underscore format (<code>ceo_name_last</code>, <code>cto_name_salutation</code>)</li>
+<li>Display names: Full professional names (<code>`r world$ceo_name_salutation`</code> <code>`r world$ceo_name_first`</code> <code>`r world$ceo_name_last`</code>)</li>
+<li>Informal references: Consistent shortened versions (“<code>`r world$ceo_name_salutation`</code> <code>`r world$ceo_name_first`</code>”, “<code>`r world$cto_name_first`</code>”)</li>
+</ul>
+<p><strong>Technical Systems</strong></p>
+<ul>
+<li>Network segments: Standard notation (<code>10.0.0.0/16</code>)</li>
+<li>Server names: Logical naming conventions (<code>DC01</code>, <code>WEB-SERVER-01</code>)</li>
+<li>Security tools: Include version numbers when relevant</li>
+</ul>
+</section>
+</section>
+<section id="integrating-world-data-into-case-studies" class="level2">
+<h2 class="anchored" data-anchor-id="integrating-world-data-into-case-studies">Integrating World Data into Case Studies</h2>
+<section id="basic-variable-substitution" class="level3">
+<h3 class="anchored" data-anchor-id="basic-variable-substitution">Basic Variable Substitution</h3>
+<p>Reference your <code>_worldbuilding.yml</code> data directly in case study QMD files using inline R code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>On `r world$incident_discovery_day`, `r world$this_year`, `r world$company_name` discovered </span>
+<span id="cb7-2"><a href="#cb7-2"></a>a security breach affecting `r world$client_name`. The incident was </span>
+<span id="cb7-3"><a href="#cb7-3"></a>initially detected by `r world$junior_analyst_job_title` `r world$junior_analyst_name_first` </span>
+<span id="cb7-4"><a href="#cb7-4"></a>`r world$junior_analyst_name_last`, who noticed unusual network traffic patterns</span>
+<span id="cb7-5"><a href="#cb7-5"></a>during routine monitoring.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Renders as:</strong></p>
+<blockquote class="blockquote">
+<p>On March 15, 2025, CyberSecure Technologies discovered a security breach affecting Regional Medical Center. The incident was initially detected by Junior Analyst Alexander Kim, who noticed unusual network traffic patterns during routine monitoring.</p>
+</blockquote>
+</section>
+<section id="complex-narrative-integration" class="level3">
+<h3 class="anchored" data-anchor-id="complex-narrative-integration">Complex Narrative Integration</h3>
+<p>Build detailed scenarios using multiple world data elements:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">## Executive Response</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="in">`r world$ceo_name_salutation`</span> <span class="in">`r world$ceo_name_last`</span>, with her background as a <span class="in">`r world$ceo_background`</span>, </span>
+<span id="cb8-4"><a href="#cb8-4"></a>immediately recognized the severity of the situation. Having faced </span>
+<span id="cb8-5"><a href="#cb8-5"></a>similar challenges during her previous role, she knew that the next </span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="in">`r world$incident_duration`</span> would be critical for both </span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="in">`r world$company_name`</span>'s reputation and <span class="in">`r world$client_name`</span>'s </span>
+<span id="cb8-8"><a href="#cb8-8"></a>operational continuity.</span>
+<span id="cb8-9"><a href="#cb8-9"></a></span>
+<span id="cb8-10"><a href="#cb8-10"></a>The financial implications were substantial. Initial estimates suggested </span>
+<span id="cb8-11"><a href="#cb8-11"></a>direct response costs of <span class="in">`r world$direct_costs`</span>, with potential </span>
+<span id="cb8-12"><a href="#cb8-12"></a>regulatory fines under <span class="in">`r world$primary_regulation`</span> reaching </span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="in">`r world$regulatory_fines`</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="dynamic-content-with-conditional-logic" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-content-with-conditional-logic">Dynamic Content with Conditional Logic</h3>
+<p>Create adaptive narratives based on character attributes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># R code chunk for conditional content</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="cf">if</span> (world<span class="sc">$</span>junior_analyst_experience <span class="sc">==</span> <span class="st">"6 months"</span>) {</span>
+<span id="cb9-3"><a href="#cb9-3"></a>  experience_desc <span class="ot">&lt;-</span> <span class="st">"relative newcomer to the field"</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  confidence_level <span class="ot">&lt;-</span> <span class="st">"cautious but eager"</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  decision_speed <span class="ot">&lt;-</span> <span class="st">"carefully considered"</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>} <span class="cf">else</span> {</span>
+<span id="cb9-7"><a href="#cb9-7"></a>  experience_desc <span class="ot">&lt;-</span> <span class="st">"well-experienced professional"</span>  </span>
+<span id="cb9-8"><a href="#cb9-8"></a>  confidence_level <span class="ot">&lt;-</span> <span class="st">"confident and decisive"</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>  decision_speed <span class="ot">&lt;-</span> <span class="st">"quickly made"</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a>As a <span class="in">`r experience_desc`</span>, <span class="in">`r world$junior_analyst_name`</span> approached </span>
+<span id="cb10-2"><a href="#cb10-2"></a>the investigation with a <span class="in">`r confidence_level`</span> attitude, ensuring that </span>
+<span id="cb10-3"><a href="#cb10-3"></a>all decisions were <span class="in">`r decision_speed`</span> based on available evidence.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="calculated-values-and-financial-impact" class="level3">
+<h3 class="anchored" data-anchor-id="calculated-values-and-financial-impact">Calculated Values and Financial Impact</h3>
+<p>Generate dynamic calculations for realistic financial scenarios:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Calculate total incident costs</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>direct_cost_num <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, world<span class="sc">$</span>direct_costs))</span>
+<span id="cb11-3"><a href="#cb11-3"></a>regulatory_fines_num <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, world<span class="sc">$</span>regulatory_fines))</span>
+<span id="cb11-4"><a href="#cb11-4"></a>business_interruption_num <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"[^0-9.]"</span>, <span class="st">""</span>, world<span class="sc">$</span>business_interruption))</span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a>total_cost <span class="ot">&lt;-</span> direct_cost_num <span class="sc">+</span> regulatory_fines_num <span class="sc">+</span> business_interruption_num</span>
+<span id="cb11-7"><a href="#cb11-7"></a>total_cost_formatted <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"$"</span>, <span class="fu">format</span>(total_cost, <span class="at">big.mark =</span> <span class="st">","</span>), <span class="st">" million"</span>)</span>
+<span id="cb11-8"><a href="#cb11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="co"># Calculate percentage of annual revenue (assuming $25M annual revenue)</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a>revenue_percentage <span class="ot">&lt;-</span> <span class="fu">round</span>((total_cost <span class="sc">/</span> <span class="dv">25</span>) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>The total financial impact reached `r total_cost_formatted`, representing </span>
+<span id="cb12-2"><a href="#cb12-2"></a>approximately `r revenue_percentage`% of the company's annual revenue and </span>
+<span id="cb12-3"><a href="#cb12-3"></a>demonstrating the significant business consequences of cybersecurity incidents.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="quality-assurance-for-worldbuilding" class="level2">
+<h2 class="anchored" data-anchor-id="quality-assurance-for-worldbuilding">Quality Assurance for Worldbuilding</h2>
+<section id="systematic-consistency-checking" class="level3">
+<h3 class="anchored" data-anchor-id="systematic-consistency-checking">Systematic Consistency Checking</h3>
+<p>Implement regular validation processes to maintain worldbuilding integrity:</p>
+<section id="character-audit-checklist" class="level4">
+<h4 class="anchored" data-anchor-id="character-audit-checklist">Character Audit Checklist</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Age Consistency</strong>: Character ages align with career timelines and experience levels</label></li>
+<li><label><input type="checkbox"><strong>Experience Alignment</strong>: Stated experience matches background descriptions and responsibilities<br>
+</label></li>
+<li><label><input type="checkbox"><strong>Relationship Logic</strong>: Character interactions reflect established professional relationships</label></li>
+<li><label><input type="checkbox"><strong>Skill Appropriateness</strong>: Character capabilities match their roles and seniority levels</label></li>
+<li><label><input type="checkbox"><strong>Career Progression</strong>: Professional advancement follows realistic cybersecurity career paths</label></li>
+</ul>
+</section>
+<section id="technical-validation-framework" class="level4">
+<h4 class="anchored" data-anchor-id="technical-validation-framework">Technical Validation Framework</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Validation Area</strong></th>
+<th><strong>Check Points</strong></th>
+<th><strong>Frequency</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Network Architecture</strong></td>
+<td>IP ranges don’t conflict, logical subnetting</td>
+<td>Per case study</td>
+</tr>
+<tr class="even">
+<td><strong>Security Tools</strong></td>
+<td>Current versions, realistic configurations</td>
+<td>Quarterly</td>
+</tr>
+<tr class="odd">
+<td><strong>Attack Techniques</strong></td>
+<td>MITRE ATT&amp;CK alignment, current TTPs</td>
+<td>Bi-annually</td>
+</tr>
+<tr class="even">
+<td><strong>Regulatory Requirements</strong></td>
+<td>Updated compliance standards, penalty amounts</td>
+<td>Annually</td>
+</tr>
+<tr class="odd">
+<td><strong>Timeline Feasibility</strong></td>
+<td>Incident progression, response timeframes</td>
+<td>Per case study</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="content-review-and-validation-process" class="level3">
+<h3 class="anchored" data-anchor-id="content-review-and-validation-process">Content Review and Validation Process</h3>
+<p><strong>Phase 1: Internal Review</strong></p>
+<ol type="1">
+<li>Cross-reference all character details for consistency</li>
+<li>Verify technical specifications against current standards</li>
+<li>Check timeline logic and progression feasibility</li>
+<li>Validate financial figures and regulatory requirements</li>
+</ol>
+<p><strong>Phase 2: Expert Validation</strong></p>
+<ol type="1">
+<li>Industry practitioner review of technical accuracy</li>
+<li>Legal expert validation of regulatory compliance aspects</li>
+<li>Educational specialist review of learning objective alignment</li>
+<li>Cybersecurity professional verification of realistic scenarios</li>
+</ol>
+<p><strong>Phase 3: Student Testing</strong></p>
+<ol type="1">
+<li>Pilot case studies with target learning audience</li>
+<li>Gather feedback on believability and engagement</li>
+<li>Identify confusion points or unrealistic elements</li>
+<li>Iterate based on learner responses and comprehension</li>
+</ol>
+</section>
+<section id="documentation-and-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-and-version-control">Documentation and Version Control</h3>
+<p>Especially useful with collaborative work, you may wish to include quality assurance metadata in your <code>_worldbuilding.yml</code>. This is especially useful with AI revisions.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Quality Assurance Metadata</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">qa_metadata</span><span class="kw">:</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="at">  </span><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">"2.1.0"</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="at">  </span><span class="fu">last_updated</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025-07-14"</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="at">  </span><span class="fu">reviewed_by</span><span class="kw">:</span><span class="at"> </span><span class="st">"John"</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="at">  </span><span class="fu">review_date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025-07-10"</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="at">  </span><span class="fu">next_review_due</span><span class="kw">:</span><span class="at"> </span><span class="st">"2025-10-10"</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="at">  </span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="at">  </span><span class="fu">validation_status</span><span class="kw">:</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="at">    </span><span class="fu">character_consistency</span><span class="kw">:</span><span class="at"> </span><span class="st">"verified"</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="at">    </span><span class="fu">technical_accuracy</span><span class="kw">:</span><span class="at"> </span><span class="st">"verified"</span><span class="at">  </span></span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="at">    </span><span class="fu">timeline_logic</span><span class="kw">:</span><span class="at"> </span><span class="st">"verified"</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="at">    </span><span class="fu">regulatory_compliance</span><span class="kw">:</span><span class="at"> </span><span class="st">"verified"</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="at">    </span><span class="fu">cross_case_continuity</span><span class="kw">:</span><span class="at"> </span><span class="st">"verified"</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="at">    </span></span>
+<span id="cb13-16"><a href="#cb13-16"></a><span class="at">  </span><span class="fu">known_limitations</span><span class="kw">:</span></span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Client organization size reflects mid-market focus"</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Incident timeline assumes dedicated response team availability"</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Financial impact calculations based on industry averages"</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a><span class="at">    </span></span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="at">  </span><span class="fu">validation_sources</span><span class="kw">:</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"NIST Cybersecurity Framework 2.0"</span></span>
+<span id="cb13-23"><a href="#cb13-23"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"MITRE ATT&amp;CK Enterprise Matrix v13.1"</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Current HIPAA penalty guidelines (2025)"</span></span>
+<span id="cb13-25"><a href="#cb13-25"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Industry salary surveys (Robert Half, 2025)"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="advanced-worldbuilding-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-worldbuilding-techniques">Advanced Worldbuilding Techniques</h2>
+<section id="multi-case-universe-development" class="level3">
+<h3 class="anchored" data-anchor-id="multi-case-universe-development">Multi-Case Universe Development</h3>
+<p>Create interconnected case studies that build upon each other and demonstrate realistic progression over time:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Universe Timeline and Case Progression</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">universe_development</span><span class="kw">:</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="at">  </span><span class="fu">case_sequence</span><span class="kw">:</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="at">    </span><span class="fu">case_01_initial_incident</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="at">      </span><span class="fu">timeframe</span><span class="kw">:</span><span class="at"> </span><span class="st">"January 2025"</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="at">      </span><span class="fu">focus</span><span class="kw">:</span><span class="at"> </span><span class="st">"Basic incident response procedures"</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="at">      </span><span class="fu">learning_outcome</span><span class="kw">:</span><span class="at"> </span><span class="st">"Fundamental incident handling"</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="at">      </span><span class="fu">character_roles_featured</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"technical_analyst"</span><span class="kw">,</span><span class="at"> </span><span class="st">"security_leadership"</span><span class="kw">]</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="at">      </span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="at">    </span><span class="fu">case_02_advanced_threat</span><span class="kw">:</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="at">      </span><span class="fu">timeframe</span><span class="kw">:</span><span class="at"> </span><span class="st">"March 2025"</span><span class="at">  </span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="at">      </span><span class="fu">focus</span><span class="kw">:</span><span class="at"> </span><span class="st">"Complex threat actor investigation"</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="at">      </span><span class="fu">learning_outcome</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced forensic techniques"</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="at">      </span><span class="fu">references_previous</span><span class="kw">:</span><span class="at"> </span><span class="st">"Lessons learned from January incident"</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="at">      </span><span class="fu">character_roles_featured</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"executive_leadership"</span><span class="kw">,</span><span class="at"> </span><span class="st">"technology_leadership"</span><span class="kw">,</span><span class="at"> </span><span class="st">"technical_analyst"</span><span class="kw">]</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="at">      </span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="at">    </span><span class="fu">case_03_strategic_response</span><span class="kw">:</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="at">      </span><span class="fu">timeframe</span><span class="kw">:</span><span class="at"> </span><span class="st">"June 2025"</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="at">      </span><span class="fu">focus</span><span class="kw">:</span><span class="at"> </span><span class="st">"Industry-wide coordination and policy development"</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="at">      </span><span class="fu">learning_outcome</span><span class="kw">:</span><span class="at"> </span><span class="st">"Strategic cybersecurity leadership"</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="at">      </span><span class="fu">builds_on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"case_01"</span><span class="kw">,</span><span class="at"> </span><span class="st">"case_02"</span><span class="kw">]</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="at">      </span><span class="fu">character_roles_featured</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"all_stakeholder_roles"</span><span class="kw">]</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co"># Character Role Development Across Cases  </span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="fu">character_role_progression</span><span class="kw">:</span></span>
+<span id="cb14-26"><a href="#cb14-26"></a><span class="at">  </span><span class="fu">technical_analyst</span><span class="kw">:</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a><span class="at">    </span><span class="fu">case_01</span><span class="kw">:</span><span class="at"> </span><span class="st">"Entry-level practitioner learning foundational procedures"</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="at">    </span><span class="fu">case_02</span><span class="kw">:</span><span class="at"> </span><span class="st">"Developing expertise and contributing key insights"</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="at">    </span><span class="fu">case_03</span><span class="kw">:</span><span class="at"> </span><span class="st">"Experienced professional mentoring newer team members"</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="at">    </span><span class="fu">development_theme</span><span class="kw">:</span><span class="at"> </span><span class="st">"Technical competency progression and knowledge transfer"</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="at">    </span></span>
+<span id="cb14-32"><a href="#cb14-32"></a><span class="at">  </span><span class="fu">executive_leadership</span><span class="kw">:</span></span>
+<span id="cb14-33"><a href="#cb14-33"></a><span class="at">    </span><span class="fu">case_01</span><span class="kw">:</span><span class="at"> </span><span class="st">"Focused on immediate operational continuity"</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a><span class="at">    </span><span class="fu">case_02</span><span class="kw">:</span><span class="at"> </span><span class="st">"Balancing business objectives with security imperatives"</span></span>
+<span id="cb14-35"><a href="#cb14-35"></a><span class="at">    </span><span class="fu">case_03</span><span class="kw">:</span><span class="at"> </span><span class="st">"Strategic thought leader influencing industry standards"</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a><span class="at">    </span><span class="fu">development_theme</span><span class="kw">:</span><span class="at"> </span><span class="st">"Leadership evolution and industry influence"</span></span>
+<span id="cb14-37"><a href="#cb14-37"></a></span>
+<span id="cb14-38"><a href="#cb14-38"></a><span class="co"># Role-to-Character Mapping (Flexible Implementation)</span></span>
+<span id="cb14-39"><a href="#cb14-39"></a><span class="fu">character_role_mapping</span><span class="kw">:</span></span>
+<span id="cb14-40"><a href="#cb14-40"></a><span class="at">  </span><span class="fu">technical_analyst</span><span class="kw">:</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a><span class="at">    </span><span class="fu">example_personas</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"junior_soc_analyst"</span><span class="kw">,</span><span class="at"> </span><span class="st">"incident_responder"</span><span class="kw">,</span><span class="at"> </span><span class="st">"forensics_specialist"</span><span class="kw">]</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a><span class="at">    </span><span class="fu">core_competencies</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"technical_investigation"</span><span class="kw">,</span><span class="at"> </span><span class="st">"tool_utilization"</span><span class="kw">,</span><span class="at"> </span><span class="st">"documentation"</span><span class="kw">]</span></span>
+<span id="cb14-43"><a href="#cb14-43"></a><span class="at">    </span><span class="fu">learning_trajectory</span><span class="kw">:</span><span class="at"> </span><span class="st">"novice_to_expert_progression"</span></span>
+<span id="cb14-44"><a href="#cb14-44"></a><span class="at">    </span></span>
+<span id="cb14-45"><a href="#cb14-45"></a><span class="at">  </span><span class="fu">security_leadership</span><span class="kw">:</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a><span class="at">    </span><span class="fu">example_personas</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"security_director"</span><span class="kw">,</span><span class="at"> </span><span class="st">"ciso"</span><span class="kw">,</span><span class="at"> </span><span class="st">"security_manager"</span><span class="kw">]</span><span class="at">  </span></span>
+<span id="cb14-47"><a href="#cb14-47"></a><span class="at">    </span><span class="fu">core_competencies</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"strategic_planning"</span><span class="kw">,</span><span class="at"> </span><span class="st">"stakeholder_communication"</span><span class="kw">,</span><span class="at"> </span><span class="st">"risk_assessment"</span><span class="kw">]</span></span>
+<span id="cb14-48"><a href="#cb14-48"></a><span class="at">    </span><span class="fu">learning_trajectory</span><span class="kw">:</span><span class="at"> </span><span class="st">"operational_to_strategic_thinking"</span></span>
+<span id="cb14-49"><a href="#cb14-49"></a><span class="at">    </span></span>
+<span id="cb14-50"><a href="#cb14-50"></a><span class="at">  </span><span class="fu">executive_leadership</span><span class="kw">:</span></span>
+<span id="cb14-51"><a href="#cb14-51"></a><span class="at">    </span><span class="fu">example_personas</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"ceo"</span><span class="kw">,</span><span class="at"> </span><span class="st">"cto"</span><span class="kw">,</span><span class="at"> </span><span class="st">"board_member"</span><span class="kw">]</span></span>
+<span id="cb14-52"><a href="#cb14-52"></a><span class="at">    </span><span class="fu">core_competencies</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"business_strategy"</span><span class="kw">,</span><span class="at"> </span><span class="st">"resource_allocation"</span><span class="kw">,</span><span class="at"> </span><span class="st">"crisis_management"</span><span class="kw">]</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a><span class="at">    </span><span class="fu">learning_trajectory</span><span class="kw">:</span><span class="at"> </span><span class="st">"reactive_to_proactive_governance"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-simple callout-pedagogical-consideration callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Pedagogical-consideration</span>Pedagogical Design Rationale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Role-Based Character Architecture</strong>: This methodology uses role-based character references rather than specific character names to maximize educational flexibility and transferability. This approach enables:</p>
+<ul>
+<li><strong>Institutional Adaptation</strong>: Educators can map roles to their own character systems or local contexts</li>
+<li><strong>Learning Objective Alignment</strong>: Focus remains on competency development rather than specific personas<br>
+</li>
+<li><strong>Methodological Transferability</strong>: The framework applies across diverse educational settings and character universes</li>
+<li><strong>Maintenance Simplicity</strong>: Updates to specific character names don’t impact the underlying pedagogical structure</li>
+</ul>
+<p>The <code>character_role_mapping</code> section demonstrates how educators can implement their own character systems while maintaining pedagogical coherence across case sequences.</p>
+</div>
+</div>
+</section>
+<section id="organizational-culture-and-context" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-culture-and-context">Organizational Culture and Context</h3>
+<p>Develop rich organizational environments that influence character behavior and decision-making:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Organizational Culture Framework</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">company_culture</span><span class="kw">:</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="at">  </span><span class="fu">core_values</span><span class="kw">:</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Client trust is paramount"</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Continuous learning and professional development"</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Transparent communication during crises"</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Innovation balanced with proven practices"</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="at">    </span></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="at">  </span><span class="fu">communication_patterns</span><span class="kw">:</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a><span class="at">    </span><span class="fu">normal_operations</span><span class="kw">:</span><span class="at"> </span><span class="st">"Open, collaborative, flat hierarchy"</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="at">    </span><span class="fu">crisis_situations</span><span class="kw">:</span><span class="at"> </span><span class="st">"Clear command structure, rapid escalation"</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="at">    </span><span class="fu">client_interactions</span><span class="kw">:</span><span class="at"> </span><span class="st">"Professional, consultative, solutions-focused"</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a><span class="at">    </span></span>
+<span id="cb15-14"><a href="#cb15-14"></a><span class="at">  </span><span class="fu">work_environment</span><span class="kw">:</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a><span class="at">    </span><span class="fu">office_model</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hybrid remote/on-site flexibility"</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a><span class="at">    </span><span class="fu">hours_expectation</span><span class="kw">:</span><span class="at"> </span><span class="st">"Standard business hours, on-call rotation for SOC"</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a><span class="at">    </span><span class="fu">professional_development</span><span class="kw">:</span><span class="at"> </span><span class="st">"Annual training budget, conference attendance encouraged"</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a><span class="at">    </span></span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="at">  </span><span class="fu">current_challenges</span><span class="kw">:</span></span>
+<span id="cb15-20"><a href="#cb15-20"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Rapid growth straining established processes"</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Talent retention in competitive market"</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Balancing specialization with service breadth"</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"Managing increased regulatory scrutiny"</span></span>
+<span id="cb15-24"><a href="#cb15-24"></a></span>
+<span id="cb15-25"><a href="#cb15-25"></a><span class="co"># Industry Context and Market Position</span></span>
+<span id="cb15-26"><a href="#cb15-26"></a><span class="fu">market_environment</span><span class="kw">:</span></span>
+<span id="cb15-27"><a href="#cb15-27"></a><span class="at">  </span><span class="fu">competitive_landscape</span><span class="kw">:</span></span>
+<span id="cb15-28"><a href="#cb15-28"></a><span class="at">    </span><span class="fu">primary_competitors</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"SecureGuard Solutions"</span><span class="kw">,</span><span class="at"> </span><span class="st">"CyberShield Consulting"</span><span class="kw">,</span><span class="at"> </span><span class="st">"DefenseWorks LLC"</span><span class="kw">]</span></span>
+<span id="cb15-29"><a href="#cb15-29"></a><span class="at">    </span><span class="fu">market_differentiators</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"Healthcare specialization"</span><span class="kw">,</span><span class="at"> </span><span class="st">"24/7 SOC"</span><span class="kw">,</span><span class="at"> </span><span class="st">"Regulatory compliance expertise"</span><span class="kw">]</span></span>
+<span id="cb15-30"><a href="#cb15-30"></a><span class="at">    </span><span class="fu">client_retention_rate</span><span class="kw">:</span><span class="at"> </span><span class="st">"94% annual retention"</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a><span class="at">    </span></span>
+<span id="cb15-32"><a href="#cb15-32"></a><span class="at">  </span><span class="fu">regulatory_environment</span><span class="kw">:</span></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="at">    </span><span class="fu">recent_developments</span><span class="kw">:</span><span class="at"> </span><span class="st">"Enhanced HIPAA cloud security guidance (2024)"</span></span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="at">    </span><span class="fu">enforcement_trends</span><span class="kw">:</span><span class="at"> </span><span class="st">"Increased penalties for delayed breach notification"</span></span>
+<span id="cb15-35"><a href="#cb15-35"></a><span class="at">    </span><span class="fu">compliance_requirements</span><span class="kw">:</span><span class="at"> </span><span class="st">"NIST Cybersecurity Framework mandatory for federal clients"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="implementation-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-best-practices">Implementation Best Practices</h2>
+<section id="development-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="development-workflow">Development Workflow</h3>
+<p>Follow a systematic approach to worldbuilding development:</p>
+<p><strong>Phase 1: Foundation Building</strong></p>
+<ol type="1">
+<li>Establish core organizational structure and key characters</li>
+<li>Define primary client relationships and basic technical environment</li>
+<li>Create initial timeline and incident framework</li>
+<li>Document naming conventions and data structure standards</li>
+</ol>
+<p><strong>Phase 2: Detailed Development</strong></p>
+<ol type="1">
+<li>Expand character backgrounds, relationships, and motivations</li>
+<li>Add technical infrastructure details and security tool specifications</li>
+<li>Develop organizational culture and industry context</li>
+<li>Create cross-case continuity elements and shared universe components</li>
+</ol>
+<p><strong>Phase 3: Validation and Refinement</strong></p>
+<ol type="1">
+<li>Conduct systematic consistency checking across all elements</li>
+<li>Validate technical accuracy with industry practitioners</li>
+<li>Test believability and engagement with target learners</li>
+<li>Iterate based on feedback and identified improvements</li>
+</ol>
+</section>
+<section id="collaborative-development-framework" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-development-framework">Collaborative Development Framework</h3>
+<p>Structure team contributions for effective worldbuilding collaboration:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Role</strong></th>
+<th><strong>Responsibilities</strong></th>
+<th><strong>Review Frequency</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Lead Worldbuilder</strong></td>
+<td>Overall consistency, character development, narrative coherence</td>
+<td>Ongoing</td>
+</tr>
+<tr class="even">
+<td><strong>Technical Reviewer</strong></td>
+<td>Infrastructure accuracy, security tool validation, attack realism</td>
+<td>Monthly</td>
+</tr>
+<tr class="odd">
+<td><strong>Industry Consultant</strong></td>
+<td>Regulatory compliance, market context, professional authenticity</td>
+<td>Quarterly</td>
+</tr>
+<tr class="even">
+<td><strong>Educational Specialist</strong></td>
+<td>Learning objective alignment, pedagogical effectiveness</td>
+<td>Per case study</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="maintenance-and-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="maintenance-and-version-control">Maintenance and Version Control</h3>
+<p><strong>Change Management Process</strong></p>
+<ol type="1">
+<li>Document all modifications in version control log</li>
+<li>Assess impact on existing case studies<br>
+</li>
+<li>Update affected materials systematically</li>
+<li>Validate consistency after changes</li>
+<li>Communicate updates to all stakeholders</li>
+</ol>
+<p><strong>Regular Review Schedule</strong></p>
+<ul>
+<li><strong>Monthly</strong>: Technical accuracy updates, emerging threat integration</li>
+<li><strong>Quarterly</strong>: Character consistency checks, regulatory requirement updates<br>
+</li>
+<li><strong>Annually</strong>: Comprehensive world audit, major revision consideration</li>
+<li><strong>As needed</strong>: Industry event integration, current event incorporation</li>
+</ul>
+</section>
+</section>
+<section id="common-pitfalls-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="common-pitfalls-and-solutions">Common Pitfalls and Solutions</h2>
+<section id="typical-worldbuilding-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="typical-worldbuilding-challenges">Typical Worldbuilding Challenges</h3>
+<p><strong>Character Inconsistencies</strong></p>
+<ul>
+<li><em>Problem</em>: Character details contradict across different case studies</li>
+<li><em>Solution</em>: Maintain a central character registry with comprehensive background details</li>
+<li><em>Prevention</em>: Use automated consistency checking and regular character audits</li>
+</ul>
+<p><strong>Technical Accuracy Issues</strong></p>
+<ul>
+<li><em>Problem</em>: Technology specifications become outdated or unrealistic</li>
+<li><em>Solution</em>: Schedule quarterly reviews with practicing cybersecurity professionals</li>
+<li><em>Prevention</em>: Subscribe to industry updates and maintain current reference materials</li>
+</ul>
+<p><strong>Timeline Confusion</strong></p>
+<ul>
+<li><em>Problem</em>: Incident timelines don’t align logically or realistically</li>
+<li><em>Solution</em>: Use relative date systems and maintain master chronology documentation</li>
+<li><em>Prevention</em>: Validate all timelines against realistic incident response procedures</li>
+</ul>
+<p><strong>Scalability Problems</strong></p>
+<ul>
+<li><em>Problem</em>: Worldbuilding becomes too complex to manage effectively</li>
+<li><em>Solution</em>: Focus development on elements directly supporting learning objectives</li>
+<li><em>Prevention</em>: Regular pruning of unnecessary details and complexity</li>
+</ul>
+</section>
+<section id="quality-maintenance-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="quality-maintenance-strategies">Quality Maintenance Strategies</h3>
+<ol type="1">
+<li><strong>Implement systematic review processes</strong> using the validation frameworks provided</li>
+<li><strong>Create comprehensive style guides</strong> for consistent contributor onboarding</li>
+<li><strong>Establish clear change management procedures</strong> to prevent inconsistency introduction</li>
+<li><strong>Build quality assurance into development workflow</strong> rather than treating it as afterthought</li>
+</ol>
+</section>
+</section>
+<section id="summary-and-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-next-steps">Summary and Next Steps</h2>
+<p>Systematic worldbuilding provides the foundation for engaging, credible cybersecurity case studies. The centralized <code>_worldbuilding.yml</code> approach enables:</p>
+<ul>
+<li><strong>Consistent character and organizational development</strong> across multiple case studies</li>
+<li><strong>Technical authenticity</strong> grounded in current industry practices<br>
+</li>
+<li><strong>Scalable content creation</strong> supporting comprehensive educational programs</li>
+<li><strong>Quality assurance</strong> maintaining professional standards and educational effectiveness</li>
+</ul>
+<section id="recommended-development-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-development-sequence">Recommended Development Sequence</h3>
+<ol type="1">
+<li><strong>Start with this worldbuilding foundation</strong> to establish your fictional universe framework</li>
+<li><strong>Advance to <a href="../guide/narrative-design.html">narrative design techniques</a></strong> for compelling story development</li>
+<li><strong>Implement <a href="../guide/cross-case-continuity.html">cross-case continuity methods</a></strong> for interconnected learning</li>
+<li><strong>Integrate <a href="../guide/assessment-framework.html">assessment frameworks</a></strong> aligning world details with learning objectives</li>
+</ol>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Worldbuilding Success
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Effective worldbuilding transforms abstract cybersecurity concepts into concrete, memorable learning experiences. Students engage more deeply when they can envision themselves working alongside believable professionals in realistic organizational environments.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../guide/tutorial.html" class="pagination-link" aria-label="Tutorial">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../guide/narrative-design.html" class="pagination-link" aria-label="Narrative Design">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/worldbuilding.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

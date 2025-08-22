@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework.">
+
+<title>2&nbsp; Methodology – Cyber Dimensions: OER Toolkit</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../guide/setup.html" rel="next">
+<link href="../guide/posthuman-foundations.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf13adfbfb24fcaa39cd11a088a62cb3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-55faffc9405ba0a5f6696ad9b6d06d17.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+div.callout-cognitive-load-alert.callout {
+  border-left-color: #a94442;
+}
+div.callout-cognitive-load-alert.callout-style-default > .callout-header {
+  background-color: rgba(169, 68, 66, 0.13);
+}
+div.callout-cognitive-load-alert .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cognitive-load-alert.callout-style-default .callout-icon::before, div.callout-cognitive-load-alert.callout-titled .callout-icon::before {
+  content: '🧠';
+  background-image: none;
+}
+div.callout-evidence-base.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-evidence-base.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-evidence-base .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-evidence-base.callout-style-default .callout-icon::before, div.callout-evidence-base.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-implementation-guidance.callout {
+  border-left-color: #736355;
+}
+div.callout-implementation-guidance.callout-style-default > .callout-header {
+  background-color: rgba(115, 99, 85, 0.13);
+}
+div.callout-implementation-guidance .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-implementation-guidance.callout-style-default .callout-icon::before, div.callout-implementation-guidance.callout-titled .callout-icon::before {
+  content: '🔧';
+  background-image: none;
+}
+div.callout-pedagogical-consideration.callout {
+  border-left-color: #4a6e8a;
+}
+div.callout-pedagogical-consideration.callout-style-default > .callout-header {
+  background-color: rgba(74, 110, 138, 0.13);
+}
+div.callout-pedagogical-consideration .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-pedagogical-consideration.callout-style-default .callout-icon::before, div.callout-pedagogical-consideration.callout-titled .callout-icon::before {
+  content: '🎓';
+  background-image: none;
+}
+div.callout-learner-experience.callout {
+  border-left-color: #8a7c6f;
+}
+div.callout-learner-experience.callout-style-default > .callout-header {
+  background-color: rgba(138, 124, 111, 0.13);
+}
+div.callout-learner-experience .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-learner-experience.callout-style-default .callout-icon::before, div.callout-learner-experience.callout-titled .callout-icon::before {
+  content: '👤';
+  background-image: none;
+}
+div.callout-scaffolding-tip.callout {
+  border-left-color: #5a7d5a;
+}
+div.callout-scaffolding-tip.callout-style-default > .callout-header {
+  background-color: rgba(90, 125, 90, 0.13);
+}
+div.callout-scaffolding-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-scaffolding-tip.callout-style-default .callout-icon::before, div.callout-scaffolding-tip.callout-titled .callout-icon::before {
+  content: '🏗️';
+  background-image: none;
+}
+div.callout-theoretical-foundation.callout {
+  border-left-color: #594a3d;
+}
+div.callout-theoretical-foundation.callout-style-default > .callout-header {
+  background-color: rgba(89, 74, 61, 0.13);
+}
+div.callout-theoretical-foundation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-theoretical-foundation.callout-style-default .callout-icon::before, div.callout-theoretical-foundation.callout-titled .callout-icon::before {
+  content: '🏛️';
+  background-image: none;
+}
+div.callout-assessment-strategy.callout {
+  border-left-color: #c88a3f;
+}
+div.callout-assessment-strategy.callout-style-default > .callout-header {
+  background-color: rgba(200, 138, 63, 0.13);
+}
+div.callout-assessment-strategy .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-assessment-strategy.callout-style-default .callout-icon::before, div.callout-assessment-strategy.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/methodology.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Cyber Dimensions: OER Toolkit</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ryanstraight/cyber-dimensions-oer" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Demonstration Case Study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/posthuman-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/methodology.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Content Development</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/worldbuilding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Worldbuilding</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/narrative-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Narrative Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/ai-assisted-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AI-Assisted Case Study Development</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/assessment-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Assessment Framework</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical Implementation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quarto-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Quarto Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/styling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Styling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/multimedia-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Multimedia Integration</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/quality-assurance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Quality Assurance</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources and Templates</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/case-study-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Artifact-Based Case Study Development Template</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../templates/assessment-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Artifact-Based Assessment Templates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../guide/cross-case-continuity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cross-Case Continuity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supplemental Resources</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#artifact-based-learning" id="toc-artifact-based-learning" class="nav-link active" data-scroll-target="#artifact-based-learning">Artifact-Based Learning</a></li>
+  <li><a href="#sec-posthumanist-foundation" id="toc-sec-posthumanist-foundation" class="nav-link" data-scroll-target="#sec-posthumanist-foundation">Posthumanist Theoretical Foundation</a>
+  <ul class="collapse">
+  <li><a href="#sec-beyond-anthropocentric" id="toc-sec-beyond-anthropocentric" class="nav-link" data-scroll-target="#sec-beyond-anthropocentric">Moving Beyond Anthropocentric Cybersecurity Education</a></li>
+  <li><a href="#sec-postphenomenological-design" id="toc-sec-postphenomenological-design" class="nav-link" data-scroll-target="#sec-postphenomenological-design">Postphenomenological Design Principles</a></li>
+  </ul></li>
+  <li><a href="#sec-worldbuilding-assemblages" id="toc-sec-worldbuilding-assemblages" class="nav-link" data-scroll-target="#sec-worldbuilding-assemblages">Worldbuilding as Assemblage Creation</a>
+  <ul class="collapse">
+  <li><a href="#sec-systematic-worldbuilding-theory" id="toc-sec-systematic-worldbuilding-theory" class="nav-link" data-scroll-target="#sec-systematic-worldbuilding-theory">Systematic Worldbuilding as Theoretical Practice</a></li>
+  <li><a href="#sec-prerender-posthuman" id="toc-sec-prerender-posthuman" class="nav-link" data-scroll-target="#sec-prerender-posthuman">Pre-render Scripts as Posthuman Infrastructure</a></li>
+  </ul></li>
+  <li><a href="#sec-design-based-research" id="toc-sec-design-based-research" class="nav-link" data-scroll-target="#sec-design-based-research">Design-Based Research Methodology</a>
+  <ul class="collapse">
+  <li><a href="#sec-evidence-based-innovation" id="toc-sec-evidence-based-innovation" class="nav-link" data-scroll-target="#sec-evidence-based-innovation">Evidence-Based Pedagogical Innovation</a></li>
+  </ul></li>
+  <li><a href="#sec-five-pillars-posthuman" id="toc-sec-five-pillars-posthuman" class="nav-link" data-scroll-target="#sec-five-pillars-posthuman">The Five Pillars Reconsidered Through Posthuman Lens</a>
+  <ul class="collapse">
+  <li><a href="#sec-immersive-fiction-posthuman" id="toc-sec-immersive-fiction-posthuman" class="nav-link" data-scroll-target="#sec-immersive-fiction-posthuman">Immersive Fiction as Material-Semiotic Practice</a></li>
+  <li><a href="#sec-interconnected-narratives-posthuman" id="toc-sec-interconnected-narratives-posthuman" class="nav-link" data-scroll-target="#sec-interconnected-narratives-posthuman">Interconnected Narratives as Actor-Networks</a></li>
+  <li><a href="#sec-multiple-perspectives-posthuman" id="toc-sec-multiple-perspectives-posthuman" class="nav-link" data-scroll-target="#sec-multiple-perspectives-posthuman">Multiple Perspectives as Posthuman Ethics</a></li>
+  <li><a href="#sec-realistic-complexity-posthuman" id="toc-sec-realistic-complexity-posthuman" class="nav-link" data-scroll-target="#sec-realistic-complexity-posthuman">Realistic Complexity as Emergent Phenomena</a></li>
+  <li><a href="#sec-flexible-assessment-posthuman" id="toc-sec-flexible-assessment-posthuman" class="nav-link" data-scroll-target="#sec-flexible-assessment-posthuman">Flexible Assessment as Posthuman Evaluation</a></li>
+  </ul></li>
+  <li><a href="#sec-implementation-framework" id="toc-sec-implementation-framework" class="nav-link" data-scroll-target="#sec-implementation-framework">Implementation Framework</a>
+  <ul class="collapse">
+  <li><a href="#sec-posthuman-learning-environments" id="toc-sec-posthuman-learning-environments" class="nav-link" data-scroll-target="#sec-posthuman-learning-environments">Establishing Posthuman Learning Environments</a></li>
+  <li><a href="#sec-worldbuilding-first" id="toc-sec-worldbuilding-first" class="nav-link" data-scroll-target="#sec-worldbuilding-first">Worldbuilding-First Development Process</a></li>
+  <li><a href="#sec-quality-theoretical-consistency" id="toc-sec-quality-theoretical-consistency" class="nav-link" data-scroll-target="#sec-quality-theoretical-consistency">Quality Assurance Through Theoretical Consistency</a></li>
+  </ul></li>
+  <li><a href="#sec-next-steps" id="toc-sec-next-steps" class="nav-link" data-scroll-target="#sec-next-steps">Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/methodology.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../guide/posthuman-foundations.html">Foundation</a></li><li class="breadcrumb-item"><a href="../guide/methodology.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-methodology" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Methodology</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This chapter outlines the theoretical foundations and practical approaches of the Cyber Dimensions methodology for creating immersive cybersecurity case studies that engage your students through posthuman pedagogical principles. First, a brief discussion of artifact-based learning (ABL), and then a more in-depth look at a posthumanist approach to developing the content.</p>
+<div class="implementation-example" title="How This Methodology Emerged">
+<p>The Cyber Dimensions approach developed through systematic analysis of the NICE Cybersecurity Workforce Framework <span class="citation" data-cites="straightHumanCentricModelsCybersecurity2024">(<a href="../references.html#ref-straightHumanCentricModelsCybersecurity2024" role="doc-biblioref">Straight, 2024</a>)</span>, where traditional competency frameworks consistently positioned humans as autonomous agents who simply “apply” or “implement” cybersecurity technologies. Through this analysis, patterns emerged showing how cybersecurity expertise actually develops through ongoing entanglements with technological systems rather than individual mastery over them.</p>
+<p>Classroom observations revealed critical moments when students struggled with scenarios where technologies appeared to “act back,” such as when monitoring systems generated unexpected alerts, when automated responses created new vulnerabilities, or when security tools enabled activities their designers never intended. These breakdown moments demonstrated the inadequacy of pedagogical approaches that position students as sovereign agents who control passive technological tools.</p>
+</div>
+<section id="artifact-based-learning" class="level2">
+<h2 class="anchored" data-anchor-id="artifact-based-learning">Artifact-Based Learning</h2>
+<p>Artifact-based learning, particularly when considering collections of deliberately fabricated items like a pedagogical dossier, draws heavily from established educational theories that emphasize active engagement and learner-centered approaches. Rooted in <strong>constructivism</strong>, it posits that learners build understanding by interacting with the world around them. Presenting a carefully curated set of “artifacts,” even if simulated, provides concrete anchors for this construction of knowledge. This method naturally fosters <strong>inquiry-based learning</strong>, as the unusual or intriguing nature of the artifacts prompts questions, encourages investigation, and drives students to seek connections and explanations. The learner becomes an active participant in deciphering the story or understanding the concept embedded within the collection. Furthermore, the direct interaction with these tangible (even if reproduction) items promotes <strong>experiential learning</strong>, moving beyond passive reception of information to a more active process of observation, analysis, and interpretation. The act of handling documents, examining photographs, or piecing together correspondence creates a more immersive and memorable learning experience compared to simply reading about a topic.</p>
+<p>The deliberate fabrication of artifacts for a specific pedagogical purpose, such as your “realistic but fake dossier,” presents a nuanced variation of artifact-based learning. Unlike working with genuine historical artifacts, this approach allows for meticulous control over the narrative, the complexity of the information, and the specific learning objectives targeted. While traditional artifact-based learning emphasizes the authenticity and often the ambiguity inherent in historical remnants, the fabricated dossier offers a focused and scaffolded experience. The design can strategically guide learners toward specific insights or critical thinking skills without the potential for misinterpretation due to a lack of historical context that can sometimes occur with decontextualized genuine artifacts. The relationship to the broader frameworks remains: learners still construct meaning through inquiry and experience. However, the controlled nature of the artifacts allows educators to fine-tune the learning journey, ensuring key concepts are encountered and explored within a carefully designed environment.</p>
+<p>Despite the controlled nature, the power of artifact-based learning in this context lies in its ability to make abstract concepts tangible and engaging. The “reality effect” created by a well-designed fake dossier can enhance motivation and create a sense of immersion, making the learning process more relevant and memorable. Students are essentially engaging in a form of simulated primary source analysis, developing crucial skills in observation, interpretation, critical evaluation, and synthesis – skills that are transferable to the analysis of genuine artifacts and real-world information. The key difference from traditional artifact-based learning is the intentional design and the focus on specific pedagogical outcomes rather than the open-ended exploration often associated with authentic historical materials. This controlled approach allows for targeted learning experiences that can be particularly effective for introducing complex topics or developing specific analytical skills within a defined timeframe.</p>
+<p>The fabricated artifacts central to ABL become more than pedagogical tools when viewed through a posthuman lens—they transform into active participants in educational assemblages. While ABL emphasizes how learners construct knowledge through interaction with curated materials, posthuman pedagogy recognizes these artifacts as <strong>actants</strong> with their own agency in shaping learning experiences. The “reality effect” that makes fabricated dossiers compelling isn’t merely psychological engagement but evidence of how material objects participate in knowledge creation alongside human learners.</p>
+<p>This shift from artifacts-as-resources to artifacts-as-actors fundamentally reconceptualizes cybersecurity education. Rather than treating fabricated documents, emails, or system logs as passive containers of information to be decoded, posthuman ABL recognizes these materials as co-participants in learning assemblages. When students engage with a carefully crafted surveillance dossier or incident response timeline, they enter into relationships with these materials that exceed simple information extraction. The artifacts “speak back” through their internal contradictions, their gaps, and their material properties, creating learning opportunities that emerge from human-artifact interaction rather than predetermined educational objectives.</p>
+<p>The systematic worldbuilding that underlies effective ABL—the meticulous attention to character consistency, organizational relationships, and technical accuracy—creates coherent sociotechnical assemblages that can support increasingly sophisticated educational encounters. ABL’s emphasis on controlled fabrication provides the foundation for posthuman educational environments where learning emerges through ongoing engagement with complex artifact collections that maintain their own agency while supporting pedagogical objectives.</p>
+</section>
+<section id="sec-posthumanist-foundation" class="level2">
+<h2 class="anchored" data-anchor-id="sec-posthumanist-foundation">Posthumanist Theoretical Foundation</h2>
+<section id="sec-beyond-anthropocentric" class="level3">
+<h3 class="anchored" data-anchor-id="sec-beyond-anthropocentric">Moving Beyond Anthropocentric Cybersecurity Education</h3>
+<p>The Cyber Dimensions approach is grounded in <strong>posthumanist educational theory</strong> that recognizes cybersecurity as fundamentally constituted through human-technology assemblages rather than individual human agency operating on passive technological systems <span class="citation" data-cites="baradMeetingUniverseHalfway2007">(<a href="../references.html#ref-baradMeetingUniverseHalfway2007" role="doc-biblioref">Barad, 2007</a>)</span>. This perspective challenges traditional cybersecurity education that positions humans as autonomous agents who simply “use” technology, instead helping you recognize that humans and technologies co-constitute each other in ongoing processes of becoming <span class="citation" data-cites="harawaySimiansCyborgsWomen1990">(<a href="../references.html#ref-harawaySimiansCyborgsWomen1990" role="doc-biblioref">Haraway, 1990</a>)</span>. Within this framework, ABL’s fabricated artifacts—incident reports, surveillance documents, email exchanges—become more than learning materials; they participate as nonhuman actors that shape educational possibilities and constrain interpretive options through their material properties and internal relationships.</p>
+<div class="research-foundation" title="Evidence from NICE Framework Analysis">
+<p>Systematic analysis of NICE Framework knowledge, skills, and tasks revealed how cybersecurity competencies are consistently framed through anthropocentric language that obscures human-technology entanglements. For example, tasks like “Analyze identified malicious activity” position analysts as sovereign interpreters of technological data, when ethnographic studies show that expertise develops through ongoing collaboration with monitoring systems, where alerts “speak” to analysts and analytical patterns emerge through human-machine dialogue.</p>
+<p>Student responses to case studies consistently revealed moments when this anthropocentric framing broke down. When presented with scenarios involving AI-assisted threat detection, students struggled to assign responsibility for false positives, demonstrating how cybersecurity practice requires recognizing distributed agency across human-technology assemblages rather than individual human control.</p>
+</div>
+<p>Analysis of NICE Framework components through posthuman coding revealed systematic patterns where human-technology entanglements are obscured through language emphasizing individual competency and human control. Where cybersecurity practice involves ongoing collaboration with algorithmic systems, the Framework describes “applying” or “implementing” technologies, positioning technologies as passive tools rather than active participants in security assemblages.</p>
+<p>This posthumanist foundation has profound implications for cybersecurity case study development:</p>
+<ul>
+<li><strong>Distributed Agency</strong>: Security emerges through networks of human and nonhuman actors, not individual decisions</li>
+<li><strong>Situated Knowledge</strong>: Cybersecurity practices are always embedded in specific sociotechnical contexts <span class="citation" data-cites="haraway1988situated">(<a href="../references.html#ref-haraway1988situated" role="doc-biblioref">Haraway, 1988</a>)</span></li>
+<li><strong>Entangled Ethics</strong>: Ethical responsibility extends across human-technology assemblages rather than residing in individual moral agents</li>
+<li><strong>Emergent Learning</strong>: Understanding develops through engagement with complex sociotechnical scenarios rather than transmission of abstract principles</li>
+</ul>
+</section>
+<section id="sec-postphenomenological-design" class="level3">
+<h3 class="anchored" data-anchor-id="sec-postphenomenological-design">Postphenomenological Design Principles</h3>
+<p>Drawing from Ihde’s postphenomenological framework <span class="citation" data-cites="ihdeTechnologyLifeworldGarden1990">(<a href="../references.html#ref-ihdeTechnologyLifeworldGarden1990" role="doc-biblioref">1990</a>)</span>, the methodology recognizes four fundamental human-technology relations that inform cybersecurity case study design:</p>
+<div class="callout callout-style-simple callout-theoretical-foundation callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Theoretical-foundation</span>Ihde's Human-Technology Relations in Cybersecurity Education
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Embodiment Relations</strong> (human-technology): Cybersecurity tools become transparent extensions of human capability, as when security analysts “feel” network anomalies through monitoring interfaces. In ABL contexts, fabricated system logs and alert notifications can create similar embodiment experiences, where students develop intuitive responses to artifact patterns that mirror professional analytical capabilities.</p>
+<p><strong>Hermeneutic Relations</strong> (human → technology → world): Students learn to “read” cybersecurity situations through technological mediation, interpreting threat landscapes through security information and event management (SIEM) systems. ABL’s curated document collections enable hermeneutic practice where students interpret cybersecurity scenarios through artifact analysis, developing skills in reading technological inscriptions that translate directly to professional contexts.</p>
+<p><strong>Alterity Relations</strong> (human ↔︎ technology): Security systems appear as quasi-other entities with apparent agency, requiring recognition of technological agency in security assemblages. Well-designed ABL artifacts can demonstrate this agency by “acting back” through internal contradictions or unexpected revelations that resist student interpretations, forcing recognition of material agency in learning processes.</p>
+<p><strong>Background Relations</strong> (human [technology/world]): Cybersecurity infrastructure creates environmental conditions that enable and constrain professional action without explicit attention. ABL creates similar background conditions through systematic worldbuilding, where fabricated organizational policies, technical constraints, and regulatory frameworks form environmental contexts that shape analytical possibilities without explicit pedagogical attention.</p>
+</div>
+</div>
+<p>These relations inform your case study development by ensuring that your fictional scenarios reflect the complex ways cybersecurity professionals actually engage with technological systems in practice, moving beyond simplistic models of human control over passive technologies.</p>
+</section>
+</section>
+<section id="sec-worldbuilding-assemblages" class="level2">
+<h2 class="anchored" data-anchor-id="sec-worldbuilding-assemblages">Worldbuilding as Assemblage Creation</h2>
+<section id="sec-systematic-worldbuilding-theory" class="level3">
+<h3 class="anchored" data-anchor-id="sec-systematic-worldbuilding-theory">Systematic Worldbuilding as Theoretical Practice</h3>
+<p>The Cyber Dimensions methodology employs systematic worldbuilding not merely as narrative convenience, but helps you recognize that effective cybersecurity education requires creating coherent <strong>sociotechnical assemblages</strong> where human and nonhuman actors co-constitute learning experiences <span class="citation" data-cites="latourReassemblingSocialIntroduction2005">(<a href="../references.html#ref-latourReassemblingSocialIntroduction2005" role="doc-biblioref">Latour, 2005</a>)</span>.</p>
+<div class="development-insight" title="Discovering Nonhuman Agency in Worldbuilding">
+<p>During development of the <em>Cyber Dimensions</em> textbook, the centralized worldbuilding system repeatedly demonstrated its own agency in unexpected ways. Character relationships automatically updated across cases, creating narrative connections that the author hadn’t explicitly planned. When fictional organizations evolved through multiple scenarios, their histories constrained new story possibilities, forcing recognition that fictional entities possess agency in shaping educational possibilities.</p>
+<p>The R/Quarto technical infrastructure revealed computational agency through automated content generation that sometimes produced meaningful connections between cases that emerged from data relationships rather than authorial intention. These breakdown moments—when the system “spoke back” through unexpected outputs—provided concrete experience of how technological systems participate in educational design rather than simply executing human plans.</p>
+</div>
+<p>The centralized <code>_worldbuilding.yml</code> system represents more than technical data management—it embodies posthumanist recognition that fictional worlds possess agency in shaping educational outcomes. Characters, organizations, and technological systems you define in this centralized architecture become <strong>actants</strong> that participate in educational assemblages alongside your students and you as instructor.</p>
+<p>For instance, when the character Dr.&nbsp;Sarah Chen appeared across multiple cases in the <em>Cyber Dimensions</em> textbook, her accumulated history began constraining new narrative possibilities. A case involving quantum encryption research had to account for her established expertise in AI ethics from previous scenarios. This constraint wasn’t a limitation but evidence of the fictional world’s agency—Chen as a character-actant “insisted” on narrative consistency that enhanced pedagogical coherence across the textbook’s interconnected scenarios.</p>
+<div class="callout callout-style-simple callout-pedagogical-consideration callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Pedagogical-consideration</span>Assemblage Thinking in Educational Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Traditional instructional design treats educational “content” as information to be transmitted from instructor to student. Assemblage thinking helps you recognize that learning emerges through dynamic interactions among human actors (your students, you as instructor), nonhuman actors (fictional characters, organizational systems, technological artifacts), and material-semiotic networks that connect them. ABL’s fabricated artifacts participate as crucial nonhuman actors in these assemblages, where documents, system logs, and communication records gain agency through their capacity to shape interpretive possibilities and resist predetermined educational outcomes.</p>
+<p>Your systematic worldbuilding approach creates stable assemblages that can support multiple learning encounters while maintaining internal coherence and agency. ABL’s emphasis on artifact collections aligns with assemblage creation by recognizing that effective learning environments require multiple materials working together—where individual documents gain meaning through their relationships with other artifacts, creating networks of significance that exceed the sum of their parts.</p>
+</div>
+</div>
+</section>
+<section id="sec-prerender-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-prerender-posthuman">Pre-render Scripts as Posthuman Infrastructure</h3>
+<p>The technical implementation through R pre-render scripts and RDS caching represents <strong>posthuman infrastructure</strong> that recognizes the agency of computational systems in educational delivery <span class="citation" data-cites="winner1980artifacts">(<a href="../references.html#ref-winner1980artifacts" role="doc-biblioref">Winner, 1980</a>)</span>.</p>
+<p>Development of pre-render scripts revealed computational agency through unexpected system behaviors that enhanced rather than hindered educational design. When automated character consistency checks identified contradictions across cases, the system wasn’t simply executing programmed rules but participating in quality assurance through pattern recognition that exceeded explicit programming. Cache invalidation logic demonstrated temporal agency, “deciding” when content updates required regeneration based on dependency relationships that emerged from the data structure rather than predetermined rules.</p>
+<p>These systems:</p>
+<ul>
+<li><strong>Enable Dynamic Content Generation</strong>: Fictional worlds respond to parameters and contexts, demonstrating technological agency through content that emerges from data relationships rather than explicit authorial control</li>
+<li><strong>Maintain Cross-Case Continuity</strong>: Automated systems ensure narrative coherence across multiple scenarios, with dependency tracking that reveals how changes ripple through interconnected educational content</li>
+<li><strong>Support Scalable Development</strong>: Infrastructure enables systematic case study creation while maintaining theoretical sophistication, with computational processes that augment rather than replace human creativity</li>
+<li><strong>Embody Computational Pedagogy</strong>: The R/Quarto workflow demonstrates how educational effectiveness emerges through human-technology collaboration, where automated consistency checking and content generation participate in pedagogical design rather than simply executing predetermined instructions</li>
+</ul>
+<p>This technical approach embodies posthumanist recognition that your educational effectiveness emerges through human-technology collaboration rather than human control over passive educational “tools.”</p>
+</section>
+</section>
+<section id="sec-design-based-research" class="level2">
+<h2 class="anchored" data-anchor-id="sec-design-based-research">Design-Based Research Methodology</h2>
+<p>The Cyber Dimensions methodology employs <strong>Design-Based Research</strong> (DBR) principles that help recognize educational innovation as systematic inquiry into learning processes within authentic contexts <span class="citation" data-cites="barab2004design">(<a href="../references.html#ref-barab2004design" role="doc-biblioref">Barab &amp; Squire, 2004</a>)</span>. This approach moves beyond traditional instructional design toward research-based educational development that contributes to both practical effectiveness and theoretical understanding.</p>
+<p>DBR implementation in cybersecurity case study development involves:</p>
+<div class="callout callout-style-simple callout-implementation-guidance callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Implementation-guidance</span>Design-Based Research Cycles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Design Phase</strong>: You develop case studies grounded in posthumanist pedagogical theory and postphenomenological understanding of human-technology relations</p>
+<p><strong>Implementation Phase</strong>: You deploy cases within authentic cybersecurity education contexts while collecting systematic data on learning processes and outcomes</p>
+<p><strong>Analysis Phase</strong>: You examine how your student learning emerges through engagement with fictional sociotechnical assemblages</p>
+<p><strong>Refinement Phase</strong>: You modify case studies based on evidence of pedagogical effectiveness and theoretical consistency</p>
+</div>
+</div>
+<section id="sec-evidence-based-innovation" class="level3">
+<h3 class="anchored" data-anchor-id="sec-evidence-based-innovation">Evidence-Based Pedagogical Innovation</h3>
+<p>Unlike generic case study development, the Cyber Dimensions approach helps you generate systematic evidence about how posthuman pedagogical principles enhance cybersecurity education. Research implementation has generated multiple forms of evidence supporting this methodology’s effectiveness:</p>
+<div class="callout callout-style-simple callout-evidence-base callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Evidence-base</span>Research Foundation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pilot studies using posthuman pedagogical approaches in cybersecurity education demonstrate enhanced student engagement with complex sociotechnical scenarios. Student reflections consistently show deeper appreciation for technological agency and distributed responsibility in cybersecurity contexts compared to traditional case study approaches that position humans as sovereign agents.</p>
+<p>Systematic review of cybersecurity education literature reveals gaps in pedagogical approaches that acknowledge human-technology entanglements, with most existing methods treating technologies as passive tools rather than active participants in security assemblages.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-five-pillars-posthuman" class="level2">
+<h2 class="anchored" data-anchor-id="sec-five-pillars-posthuman">The Five Pillars Reconsidered Through Posthuman Lens</h2>
+<section id="sec-immersive-fiction-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-immersive-fiction-posthuman">Immersive Fiction as Material-Semiotic Practice</h3>
+<p>Rather than treating “immersive fiction” as narrative technique, the posthuman approach helps you recognize fictional worlds as <strong>material-semiotic practices</strong> that co-constitute learning experiences <span class="citation" data-cites="baradMeetingUniverseHalfway2007">(<a href="../references.html#ref-baradMeetingUniverseHalfway2007" role="doc-biblioref">Barad, 2007</a>)</span>. ABL’s “reality effect” exemplifies this process—fabricated artifacts achieve educational effectiveness not through psychological illusion but through material participation in learning assemblages. Your effective fictional cybersecurity scenarios:</p>
+<ul>
+<li><strong>Create Agential Cuts</strong>: Establish boundaries between actors and networks that make specific phenomena observable for learning. ABL artifacts perform cuts by foregrounding certain relationships (email chains revealing organizational tensions) while backgrounding others (technical implementation details), making specific cybersecurity phenomena available for analysis.</li>
+<li><strong>Embody Situated Knowledges</strong>: Reflect positioned perspectives that resist universal claims about cybersecurity practice. Fabricated documents naturally embody situated perspectives through their authorship, organizational context, and material properties that reflect specific institutional positions within cybersecurity assemblages.</li>
+<li><strong>Enable Intra-active Learning</strong>: Provide contexts where human learners and fictional assemblages mutually constitute understanding. ABL creates intra-active learning when students’ analytical questions reshape their engagement with artifact collections, while material properties of documents simultaneously reshape analytical possibilities.</li>
+</ul>
+</section>
+<section id="sec-interconnected-narratives-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-interconnected-narratives-posthuman">Interconnected Narratives as Actor-Networks</h3>
+<p>When you create systematic narrative continuity across multiple case studies, this creates stable <strong>actor-networks</strong> <span class="citation" data-cites="latourReassemblingSocialIntroduction2005">(<a href="../references.html#ref-latourReassemblingSocialIntroduction2005" role="doc-biblioref">Latour, 2005</a>)</span> that enable increasingly sophisticated analysis of cybersecurity phenomena. Recurring characters and organizations become <strong>obligatory passage points</strong> through which your students must navigate to understand complex ethical and technical relationships. ABL’s systematic artifact curation amplifies this effect—when fabricated documents reference previous incidents, organizational policies, or character relationships, these textual connections create material actor-networks that bind fictional elements together through documentary evidence.</p>
+<p>This approach helps you recognize that effective cybersecurity education requires your students’ understanding of how security practices emerge through ongoing relationships among diverse actors rather than through isolated technical interventions. ABL artifact collections embody this principle by creating documentary evidence of relationship networks, where email chains, policy documents, and incident reports demonstrate how cybersecurity challenges arise through complex interactions among human and technological actors.</p>
+</section>
+<section id="sec-multiple-perspectives-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-multiple-perspectives-posthuman">Multiple Perspectives as Posthuman Ethics</h3>
+<p>When you include diverse stakeholder perspectives, this reflects <strong>posthuman ethics</strong> that recognizes ethical responsibility as distributed across assemblages rather than located in individual moral agents <span class="citation" data-cites="puig2012caring">(<a href="../references.html#ref-puig2012caring" role="doc-biblioref">Puig de la Bellacasa, 2012</a>)</span>. Your cybersecurity case studies must demonstrate how:</p>
+<ul>
+<li><strong>Response-ability</strong>: Ethical obligations emerge through relationships among humans, technologies, and organizational systems</li>
+<li><strong>Care Networks</strong>: Security practices require attention to vulnerable entities across assemblages</li>
+<li><strong>Distributed Responsibility</strong>: Accountability extends beyond individual actors to include technological and organizational systems</li>
+</ul>
+</section>
+<section id="sec-realistic-complexity-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-realistic-complexity-posthuman">Realistic Complexity as Emergent Phenomena</h3>
+<p>Rather than managing cognitive load through simplification, the posthuman approach helps you embrace complexity as <strong>emergent phenomena</strong> that arise through assemblage interactions. ABL’s carefully controlled fabrication enables this complexity by creating artifacts with built-in ambiguities, contradictions, and gaps that mirror real-world cybersecurity challenges. Your effective case studies:</p>
+<ul>
+<li><strong>Preserve Emergent Properties</strong>: Maintain the unpredictable outcomes that characterize real cybersecurity environments. ABL achieves this through artifact collections that contain internal tensions—where different documents suggest conflicting interpretations, forcing students to work with rather than resolve complexity.</li>
+<li><strong>Support Distributed Cognition</strong>: Recognize that understanding emerges through human-technology-organization networks. Fabricated artifacts support distributed cognition by requiring students to synthesize insights across multiple document types, time periods, and organizational perspectives.</li>
+<li><strong>Enable Posthuman Problem-Solving</strong>: Develop capabilities for working with rather than controlling complex sociotechnical systems. ABL develops these capabilities by presenting students with artifact collections that resist simple analysis, requiring ongoing engagement with material complexity rather than definitive resolution.</li>
+</ul>
+</section>
+<section id="sec-flexible-assessment-posthuman" class="level3">
+<h3 class="anchored" data-anchor-id="sec-flexible-assessment-posthuman">Flexible Assessment as Posthuman Evaluation</h3>
+<p>When you assess within posthuman pedagogy, you recognize that learning outcomes emerge through assemblage participation rather than individual cognitive achievement. ABL provides concrete mechanisms for this assessment approach through student engagement with artifact collections that reveal learning processes rather than predetermined outcomes. Your effective evaluation:</p>
+<ul>
+<li><strong>Assesses Assemblage Participation</strong>: Measures how your students engage with complex human-technology-organization networks. ABL enables this assessment by evaluating how students navigate relationships among artifacts, trace connections across document types, and recognize material agency in their analytical processes.</li>
+<li><strong>Values Situated Understanding</strong>: Recognizes that cybersecurity knowledge is always embedded in specific contexts. Artifact-based assessment naturally embodies situated understanding by requiring students to work with positioned documents that reflect specific organizational, temporal, and technological contexts rather than abstract principles.</li>
+<li><strong>Supports Ongoing Becoming</strong>: Treats your assessment as formative participation in educational assemblages rather than summative measurement of fixed knowledge. ABL supports this through iterative engagement with artifact collections, where student interpretations evolve through ongoing encounters with materials that continue to reveal new possibilities for analysis.</li>
+</ul>
+</section>
+</section>
+<section id="sec-implementation-framework" class="level2">
+<h2 class="anchored" data-anchor-id="sec-implementation-framework">Implementation Framework</h2>
+<section id="sec-posthuman-learning-environments" class="level3">
+<h3 class="anchored" data-anchor-id="sec-posthuman-learning-environments">Establishing Posthuman Learning Environments</h3>
+<p>Your successful implementation of the Cyber Dimensions methodology requires creating educational environments that support posthuman pedagogical principles:</p>
+<div class="callout callout-style-simple callout-scaffolding-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Scaffolding-tip</span>Creating Posthuman Learning Spaces
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Decenter Human Agency</strong>: Structure activities that require your students to recognize technological and organizational agency in cybersecurity scenarios</p>
+<p><strong>Embrace Complexity</strong>: Resist simplification that eliminates the emergent properties characteristic of real cybersecurity assemblages</p>
+<p><strong>Support Collective Intelligence</strong>: Design collaborative activities that distribute cognition across human-technology networks</p>
+<p><strong>Value Situated Perspectives</strong>: Recognize that different positions within assemblages enable different forms of cybersecurity understanding</p>
+</div>
+</div>
+</section>
+<section id="sec-worldbuilding-first" class="level3">
+<h3 class="anchored" data-anchor-id="sec-worldbuilding-first">Worldbuilding-First Development Process</h3>
+<p>The methodology employs a <strong>worldbuilding-first</strong> approach that helps you establish coherent sociotechnical assemblages before developing specific learning activities. ABL’s systematic artifact curation aligns perfectly with this approach, as effective fabricated documents require coherent background worlds to maintain believability and internal consistency:</p>
+<ol type="1">
+<li><strong>Assemblage Mapping</strong>: You identify key human and nonhuman actors that constitute the cybersecurity domain, including the types of documents, communications, and technical artifacts that circulate among these actors</li>
+<li><strong>Network Architecture</strong>: You establish relationships and dependencies among assemblage components, creating the foundation for ABL artifact collections that reflect authentic organizational communication patterns and technical documentation practices</li>
+<li><strong>Agency Distribution</strong>: You recognize how different actors contribute to security outcomes, enabling creation of artifacts that demonstrate technological agency alongside human decision-making processes</li>
+<li><strong>Scenario Generation</strong>: You develop specific learning encounters within established assemblages, with ABL artifacts serving as entry points into complex sociotechnical scenarios</li>
+<li><strong>Assessment Integration</strong>: You create evaluation mechanisms that measure assemblage participation, using student engagement with artifact collections as evidence of posthuman learning outcomes</li>
+</ol>
+</section>
+<section id="sec-quality-theoretical-consistency" class="level3">
+<h3 class="anchored" data-anchor-id="sec-quality-theoretical-consistency">Quality Assurance Through Theoretical Consistency</h3>
+<p>Development of the <em>Cyber Dimensions</em> textbook revealed the inadequacy of traditional instructional design evaluation criteria that focus on learning objectives achievement and content accuracy while ignoring how educational materials participate in learning assemblages. When case studies consistently “acted back” through narrative constraints and character agency, traditional evaluation frameworks couldn’t account for these posthuman dimensions of educational effectiveness.</p>
+<p>These quality criteria emerged through systematic attention to moments when fictional worlds demonstrated agency in shaping learning experiences, requiring evaluation approaches that recognize both human and nonhuman contributions to educational outcomes.</p>
+<p>Unlike generic case study evaluation, the Cyber Dimensions approach helps you employ quality criteria grounded in posthumanist theory:</p>
+<div class="callout callout-style-simple callout-assessment-strategy callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Assessment-strategy</span>Posthuman Quality Indicators
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Theoretical Consistency</strong>: Case studies accurately reflect posthumanist understanding of human-technology relations. In practice, this means scenarios where security emerges through assemblage interactions rather than individual human control—for example, cases where AI-assisted threat detection produces insights that exceed human or technological capabilities alone.</p>
+<p><strong>Assemblage Coherence</strong>: Fictional worlds maintain internal consistency as sociotechnical networks. Applied in the <em>Cyber Dimensions</em> textbook, this meant ensuring that technological systems, organizational structures, and character relationships formed coherent networks that could sustain multiple case studies without contradiction. ABL artifact collections must demonstrate similar coherence, where fabricated documents reference consistent organizational policies, character relationships, and technical environments across multiple learning encounters.</p>
+<p><strong>Agential Recognition</strong>: Scenarios demonstrate technological and organizational agency alongside human agency. This appears in cases where monitoring systems “alert” analysts to unusual patterns, where automated responses create unintended consequences, or where organizational policies shape available actions.</p>
+<p><strong>Situated Authenticity</strong>: Cases reflect positioned perspectives rather than universal cybersecurity truths. Each scenario acknowledges specific cultural, organizational, and technological contexts that shape how cybersecurity challenges emerge and can be addressed.</p>
+<p><strong>Emergent Complexity</strong>: Learning environments preserve the unpredictable outcomes characteristic of real cybersecurity practice, refusing simplification that eliminates the assemblage properties essential for developing posthuman cybersecurity capabilities.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="sec-next-steps">Next Steps</h2>
+<p>Now that you understand the posthuman theoretical foundations, you can:</p>
+<ol type="1">
+<li><strong><a href="../guide/posthuman-foundations.html">Explore the detailed theoretical foundations</a></strong> to understand the research base supporting this approach</li>
+<li><strong><a href="../guide/worldbuilding.html">Examine systematic worldbuilding</a></strong> as assemblage creation and infrastructure development</li>
+<li><strong><a href="../guide/tutorial.html">Work through practical implementation</a></strong> while maintaining theoretical sophistication</li>
+<li><strong><a href="../guide/assessment-framework.html">Design posthuman assessment approaches</a></strong> that recognize distributed learning outcomes</li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-barab2004design" class="csl-entry" role="listitem">
+Barab, S., &amp; Squire, K. (2004). Design-based research: Putting a stake in the ground. <em>The Journal of the Learning Sciences</em>, <em>13</em>(1), 1–14.
+</div>
+<div id="ref-baradMeetingUniverseHalfway2007" class="csl-entry" role="listitem">
+Barad, K. (2007). <em>Meeting the universe halfway: Quantum physics and the entanglement of matter and meaning</em>. Duke University Press.
+</div>
+<div id="ref-haraway1988situated" class="csl-entry" role="listitem">
+Haraway, D. (1988). Situated knowledges: The science question in feminism and the privilege of partial perspective. <em>Feminist Studies</em>, <em>14</em>(3), 575–599.
+</div>
+<div id="ref-harawaySimiansCyborgsWomen1990" class="csl-entry" role="listitem">
+Haraway, D. (1990). <em>Simians, <span>Cyborgs</span>, and <span>Women</span>: <span>The Reinvention</span> of <span>Nature</span></em>. Routledge. <a href="https://doi.org/10.4324/9780203873106">https://doi.org/10.4324/9780203873106</a>
+</div>
+<div id="ref-ihdeTechnologyLifeworldGarden1990" class="csl-entry" role="listitem">
+Ihde, D. (1990). <em>Technology and the lifeworld: From garden to earth</em>. Indiana University Press.
+</div>
+<div id="ref-latourReassemblingSocialIntroduction2005" class="csl-entry" role="listitem">
+Latour, B. (2005). <em>Reassembling the social: An introduction to actor-network-theory</em>. Oxford University Press.
+</div>
+<div id="ref-puig2012caring" class="csl-entry" role="listitem">
+Puig de la Bellacasa, M. (2012). <em>The politics of care in technoscience: The case of care in chronic care</em>. University of Minnesota Press.
+</div>
+<div id="ref-straightHumanCentricModelsCybersecurity2024" class="csl-entry" role="listitem">
+Straight, R. (2024). Beyond <span>Human-Centric Models</span> in <span>Cybersecurity Education</span>: <span>A Pilot Posthuman Analysis</span> of the <span>NICE Workforce Framework</span> for <span>Cybersecurity</span>. <em>Journal of Cybersecurity Education, Research and Practice</em>, <em>2024</em>(1). <a href="https://doi.org/10.62915/2472-2707.1210">https://doi.org/10.62915/2472-2707.1210</a>
+</div>
+<div id="ref-winner1980artifacts" class="csl-entry" role="listitem">
+Winner, L. (1980). Do artifacts have politics? <em>Daedalus</em>, <em>109</em>(1), 121–136.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ryanstraight\.github\.io\/cyber-dimensions-oer");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../guide/posthuman-foundations.html" class="pagination-link" aria-label="Posthuman Foundations">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Posthuman Foundations</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../guide/setup.html" class="pagination-link" aria-label="Setup">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setup</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>©2025, Ryan M. Straight</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/edit/main/guide/methodology.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ryanstraight/cyber-dimensions-oer/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Built with 🤎 and <a href="https://quarto.org/">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

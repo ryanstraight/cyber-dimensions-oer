@@ -1,47 +1,55 @@
 # Cyber Dimensions: Open Educational Resource Toolkit
 
 
-![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA_4.0-lightgrey.svg)
 ![Quarto](https://img.shields.io/badge/Made%20with-Quarto-blue.svg)
-![Status](https://img.shields.io/badge/Status-Coming_soon-brightgreen.svg)
-![Version](https://img.shields.io/badge/Version-0.0.9999-blue.svg)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)
 
 **Learn the Methodology Behind Immersive Cybersecurity Case Studies**
 
+<div class="callout-info">
 
-<a href="https://github.com/ryanstraight/cyber-dimensions-oer/blob/main/assets/images/Straight-Cyber_Dimensions-OER-portrait_cover.png"><img align=left src="assets/images/Straight-Cyber_Dimensions-OER-portrait_cover.png" width=300 alt="Cover for Cyber Dimensions OER Toolkit" /></a>
+## Coming soon!
+
+This toolkit is a supplement to the [*Cyber Dimensions: Immersive Case
+Studies Across Digital Domains*
+textbook](https://he.kendallhunt.com/product/cyber-dimensions-immersive-case-studies-across-digital-domains)
+published with Kendall Hunt. This Open Educational Resource (OER) is
+written as a Quarto book, available at
+[ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
+
+</div>
+
+## Overview
+
+<a href="https://github.com/ryanstraight/cyber-dimensions-oer"><img src="assets/cover.png" alt="Cyber Dimensions OER Toolkit Book Cover" align="right" width="200"></a>
 
 This Open Educational Resource (OER) is a comprehensive **methodology
 guide** that teaches you how to create immersive, fictional
 cybersecurity case studies for your classroom. This Quarto book
-documents the proven “Cyber Dimensions” approach, providing detailed
+documents the "Cyber Dimensions" approach, providing detailed
 explanations, examples, and frameworks to help you understand and apply
 this educational methodology in your own context.
 
-The *Cyber Dimensions* toolkit will be released to coincide with the
-*Cyber Dimensions* text from Kendall Hunt, scheduled for August 2025.
-This Open Educational Resource (OER) will be available at
-[ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer).
-
-
 ### Supplemental to Published Textbook
 
-This OER guide is the companion resource to the **“Cyber Dimensions:
-Immersive Case Studies Across Digital Domains”** textbook that provides complete case studies, assessments,
-and instructional guides ready for classroom use. This methodology guide
+This OER guide is the companion resource to **"Cyber Dimensions:
+Immersive Case Studies Across Digital Domains"** published by Kendall
+Hunt. While the textbook provides complete case studies, assessments,
+and instructional guides ready for classroom use, this methodology guide
 explains how those case studies were developed and how you can apply the
-same approaches to create your own immersive scenarios leveraging the
-power of artificial intelligence.
+same approaches to create your own immersive scenarios.
 
 ## Why Learn This Methodology?
 
-This approach has been tested across multiple institutions and refined
-through systematic implementation. The methodology offers several
-advantages over traditional case study development:
+This approach has been tested for over a year at time of publishing and
+refined through systematic implementation. The methodology offers
+several advantages over traditional case study development:
 
-- Based on successful case studies used at University of Arizona
-- Grounded in constructivist learning theory, problem-based learning,
-  and posthuman pedagogical research  
+- Based on successfully implemented teaching at University of Arizona
+- Grounded in posthumanist learning theory and artifact-based learning
+  research
 - Provides adaptable framework for diverse institutional contexts and
   learning objectives
 - Enables deep understanding of both theory and practice behind
@@ -51,8 +59,8 @@ advantages over traditional case study development:
 
 This comprehensive **methodology guide** is structured as a **Quarto
 book** with enhanced features including custom extensions, comprehensive
-cross-referencing, and professional theming. The guide includes 17+
-chapters across 5 major parts:
+cross-referencing, and professional branding. The guide includes 19
+chapters across 4 major parts:
 
 ### Methodology Documentation
 
@@ -90,11 +98,12 @@ throughout the guide.
 
 ### Quick Start
 
-1.  Visit the published guide when released at
+1.  Visit the published guide at
     [ryanstraight.github.io/cyber-dimensions-oer](https://ryanstraight.github.io/cyber-dimensions-oer)
-    (scheduled August 2025)
-2.  Begin with the Introduction to understand the methodology overview
-3.  Read Chapter 1: Methodology to grasp the theoretical foundations
+2.  Try the [CIRCUIT demo case
+    study](https://ryanstraight.github.io/cyber-dimensions-demo) to
+    experience the methodology in action
+3.  Begin with the Introduction to understand the methodology overview
 4.  Explore the examples to see the approach in practice
 
 ### For Developers/Contributors
@@ -120,8 +129,8 @@ to set up the project locally:
 ## The “Cyber Dimensions” Approach
 
 This methodology guide documents and explains the approach used to
-create “Cyber Dimensions: Immersive Case Studies Across Digital
-Domains” - a comprehensive text featuring 7 interconnected case studies
+create *Cyber Dimensions: Immersive Case Studies Across Digital
+Domains*, a comprehensive text featuring 7 interconnected case studies
 used at the University of Arizona to teach Cyber Ethics, Law, and
 Policy.
 
@@ -136,45 +145,72 @@ The methodology rests on five core principles:
 
 ## License
 
-<img src="assets/images/by.png" width="100" />
+![](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-nc-sa.png)
 
-This OER toolkit is released under [Creative Commons Attribution 4.0
-International License (CC BY
-4.0)](https://creativecommons.org/licenses/by/4.0/).
+This demo is released under [Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License (CC
+BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-You are free to:
-
-- **Share** — copy and redistribute the material
-- **Adapt** — remix, transform, and build upon the material
-- Use for any purpose, including commercial use
-
-**Attribution** — You must give appropriate credit , provide a link to
-the license, and indicate if changes were made . You may do so in any
-reasonable manner, but not in any way that suggests the licensor
-endorses you or your use.
-
-**No additional restrictions** — You may not apply legal terms or
-technological measures that legally restrict others from doing anything
-the license permits.
+> [!TIP]
+>
+> ### You are free to:
+>
+> 1.  **Share**— copy and redistribute the material in any medium or
+>     format
+> 2.  **Adapt**— remix, transform, and build upon the material
+> 3.  The licensor cannot revoke these freedoms as long as you follow
+>     the license terms.
+>
+> ### Under the following terms:
+>
+> 1.  **Attribution**— You must give [appropriate
+>     credit](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-appropriate-credit),
+>     provide a link to the license, and [indicate if changes were
+>     made](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-indicate-changes).
+>     You may do so in any reasonable manner, but not in any way that
+>     suggests the licensor endorses you or your use.
+> 2.  **NonCommercial**— You may not use the material for [commercial
+>     purposes](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-commercial-purposes).
+> 3.  **ShareAlike**— If you remix, transform, or build upon the
+>     material, you must distribute your contributions under the [same
+>     license](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-same-license)as
+>     the original.
+> 4.  **No additional restrictions**— You may not apply legal terms or
+>     [technological
+>     measures](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-technological-measures)that
+>     legally restrict others from doing anything the license permits.
+>
+> ### Notices:
+>
+> You do not have to comply with the license for elements of the
+> material in the public domain or where your use is permitted by an
+> applicable [exception or
+> limitation](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-exception-or-limitation).
+>
+> No warranties are given. The license may not give you all of the
+> permissions necessary for your intended use. For example, other rights
+> such as [publicity, privacy, or moral
+> rights](https://creativecommons.org/licenses/by-nc-sa/4.0/#ref-publicity-privacy-or-moral-rights)may
+> limit how you use the material.
 
 ## Citation
 
 BibTeX citations for the toolkit:
 
 ``` bibtex
-@book{straightCyberDimensionsToolkit2025,
+@software{straightCyberDimensionsToolkit2025,
   author = {Straight, Ryan M.},
   title = {Cyber Dimensions: Open Educational Resource Toolkit},
   year = {2025},
-  publisher = {GitHub Pages},
+  publisher = {GitHub},
   url = {https://github.com/ryanstraight/cyber-dimensions-oer},
   note = {Open Educational Resource for developing immersive cybersecurity case studies}
 }
 ```
 
 > Straight, R. M. (2025). Cyber Dimensions: Open Educational Resource
-> Toolkit. GitHub Pages.
-> <https://github.com/ryanstraight/cyber-dimensions-oer>
+> Toolkit \[Computer software\]. GitHub.
+> https://github.com/ryanstraight/cyber-dimensions-oer
 
 And the Kendall Hunt textbook:
 
@@ -182,16 +218,17 @@ And the Kendall Hunt textbook:
 @book{straightCyberDimensionsImmersive2025,
   title = {Cyber {{Dimensions}}: {{Immersive Case Studies Across Digital Domains}}},
   shorttitle = {Cyber {{Dimensions}}},
-  author = {Straight, Ryan},
+  author = {Straight, Ryan M.},
   year = {2025},
   edition = {1st},
   publisher = {Kendall Hunt},
-  isbn = {979-8-3851-8653-2}
+  isbn = {979-8-3851-8653-2},
+  url = {https://he.kendallhunt.com/product/cyber-dimensions-immersive-case-studies-across-digital-domains}
 }
 ```
 
-> Straight, R. M. (2025). *Cyber Dimensions: Immersive Case Studies Across
-> Digital Domains* (1st ed.). Kendall Hunt.
+> Straight, R. M. (2025). Cyber Dimensions: Immersive Case Studies
+> Across Digital Domains (1st ed.). Kendall Hunt.
 
 ## Technical Features
 
@@ -218,7 +255,7 @@ published textbook, allowing for:
 
 ## Support & Community
 
-- **Documentation**: Complete 17+ chapter guide with examples and
+- **Documentation**: Complete 19 chapter guide with examples and
   comprehensive cross-referencing
 - **Issues**: Report problems via [GitHub
   Issues](https://github.com/ryanstraight/cyber-dimensions-oer/issues)

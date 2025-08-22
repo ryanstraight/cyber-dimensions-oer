@@ -1,0 +1,62 @@
+book:
+  title: "Cyber Dimensions: OER Toolkit"
+  subtitle: "Build Your Own Immersive Cybersecurity Case Studies"
+  author:
+    - name: Ryan M. Straight
+      url: https://infosci.arizona.edu/person/ryan-straight
+      affiliation: University of Arizona
+      affiliation-url: https://infosci.arizona.edu
+  
+  description: "A comprehensive methodology guide for creating immersive cybersecurity case studies using evidence-based pedagogical approaches and Quarto publishing framework."
+  
+  cover-image: "assets/images/cover.png"
+  cover-image-alt: "Cyber Dimensions OER toolkit cover"
+  
+  favicon: "assets/favicon.png"
+  
+  site-url: "https://ryanstraight.github.io/cyber-dimensions-oer"
+  repo-url: "https://github.com/ryanstraight/cyber-dimensions-oer"
+  repo-branch: "main"
+  repo-actions: [edit, issue]
+  
+  #downloads: [pdf, docx]
+  #sharing: [twitter, linkedin]
+  
+  #search: true
+  
+  page-navigation: true
+  back-to-top-navigation: true
+  reader-mode: true
+  
+  page-footer:
+    left: "&copy;2025, Ryan M. Straight"
+    right: "Built with 🤎 and [Quarto](https://quarto.org/)"
+  
+  chapters:
+    - index.qmd
+    - demo.qmd
+    - part: "Foundation"
+      chapters:
+        - guide/posthuman-foundations.qmd
+        - guide/methodology.qmd
+        - guide/setup.qmd
+        - guide/tutorial.qmd
+    - part: "Content Development"
+      chapters:
+        - guide/worldbuilding.qmd
+        - guide/narrative-design.qmd
+        - guide/ai-assisted-development.qmd
+        - guide/assessment-framework.qmd
+    - part: "Technical Implementation"
+      chapters:
+        - guide/quarto-setup.qmd
+        - guide/styling.qmd
+        - guide/multimedia-integration.qmd
+        - guide/quality-assurance.qmd
+    - part: "Resources and Templates"
+      chapters:
+        - templates/case-study-template.qmd
+        - templates/assessment-templates.qmd
+        - guide/cross-case-continuity.qmd
+    - supplemental.qmd
+    - references.qmd

@@ -1,0 +1,802 @@
+/*-- scss:defaults --*/
+// Custom SCSS variables for Cyber Dimensions OER Toolkit
+// This file extends the Flatly theme with the new retro color palette
+
+// Color palette from the book cover design
+$primary: #594a3d;        // Brown dark for headers and navigation
+$secondary: #736355;      // Brown accent for secondary elements
+$success: #5a7d5a;        // Muted earthy green for success states
+$warning: #c88a3f;        // Warm amber/gold for warnings
+$danger: #a94442;         // Desaturated brick red for errors
+$info: #4a6e8a;           // Muted greyish blue for informational content
+
+// Typography using Work Sans
+$font-family-sans-serif: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+
+// Layout
+$navbar-brand-font-size: 1.25rem;
+$navbar-nav-link-padding-x: 1rem;
+
+// Code styling
+$code-color: #594a3d;
+$code-bg: #f8f6f0;
+
+/*-- scss:rules --*/
+
+// Enhanced navbar styling
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: $primary !important;
+  
+  .navbar-brand {
+    font-weight: 600;
+    color: #f2f0e6 !important;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: #f2f0e6 !important;
+    
+    &:hover {
+      color: rgba(242,240,230,0.8) !important;
+    }
+  }
+}
+
+// Enhanced callout styling with custom callout support
+.callout {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  margin: 1.5rem 0;
+  border: 1px solid rgba(0,0,0,0.08);
+  
+  .callout-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    
+    .callout-icon {
+      margin-right: 0.75rem;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      justify-content: center;
+    }
+  }
+  
+  .callout-body {
+    line-height: 1.6;
+  }
+  
+  // Standard callout improvements with emoji icons as fallback
+  &.callout-note {
+    border-left: 4px solid $info;
+    
+    .callout-icon::before {
+      content: "ℹ️";
+      font-size: 1.2rem;
+    }
+  }
+  
+  &.callout-important {
+    border-left: 4px solid $danger;
+    
+    .callout-icon::before {
+      content: "❗";
+      font-size: 1.2rem;
+    }
+  }
+  
+  &.callout-warning {
+    border-left: 4px solid $warning;
+    
+    .callout-icon::before {
+      content: "⚠️";
+      font-size: 1.2rem;
+    }
+  }
+  
+  &.callout-tip {
+    border-left: 4px solid $success;
+    
+    .callout-icon::before {
+      content: "💡";
+      font-size: 1.2rem;
+    }
+  }
+  
+  &.callout-success {
+    border-left: 4px solid $success;
+    
+    .callout-icon::before {
+      content: "✅";
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Custom callout types - Additional styling for Quarto custom-callout filter
+// Note: Primary callout configuration is handled in _quarto.yml
+// This section provides complementary styling enhancements
+
+// Enhanced callout styling for better visual hierarchy
+.callout.callout-theoretical-foundation {
+  background: linear-gradient(135deg, rgba(89, 74, 61, 0.02) 0%, rgba(89, 74, 61, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-pedagogical-consideration {
+  background: linear-gradient(135deg, rgba(74, 110, 138, 0.02) 0%, rgba(74, 110, 138, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-implementation-guidance {
+  background: linear-gradient(135deg, rgba(115, 99, 85, 0.02) 0%, rgba(115, 99, 85, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-assessment-strategy {
+  background: linear-gradient(135deg, rgba(200, 138, 63, 0.02) 0%, rgba(200, 138, 63, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-cognitive-load-alert {
+  background: linear-gradient(135deg, rgba(169, 68, 66, 0.02) 0%, rgba(169, 68, 66, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-scaffolding-tip {
+  background: linear-gradient(135deg, rgba(90, 125, 90, 0.02) 0%, rgba(90, 125, 90, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-learner-experience {
+  background: linear-gradient(135deg, rgba(138, 124, 111, 0.02) 0%, rgba(138, 124, 111, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+.callout.callout-evidence-base {
+  background: linear-gradient(135deg, rgba(74, 110, 138, 0.02) 0%, rgba(74, 110, 138, 0.01) 100%);
+  
+  .callout-title {
+    font-weight: 600;
+  }
+}
+
+// Enhanced code styling with professional appearance
+code {
+  background-color: $code-bg;
+  color: $code-color;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+  border: 1px solid rgba(89, 74, 61, 0.1);
+  
+  // Inline code in headings
+  h1 &, h2 &, h3 &, h4 &, h5 &, h6 & {
+    font-size: 0.9em;
+  }
+}
+
+// Enhanced pre blocks for code
+pre {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
+  border: 1px solid #e1e5e9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  overflow-x: auto;
+  line-height: 1.5;
+  
+  code {
+    background-color: transparent;
+    color: #2d3748;
+    padding: 0;
+    font-weight: normal;
+    border: none;
+    font-size: 0.875rem;
+  }
+  
+  // Copy button enhancement
+  .code-copy-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: $primary;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    
+    &:hover {
+      background: darken($primary, 10%);
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Language-specific styling
+pre.language-yaml, 
+pre.language-yml {
+  &::before {
+    content: "YAML";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    background: $warning;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+pre.language-r {
+  &::before {
+    content: "R";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    background: #276DC3;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+pre.language-bash, 
+pre.language-shell {
+  &::before {
+    content: "BASH";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    background: #2d3748;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+pre.language-css, 
+pre.language-scss {
+  &::before {
+    content: "CSS";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    background: #1572B6;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+// Syntax highlighting improvements
+pre .hljs-comment,
+pre .hljs-quote {
+  color: #6c757d;
+  font-style: italic;
+}
+
+pre .hljs-keyword,
+pre .hljs-selector-tag,
+pre .hljs-addition {
+  color: $primary;
+  font-weight: 600;
+}
+
+pre .hljs-string,
+pre .hljs-attr {
+  color: $success;
+}
+
+pre .hljs-number,
+pre .hljs-literal {
+  color: $info;
+}
+
+pre .hljs-title,
+pre .hljs-section {
+  color: $warning;
+  font-weight: 600;
+}
+
+// Table enhancements
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  
+  th {
+    background-color: $primary;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem;
+    text-align: left;
+    
+    &:first-child {
+      border-top-left-radius: 0.375rem;
+    }
+    
+    &:last-child {
+      border-top-right-radius: 0.375rem;
+    }
+  }
+  
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  tr:hover {
+    background-color: #e3f2fd;
+  }
+}
+
+// Enhanced typography system
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0;
+  
+  .anchor {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: $secondary;
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+  
+  &:hover .anchor {
+    opacity: 1;
+  }
+}
+
+// Improved heading hierarchy with better spacing
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 3px solid $secondary;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px solid #d1ccc0;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: darken($primary, 5%);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: darken($primary, 10%);
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: darken($primary, 15%);
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: darken($primary, 20%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Improved paragraph and text spacing
+p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+// Better list styling
+ul, ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  // Nested lists
+  ul, ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Special content blocks
+.content-sidebar {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid $secondary;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+// Enhanced interactive elements
+.btn {
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-height: 44px; // WCAG touch target size
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:focus {
+    outline: 2px solid $secondary;
+    outline-offset: 2px;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 5%) 100%);
+  color: white;
+  
+  &:hover {
+    background: linear-gradient(135deg, darken($primary, 5%) 0%, darken($primary, 10%) 100%);
+    color: white;
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $secondary;
+  border: 2px solid $secondary;
+  
+  &:hover {
+    background: $secondary;
+    color: white;
+  }
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+}
+
+// Enhanced navigation elements
+.page-navigation {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 2px solid #d1ccc0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-page-previous,
+.nav-page-next {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #d1ccc0;
+  border-radius: 0.5rem;
+  color: $primary;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  
+  &:hover {
+    background: linear-gradient(135deg, $primary 0%, darken($primary, 5%) 100%);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+.nav-page-previous::before {
+  content: "←";
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-page-next::after {
+  content: "→";
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+// Links
+a {
+  color: $secondary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: darken($secondary, 15%);
+    text-decoration: underline;
+  }
+  
+  &.anchor {
+    color: $primary;
+    text-decoration: none;
+    
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+// Footer styling
+footer {
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 10%) 100%);
+  color: #f2f0e6;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  
+  a {
+    color: rgba(242,240,230,0.8);
+    
+    &:hover {
+      color: #f2f0e6;
+    }
+  }
+}
+
+// Responsive design enhancements
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  table {
+    font-size: 0.875rem;
+    
+    th, td {
+      padding: 0.5rem;
+    }
+  }
+  
+  .callout {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+  
+  pre {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+}
+
+// Reader mode support - ensure content expands when sidebar is hidden
+// This CSS works with Quarto's actual reader mode implementation
+
+// When reader mode is active (stored in localStorage), expand content
+@media screen {
+  // Hide sidebar when reader mode is active and ensure content expands
+  body:has(.quarto-reader-toggle.reader) {
+    .quarto-sidebar {
+      display: none !important;
+    }
+    
+    .content,
+    .quarto-container,
+    main.content {
+      margin-left: 0 !important;
+      max-width: none !important;
+      width: 100% !important;
+    }
+  }
+  
+  // Alternative selector for broader browser support
+  .quarto-reader-toggle.reader ~ * .quarto-sidebar,
+  .quarto-reader-toggle.reader ~ .quarto-sidebar {
+    display: none !important;
+  }
+}
+
+// Smooth transitions for reader mode
+.quarto-container,
+.content,
+.quarto-sidebar {
+  transition: margin 0.3s ease, max-width 0.3s ease, width 0.3s ease;
+}
+
+// Ensure the reader mode toggle itself is visible
+.quarto-reader-toggle {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+// Print styles
+@media print {
+  .navbar, .content-sidebar {
+    display: none !important;
+  }
+  
+  .callout {
+    border: 1px solid #dee2e6;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  // Show URLs for external links in print
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+// Accessibility improvements
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Focus indicators for keyboard navigation
+a:focus, 
+button:focus, 
+input:focus, 
+textarea:focus, 
+select:focus,
+.btn:focus {
+  outline: 2px solid $secondary;
+  outline-offset: 2px;
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .callout {
+    border-width: 2px;
+  }
+  
+  table {
+    border: 2px solid $primary;
+  }
+  
+  code {
+    border: 1px solid $code-color;
+  }
+}
+
+// Dark mode considerations (for future implementation)
+@media (prefers-color-scheme: dark) {
+  // Variables for dark mode would go here
+  // Currently disabled pending full dark mode implementation
+}
